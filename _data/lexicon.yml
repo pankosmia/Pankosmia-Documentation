@@ -6,5 +6,5 @@
 # To reference a lexicon word, use: {{ site.data.lexicon.variable_name }}
 
 {
-  "required-fields": "Required fields"
+  "required-fields": "Required fields", "required-fields_link": "required-fields"
 }
