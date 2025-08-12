@@ -15,4 +15,4 @@ Make your own tool for creating Scripture and related resources.
 TBD.
 
 ---
-[Legal Notices](./legal/)
+[Legal Notices](./legal-notices/)

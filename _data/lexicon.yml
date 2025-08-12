@@ -1,10 +1,9 @@
-# This is a Lexicon for the whole Pankosmia documentation
-# It contains any bit of text that appears at two places
-# If one day the title "UX/UI guidelines" is referenced on some page, we need a variable in this lexicon
-# This is for future maintenance and mainteners' mental health
+# This is a Lexicon for the Pankosmia documentation
+# It contains bits of text that benefits from quick overall updates
 
-# To reference a lexicon word, use: {{ site.data.lexicon.variable_name }}
+# To reference a lexicon variable, use: {{ site.data.lexicon.variable_name }}
 
 {
-  "required-fields": "Required fields", "required-fields_link": "required-fields"
+  "app-name": "Pithekos",
+  "app-version": ""
 }

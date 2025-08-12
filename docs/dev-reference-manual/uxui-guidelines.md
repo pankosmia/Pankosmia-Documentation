@@ -32,7 +32,7 @@ A Dialog is composed of three main parts:
 
 * **Actions**. There's always a way to go back (*Cancel*). And the main action is on the right. The label should reflect the action performed when clicked.
 
-    If any [required field](https://pankosmia.dev/uxui-guidelines/#{{ site.data.lexicon.required-fields_link }}) is in the content, the action button is disabled until they are completed.
+    If any [required field](https://pankosmia.dev/uxui-guidelines/#required-fields) is in the content, the action button is disabled until they are completed.
 
     > *Cancel*. Text button, primary color.
     >
@@ -44,7 +44,7 @@ Responsiveness is configured as follow:
 
     > TBD (full-width + variable maxWidth depending on breakpoints?).
 
-## {{ site.data.lexicon.required-fields }}
+## Required fields
 
 When information is required to proceed:
 * Required field(s) should show an asterisk `*` after the label.
