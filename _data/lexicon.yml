@@ -5,5 +5,8 @@
 
 {
   "app-name": "Pithekos",
-  "app-version": ""
+  "app-version": "",
+
+  "company-name": "Xenizo",
+  "company-website": "https://xenizo.fr/" # Linked on the homepage
 }
