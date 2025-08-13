@@ -19,7 +19,7 @@ email: webmaster@mvhsolutions.com
 
 ## Hosting
 
-The https://pankosmia.dev website is hosted by MVH SOLUTIONS
+The https://pankosmia.dev website is hosted by MVH SOLUTIONS.  
 Address: 117 rue Lamartine – 84300 Cavaillon (🚧 - Github?).
 
 ## Terms of use
