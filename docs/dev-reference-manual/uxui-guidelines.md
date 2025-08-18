@@ -42,7 +42,7 @@ A Dialog is composed of three main parts:
 
 Responsiveness is configured as follow:
 
-    > TBD (full-width + variable maxWidth depending on breakpoints?).
+    > 🚧 TBD (full-width + variable maxWidth depending on breakpoints?).
 
 ## Required fields
 
