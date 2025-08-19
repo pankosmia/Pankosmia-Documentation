@@ -9,6 +9,7 @@ title: Home
 
 *An ecosystem to build custom-made translation softwares.  
 Make your own tool for creating Scripture and related resources.*
+{: .fs-6 .fw-300 }
 
 Pankosmia is a Scripture translation software toolkit. {{ site.data.lexicon.app-name }} is the translation software made by [{{ site.data.lexicon.company-name }}]({{ site.data.lexicon.company-website }}) from Pankosmia.  
 This documentation presents {{ site.data.lexicon.app-name }} as an example of how Pankosmia works and what it can do.
