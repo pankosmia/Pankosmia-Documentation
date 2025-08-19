@@ -1,6 +1,7 @@
 ---
 layout: default
 nav_order: 3
-title: 🚧 User Guide
+title: User Guide
 permalink: /user-guide/
 ---
+🚧 Work in progress.

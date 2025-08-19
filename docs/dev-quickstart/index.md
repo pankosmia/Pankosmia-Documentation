@@ -1,6 +1,7 @@
 ---
 layout: default
 nav_order: 4
-title: 🚧 Dev Quickstart
+title: Dev Quickstart
 permalink: /dev-quickstart/
 ---
+🚧 Work in progress.

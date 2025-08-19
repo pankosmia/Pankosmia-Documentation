@@ -1,6 +1,7 @@
 ---
 layout: default
 nav_order: 2
-title: 🚧 Guided Tour
+title: Guided Tour
 permalink: /guided-tour/
 ---
+🚧 Work in progress.

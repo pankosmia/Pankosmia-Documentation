@@ -1,10 +1,12 @@
 ---
 layout: default
-title: 🚧 Legal Notices
+title: Legal Notices
 permalink: /legal-notices/
 ---
 # Legal Notices
 {: .no_toc }
+
+🚧 Work in progress.
 
 ## Table of Contents
 {: .no_toc .text-delta }

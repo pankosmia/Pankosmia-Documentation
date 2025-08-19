@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Local setup, build an installer
-permalink: /local-setup_build-an-installer/
+permalink: /local-setup_build-installer/
 parent: Electronite
 ---
 # Electron tips
