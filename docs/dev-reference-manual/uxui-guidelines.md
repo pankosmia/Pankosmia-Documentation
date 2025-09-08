@@ -44,6 +44,10 @@ Responsiveness is configured as follow:
 
     > 🚧 TBD (full-width + variable maxWidth depending on breakpoints?).
 
+## Icons
+
+[Material Icons](https://mui.com/material-ui/material-icons/?theme=Outlined) should be in the `Outlined style` by default.
+
 ## Required fields
 
 When information is required to proceed:
