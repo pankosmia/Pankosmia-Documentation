@@ -70,17 +70,17 @@ When information is required to proceed:
     > It's a good practice to [check contrast](https://app.contrast-finder.org/?lang=en). Online color tools tend to rely on different contrast ratios, better choose which standard to follow.  
     Note that MUI uses colors in different contexts, so try your colors as background for text, but also as text on a plain background.
 
-### Generate MUI color variants for `theme.json`
+### Generate MUI color variants for *theme.json*
 {: .no_toc }
 
 - Use the [MUI Theme Creator](https://zenoo.github.io/mui-theme-creator/). On the bottom-right you can edit a `main` color to automatically generate its `light` and `dark` variants, with the needed corresponding `contrastText` color.
 
     > Note those are different from a light/dark app theme. They are a lighter and darker shade of the main color. You can use them to play with contrast in the interface.
 
-### Generate `appbar-chip-inactive` colors
+### Generate *appbar-chip-inactive* colors
 {: .no_toc }
 
-- If your primary color is **darker** than your secondary. Use `secondary dark` as `appbar-chip-inactive main` and [Generate MUI color variants](https://pankosmia.dev/uxui-guidelines/#generate-MUI-color-variants-for-theme.json) from it.
-- If your primary color is **lighter** than your secondary. Use `secondary light` as `appbar-chip-inactive main` and [Generate MUI color variants](https://pankosmia.dev/uxui-guidelines/#generate-MUI-color-variants-for-theme.json) from it.
+- If your primary color is **darker** than your secondary. Use `secondary dark` as `appbar-chip-inactive main` and [Generate MUI color variants](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) from it.
+- If your primary color is **lighter** than your secondary. Use `secondary light` as `appbar-chip-inactive main` and [Generate MUI color variants](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) from it.
 
 ## Tooltip
