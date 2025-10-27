@@ -67,15 +67,22 @@ When information is required to proceed:
 
 - You can find matching primary and secondary colors using a palette generator like [Coolors](https://coolors.co/d4e09b-f6f4d2-cbdfbd-f19c79-a44a3f). If you already have a primary color in mind, you can also generate a matching secondary color with a [Color Wheel](https://www.figma.com/color-wheel/).
 
-    > It's a good practice to [check contrast](https://app.contrast-finder.org/?lang=en). Online color tools tend to rely on different contrast ratios, better choose which standard to follow.  
-    Note that MUI uses colors in different contexts, so try your colors as background for text, but also as text on a plain background.
-
 ### Generate MUI color variants for *theme.json*
 {: .no_toc }
 
 - Use the [MUI Theme Creator](https://zenoo.github.io/mui-theme-creator/). On the bottom-right you can edit a `main` color to automatically generate its `light` and `dark` variants, with the needed corresponding `contrastText` color.
 
     > Note those are different from a light/dark app theme. They are a lighter and darker shade of the main color. You can use them to play with contrast in the interface.
+
+### Check contrast
+{: .no_toc }
+
+- It's a good practice to [check contrast](https://app.contrast-finder.org/?lang=en). Online palette and color tools tend to rely on varying contrast standards. Better to double check and choose which contrast standard you want to aim for.
+- MUI uses colors in different contexts. To prevent any issue, try your colors' contrasts accordingly. Check primary and secondary as background for their corresponding `contrastText`. Check also primary and secondary as text on a white and black background, to make sure it works on a light or dark theme.
+
+    > Note that you don't necessarily need your colors to have a good contrast in light **and** dark mode out-of-the-box. When switching mode, colors can be further adjusted to better work in the other mode.
+
+- It's good to have some contrast between primary and secondary. You don't need a standard-level contrast. But a secondary component on a primary background can be a thing (like a badge with number of notifications). If primary and secondary are too close, the interface will become less clear.
 
 ### Generate *appbar-chip-inactive* colors
 {: .no_toc }
