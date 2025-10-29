@@ -41,7 +41,7 @@ How to develop quickly on the Electronite app while using a local dev server.
 
 Electronite is a drop-in replacement for electron that provides an enhanced font rendering system.  Make your dev changes the same way as for an Electron viewer.
 
-This project works in either a web browser or the Electronite viewer. Only add code to Electron/Electronite that are necessary for it to handle things that web browser already do (e.g., Print, Find, Zoom). Avoid coding in such a way that prevents web browser use.
+This project works in either a web browser or the Electronite viewer. Only add code to Electron/Electronite that are necessary for it to handle things that web browser already do (e.g., Print, Find, Zoom, Back, Forward). Avoid coding in such a way that prevents web browser use.
 
 💡 The way to develop in Electronite is to start by modifying the code that is used by your dev viewer. The file structure to focus on is below, in particular `electronStartup.js` and `preload.js`. Make changes here first to test in local dev:
 <pre>
