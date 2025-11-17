@@ -70,7 +70,7 @@ When information is required to proceed:
 ### Generate MUI color variants for *theme.json*
 {: .no_toc }
 
-- Use the [MUI Theme Creator](https://zenoo.github.io/mui-theme-creator/). On the bottom-right you can edit a `main` color to automatically generate its `light` and `dark` variants, with the needed corresponding `contrastText` color.
+- Use the [MUI Theme Creator](https://zenoo.github.io/mui-theme-creator/). On the bottom-right you can edit a `main` color to automatically generate its `light` and `dark` variants, and the corresponding `contrastText` color.
 
     > Note those are different from a light/dark app theme. They are a lighter and darker shade of the main color. You can use them to play with contrast in the interface.
 
@@ -78,9 +78,9 @@ When information is required to proceed:
 {: .no_toc }
 
 - It's a good practice to [check contrast](https://app.contrast-finder.org/?lang=en). Online palette and color tools tend to rely on varying contrast standards. Better to double check and choose which contrast standard you want to aim for.
-- MUI uses colors in different contexts. To prevent any issue, try your colors' contrasts accordingly. Check primary and secondary as background for their corresponding `contrastText`. Check also primary and secondary as text on a white and black background, to make sure it works on a light or dark theme.
+- MUI uses colors in different contexts. To prevent any issue, try your colors' contrasts accordingly. Check primary and secondary as text for both white and black background.
 
-    > Note that you don't necessarily need your colors to have a good contrast in light **and** dark mode out-of-the-box. When switching mode, colors can be further adjusted to better work in the other mode.
+    > Note that you don't necessarily need your colors to have a good contrast with white **and** and black out-of-the-box. This is to make sure light and dark mode will work. But colors can also be further adjusted to better work in a specific mode.
 
 - It's good to have some contrast between primary and secondary. You don't need a standard-level contrast. But a secondary component on a primary background can be a thing (like a badge with number of notifications). If primary and secondary are too close, the interface will become less clear.
 
