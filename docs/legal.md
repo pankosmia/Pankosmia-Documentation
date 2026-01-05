@@ -6,8 +6,6 @@ permalink: /legal-notices/
 # Legal Notices
 {: .no_toc }
 
-🚧 Work in progress.
-
 ## Table of Contents
 {: .no_toc .text-delta }
 
@@ -21,8 +19,8 @@ email: webmaster@mvhsolutions.com
 
 ## Hosting
 
-The https://pankosmia.dev website is hosted by MVH SOLUTIONS.  
-Address: 117 rue Lamartine – 84300 Cavaillon (🚧 - Github?).
+The https://pankosmia.dev website is hosted by MVH SOLUTIONS via https://github.com.  
+Address: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon.
 
 ## Terms of use
 
@@ -38,13 +36,13 @@ Users may not reproduce, represent, adapt, translate or transform any component 
 
 ## Hypertext links
 
-MVH Solutions (🚧) may not be held liable for the destination anchors of any hypertext links installed as part of the https://pankosmia.dev website pointing to other resources on the Internet.
+MVH Solutions may not be held liable for the destination anchors of any hypertext links installed as part of the https://pankosmia.dev website pointing to other resources on the Internet.
 
 Similarly, it may not be held liable in respect of the content and relevance of the information provided by sites published by third parties that can be accessed from the https://pankosmia.dev website via hypertext links.
 
-## GDPR (🚧 - we don't collect data, do we remove that?)
+## GDPR
 
-Data collected is processed for the purpose of making contact with customers. The data recipient is the manager.
+MVH Solutions does not collect any personal data unless the user initiates contact by email of via the Github interface. For details of how Github itself manages data, please see https://docs.github.com/fr/site-policy/github-terms/github-terms-of-service
 
 The French Data Protection Act 78-17 of January 6, 1978 as amended in 2004 grants you the right to access and/or rectify personal data. You can exercise this right by contacting the webmaster.
 
@@ -54,7 +52,7 @@ Pursuant to the General Data Protection Regulation in force as of 25 May 2018, t
 
 ## Site content
 
-MVH Solutions (🚧) provides users of the https://pankosmia.dev website with available, verified information, but may not be held liable should any information be unavailable.
+MVH Solutions provides users of the https://pankosmia.dev website with available, verified information, but may not be held liable should any information be unavailable.
 
 No guarantee is made that information made available on the https://pankosmia.dev website is correct, accurate or exhaustive.  
 
@@ -62,4 +60,4 @@ Authors retain liability for the content they provide. MVH Solutions (🚧) rese
 
 ## Cookies
 
-(🚧 - do we have to say something?)
+Please see Github's policy above.

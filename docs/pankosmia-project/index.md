@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_order: 4
+nav_order: 1
 title: The Pankosmia Project
 permalink: /pankosmia-project/
 ---
@@ -11,7 +11,7 @@ permalink: /pankosmia-project/
 {: .no_toc .text-delta }
 
 - TOC
-  {:toc}
+{:toc}
 
 ## Project Distinctives
 
@@ -30,7 +30,7 @@ Products ship as an Electronite app, ie Electron with added support for graphite
   - language and font options
   - access to burrito servers (when Internet is enabled)
   - shared application state between clients
-- multiple clients, served as compiled HTML/CSS/JS:
-  - core clients use React but other JS frameworks could be integrated
-- core libraries to simplify the creation of new clients
-- an extensive online build toolchain for multiple operating systems 
+- multiple clients, served as built HTML/CSS/Javascript:
+  - core clients use React and MUI, use of other frameworks is possible
+- core Node libraries to simplify the creation of new clients
+- an extensive online build toolchain for multiple operating systems

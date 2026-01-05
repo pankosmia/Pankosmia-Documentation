@@ -24,10 +24,6 @@ The website contains two major parts, in four sections:
 
 * ### [The Pankosmia Project](./docs/pankosmia-project/index.md)
 
-* ### [Guided Tour](./docs/guided-tour/index.md)
-
-* ### [User Guide](./docs/user-guide/index.md)
-
 * ### [Dev Quickstart](./docs/dev-quickstart/index.md)
 
 * ### [Dev Reference Manual](./docs/dev-reference-manual/index.md)
