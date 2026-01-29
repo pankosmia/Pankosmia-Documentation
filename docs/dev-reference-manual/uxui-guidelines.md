@@ -4,7 +4,7 @@ title: UX/UI guidelines
 permalink: /uxui-guidelines/
 parent: Dev Reference Manual
 ---
-# UX/UI guidelines
+# UX/UI Guidelines
 {: .no_toc }
 
 ## Table of Contents
