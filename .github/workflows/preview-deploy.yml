@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Branch or tag to build (e.g. feature/foo)'
-        required: true
-        default: 'main'
+        description: 'Optional: branch or tag to build (leave empty to build the branch selected in the Run workflow dialog)'
+        required: false
+        default: ''
 
 jobs:
   build-and-deploy:
@@ -14,13 +14,28 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Determine ref to build
+        id: ref
+        run: |
+          # Use provided input if set, otherwise use the branch selected in the UI
+          if [ -n "${{ github.event.inputs.ref }}" ]; then
+            REF="${{ github.event.inputs.ref }}"
+          else
+            # github.ref_name is the branch selected in the Run workflow dialog
+            REF="${{ github.ref_name }}"
+          fi
+          # Normalize preview path: keep slashes so previews appear under preview/branch/name
+          # but also create a safe filesystem directory by replacing initial refs/heads/ if present
+          REF="${REF#refs/heads/}"
+          echo "ref=$REF" >> $GITHUB_OUTPUT
+
       - name: Checkout target ref
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.ref }}
+          ref: ${{ steps.ref.outputs.ref }}
           fetch-depth: 0
 
-      - name: Set up Ruby
+      - name: Set up Ruby (pinned to match jekyll.yml)
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
           ruby-version: '3.3.6' # match your production Ruby
@@ -37,25 +52,43 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --destination ./_site
 
-      - name: Prepare preview branch tree
+      - name: Prepare preview tree
         run: |
-          PREVIEW_DIR=previews/${{ github.event.inputs.ref }}
-          mkdir -p out
-          # Use a temporary worktree to avoid clobbering current branch
+          PREVIEW_DIR="previews/${{ steps.ref.outputs.ref }}"
+          # Create a temporary worktree to operate on gh-pages without switching the checked-out repo
+          rm -rf out
           git init out
           pushd out
-          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git fetch --no-tags origin gh-pages:gh-pages || git fetch --no-tags origin HEAD:gh-pages
-          git checkout gh-pages || git checkout --orphan gh-pages
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          # Try to fetch gh-pages; if it doesn't exist, create it
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            git fetch --no-tags origin gh-pages:gh-pages
+            git checkout gh-pages
+          else
+            git fetch --no-tags origin HEAD:gh-pages || true
+            git checkout --orphan gh-pages
+            git rm -rf .
+            git commit --allow-empty -m "Initialize gh-pages"
+            git push origin gh-pages
+          fi
+          # Remove existing preview directory and copy new build
           rm -rf "$PREVIEW_DIR"
           mkdir -p "$PREVIEW_DIR"
           popd
           cp -a _site/. out/$PREVIEW_DIR/
 
       - name: Commit and push preview
+        env:
+          GIT_COMMITTER_NAME: "github-actions[bot]"
+          GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
         run: |
           pushd out
           git add --all
-          git commit -m "Preview: deploy ${{ github.event.inputs.ref }} to /previews/${{ github.event.inputs.ref }}" || echo "No changes to commit"
+          git commit -m "Preview: deploy ${{ steps.ref.outputs.ref }} to /previews/${{ steps.ref.outputs.ref }}" || echo "No changes to commit"
           git push origin gh-pages:gh-pages
           popd
+
+      - name: Post preview URL comment on PR (optional)
+        if: github.event_name == 'workflow_dispatch' && startsWith(github.event.inputs.ref, '') == false
+        run: |
+          echo "Preview deployed to: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/previews/${{ steps.ref.outputs.ref }}"
