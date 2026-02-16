@@ -1,0 +1,61 @@
+name: Preview deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Branch or tag to build (e.g. feature/foo)'
+        required: true
+        default: 'main'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout target ref
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref }}
+          fetch-depth: 0
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3' # match your production Ruby
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
+
+      - name: Build Jekyll site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --destination ./_site
+
+      - name: Prepare preview branch tree
+        run: |
+          PREVIEW_DIR=previews/${{ github.event.inputs.ref }}
+          mkdir -p out
+          # Use a temporary worktree to avoid clobbering current branch
+          git init out
+          pushd out
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git fetch --no-tags origin gh-pages:gh-pages || git fetch --no-tags origin HEAD:gh-pages
+          git checkout gh-pages || git checkout --orphan gh-pages
+          rm -rf "$PREVIEW_DIR"
+          mkdir -p "$PREVIEW_DIR"
+          popd
+          cp -a _site/. out/$PREVIEW_DIR/
+
+      - name: Commit and push preview
+        run: |
+          pushd out
+          git add --all
+          git commit -m "Preview: deploy ${{ github.event.inputs.ref }} to /previews/${{ github.event.inputs.ref }}" || echo "No changes to commit"
+          git push origin gh-pages:gh-pages
+          popd
