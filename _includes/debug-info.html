@@ -2,7 +2,7 @@
   <strong>Build info</strong><br>
   Jekyll version: {{ jekyll.version }}<br>
   Environment: {{ jekyll.environment }}<br>
-  Safe mode: {{ jekyll.safe | inspect }}<br>
+  Safe mode: {{ jekyll.safe | default: false }}<br>
 
   {% if site.github %}
     <br><strong>GitHub Pages info</strong><br>
