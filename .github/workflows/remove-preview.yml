@@ -1,0 +1,48 @@
+name: Remove preview
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Preview ref to remove (e.g. feature/branch/name)'
+        required: true
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  remove-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Determine preview path
+        id: preview
+        run: |
+          REF="${{ github.event.inputs.ref }}"
+          REF="${REF#refs/heads/}"
+          # sanitize: collapse duplicate slashes, remove leading/trailing slashes
+          REF="$(echo "$REF" | sed -E 's#/{2,}#/#g' | sed -E 's#^/##; s#/$##')"
+          PREVIEW_PATH="previews/${REF}"
+          echo "preview_path=${PREVIEW_PATH}" >> $GITHUB_OUTPUT
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository }}
+          ref: gh-pages
+          token: ${{ secrets.REPO_DEPLOY_TOKEN || github.token }}
+          fetch-depth: 0
+
+      - name: Remove preview folder
+        run: |
+          TARGET="${{ steps.preview.outputs.preview_path }}"
+          if [ ! -d "$TARGET" ]; then
+            echo "Preview path $TARGET does not exist on gh-pages; nothing to remove."
+            exit 0
+          fi
+          git rm -r --ignore-unmatch "$TARGET"
+          git commit -m "ci: remove preview ${TARGET}" || echo "No changes to commit"
+
+      - name: Push changes
+        run: |
+          git push origin gh-pages
