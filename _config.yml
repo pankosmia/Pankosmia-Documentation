@@ -92,14 +92,18 @@ back_to_top_text: "Back to top"
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - spare/
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - "spare/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
+  - "vendor/bundle"
+  - ".bundle"
+  - "node_modules"
+  - "_site"
+  - ".jekyll-cache"
+  - ".sass-cache"
+  - ".cache"
+  - "README.md"
+#   - gemfiles/    # Used for CI/test matrix where applicable; only exclude if it contains temporary/generated files
+#   - Gemfile      # Needed to define and pin dependencies
+#   - Gemfile.lock # Needed to define and pin dependencies

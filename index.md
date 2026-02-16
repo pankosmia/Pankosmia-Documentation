@@ -14,7 +14,7 @@ title: Home
 *An ecosystem to build custom-made translation tools*
 {: .fs-6 .fw-300 }
 
-Pankosmia is a Scripture translation software Ecosystem. It is used to build multiple
+Pankosmia is a scripture translation software Ecosystem. It is used to build multiple
 translation tools, using shared components.
 
 ## Contents
