@@ -4,58 +4,75 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Branch or tag to build (e.g. feature/foo)'
+        description: 'Branch, tag, PR ref, or commit to build'
         required: true
-        default: 'main'
+        default: ''
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-preview"
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    outputs:
+      preview_ref: ${{ steps.set-ref.outputs.preview_ref }}
+      base_path: ${{ steps.set-ref.outputs.base_path }}
     steps:
+      - name: Determine ref to build
+        id: set-ref
+        run: |
+          # Input 'ref' is required for this workflow (run it from main and set the target ref)
+          REF="${{ github.event.inputs.ref }}"
+          # Strip refs/heads/ prefix if present
+          REF="${REF#refs/heads/}"
+          # Normalize: remove leading/trailing slashes and collapse duplicate slashes
+          REF="$(echo "$REF" | sed -E 's#/{2,}#/#g' | sed -E 's#^/##; s#/$##')"
+          # Base path for preview (keeps internal slashes to create nested preview path)
+          BASE_PATH="/previews/${REF}"
+          echo "preview_ref=${REF}" >> $GITHUB_OUTPUT
+          echo "base_path=${BASE_PATH}" >> $GITHUB_OUTPUT
+
       - name: Checkout target ref
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.ref }}
+          ref: ${{ steps.set-ref.outputs.preview_ref }}
           fetch-depth: 0
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
-          ruby-version: '3.3' # match your production Ruby
+          ruby-version: '3.3.6'
           bundler-cache: true
+          cache-version: 0
 
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3
-
-      - name: Build Jekyll site
+      - name: Build with Jekyll
         env:
           JEKYLL_ENV: production
-        run: bundle exec jekyll build --destination ./_site
-
-      - name: Prepare preview branch tree
         run: |
-          PREVIEW_DIR=previews/${{ github.event.inputs.ref }}
-          mkdir -p out
-          # Use a temporary worktree to avoid clobbering current branch
-          git init out
-          pushd out
-          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git fetch --no-tags origin gh-pages:gh-pages || git fetch --no-tags origin HEAD:gh-pages
-          git checkout gh-pages || git checkout --orphan gh-pages
-          rm -rf "$PREVIEW_DIR"
-          mkdir -p "$PREVIEW_DIR"
-          popd
-          cp -a _site/. out/$PREVIEW_DIR/
+          bundle exec jekyll build --baseurl "${{ steps.set-ref.outputs.base_path }}" --destination ./_site
 
-      - name: Commit and push preview
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Output preview URL
         run: |
-          pushd out
-          git add --all
-          git commit -m "Preview: deploy ${{ github.event.inputs.ref }} to /previews/${{ github.event.inputs.ref }}" || echo "No changes to commit"
-          git push origin gh-pages:gh-pages
-          popd
+          echo "Preview deployed at: ${{ steps.deployment.outputs.page_url }}${{ needs.build.outputs.base_path }}"
