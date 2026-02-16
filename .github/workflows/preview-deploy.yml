@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Optional: branch, tag, PR ref, or commit to build (leave empty to use branch selected in Run workflow dialog)'
-        required: false
+        description: 'Branch, tag, PR ref, or commit to build'
+        required: true
         default: ''
 
 permissions:
@@ -27,19 +27,13 @@ jobs:
       - name: Determine ref to build
         id: set-ref
         run: |
-          # Use input ref if provided, otherwise use the branch selected in UI
-          if [ -n "${{ github.event.inputs.ref }}" ]; then
-            REF="${{ github.event.inputs.ref }}"
-          else
-            REF="${{ github.ref_name }}"
-          fi
-          # Strip optional refs/heads/ prefix
+          # Input 'ref' is required for this workflow (run it from main and set the target ref)
+          REF="${{ github.event.inputs.ref }}"
+          # Strip refs/heads/ prefix if present
           REF="${REF#refs/heads/}"
-          # Sanitize for a URL path but preserve internal slashes so previews appear under /previews/branch/name
-          # Replace any leading/trailing slashes and collapse multiple slashes
-          REF="${REF#"${REF%%[!/]*/}"}"
+          # Normalize: remove leading/trailing slashes and collapse duplicate slashes
           REF="$(echo "$REF" | sed -E 's#/{2,}#/#g' | sed -E 's#^/##; s#/$##')"
-          # Provide a base_path for Jekyll so the preview appears at /previews/<REF>
+          # Base path for preview (keeps internal slashes to create nested preview path)
           BASE_PATH="/previews/${REF}"
           echo "preview_ref=${REF}" >> $GITHUB_OUTPUT
           echo "base_path=${BASE_PATH}" >> $GITHUB_OUTPUT
@@ -61,7 +55,6 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          # Build Jekyll into ./_site and set baseurl so Pages serves under /previews/<ref>
           bundle exec jekyll build --baseurl "${{ steps.set-ref.outputs.base_path }}" --destination ./_site
 
       - name: Upload artifact
