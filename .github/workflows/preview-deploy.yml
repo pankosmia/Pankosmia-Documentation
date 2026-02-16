@@ -4,91 +4,82 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Optional: branch or tag to build (leave empty to build the branch selected in the Run workflow dialog)'
+        description: 'Optional: branch, tag, PR ref, or commit to build (leave empty to use branch selected in Run workflow dialog)'
         required: false
         default: ''
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-preview"
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    outputs:
+      preview_ref: ${{ steps.set-ref.outputs.preview_ref }}
+      base_path: ${{ steps.set-ref.outputs.base_path }}
     steps:
       - name: Determine ref to build
-        id: ref
+        id: set-ref
         run: |
-          # Use provided input if set, otherwise use the branch selected in the UI
+          # Use input ref if provided, otherwise use the branch selected in UI
           if [ -n "${{ github.event.inputs.ref }}" ]; then
             REF="${{ github.event.inputs.ref }}"
           else
-            # github.ref_name is the branch selected in the Run workflow dialog
             REF="${{ github.ref_name }}"
           fi
-          # Normalize preview path: keep slashes so previews appear under preview/branch/name
-          # but also create a safe filesystem directory by replacing initial refs/heads/ if present
+          # Strip optional refs/heads/ prefix
           REF="${REF#refs/heads/}"
-          echo "ref=$REF" >> $GITHUB_OUTPUT
+          # Sanitize for a URL path but preserve internal slashes so previews appear under /previews/branch/name
+          # Replace any leading/trailing slashes and collapse multiple slashes
+          REF="${REF#"${REF%%[!/]*/}"}"
+          REF="$(echo "$REF" | sed -E 's#/{2,}#/#g' | sed -E 's#^/##; s#/$##')"
+          # Provide a base_path for Jekyll so the preview appears at /previews/<REF>
+          BASE_PATH="/previews/${REF}"
+          echo "preview_ref=${REF}" >> $GITHUB_OUTPUT
+          echo "base_path=${BASE_PATH}" >> $GITHUB_OUTPUT
 
       - name: Checkout target ref
         uses: actions/checkout@v4
         with:
-          ref: ${{ steps.ref.outputs.ref }}
+          ref: ${{ steps.set-ref.outputs.preview_ref }}
           fetch-depth: 0
 
-      - name: Set up Ruby (pinned to match jekyll.yml)
+      - name: Setup Ruby
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
-          ruby-version: '3.3.6' # match your production Ruby
+          ruby-version: '3.3.6'
           bundler-cache: true
+          cache-version: 0
 
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3
-
-      - name: Build Jekyll site
+      - name: Build with Jekyll
         env:
           JEKYLL_ENV: production
-        run: bundle exec jekyll build --destination ./_site
-
-      - name: Prepare preview tree
         run: |
-          PREVIEW_DIR="previews/${{ steps.ref.outputs.ref }}"
-          # Create a temporary worktree to operate on gh-pages without switching the checked-out repo
-          rm -rf out
-          git init out
-          pushd out
-          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-          # Try to fetch gh-pages; if it doesn't exist, create it
-          if git ls-remote --exit-code --heads origin gh-pages; then
-            git fetch --no-tags origin gh-pages:gh-pages
-            git checkout gh-pages
-          else
-            git fetch --no-tags origin HEAD:gh-pages || true
-            git checkout --orphan gh-pages
-            git rm -rf .
-            git commit --allow-empty -m "Initialize gh-pages"
-            git push origin gh-pages
-          fi
-          # Remove existing preview directory and copy new build
-          rm -rf "$PREVIEW_DIR"
-          mkdir -p "$PREVIEW_DIR"
-          popd
-          cp -a _site/. out/$PREVIEW_DIR/
+          # Build Jekyll into ./_site and set baseurl so Pages serves under /previews/<ref>
+          bundle exec jekyll build --baseurl "${{ steps.set-ref.outputs.base_path }}" --destination ./_site
 
-      - name: Commit and push preview
-        env:
-          GIT_COMMITTER_NAME: "github-actions[bot]"
-          GIT_COMMITTER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
-        run: |
-          pushd out
-          git add --all
-          git commit -m "Preview: deploy ${{ steps.ref.outputs.ref }} to /previews/${{ steps.ref.outputs.ref }}" || echo "No changes to commit"
-          git push origin gh-pages:gh-pages
-          popd
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
-      - name: Post preview URL comment on PR (optional)
-        if: github.event_name == 'workflow_dispatch' && startsWith(github.event.inputs.ref, '') == false
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Output preview URL
         run: |
-          echo "Preview deployed to: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/previews/${{ steps.ref.outputs.ref }}"
+          echo "Preview deployed at: ${{ steps.deployment.outputs.page_url }}${{ needs.build.outputs.base_path }}"
