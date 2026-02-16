@@ -1,7 +1,28 @@
+# IDE config
 .idea/
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-Gemfile.lock
+
+# Bundler / Ruby
+/vendor/bundle/
+/.bundle/
+/.bundle/*
+
+# Jekyll build artifacts & caches
+_site/
+.jekyll-cache/
+.sass-cache/
+.cache/
+.jekyll-metadata/
+vendor/
+
+# Node
+node_modules/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs / temp
+*.log
+tmp/
