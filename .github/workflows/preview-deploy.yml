@@ -1,10 +1,10 @@
-name: Preview deploy
+name: Preview deploy (use workflow from main only)
 
 on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Branch, tag, PR ref, or commit to build. (Note: The branch dropdown above must be set to main.)'
+        description: 'Use workflow from Branch:main only (above). Enter branch, tag, PR ref, or commit to build below:'
         required: true
         default: ''
 
@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   build-preview:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     outputs:
       preview_ref: ${{ steps.set-ref.outputs.preview_ref }}
