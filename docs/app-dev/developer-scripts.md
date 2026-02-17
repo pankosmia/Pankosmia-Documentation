@@ -17,7 +17,7 @@ Developer scripts for an app repos built on Pankosmia
 - TOC
 {:toc}
 
-# Use
+## Use
 
  - Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.
     - Consider also if you need to delete ~/pankosmia_working first.
