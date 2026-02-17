@@ -1,10 +1,10 @@
-name: Remove preview (use workflow from main only)
+name: Remove preview (use main workflow)
 
 on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Use workflow from Branch:main only (above). Enter preview ref to remove below:'
+        description: 'Use workflow from Branch:main only above. Enter preview ref to remove below:'
         required: true
         default: ''
 

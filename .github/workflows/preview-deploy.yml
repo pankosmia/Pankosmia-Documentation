@@ -1,10 +1,10 @@
-name: Preview deploy (use workflow from main only)
+name: Preview deploy (use main workflow)
 
 on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Use workflow from Branch:main only (above). Enter branch, tag, PR ref, or commit to build below:'
+        description: 'Use workflow from Branch:main only above. Enter branch, tag, PR ref, or commit to build below:'
         required: true
         default: ''
 
