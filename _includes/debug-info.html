@@ -1,0 +1,21 @@
+<div class="debug-info" style="font-size:0.9em; color:#666; border-top:1px solid #ddd; margin-top:2rem; padding-top:0.5rem;">
+  <strong>Build info</strong><br>
+  Jekyll version: {{ jekyll.version }}<br>
+  Environment: {{ jekyll.environment }}<br>
+  Safe mode: {{ jekyll.safe | default: false }}<br>
+
+  {% if site.github %}
+    <br><strong>GitHub Pages info</strong><br>
+    {% if site.github.build_revision %}
+      Build revision: {{ site.github.build_revision }}<br>
+    {% endif %}
+    {% if site.github.environment %}
+      GitHub env: {{ site.github.environment }}<br>
+    {% endif %}
+  {% endif %}
+
+  {% if site.ruby %}
+    <br><strong>Ruby info (from config; keep in sync manually with Gemfile)</strong><br>
+    Ruby: {{ site.ruby }}<br>
+  {% endif %}
+</div>

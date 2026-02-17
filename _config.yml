@@ -26,7 +26,6 @@ repository: pankosmia/Pankosmia-Documentation
 # description: >- # this means to ignore newlines until "baseurl:"
 #  My description text.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: Pankosmia
 
@@ -107,3 +106,7 @@ exclude:
 #   - gemfiles/    # Used for CI/test matrix where applicable; only exclude if it contains temporary/generated files
 #   - Gemfile      # Needed to define and pin dependencies
 #   - Gemfile.lock # Needed to define and pin dependencies
+
+# Ruby version displayed in debugging info.
+# IMPORTANT: Set this in Gemfile, and then replicate it here.
+ruby: 3.3.6
