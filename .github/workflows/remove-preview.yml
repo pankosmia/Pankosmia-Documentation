@@ -25,24 +25,29 @@ jobs:
           PREVIEW_PATH="previews/${REF}"
           echo "preview_path=${PREVIEW_PATH}" >> $GITHUB_OUTPUT
 
-      - name: Checkout gh-pages
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository }}
-          ref: gh-pages
-          token: ${{ secrets.REPO_DEPLOY_TOKEN || github.token }}
+          ref: main
           fetch-depth: 0
 
       - name: Remove preview folder
         run: |
           TARGET="${{ steps.preview.outputs.preview_path }}"
           if [ ! -d "$TARGET" ]; then
-            echo "Preview path $TARGET does not exist on gh-pages; nothing to remove."
+            echo "Preview path $TARGET does not exist on main; nothing to remove."
             exit 0
           fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git rm -r --ignore-unmatch "$TARGET"
           git commit -m "ci: remove preview ${TARGET}" || echo "No changes to commit"
 
       - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git push origin gh-pages
+          git push origin main

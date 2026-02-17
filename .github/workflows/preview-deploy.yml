@@ -4,21 +4,19 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Branch, tag, PR ref, or commit to build'
+        description: 'Branch, tag, PR ref, or commit to build (e.g. feature/branch/name)'
         required: true
         default: ''
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: "pages-preview"
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-preview:
     runs-on: ubuntu-latest
     outputs:
       preview_ref: ${{ steps.set-ref.outputs.preview_ref }}
@@ -27,13 +25,10 @@ jobs:
       - name: Determine ref to build
         id: set-ref
         run: |
-          # Input 'ref' is required for this workflow (run it from main and set the target ref)
           REF="${{ github.event.inputs.ref }}"
-          # Strip refs/heads/ prefix if present
           REF="${REF#refs/heads/}"
-          # Normalize: remove leading/trailing slashes and collapse duplicate slashes
+          # Normalize: collapse duplicate slashes, remove leading/trailing slashes
           REF="$(echo "$REF" | sed -E 's#/{2,}#/#g' | sed -E 's#^/##; s#/$##')"
-          # Base path for preview (keeps internal slashes to create nested preview path)
           BASE_PATH="/previews/${REF}"
           echo "preview_ref=${REF}" >> $GITHUB_OUTPUT
           echo "base_path=${BASE_PATH}" >> $GITHUB_OUTPUT
@@ -45,34 +40,74 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
+        uses: ruby/setup-ruby@v4
         with:
           ruby-version: '3.3.6'
           bundler-cache: true
           cache-version: 0
 
-      - name: Build with Jekyll
+      - name: Build preview with Jekyll
         env:
           JEKYLL_ENV: production
         run: |
-          bundle exec jekyll build --baseurl "${{ steps.set-ref.outputs.base_path }}" --destination ./_site
+          bundle exec jekyll build \
+            --baseurl "${{ steps.set-ref.outputs.base_path }}" \
+            --destination ./_site
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload built preview
+        uses: actions/upload-artifact@v4
         with:
+          name: preview-site
           path: ./_site
 
-  deploy:
-    needs: build
+  publish-preview:
+    needs: build-preview
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Download built preview
+        uses: actions/download-artifact@v4
+        with:
+          name: preview-site
+          path: preview-temp
+
+      - name: Copy preview into previews/<ref> on main
+        run: |
+          REF="${{ needs.build-preview.outputs.preview_ref }}"
+          # target path in repo
+          TARGET_DIR="previews/${REF}"
+
+          mkdir -p "$(dirname "${TARGET_DIR}")"
+
+          # Remove any existing preview for this ref
+          rm -rf "${TARGET_DIR}"
+
+          # Copy built site
+          cp -R "preview-temp/." "${TARGET_DIR}"
+
+      - name: Commit and push preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add "previews/${{ needs.build-preview.outputs.preview_ref }}"
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit for preview."
+            exit 0
+          fi
+
+          git commit -m "ci: add preview for ${{ needs.build-preview.outputs.preview_ref }}"
+          git push origin main
 
       - name: Output preview URL
         run: |
-          echo "Preview deployed at: ${{ steps.deployment.outputs.page_url }}${{ needs.build.outputs.base_path }}"
+          echo "Preview deployed at: https://pankosmia.dev${{ needs.build-preview.outputs.base_path }}"
