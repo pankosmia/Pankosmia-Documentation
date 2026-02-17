@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Preview ref to remove (e.g. feature/branch/name)'
+        description: 'Preview ref to remove (Note: The branch dropdown above must be set to main.)'
         required: true
         default: ''
 

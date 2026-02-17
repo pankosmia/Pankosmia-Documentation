@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Branch, tag, PR ref, or commit to build (e.g. feature/branch/name)'
+        description: 'Branch, tag, PR ref, or commit to build. (Note: The branch dropdown above must be set to main.)'
         required: true
         default: ''
 
@@ -40,7 +40,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v4
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3.6'
           bundler-cache: true
