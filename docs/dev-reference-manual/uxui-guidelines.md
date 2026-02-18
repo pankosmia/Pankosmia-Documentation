@@ -7,7 +7,7 @@ parent: Dev Reference Manual
 # UX/UI Guidelines
 {: .no_toc }
 
-## Table of Contents
+## Table of contents
 {: .no_toc .text-delta }
 
 - TOC
