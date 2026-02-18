@@ -1,10 +1,10 @@
-name: Remove preview
+name: Remove preview (use main workflow)
 
 on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'Preview ref to remove (e.g. feature/branch/name)'
+        description: 'Use workflow from Branch:main only above. Enter preview ref to remove below:'
         required: true
         default: ''
 
@@ -13,6 +13,7 @@ permissions:
 
 jobs:
   remove-preview:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Determine preview path

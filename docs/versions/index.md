@@ -1,6 +1,7 @@
 ---
 title: Build Versions
 layout: versions
+nav_exclude: true
 permalink: /versions/
 ---
 

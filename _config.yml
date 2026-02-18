@@ -39,7 +39,7 @@ nav_external_links: # external links in the navigation, after the links to ordin
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
 
-favicon_ico: "/assets/images/logo.png"
+favicon_ico: "/assets/images/favicon.ico"
 
 # Build settings
 # theme: minima
@@ -104,8 +104,8 @@ exclude:
   - ".cache"
   - "README.md"
 #   - gemfiles/    # Used for CI/test matrix where applicable; only exclude if it contains temporary/generated files
-#   - Gemfile      # Needed to define and pin dependencies
-#   - Gemfile.lock # Needed to define and pin dependencies
+#   - Gemfile      # Defines and pin dependencies
+  - "Gemfile.lock" # Note: Github determines the jekyll version
 
 # Ruby version displayed in debugging info.
 # IMPORTANT: Set this in Gemfile, and then replicate it here.

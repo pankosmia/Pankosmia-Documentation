@@ -21,6 +21,12 @@ translation tools, using shared components.
 
 * ### [The Pankosmia Project](./docs/pankosmia-project/index.md)
 
+* ### [Dev Environment Requirements](./docs/dev-enviornment-requirements/index.md)
+
+* ### [App Spin-Up](./docs/app-spin-up/index.md)
+
+* ### [AppDev](./docs/app-dev/index.md)
+
 * ### [Dev Quickstart](./docs/dev-quickstart/index.md)
 
 * ### [Dev Reference Manual](./docs/dev-reference-manual/index.md)
