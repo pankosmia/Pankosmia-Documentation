@@ -127,7 +127,7 @@
   },"18": {
     "doc": "Build Versions",
     "title": "Build Versions",
-    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 1d353c7bf883d1733c86e1649afc6b604bf465dd GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: aff797a0553024bcce183022684c5f54444289cd GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
     "url": "/previews/run/desktop-app-template-readme/versions/",
     
     "relUrl": "/versions/"
@@ -190,7 +190,7 @@
   },"27": {
     "doc": "Home",
     "title": "Contents",
-    "content": ". | The Pankosmia Project . | Dev Quickstart . | Dev Reference Manual . | . Legal Notices . ",
+    "content": ". | The Pankosmia Project . | Dev Environment Requirements . | App Spin-Up . | AppDev . | Dev Quickstart . | Dev Reference Manual . | . Legal Notices . ",
     "url": "/previews/run/desktop-app-template-readme/#contents",
     
     "relUrl": "/#contents"
