@@ -27,52 +27,68 @@ How to fork and configure a Desktop App repo built on Pankosmia
 
 ## Setup
 
-1. Recommended directory structure:
-
+### Recommended directory structure:
 <ul><pre>
 |-- repos
     |-- pankosmia
         |-- [your-desktop-app-repo-name] <b><em>(30 characters or less on windows!)</em></b>
 </pre></ul>
 
-2. Replace all instances of "desktop-app-template" in packages.json with "[your-desktop-app-repo-name]"
-3. At the root of your clone of this repo, run
+### package.json
+Replace all instances of "desktop-app-template" in package.json with "[your-desktop-app-repo-name]"
 
+### At the root of your clone of this repo, run:
 <ul><pre>
 npm install
 </pre></ul>
 
-4. Edit app_config.env, entering the App Name, version number, Apps Short Name for working directory, assets, and clients.
- - Required Assets
-   - ASSET1=resource-core
-   - ASSET1_PATH=/runtime_resources
-   - ASSET1_NAME=app_resources
-   - ASSET2=resource-core
-   - ASSET2_PATH=/templates
-   - ASSET2_NAME=templates
-   - ASSET3=webfonts-core
-   - ASSET3_PATH=/
-   - ASSET3_NAME=webfonts
- - Required Clients
-   - CLIENT1=core-client-dashboard
-   - CLIENT2=core-client-content
-   - CLIENT***[any number]***=core-client-settings
+### Edit app_config.env
+Entering the App Name, version number, Apps Short Name for working directory, assets, and clients.
 
-5. Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see https://pankosmia.dev/uxui-guidelines/#theme
-6 For implementing your logo, see the [Branding README](https://github.com/pankosmia/desktop-app-template/tree/main/branding#readme){:target="_blank" :rel="noopener noreferrer"} for scripts to customize /globalBuildResources/*.ico, /globalBuildResources/*.png, and /globalBuildResources/icon.icns, along with info on how each is used.
-7. `cd [os]/scripts`
-8. Run<sup id="a1">[[1]](#f1)</sup> the `clone` script to clone all repos listed in `app_config.env` (assets and clients)
-9. Run<sup id="a1">[[1]](#f1)</sup> the `app_setup` script to generate the config files to match `app_config.env`. Re-run<sup id="a1">[[1]](#f1)</sup> the `app_setup` script anytime `app_config.env` is modified.
-10. Run<sup id="a1">[[1]](#f1)</sup> the `build_clients` script to build all clients. Be patient. This will take a while.
-   - This script is intended for setting all clients up for <b>first use</b>, or for rebuilding <b>all</b> clients to their <b>latest main</b> branch. It changes to the main<sup id="a2">[[2]](#f2)</sup> branch, pulls the latest, and builds (or rebuilds) every client every time it is run.<br />
-   - Build client manually when you want to use a branch or when you only need to rebuild one client or when you do not want all clients built from their latest main branch!
-11. Run<sup id="a1">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.)
-12. (Optional) Run<sup id="a1">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local dev build environment.
+#### Required Assets:
+- ASSET1=resource-core
+- ASSET1_PATH=/runtime_resources
+- ASSET1_NAME=app_resources
+- ASSET2=resource-core
+- ASSET2_PATH=/templates
+- ASSET2_NAME=templates
+- ASSET3=webfonts-core
+- ASSET3_PATH=/
+- ASSET3_NAME=webfonts
+
+#### Required Clients:
+- CLIENT1=core-client-dashboard
+- CLIENT2=core-client-content
+- CLIENT***[any number]***=core-client-settings
+
+### Branding
+
+Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see https://pankosmia.dev/uxui-guidelines/#theme
+
+For implementing your logo, see the [Branding README](https://github.com/pankosmia/desktop-app-template/tree/main/branding#readme){:target="_blank" :rel="noopener noreferrer"} for scripts to customize /globalBuildResources/*.ico, /globalBuildResources/*.png, and /globalBuildResources/icon.icns, along with info on how each is used.
+
+### Setup Scripts
+
+`cd [os]/scripts`
+
+Run<sup id="a1">[[1]](#f1)</sup> the `clone` script to clone all repos listed in `app_config.env` (assets and clients)
+
+Run<sup id="a1">[[1]](#f1)</sup> the `app_setup` script to generate the config files to match `app_config.env`. Re-run<sup id="a1">[[1]](#f1)</sup> the `app_setup` script anytime `app_config.env` is modified.
+
+Run<sup id="a1">[[1]](#f1)</sup> the `build_clients` script to build all clients. Be patient. This will take a while.
+- This script is intended for setting all clients up for <b>first use</b>, or for rebuilding <b>all</b> clients to their <b>latest main</b> branch. It changes to the main<sup id="a2">[[2]](#f2)</sup> branch, pulls the latest, and builds (or rebuilds) every client every time it is run.<br />
+- Build client manually when you want to use a branch or when you only need to rebuild one client or when you do not want all clients built from their latest main branch!
+
+Run<sup id="a1">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.)
+
+(Optional) Run<sup id="a1">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local dev build environment.
 
 ## Running your Setup
-1. Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.
+
+Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.
   - Only one instance of the server can be running at a time.<sup id="a3">[[3]](#f3)</sup>
-3. Run the `viewer` script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated.
+
+Run the `viewer` script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated.
   - The Electronite viewer is Chromium compiled with [Graphite](https://graphite.sil.org/){:target="_blank" :rel="noopener noreferrer"}
   - Some browsers that support graphite include [Firefox](https://www.firefox.com/){:target="_blank" :rel="noopener noreferrer"}, [Zen Browser](https://zen-browser.app/){:target="_blank" :rel="noopener noreferrer"}, and [LibreWolf](https://librewolf.net/){:target="_blank" :rel="noopener noreferrer"}.
 
