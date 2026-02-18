@@ -7,13 +7,13 @@ parent: Dev Reference Manual
 # UX/UI Guidelines
 {: .no_toc }
 
-## Table of contents
+## Table of Contents
 {: .no_toc .text-delta }
 
 - TOC
 {:toc}
 
-## General page template
+## General page Template
 
 ## Data grid
 
