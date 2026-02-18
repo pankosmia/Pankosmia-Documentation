@@ -63,7 +63,7 @@ Entering the App Name, version number, Apps Short Name for working directory, as
 
 ### Branding
 
-Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see https://pankosmia.dev/uxui-guidelines/#theme
+Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see the [Theme section of UX/UI guidelines](https://pankosmia.dev/uxui-guidelines/#theme).
 
 For implementing your logo, see the [Branding README](https://github.com/pankosmia/desktop-app-template/tree/main/branding#readme){:target="_blank" :rel="noopener noreferrer"} for scripts to customize /globalBuildResources/*.ico, /globalBuildResources/*.png, and /globalBuildResources/icon.icns, along with info on how each is used.
 
