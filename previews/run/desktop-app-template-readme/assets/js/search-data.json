@@ -127,7 +127,7 @@
   },"18": {
     "doc": "Build Versions",
     "title": "Build Versions",
-    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 6689b9146453c4d3b32cb108e2c1cfb081f36bc8 GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 1d353c7bf883d1733c86e1649afc6b604bf465dd GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
     "url": "/previews/run/desktop-app-template-readme/versions/",
     
     "relUrl": "/versions/"
@@ -141,7 +141,7 @@
   },"20": {
     "doc": "App Spin-up",
     "title": "Table of Contents",
-    "content": ". | Fork desktop-app-template | Setup | Viewing your Setup | Footnotes | Additional Info TL;DR - For reference when needed! . | Ecosystem setup and configuration | Installing the clients | Scripts . | Configuration . | Config scripts: | Setup scripts: | Usage scripts: | Maintenance scripts: | . | . | . | . ",
+    "content": ". | Fork desktop-app-template | Setup | Running your Setup | Footnotes | Additional Info TL;DR - For reference when needed! . | Ecosystem setup and configuration | Installing the clients | Scripts . | Configuration . | Config scripts: | Setup scripts: | Usage scripts: | Maintenance scripts: | . | . | . | . ",
     "url": "/previews/run/desktop-app-template-readme/app-spin-up/#table-of-contents",
     
     "relUrl": "/app-spin-up/#table-of-contents"
@@ -161,11 +161,11 @@
     "relUrl": "/app-spin-up/#setup"
   },"23": {
     "doc": "App Spin-up",
-    "title": "Viewing your Setup",
+    "title": "Running your Setup",
     "content": ". | Run[1] the run script to start the server without a browser launch. | Only one instance of the server can be running at a time.[3] | . | Run the viewer script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated. | The Electronite viewer is Chromium compiled with Graphite | Some browsers that support graphite include Firefox, Zen Browser, and LibreWolf. | . | . ",
-    "url": "/previews/run/desktop-app-template-readme/app-spin-up/#viewing-your-setup",
+    "url": "/previews/run/desktop-app-template-readme/app-spin-up/#running-your-setup",
     
-    "relUrl": "/app-spin-up/#viewing-your-setup"
+    "relUrl": "/app-spin-up/#running-your-setup"
   },"24": {
     "doc": "App Spin-up",
     "title": "Footnotes",
