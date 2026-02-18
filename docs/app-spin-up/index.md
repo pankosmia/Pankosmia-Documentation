@@ -69,7 +69,7 @@ npm install
 11. Run<sup id="a1">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.)
 12. (Optional) Run<sup id="a1">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local dev build environment.
 
-## Viewing your Setup
+## Running your Setup
 1. Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.
   - Only one instance of the server can be running at a time.<sup id="a3">[[3]](#f3)</sup>
 3. Run the `viewer` script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated.
