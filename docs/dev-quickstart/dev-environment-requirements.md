@@ -38,4 +38,4 @@ Local dev environment requirements for AppDev of a Desktop App repo built on Pan
 - npm 10.8.2 (tested on Sequoia)
 - node 20.18.1
 - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \| sh`
-- OpenSSL 3.5.0 -- `brew install openssl` |
+- OpenSSL 3.5.0 -- `brew install openssl`

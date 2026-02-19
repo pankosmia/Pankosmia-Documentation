@@ -27,7 +27,7 @@ Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a 
 ### Client development:
 Manually build the client(s) changed, stop the server if is is running, then start the server (`run`).  The `run` script will re-assemble the environment to include your build.
 
-See also [Running your setup]()../app-spin-up/#running-your-setup).
+See also [Running your setup](../app-spin-up/#running-your-setup).
 
 To generate a release package for the OS you are using, edit the version number for the release in `app_config.env` then see the next section below, or [Local installer build](../electronite-local-dev/#local-installer-build) or the bundle scripts in [Dev script reference](../dev-script-reference/)
 

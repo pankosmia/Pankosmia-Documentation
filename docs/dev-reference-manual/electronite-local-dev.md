@@ -86,6 +86,8 @@ Test by either building locally on all three operating systems, or by pushing a 
 ### Local Installer Build
 {: .no_toc }
 
+Before doing this, also consider [To Generate Artifacts](../dev-scripts/#to-generate-artifacts)
+
 #### Prerequisites:
   - Ensure the server (`build_server` script) is current!
   - Windows has an additional requirement for running this `bundle_viewer` build locally:
