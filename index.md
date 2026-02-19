@@ -19,11 +19,11 @@ translation tools, using shared components.
 
 ## Contents
 
-* ### [The Pankosmia Project](pankosmia-project/index.md)
+* ### [The Pankosmia Project](pankosmia-project/)
 
-* ### [Dev Quickstart](dev-quickstart/index.md)
+* ### [Dev Quickstart](dev-quickstart/)
 
-* ### [Dev Reference Manual](dev-reference-manual/index.md)
+* ### [Dev Reference Manual](dev-reference-manual/)
 
 ---
 [Legal Notices](legal-notices/)
