@@ -22,14 +22,14 @@
   },"3": {
     "doc": "App Spin-up",
     "title": "Setup",
-    "content": "Recommended directory structure: . |-- repos |-- pankosmia |-- [your-desktop-app-repo-name] (30 characters or less on windows!) . package.json . Replace all instances of “desktop-app-template” in package.json with “[your-desktop-app-repo-name]” . At the root of your clone of this repo, run: . npm install . Edit app_config.env . Entering the App Name, version number, Apps Short Name for working directory, assets, and clients. Required Assets: . | ASSET1=resource-core | ASSET1_PATH=/runtime_resources | ASSET1_NAME=app_resources | ASSET2=resource-core | ASSET2_PATH=/templates | ASSET2_NAME=templates | ASSET3=webfonts-core | ASSET3_PATH=/ | ASSET3_NAME=webfonts | . Required Clients: . | CLIENT1=core-client-dashboard | CLIENT2=core-client-content | CLIENT[any number]=core-client-settings | . Branding . Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see the Theme section of UX/UI guidelines. For implementing your logo, see the Branding README for scripts to customize /globalBuildResources/.ico, /globalBuildResources/.png, and /globalBuildResources/icon.icns, along with info on how each is used. Setup Scripts . cd [os]/scripts . Run[1] the clone script to clone all repos listed in app_config.env (assets and clients) . Run[1] the app_setup script to generate the config files to match app_config.env. Re-run[1] the app_setup script anytime app_config.env is modified. Run[1] the build_clients script to build all clients. Be patient. This will take a while. | This script is intended for setting all clients up for first use, or for rebuilding all clients to their latest main branch. It changes to the main[2] branch, pulls the latest, and builds (or rebuilds) every client every time it is run. | Build client manually when you want to use a branch or when you only need to rebuild one client or when you do not want all clients built from their latest main branch! | . Run[1] the build_server script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.) . (Optional) Run[1] the build_viewer script to create an Electronite viewer for use with the local dev build environment. ",
+    "content": "Recommended directory structure: . |-- repos |-- pankosmia |-- [your-desktop-app-repo-name] (30 characters or less on windows!) . package.json . Replace all instances of “desktop-app-template” in package.json with “[your-desktop-app-repo-name]” . At the root of your clone of this repo, run: . npm ci . Edit app_config.env . Entering the App Name, version number, Apps Short Name for working directory, assets, and clients. Required Assets: . | ASSET1=resource-core | ASSET1_PATH=/runtime_resources | ASSET1_NAME=app_resources | ASSET2=resource-core | ASSET2_PATH=/templates | ASSET2_NAME=templates | ASSET3=webfonts-core | ASSET3_PATH=/ | ASSET3_NAME=webfonts | . Required Clients: . | CLIENT1=core-client-dashboard | CLIENT2=core-client-content | CLIENT[any number]=core-client-settings | . Branding . Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see the Theme section of UX/UI guidelines. For implementing your logo, see the Branding README for scripts to customize /globalBuildResources/.ico, /globalBuildResources/.png, and /globalBuildResources/icon.icns, along with info on how each is used. Setup Scripts . cd [os]/scripts . Run[1] the clone script to clone all repos listed in app_config.env (assets and clients) . Run[1] the app_setup script to generate the config files to match app_config.env. Re-run[1] the app_setup script anytime app_config.env is modified. Run[1] the build_clients script to build all clients. Be patient. This will take a while. | This script is intended for setting all clients up for first use, or for rebuilding all clients to their latest main branch. It changes to the main[2] branch, pulls the latest, and builds (or rebuilds) every client every time it is run. | Build client manually when you want to use a branch or when you only need to rebuild one client or when you do not want all clients built from their latest main branch! | . Run[1] the build_server script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.) . (Optional) Run[1] the build_viewer script to create an Electronite viewer for use with the local dev build environment. ",
     "url": "/previews/run/undeprecation/app-spin-up/#setup",
     
     "relUrl": "/app-spin-up/#setup"
   },"4": {
     "doc": "App Spin-up",
     "title": "Running your Setup",
-    "content": "Run[1] the run script to start the server without a browser launch. | Only one instance of the server can be running at a time.[3] | . Run the viewer script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated. | The Electronite viewer is Chromium compiled with Graphite | Some browsers that support graphite include Firefox, Zen Browser, and LibreWolf. | . ",
+    "content": "Run[1] the run script to start the server without a browser launch. | Only one instance of the server can be running at a time.[3] | . Run the viewer script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated. | The Electronite viewer is Chromium compiled with Graphite | Some browsers that support graphite include Firefox, Zen Browser, and LibreWolf. | See Electronite Local Dev for additional detail. | . ",
     "url": "/previews/run/undeprecation/app-spin-up/#running-your-setup",
     
     "relUrl": "/app-spin-up/#running-your-setup"
@@ -62,321 +62,328 @@
     
     "relUrl": "/dev-environment-requirements/#tested-on"
   },"9": {
-    "doc": "Developer Scripts",
+    "doc": "Dev Script Reference",
+    "title": "Developer  Script Reference",
+    "content": "Additional Info TL;DR - For reference when needed on developer scripts for an app repos built on Pankosmia . ",
+    "url": "/previews/run/undeprecation/dev-script-reference/#developer--script-reference",
+    
+    "relUrl": "/dev-script-reference/#developer--script-reference"
+  },"10": {
+    "doc": "Dev Script Reference",
+    "title": "Table of Contents",
+    "content": ". | Ecosystem setup and configuration | Installing the clients | Scripts . | Configuration . | Config scripts: | Setup scripts: | Usage scripts: | Maintenance scripts: | . | . | . ",
+    "url": "/previews/run/undeprecation/dev-script-reference/#table-of-contents",
+    
+    "relUrl": "/dev-script-reference/#table-of-contents"
+  },"11": {
+    "doc": "Dev Script Reference",
+    "title": "Ecosystem setup and configuration",
+    "content": "This repo pulls together several libraries and projects into a single app. The projects are spread across several repos to allow modular reuse. Scripts follow for assisting in setup, though it can also all be setup manually. The following assume the repos are installed with the following directory structure. This is an example. Clients in use may vary. Configuration is handled via app_config.envand the app_setup script. |-- repos |-- pankosmia |-- core-client-content repository |-- core-client-dashboard repository |-- core-client-i18n-editor repository |-- core-client-remote-repos repository |-- core-client-settings repository |-- core-client-workspace repository |-- [your-desktop-app-repo-name] (30 characters or less on windows!) |-- resource-core |-- webfonts-core . ",
+    "url": "/previews/run/undeprecation/dev-script-reference/#ecosystem-setup-and-configuration",
+    
+    "relUrl": "/dev-script-reference/#ecosystem-setup-and-configuration"
+  },"12": {
+    "doc": "Dev Script Reference",
+    "title": "Installing the clients",
+    "content": "The local_server (pankosmia_web) serves compiled files from the build directory of each client, each client must be built. This is handled by the clone and build_clients scripts, though can also all be run manually which is helpful during development. # In each client repo, NOT this repo! npm ci npm run build . Running run, build_server, or bundle_... all copy the latest build to the build environment. ",
+    "url": "/previews/run/undeprecation/dev-script-reference/#installing-the-clients",
+    
+    "relUrl": "/dev-script-reference/#installing-the-clients"
+  },"13": {
+    "doc": "Dev Script Reference",
+    "title": "Scripts",
+    "content": "Configuration . Config files must match clients and assets utilized. Scripts that write them are provided, as per app_config.env. Files created by the app_setup script are: . | Linux | Windows | MacOS | . | buildSpec.json/globalBuildResources/i18nPatch.json/globalBuildResources/product.json/linux/buildResources/setup/app_setup.json | buildSpec.json\\globalBuildResources\\i18nPatch.json\\globalBuildResources\\product.json\\windows\\buildResources\\setup\\app_setup.json | buildSpec.json/globalBuildResources/i18nPatch.json/globalBuildResources/product.json/macos/buildResources/setup/app_setup.json | . Review app_config.env and adjust as needed, then run one of the setup scripts that follow. Re-run the app_setup script anytime app_config.env is changed. Config scripts: . Run from the provided location: . | Description | Linux:cd linux/scripts | Windows:cd windows/scripts | MacOS:cd macos/scripts | . | Uses app_config.env to generate/rebuild/replace app_setup.json, buildSpec.json, product.json, and i18nPatch.json | ./app_setup.bsh | .\\app_setup.bat | ./app_setup.zsh | . Setup scripts: . Run from the provided location: . | Description | Linux:cd linux/scripts | Windows:cd windows/scripts | MacOS:cd macos/scripts | . | Clones all repos in /app_config.env if a directory by that name does not already exit | ./clone.bsh Default clones via HTTPS.Optional argument:./clone.bsh -s Clones via SSH. | .\\clone.bat Default clones via HTTPS.Optional argument:.\\clone.bat -s Clones via SSH. | ./clone.zsh Default clones via HTTPS.Optional argument:./clone.zsh -s Clones via SSH. | . | For each asset repo in /app_config.env: git checkout main, git pullFor each client repo in /app_config.env: git checkout main, git pull, npm ci, and npm run build.Dev’s should build manually when testing branch(es). | ./build_clients.bsh | .\\build_clients.bat | ./build_clients.zsh | . | Create an Electronite viewer for use with the local dev build environment. | ./build_viewer.bsh | .\\build_viewer.ps1(use a powershell terminal) | ./build_viewer.zsh | . Usage scripts: . Note: Multiple arguments can be applied in any order, e.g., ./run.zsh -s -d is the same as ./run.zsh -d -s . | Description | Linux:cd linux/scripts | Windows:cd windows/scripts | MacOS:cd macos/scripts | . | removes the build directory and runs cargo clean(%) | ./clean.bshOptional arguments:./clean.bsh -s Will not ask if server is off | .\\clean.batOptional arguments:.\\clean.bat -s Will not ask if server is off | ./clean.zshOptional arguments:./clean.zsh -s Will not ask if server is off | . | runs cargo build, and node build.js | ./build_server.bshOptional arguments:./build_server.bsh -s Will not ask if server is off ./build_server.bsh -d Builds server in debug mode | .\\build_server.batOptional arguments:.\\build_server.bat -s Will not ask if server is off.\\build_server.bat -d Builds server in debug mode | ./build_server.zshOptional arguments:./build_server.zsh -s Will not ask if server is off ./build_server.zsh -d Builds server in debug mode | . | Assembles the build environment (clients) and starts the server (*) | ./run.bshOptional arguments:./run.bsh -s Will not ask if server is off.\\run.bsh -d Runs with server in debug mode | .\\run.batOptional arguments:.\\run.bat -s Will not ask if server is off.\\run.bat -d Runs with server in debug mode | ./run.zshOptional arguments:./run.zsh -s Will not ask if server is off.\\run.zsh -d Runs with server in debug mode | . | Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the build_viewer script.) | ./viewer.bshDev Tools: Ctrl + Shift + IOptional argument:./viewer.bsh [PORT#](default is 19119) | .\\viewer.batDev Tools: Ctrl + Shift + IOptional argument:.\\viewer.bat [PORT#](default is 19119) | ./viewer.zshDev Tools: Cmd + Option + IOptional argument:./viewer.zsh [PORT#](default is 19119) | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone installer. (*) (•) | ./bundle_viewer.bsh(Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.) | .\\bundle_viewer.ps1Optional arguments:`.\\bundle_viewer.ps1 -ServerOff \"Y\"` or: “y”; Will not ask if server is off | ./bundle_viewer.zshOptional arguments:./bundle_viewer.zsh -s Will not ask if server is off | . | Deletes the last .zip release bundle if it it exists, then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle (*) | ./bundle_tgz.bshOptional arguments:./bundle_tgz.bsh -s Will not ask if server is off/bundle_tgz.bsh -g Run from Github Actions | .\\bundle_zip.ps1Optional arguments:-ServerOff “Y” or: “y”; Will not ask if server is off-IsGHA “Y” or: “y”; Run from Gihtub Actions | ./bundle_zip.zshOptional arguments:/bundle_zip.zsh -s Will not ask if server is off/bundle_zip.zsh -g Run from Github Actions | . | Deletes the last .exe release bundle if it it exists, then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes an exe installer (*) (•) |   | .\\bundle_exe.ps1Optional arguments:`bundle_exe.ps1 -ServerOff \"Y\"` or: “y”; Will not ask if server is off(•) |   | . ()** **Ensure the server (build_server.bat) is current! (•) *Environment prerequisite for running the exe build locally: Install Inno Setup -tested with v6.4.3 (%) Targeted clean tips: . | To clean just the dev server: cd to the /local_server directory and run cargo clean --target-dir target/debug | To clean just the dev server: cd to the /local_server directory and run cargo clean --target-dir target/release | To clean just the build environment, cd to the subdirectory for your OS (i.e., /macos, /linux, or /windows), then recursively remove its build subdirectory. | (The clean script does all of the above.) | . Maintenance scripts: . Run from the provided location: . | Description | Linux:cd linux/scripts | Windows:cd windows/scripts | MacOS:cd macos/scripts | . | Facilitates syncing with upstream with exclusion of files expected to differ: | ./sync.bshOptional arguments:./sync.bsh -p Will not ask if latest is already pulled. | .\\sync.batOptional arguments:.\\sync.bat -p Will not ask if latest is already pulled | ./sync.zshOptional arguments:./sync.zsh -p Will not ask if latest is already pulled. | . ",
+    "url": "/previews/run/undeprecation/dev-script-reference/#scripts",
+    
+    "relUrl": "/dev-script-reference/#scripts"
+  },"14": {
+    "doc": "Dev Script Reference",
+    "title": "Dev Script Reference",
+    "content": " ",
+    "url": "/previews/run/undeprecation/dev-script-reference/",
+    
+    "relUrl": "/dev-script-reference/"
+  },"15": {
+    "doc": "Dev Scripts",
     "title": "Developer Scripts",
     "content": "Developer scripts for an app repos built on Pankosmia . ",
-    "url": "/previews/run/undeprecation/developer-scripts/",
+    "url": "/previews/run/undeprecation/dev-scripts/#developer-scripts",
     
-    "relUrl": "/developer-scripts/"
-  },"10": {
-    "doc": "Developer Scripts",
+    "relUrl": "/dev-scripts/#developer-scripts"
+  },"16": {
+    "doc": "Dev Scripts",
     "title": "Table of Contents",
     "content": ". | Use . | Client development: | To generate artifacts: | . | Maintenance | Footnotes | . ",
-    "url": "/previews/run/undeprecation/developer-scripts/#table-of-contents",
+    "url": "/previews/run/undeprecation/dev-scripts/#table-of-contents",
     
-    "relUrl": "/developer-scripts/#table-of-contents"
-  },"11": {
-    "doc": "Developer Scripts",
+    "relUrl": "/dev-scripts/#table-of-contents"
+  },"17": {
+    "doc": "Dev Scripts",
     "title": "Use",
-    "content": "Run[1] the run script to start the server without a browser launch. | Consider also if you need to delete ~/pankosmia_working first. | You’ll want to restart the server if deleting ~/pankosmia_working after starting the server. To restart, exit the terminal window where the server is running the run the run script[1] again. | Only one instance of the server can be running at a time.[3] | . Client development: . Manually build the client(s) changed, stop the server it is is running, then start the server (run). The run script will re-assemble the environment to include your build. Run the viewer script to use the Electronite viewer with the local dev build environment. To generate a release package for the OS you are using, edit the version number for the release in app_config.env then run[1] the bundle_... script. To generate artifacts: . Manually run the desired workflow (Actions &gt; [select workflow] &gt; Run workflow). | The current main branch of client repo and resource at the time of running the workflow will be used. | . Download resulting artifacts (Actions &gt; click the name of a run to see the workflow run summary &gt; scroll down to the bottom to the Artifacts section &gt; to download, click either the name of each artifact or the down arrow on each row . Any double-compressed artifacts should have one layer uncompressed before release, e.g.: . | Strip *.tgz.zip down to *.tgz | Strip *.zip.zip down to *.zip | If working from windows, avoid releasing a re-zipping a macos or linux zip package if a .pkg, .sh, .bsh, .zsh was in the layer re-zipped in windows. Doing so would otherwise remove file permission settings of chmod +x where they are needed. | Release the *.pkg.zip layer as .zip as it includes a README file in the same layer as the pkg, which contains installation and upgrade instructions / info. | . Upload releases manually by going to the Release section of your repo and selecting “Draft a new release”. ",
-    "url": "/previews/run/undeprecation/developer-scripts/#use",
+    "content": "Run[1] the run script to start the server without a browser launch. | Consider also if you need to delete ~/pankosmia_working first. | You’ll want to restart the server if deleting ~/pankosmia_working after starting the server. To restart, exit the terminal window where the server is running the run the run script[1] again. | Only one instance of the server can be running at a time.[3] | . Client development: . Manually build the client(s) changed, stop the server if is is running, then start the server (run). The run script will re-assemble the environment to include your build. See also Running your setup../app-spin-up/#running-your-setup). To generate a release package for the OS you are using, edit the version number for the release in app_config.env then see the next section below, or Local installer build or the bundle scripts in Dev script reference . To generate artifacts: . Manually run the desired workflow (Actions &gt; [select workflow] &gt; Run workflow). | The current main branch of client repo and resource at the time of running the workflow will be used. | . Download resulting artifacts (Actions &gt; click the name of a run to see the workflow run summary &gt; scroll down to the bottom to the Artifacts section &gt; to download, click either the name of each artifact or the down arrow on each row . Any double-compressed artifacts should have one layer uncompressed before release, e.g.: . | Strip *.tgz.zip down to *.tgz | Strip *.zip.zip down to *.zip | If working from windows, avoid releasing a re-zipping a macos or linux zip package if a .pkg, .sh, .bsh, .zsh was in the layer re-zipped in windows. Doing so would otherwise remove file permission settings of chmod +x where they are needed. | Release the *.pkg.zip layer as .zip as it includes a README file in the same layer as the pkg, which contains installation and upgrade instructions / info. | . Upload releases manually by going to the Release section of your repo and selecting “Draft a new release”. ",
+    "url": "/previews/run/undeprecation/dev-scripts/#use",
     
-    "relUrl": "/developer-scripts/#use"
-  },"12": {
-    "doc": "Developer Scripts",
+    "relUrl": "/dev-scripts/#use"
+  },"18": {
+    "doc": "Dev Scripts",
     "title": "Maintenance",
     "content": "To update the server, change the latest version of panksomia-web in /local_server/Cargo.toml and re-run the build_server script. To sync this repo with its upstream, run the sync script. ",
-    "url": "/previews/run/undeprecation/developer-scripts/#maintenance",
+    "url": "/previews/run/undeprecation/dev-scripts/#maintenance",
     
-    "relUrl": "/developer-scripts/#maintenance"
-  },"13": {
-    "doc": "Developer Scripts",
+    "relUrl": "/dev-scripts/#maintenance"
+  },"19": {
+    "doc": "Dev Scripts",
     "title": "Footnotes",
     "content": "[1] … Windows developers, run .bat scripts from a Powershell or Command terminal:              …repos\\pankosmia[your-desktop-app-repo-name]\\windows\\scripts&gt; .\\[scriptname].bat              Use a powershell terminal for the .ps1 build scripts. MacOS developers, run .bsh scripts from a MacOS terminal:              …repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts&gt; ./[scriptname].bsh Linux developers, run .zsh scripts from a linux terminal:              …repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts&gt; ./[scriptname].zsh . [2] … The build script will fail on any clients set to a different branch with uncommitted changes or with conflicts vs, the latest main pull. Scroll back up in the terminal to find any build errors and address them. [3] … If running into an error saying that another instance is running, you can either find the other instance and stop it, or simply reboot. Another instance could be one started from a .zip, .tgz, installed version, run from a different repo, or a manually started panksomia-web. ",
-    "url": "/previews/run/undeprecation/developer-scripts/#footnotes",
+    "url": "/previews/run/undeprecation/dev-scripts/#footnotes",
     
-    "relUrl": "/developer-scripts/#footnotes"
-  },"14": {
+    "relUrl": "/dev-scripts/#footnotes"
+  },"20": {
+    "doc": "Dev Scripts",
+    "title": "Dev Scripts",
+    "content": " ",
+    "url": "/previews/run/undeprecation/dev-scripts/",
+    
+    "relUrl": "/dev-scripts/"
+  },"21": {
     "doc": "Electronite Local Dev",
     "title": "Electronite local dev",
     "content": "How to make dev changes to Electronite while using a local dev server. ",
     "url": "/previews/run/undeprecation/electronite-local-dev/#electronite-local-dev",
     
     "relUrl": "/electronite-local-dev/#electronite-local-dev"
-  },"15": {
+  },"22": {
     "doc": "Electronite Local Dev",
     "title": "Table of Contents",
     "content": ". | Windows, MacOS, or Linux . | Electronite Dev Viewer | Making dev changes to Electronite | Deploying tested dev changes to Electronite . | Prerequisites: | bundle_viewer script | bundle_viewer script Outputs: | . | . | . ",
     "url": "/previews/run/undeprecation/electronite-local-dev/#table-of-contents",
     
     "relUrl": "/electronite-local-dev/#table-of-contents"
-  },"16": {
+  },"23": {
     "doc": "Electronite Local Dev",
     "title": "Windows, MacOS, or Linux",
-    "content": "Prerequisites . | See README ‘Environment requirements for this repo’. | Follow the README ‘Setup’. | . Electronite Dev Viewer . | 💡 To create an Electronite viewer for use with your local dev build environment, run this script once while online: . | Linux: cd linux/scripts then ./build_viewer.bsh | Windows: cd windows\\scripts then .\\build_viewer.ps1 (use a powershell terminal) | MacOS: cd macos/scripts the ./build_viewer.zsh | . | Read the ‘Run …’ and ‘Client Development …’ bullets at the top of app README ‘Use’. | 💡 When the server is running (the run script), start the Electronite viewer created by the build_viewer script: | . | Linux: cd linux/scripts then ./viewer.bsh – Dev Tools: Ctrl + Shift + I | Windows: cd windows\\scripts then .\\viewer.bat – Dev Tools: Ctrl + Shift + I | MacOS: cd macos/scripts then ./viewer.zsh – Dev Tools: Cmd + Option + I | . | . Making dev changes to Electronite . Electronite is a drop-in replacement for electron that provides an enhanced font rendering system. Make your dev changes the same way as for an Electron viewer. This project works in either a web browser or the Electronite viewer. Only add code to Electron/Electronite that are necessary for it to handle things that web browser already do (e.g., Print, Find, Zoom, Back, Forward). Avoid coding in such a way that prevents web browser use. 💡 The way to develop in Electronite is to start by modifying the code that is used by your dev viewer. The file structure to focus on is below, in particular electronStartup.js and preload.js. Make changes here first to test in local dev: . |-- [linux | windows | macos] |-- viewer |-- project |-- payload |-- app |-- appLauncherElectron.sh | appLauncherElectron.bat |-- electron |-- electronStartup.js |-- favicon.png |-- favicon@1.5x.png |-- favicon@1.25x.png |-- favicon@2x.png |-- preload.js . Deploying tested dev changes to Electronite . If changes to electronStartup.js are required, reproduce these changes in the following two files: . |-- buildResources |-- electron |-- electronDevStartup.js (used by the viewer and the Linux app; launches the viewer without starting the server) |-- electronStartup.js (used by the Windows and MacOS apps; starts the server then launches the viewer) . Test electronDevStartup.js by re-running the build_viewer script. See Electronite Dev Viewer above. Also used in the Linux app. Test electronStartup.js by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs for Windows/MacOS. If a change needs to be made to favicon*.png, make those changes in the globalBuildResources directory. The same test instructions above apply. If a change needs to be made to the appLauncherElectron script, it will need to be made in 3 different places and tested on three different operating systems. Those file lives at: . | linux\\buildResources\\appLauncherElectron.sh | windows\\buildResources\\appLauncherElectron.bat | macos\\buildResources\\appLauncherElectron.sh | . Test by either building locally on all three operating systems, or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs. Local Installer Build . Prerequisites: . | Ensure the server (build_server script) is current! | Windows has an additional requirement for running this bundle_viewer build locally: . | Install Inno Setup -tested with v6.4.3 | . | . bundle_viewer script . | Windows - cd windows\\scripts then .\\bundle_viewer.ps1 . | Optional arguments: . | .\\bundle_viewer.ps1 -ServerOff \"Y\"  or: “y”; Will not ask if server is off | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm install, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer. | . | MacOS - cd /macos/scripts the ./bundle_viewer.zsh . | Optional arguments: . | ./bundle_viewer.zsh -s  Will not ask if server is off | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm install, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer. | . | Linux - cd /linux/scripts the ./bundle_viewer.bsh . | Before running: . | manually delete prior local builds | npm install (if not already run) | app_setup.bat to ensure version consistency (unless already current) | run run ./bundle_tgz.bsh | then run ./bundle_viewer.bsh | . | . | . bundle_viewer script Outputs: . | Windows: releases\\windows\\intel64\\[app-name]-windows-setup-standalone-[version].exe | MacOS: releases/macos/[intel64|arm64]/[app-name]-macos-installer-standalone-[intel64|arm64]-[version].pkg | Linux: releases/linux/[app-name]-linux-standalone-intel64-[version].deb | . ",
+    "content": "Prerequisites . | See README ‘Environment requirements for this repo’. | Follow the README ‘Setup’. | . Electronite Dev Viewer . | 💡 To create an Electronite viewer for use with your local dev build environment, run this script once while online: . | Linux: cd linux/scripts then ./build_viewer.bsh | Windows: cd windows\\scripts then .\\build_viewer.ps1 (use a powershell terminal) | MacOS: cd macos/scripts the ./build_viewer.zsh | . | Read the ‘Run …’ and ‘Client Development …’ bullets at the top of app README ‘Use’. | 💡 When the server is running (the run script), start the Electronite viewer created by the build_viewer script: | . | Linux: cd linux/scripts then ./viewer.bsh – Dev Tools: Ctrl + Shift + I | Windows: cd windows\\scripts then .\\viewer.bat – Dev Tools: Ctrl + Shift + I | MacOS: cd macos/scripts then ./viewer.zsh – Dev Tools: Cmd + Option + I | . | . Making dev changes to Electronite . Electronite is a drop-in replacement for electron that provides an enhanced font rendering system. Make your dev changes the same way as for an Electron viewer. This project works in either a web browser or the Electronite viewer. Only add code to Electron/Electronite that are necessary for it to handle things that web browser already do (e.g., Print, Find, Zoom, Back, Forward). Avoid coding in such a way that prevents web browser use. 💡 The way to develop in Electronite is to start by modifying the code that is used by your dev viewer. The file structure to focus on is below, in particular electronStartup.js and preload.js. Make changes here first to test in local dev: . |-- [linux | windows | macos] |-- viewer |-- project |-- payload |-- app |-- appLauncherElectron.sh | appLauncherElectron.bat |-- electron |-- electronStartup.js |-- favicon.png |-- favicon@1.5x.png |-- favicon@1.25x.png |-- favicon@2x.png |-- preload.js . Deploying tested dev changes to Electronite . If changes to electronStartup.js are required, reproduce these changes in the following two files: . |-- buildResources |-- electron |-- electronDevStartup.js (used by the viewer and the Linux app; launches the viewer without starting the server) |-- electronStartup.js (used by the Windows and MacOS apps; starts the server then launches the viewer) . Test electronDevStartup.js by re-running the build_viewer script. See Electronite Dev Viewer above. Also used in the Linux app. Test electronStartup.js by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs for Windows/MacOS. If a change needs to be made to favicon*.png, make those changes in the globalBuildResources directory. The same test instructions above apply. If a change needs to be made to the appLauncherElectron script, it will need to be made in 3 different places and tested on three different operating systems. Those file lives at: . | linux\\buildResources\\appLauncherElectron.sh | windows\\buildResources\\appLauncherElectron.bat | macos\\buildResources\\appLauncherElectron.sh | . Test by either building locally on all three operating systems, or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs. Local Installer Build . Prerequisites: . | Ensure the server (build_server script) is current! | Windows has an additional requirement for running this bundle_viewer build locally: . | Install Inno Setup -tested with v6.4.3 | . | . bundle_viewer script . | Windows - cd windows\\scripts then .\\bundle_viewer.ps1 . | Optional arguments: . | .\\bundle_viewer.ps1 -ServerOff \"Y\"  or: “y”; Will not ask if server is off | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer. | . | MacOS - cd /macos/scripts the ./bundle_viewer.zsh . | Optional arguments: . | ./bundle_viewer.zsh -s  Will not ask if server is off | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer. | . | Linux - cd /linux/scripts the ./bundle_viewer.bsh . | Before running: . | manually delete prior local builds | npm ci (if not already run) | app_setup.bat to ensure version consistency (unless already current) | run run ./bundle_tgz.bsh | then run ./bundle_viewer.bsh | . | . | . bundle_viewer script Outputs: . | Windows: releases\\windows\\intel64\\[app-name]-windows-setup-standalone-[version].exe | MacOS: releases/macos/[intel64|arm64]/[app-name]-macos-installer-standalone-[intel64|arm64]-[version].pkg | Linux: releases/linux/[app-name]-linux-standalone-intel64-[version].deb | . ",
     "url": "/previews/run/undeprecation/electronite-local-dev/#windows-macos-or-linux",
     
     "relUrl": "/electronite-local-dev/#windows-macos-or-linux"
-  },"17": {
+  },"24": {
     "doc": "Electronite Local Dev",
     "title": "Electronite Local Dev",
     "content": " ",
     "url": "/previews/run/undeprecation/electronite-local-dev/",
     
     "relUrl": "/electronite-local-dev/"
-  },"18": {
+  },"25": {
     "doc": "Dev Reference Manual",
     "title": "Dev Reference Manual",
     "content": " ",
     "url": "/previews/run/undeprecation/dev-reference-manual/",
     
     "relUrl": "/dev-reference-manual/"
-  },"19": {
+  },"26": {
     "doc": "The Pankosmia Project",
     "title": "The Pankosmia Project",
     "content": " ",
     "url": "/previews/run/undeprecation/pankosmia-project/",
     
     "relUrl": "/pankosmia-project/"
-  },"20": {
+  },"27": {
     "doc": "The Pankosmia Project",
     "title": "Table of Contents",
     "content": ". | Philosophy | Project Distinctives | Architecture | . ",
     "url": "/previews/run/undeprecation/pankosmia-project/#table-of-contents",
     
     "relUrl": "/pankosmia-project/#table-of-contents"
-  },"21": {
+  },"28": {
     "doc": "The Pankosmia Project",
     "title": "Philosophy",
     "content": "Pankosmia began with a conversation about the First the monkey principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don’t focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger. Some corollaries of “First the Monkey” for us are . | focus on the hard and unsolved problems | the working but clunky solution we can build and ship is better than both the lovely solution we can’t build and ship and the lovely UI we can ship that doesn’t do the right thing under the hood | polishing things that we know how to polish is rarely urgent | users need happy devs because devs build the systems the users need | . ",
     "url": "/previews/run/undeprecation/pankosmia-project/#philosophy",
     
     "relUrl": "/pankosmia-project/#philosophy"
-  },"22": {
+  },"29": {
     "doc": "The Pankosmia Project",
     "title": "Project Distinctives",
     "content": ". | open source (but third-party products may include closed-source clients) | radically offline-first | support for graphite-enabled fonts | built around Scripture Burrito for all content | multiple “white app” products that can be branded and maintained by different organizations and developed to meet different user needs | multiple clients per product, including standard clients for core functionality | . ",
     "url": "/previews/run/undeprecation/pankosmia-project/#project-distinctives",
     
     "relUrl": "/pankosmia-project/#project-distinctives"
-  },"23": {
+  },"30": {
     "doc": "The Pankosmia Project",
     "title": "Architecture",
     "content": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes . | a localhost HTTP server, written in Rust, that handles . | access to local burritos | language and font options | access to burrito servers (when Internet is enabled) | shared application state between clients | . | multiple clients, served as built HTML/CSS/Javascript: . | core clients use React and MUI, use of other frameworks is possible | . | core Node libraries to simplify the creation of new clients | an extensive online build toolchain for multiple operating systems | . ",
     "url": "/previews/run/undeprecation/pankosmia-project/#architecture",
     
     "relUrl": "/pankosmia-project/#architecture"
-  },"24": {
+  },"31": {
     "doc": "Build Versions",
     "title": "Build Versions",
-    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 93497e24bbc25abf558fe83241a6d94f8fcd8750 GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 89d4fb48658cebded33cf5b9b60d363a747ca0d6 GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
     "url": "/previews/run/undeprecation/versions/",
     
     "relUrl": "/versions/"
-  },"25": {
+  },"32": {
     "doc": "Dev Quickstart",
     "title": "Dev Quickstart",
     "content": " ",
     "url": "/previews/run/undeprecation/dev-quickstart/",
     
     "relUrl": "/dev-quickstart/"
-  },"26": {
+  },"33": {
     "doc": "Home",
     "title": "Pankosmia",
     "content": "An ecosystem to build custom-made translation tools . Pankosmia is a scripture translation software Ecosystem. It is used to build multiple translation tools, using shared components. ",
     "url": "/previews/run/undeprecation/#pankosmia",
     
     "relUrl": "/#pankosmia"
-  },"27": {
+  },"34": {
     "doc": "Home",
     "title": "Contents",
     "content": ". | The Pankosmia Project . | Dev Quickstart . | Dev Reference Manual . | . Legal Notices . ",
     "url": "/previews/run/undeprecation/#contents",
     
     "relUrl": "/#contents"
-  },"28": {
+  },"35": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
     "url": "/previews/run/undeprecation/",
     
     "relUrl": "/"
-  },"29": {
+  },"36": {
     "doc": "Legal Notices",
     "title": "Legal Notices",
     "content": " ",
     "url": "/previews/run/undeprecation/legal-notices/",
     
     "relUrl": "/legal-notices/"
-  },"30": {
+  },"37": {
     "doc": "Legal Notices",
     "title": "Table of Contents",
     "content": ". | Contact | Hosting | Terms of use | Property | Hypertext links | GDPR | Site content | Cookies | . ",
     "url": "/previews/run/undeprecation/legal-notices/#table-of-contents",
     
     "relUrl": "/legal-notices/#table-of-contents"
-  },"31": {
+  },"38": {
     "doc": "Legal Notices",
     "title": "Contact",
     "content": "CEO: Mark Howe email: webmaster@mvhsolutions.com . ",
     "url": "/previews/run/undeprecation/legal-notices/#contact",
     
     "relUrl": "/legal-notices/#contact"
-  },"32": {
+  },"39": {
     "doc": "Legal Notices",
     "title": "Hosting",
     "content": "The https://pankosmia.dev website is hosted by MVH SOLUTIONS via https://github.com. Address: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon. ",
     "url": "/previews/run/undeprecation/legal-notices/#hosting",
     
     "relUrl": "/legal-notices/#hosting"
-  },"33": {
+  },"40": {
     "doc": "Legal Notices",
     "title": "Terms of use",
     "content": "Use of the https://pankosmia.dev website is subject to compliance with the following general terms and conditions. By opening the https://pankosmia.dev website, you declare that you are aware of these general terms and conditions of use and accept them unreservedly. ",
     "url": "/previews/run/undeprecation/legal-notices/#terms-of-use",
     
     "relUrl": "/legal-notices/#terms-of-use"
-  },"34": {
+  },"41": {
     "doc": "Legal Notices",
     "title": "Property",
     "content": "All components of the https://pankosmia.dev website (text, logos, images, audio, software, icons, layout, databases, etc.) are protected by national and international intellectual property laws. These components remain the sole property of their respective owners. Users may not reproduce, represent, adapt, translate or transform any component of the https://pankosmia.dev website in part or in whole, or transfer it to any other website, except by the prior written permission of MVH solutions (🚧). ",
     "url": "/previews/run/undeprecation/legal-notices/#property",
     
     "relUrl": "/legal-notices/#property"
-  },"35": {
+  },"42": {
     "doc": "Legal Notices",
     "title": "Hypertext links",
     "content": "MVH Solutions may not be held liable for the destination anchors of any hypertext links installed as part of the https://pankosmia.dev website pointing to other resources on the Internet. Similarly, it may not be held liable in respect of the content and relevance of the information provided by sites published by third parties that can be accessed from the https://pankosmia.dev website via hypertext links. ",
     "url": "/previews/run/undeprecation/legal-notices/#hypertext-links",
     
     "relUrl": "/legal-notices/#hypertext-links"
-  },"36": {
+  },"43": {
     "doc": "Legal Notices",
     "title": "GDPR",
     "content": "MVH Solutions does not collect any personal data unless the user initiates contact by email of via the Github interface. For details of how Github itself manages data, please see https://docs.github.com/fr/site-policy/github-terms/github-terms-of-service . The French Data Protection Act 78-17 of January 6, 1978 as amended in 2004 grants you the right to access and/or rectify personal data. You can exercise this right by contacting the webmaster. You may also refuse processing of your personal data if you have legitimate grounds. Pursuant to the General Data Protection Regulation in force as of 25 May 2018, the data gathered will be used for internal purposes only. To request rectification or erasure of your personal data, please contact us at the following address: webmaster@mvhsolutions.com. ",
     "url": "/previews/run/undeprecation/legal-notices/#gdpr",
     
     "relUrl": "/legal-notices/#gdpr"
-  },"37": {
+  },"44": {
     "doc": "Legal Notices",
     "title": "Site content",
     "content": "MVH Solutions provides users of the https://pankosmia.dev website with available, verified information, but may not be held liable should any information be unavailable. No guarantee is made that information made available on the https://pankosmia.dev website is correct, accurate or exhaustive. Authors retain liability for the content they provide. MVH Solutions (🚧) reserves the right to amend and/or delete all or part of the https://pankosmia.dev website without notice. ",
     "url": "/previews/run/undeprecation/legal-notices/#site-content",
     
     "relUrl": "/legal-notices/#site-content"
-  },"38": {
+  },"45": {
     "doc": "Legal Notices",
     "title": "Cookies",
     "content": "Please see Github’s policy above. ",
     "url": "/previews/run/undeprecation/legal-notices/#cookies",
     
     "relUrl": "/legal-notices/#cookies"
-  },"39": {
-    "doc": "Developer Script Reference",
-    "title": "Developer  Script Reference",
-    "content": "Additional Info TL;DR - For reference when needed on developer scripts for an app repos built on Pankosmia . ",
-    "url": "/previews/run/undeprecation/script-reference/#developer--script-reference",
-    
-    "relUrl": "/script-reference/#developer--script-reference"
-  },"40": {
-    "doc": "Developer Script Reference",
-    "title": "Table of Contents",
-    "content": ". | Ecosystem setup and configuration | Installing the clients | Scripts . | Configuration . | Config scripts: | Setup scripts: | Usage scripts: | Maintenance scripts: | . | . | . ",
-    "url": "/previews/run/undeprecation/script-reference/#table-of-contents",
-    
-    "relUrl": "/script-reference/#table-of-contents"
-  },"41": {
-    "doc": "Developer Script Reference",
-    "title": "Ecosystem setup and configuration",
-    "content": "This repo pulls together several libraries and projects into a single app. The projects are spread across several repos to allow modular reuse. Scripts follow for assisting in setup, though it can also all be setup manually. The following assume the repos are installed with the following directory structure. This is an example. Clients in use may vary. Configuration is handled via app_config.envand the app_setup script. |-- repos |-- pankosmia |-- core-client-content repository |-- core-client-dashboard repository |-- core-client-i18n-editor repository |-- core-client-remote-repos repository |-- core-client-settings repository |-- core-client-workspace repository |-- [your-desktop-app-repo-name] (30 characters or less on windows!) |-- resource-core |-- webfonts-core . ",
-    "url": "/previews/run/undeprecation/script-reference/#ecosystem-setup-and-configuration",
-    
-    "relUrl": "/script-reference/#ecosystem-setup-and-configuration"
-  },"42": {
-    "doc": "Developer Script Reference",
-    "title": "Installing the clients",
-    "content": "The local_server (pankosmia_web) serves compiled files from the build directory of each client, each client must be built. This is handled by the clone and build_clients scripts, though can also all be run manually which is helpful during development. # In each client repo, NOT this repo! npm install npm run build . Running run, build_server, or bundle_... all copy the latest build to the build environment. ",
-    "url": "/previews/run/undeprecation/script-reference/#installing-the-clients",
-    
-    "relUrl": "/script-reference/#installing-the-clients"
-  },"43": {
-    "doc": "Developer Script Reference",
-    "title": "Scripts",
-    "content": "Configuration . Config files must match clients and assets utilized. Scripts that write them are provided, as per app_config.env. Files created by the app_setup script are: . | Linux | Windows | MacOS | . | &lt;pre&gt;buildSpec.json/globalBuildResources/i18nPatch.json/globalBuildResources/product.json/linux/buildResources/setup/app_setup.json&lt;/pre&gt; | &lt;pre&gt;buildSpec.json\\globalBuildResources\\i18nPatch.json\\globalBuildResources\\product.json\\windows\\buildResources\\setup\\app_setup.json&lt;/pre&gt; | &lt;pre&gt;buildSpec.json/globalBuildResources/i18nPatch.json/globalBuildResources/product.json/macos/buildResources/setup/app_setup.json&lt;/pre&gt; | . Review app_config.env and adjust as needed, then run one of the setup scripts that follow. Re-run the app_setup script anytime app_config.env is changed. Config scripts: . Run from the provided location: . | Description | Linux:cd linux/scripts | Windows:cd windows/scripts | MacOS:cd macos/scripts | . | Uses app_config.env to generate/rebuild/replace app_setup.json, buildSpec.json, product.json, and i18nPatch.json | ./app_setup.bsh | .\\app_setup.bat | ./app_setup.zsh | . Setup scripts: . Run from the provided location: . | Description | Linux:cd linux/scripts | Windows:cd windows/scripts | MacOS:cd macos/scripts | . | Clones all repos in /app_config.env if a directory by that name does not already exit | ./clone.bsh Default clones via HTTPS.Optional argument:./clone.bsh -s Clones via SSH. | .\\clone.bat Default clones via HTTPS.Optional argument:.\\clone.bat -s Clones via SSH. | ./clone.zsh Default clones via HTTPS.Optional argument:./clone.zsh -s Clones via SSH. | . | For each asset repo in /app_config.env: git checkout main, git pullFor each client repo in /app_config.env: git checkout main, git pull, npm install, and npm run build.Dev’s should build manually when testing branch(es). | ./build_clients.bsh | .\\build_clients.bat | ./build_clients.zsh | . | Create an Electronite viewer for use with the local dev build environment. | ./build_viewer.bsh | .\\build_viewer.ps1(use a powershell terminal) | ./build_viewer.zsh | . Usage scripts: . Note: Multiple arguments can be applied in any order, e.g., ./run.zsh -s -d is the same as ./run.zsh -d -s . | Description | Linux:cd linux/scripts | Windows:cd windows/scripts | MacOS:cd macos/scripts | . | removes the build directory and runs cargo clean(%) | ./clean.bshOptional arguments:./clean.bsh -s Will not ask if server is off | .\\clean.batOptional arguments:.\\clean.bat -s Will not ask if server is off | ./clean.zshOptional arguments:./clean.zsh -s Will not ask if server is off | . | runs cargo build, and node build.js | ./build_server.bshOptional arguments:./build_server.bsh -s Will not ask if server is off ./build_server.bsh -d Builds server in debug mode | .\\build_server.batOptional arguments:.\\build_server.bat -s Will not ask if server is off.\\build_server.bat -d Builds server in debug mode | ./build_server.zshOptional arguments:./build_server.zsh -s Will not ask if server is off ./build_server.zsh -d Builds server in debug mode | . | Assembles the build environment (clients) and starts the server (*) | ./run.bshOptional arguments:./run.bsh -s Will not ask if server is off.\\run.bsh -d Runs with server in debug mode | .\\run.batOptional arguments:.\\run.bat -s Will not ask if server is off.\\run.bat -d Runs with server in debug mode | ./run.zshOptional arguments:./run.zsh -s Will not ask if server is off.\\run.zsh -d Runs with server in debug mode | . | Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the build_viewer script.) | ./viewer.bshDev Tools: Ctrl + Shift + IOptional argument:./viewer.bsh [PORT#](default is 19119) | .\\viewer.batDev Tools: Ctrl + Shift + IOptional argument:.\\viewer.bat [PORT#](default is 19119) | ./viewer.zshDev Tools: Cmd + Option + IOptional argument:./viewer.zsh [PORT#](default is 19119) | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm install, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone installer. (*) (•) | ./bundle_viewer.bsh(Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.) | .\\bundle_viewer.ps1Optional arguments:`.\\bundle_viewer.ps1 -ServerOff \"Y\"` or: “y”; Will not ask if server is off | ./bundle_viewer.zshOptional arguments:./bundle_viewer.zsh -s Will not ask if server is off | . | Deletes the last .zip release bundle if it it exists, then on this repo runs git checkout main, git pull, and npm install, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle (*) | ./bundle_tgz.bshOptional arguments:./bundle_tgz.bsh -s Will not ask if server is off/bundle_tgz.bsh -g Run from Github Actions | .\\bundle_zip.ps1Optional arguments:-ServerOff “Y” or: “y”; Will not ask if server is off-IsGHA “Y” or: “y”; Run from Gihtub Actions | ./bundle_zip.zshOptional arguments:/bundle_zip.zsh -s Will not ask if server is off/bundle_zip.zsh -g Run from Github Actions | . | Deletes the last .exe release bundle if it it exists, then on this repo runs git checkout main, git pull, and npm install, runs app_setup.bat to ensure version consistency, runs node build.js, then makes an exe installer (*) (•) |   | .\\bundle_exe.ps1Optional arguments:`bundle_exe.ps1 -ServerOff \"Y\"` or: “y”; Will not ask if server is off(•) |   | . ()** **Ensure the server (build_server.bat) is current! (•) *Environment prerequisite for running the exe build locally: Install Inno Setup -tested with v6.4.3 (%) Targeted clean tips: . | To clean just the dev server: cd to the /local_server directory and run cargo clean --target-dir target/debug | To clean just the dev server: cd to the /local_server directory and run cargo clean --target-dir target/release | To clean just the build environment, cd to the subdirectory for your OS (i.e., /macos, /linux, or /windows), then recursively remove its build subdirectory. | (The clean script does all of the above.) | . Maintenance scripts: . Run from the provided location: . | Description | Linux:cd linux/scripts | Windows:cd windows/scripts | MacOS:cd macos/scripts | . | Facilitates syncing with upstream with exclusion of files expected to differ: | ./sync.bshOptional arguments:./sync.bsh -p Will not ask if latest is already pulled. | .\\sync.batOptional arguments:.\\sync.bat -p Will not ask if latest is already pulled | ./sync.zshOptional arguments:./sync.zsh -p Will not ask if latest is already pulled. | . ",
-    "url": "/previews/run/undeprecation/script-reference/#scripts",
-    
-    "relUrl": "/script-reference/#scripts"
-  },"44": {
-    "doc": "Developer Script Reference",
-    "title": "Developer Script Reference",
-    "content": " ",
-    "url": "/previews/run/undeprecation/script-reference/",
-    
-    "relUrl": "/script-reference/"
-  },"45": {
+  },"46": {
     "doc": "UX/UI guidelines",
     "title": "UX/UI Guidelines",
     "content": " ",
     "url": "/previews/run/undeprecation/uxui-guidelines/#uxui-guidelines",
     
     "relUrl": "/uxui-guidelines/#uxui-guidelines"
-  },"46": {
+  },"47": {
     "doc": "UX/UI guidelines",
     "title": "Table of contents",
     "content": ". | General page template | Data grid | Dialog | Icons | Required fields | Theme | Tooltip | . ",
     "url": "/previews/run/undeprecation/uxui-guidelines/#table-of-contents",
     
     "relUrl": "/uxui-guidelines/#table-of-contents"
-  },"47": {
+  },"48": {
     "doc": "UX/UI guidelines",
     "title": "General page template",
     "content": " ",
     "url": "/previews/run/undeprecation/uxui-guidelines/#general-page-template",
     
     "relUrl": "/uxui-guidelines/#general-page-template"
-  },"48": {
+  },"49": {
     "doc": "UX/UI guidelines",
     "title": "Data grid",
     "content": " ",
     "url": "/previews/run/undeprecation/uxui-guidelines/#data-grid",
     
     "relUrl": "/uxui-guidelines/#data-grid"
-  },"49": {
+  },"50": {
     "doc": "UX/UI guidelines",
     "title": "Dialog",
     "content": "💡 Use the Dialog component instead of a modal. The modal is the low-level element meant to block the interaction. The Dialog is based on a modal, but specializes in providing information and further actions. A Dialog is composed of three main parts: . | Title. Contain a brief, clear statement or question. It should communicate the Dialog’s purpose. Background color is secondary. | Content. Anything needed for the context, from supporting text to full-size form. With long content, use the scroll=paper. | Actions. There’s always a way to go back (Cancel). And the main action is on the right. The label should reflect the action performed when clicked. If any required field is in the content, the action button is disabled until they are completed. Cancel. Text button, primary color. Action. Contained button, primary color. | . Responsiveness is configured as follow: . &gt; 🚧 TBD (full-width + variable maxWidth depending on breakpoints?). ",
     "url": "/previews/run/undeprecation/uxui-guidelines/#dialog",
     
     "relUrl": "/uxui-guidelines/#dialog"
-  },"50": {
+  },"51": {
     "doc": "UX/UI guidelines",
     "title": "Icons",
     "content": "Material Icons should be in the Outlined style by default. ",
     "url": "/previews/run/undeprecation/uxui-guidelines/#icons",
     
     "relUrl": "/uxui-guidelines/#icons"
-  },"51": {
+  },"52": {
     "doc": "UX/UI guidelines",
     "title": "Required fields",
     "content": "When information is required to proceed: . | Required field(s) should show an asterisk * after the label. | Above required field(s), explain what the asterisk does. This message is displayed once, after any title and before required field(s). Add * Required fields., with the typography style subtitle2. | The action button below the field(s) is enabled only when all required fields are completed. | . ",
     "url": "/previews/run/undeprecation/uxui-guidelines/#required-fields",
     
     "relUrl": "/uxui-guidelines/#required-fields"
-  },"52": {
+  },"53": {
     "doc": "UX/UI guidelines",
     "title": "Theme",
     "content": "Main colors . | You can find matching primary and secondary colors using a palette generator like Coolors. If you already have a primary color in mind, you can also generate a matching secondary color with a Color Wheel. | . Generate MUI color variants for theme.json . | Use the MUI Theme Creator. On the bottom-right you can edit a main color to automatically generate its light and dark variants, and the corresponding contrastText color. Note those are different from a light/dark app theme. They are a lighter and darker shade of the main color. You can use them to play with contrast in the interface. | . Check contrast . | It’s a good practice to check contrast. Online palette and color tools tend to rely on varying contrast standards. Better to double check and choose which contrast standard you want to aim for. | MUI uses colors in different contexts. To prevent any issue, try your colors’ contrasts accordingly. Check primary and secondary as text for both white and black background. Note that you don’t necessarily need your colors to have a good contrast with white and black out-of-the-box. This is to make sure light and dark mode will work. But colors can also be further adjusted to better work in a specific mode. | It’s good to have some contrast between primary and secondary. You don’t need a standard-level contrast. But a secondary component on a primary background can be a thing (like a badge with number of notifications). If primary and secondary are too close, the interface will become less clear. | . Generate appbar-chip-inactive colors . | If your primary color is darker than your secondary. Use secondary dark as appbar-chip-inactive main and Generate MUI color variants from it. | If your primary color is lighter than your secondary. Use secondary light as appbar-chip-inactive main and Generate MUI color variants from it. | . ",
     "url": "/previews/run/undeprecation/uxui-guidelines/#theme",
     
     "relUrl": "/uxui-guidelines/#theme"
-  },"53": {
+  },"54": {
     "doc": "UX/UI guidelines",
     "title": "Tooltip",
     "content": " ",
     "url": "/previews/run/undeprecation/uxui-guidelines/#tooltip",
     
     "relUrl": "/uxui-guidelines/#tooltip"
-  },"54": {
+  },"55": {
     "doc": "UX/UI guidelines",
     "title": "UX/UI guidelines",
     "content": " ",
