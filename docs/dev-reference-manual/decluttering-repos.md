@@ -38,11 +38,14 @@ Knip is quite good at following the include chain throughout a project.  However
 
 ## Applying package changes
 
-There are differences between manually editing package.json and running `npm install` / `npm prune` vs running `npm [package] uninstall`.
+There are differences between manually editing package.json and running `npm install` / `npm prune` vs running `npm [package] uninstall`.  Avoid the former.
 - Use `npm [package] uninstall`
-- Use `npm [package] install` or for devDepndencies: `npm [package] uninstall -D` or --save-dev.
+- Use `npm [package] install` or for devDependencies: `npm [package] uninstall -D` or --save-dev.
 
-That will help keep package-lock.json and node_modules consistent!
+That will help keep package-lock.json and node_modules consistent, as will using a common npm major version!
 
-A little additional info for the curious:
-- `npm prune` (after a manual package.json edit) does not update package-lock.json to reflect the removal, and it not run uninstall lifecycle scripts (which let packages perform custom actions automatically).
+## Keeping local installs clean and consistent
+
+Note that `npm prune` (after a manual package.json edit) does *not* update package-lock.json to reflect the removal, and it *not* run uninstall lifecycle scripts (which let packages perform custom actions automatically).
+
+For keeping local installs clean, use `npm ci` which removes node_modules and then matches the lock file.  Or `rm -rf node_modules` (or manually delete them) and then `npm install`.
