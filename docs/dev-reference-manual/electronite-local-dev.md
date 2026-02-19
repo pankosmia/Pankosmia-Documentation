@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Local setup
-permalink: /local-setup/
-parent: Electronite
+title: Electronite Local Dev
+permalink: /electronite-local-dev/
+parent: Dev Reference Manual
 ---
-# Electronite tips
+# Electronite local dev
 {: .no_toc }
 
-How to develop quickly on the Electronite app while using a local dev server.
+How to make dev changes to Electronite while using a local dev server.
 {: .fs-6 .fw-300 }
 
 ## Table of Contents

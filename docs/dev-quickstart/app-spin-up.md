@@ -1,8 +1,9 @@
 ---
 layout: default
-nav_order: 4
+nav_order: 2
 title: App Spin-up
 permalink: /app-spin-up/
+parent: Dev Quickstart
 ---
 # App Spin-up
 {: .no_toc }

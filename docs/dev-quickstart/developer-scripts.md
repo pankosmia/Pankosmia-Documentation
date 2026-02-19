@@ -1,9 +1,9 @@
 ---
 layout: default
-nav_order: 1
+nav_order: 3
 title: Developer Scripts
 permalink: /developer-scripts/
-parent: AppDev
+parent: Dev Quickstart
 ---
 # Developer Scripts
 {: .no_toc }
