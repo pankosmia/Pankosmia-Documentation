@@ -174,61 +174,61 @@
     
     "relUrl": "/electronite-local-dev/"
   },"25": {
-    "doc": "The Pankosmia Project",
-    "title": "The Pankosmia Project",
-    "content": " ",
-    "url": "/previews/run/undeprecation/pankosmia-project/",
-    
-    "relUrl": "/pankosmia-project/"
-  },"26": {
-    "doc": "The Pankosmia Project",
-    "title": "Table of Contents",
-    "content": ". | Philosophy | Project Distinctives | Architecture | . ",
-    "url": "/previews/run/undeprecation/pankosmia-project/#table-of-contents",
-    
-    "relUrl": "/pankosmia-project/#table-of-contents"
-  },"27": {
-    "doc": "The Pankosmia Project",
-    "title": "Philosophy",
-    "content": "Pankosmia began with a conversation about the First the monkey principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don’t focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger. Some corollaries of “First the Monkey” for us are . | focus on the hard and unsolved problems | the working but clunky solution we can build and ship is better than both the lovely solution we can’t build and ship and the lovely UI we can ship that doesn’t do the right thing under the hood | polishing things that we know how to polish is rarely urgent | users need happy devs because devs build the systems the users need | . ",
-    "url": "/previews/run/undeprecation/pankosmia-project/#philosophy",
-    
-    "relUrl": "/pankosmia-project/#philosophy"
-  },"28": {
-    "doc": "The Pankosmia Project",
-    "title": "Project Distinctives",
-    "content": ". | open source (but third-party products may include closed-source clients) | radically offline-first | support for graphite-enabled fonts | built around Scripture Burrito for all content | multiple “white app” products that can be branded and maintained by different organizations and developed to meet different user needs | multiple clients per product, including standard clients for core functionality | . ",
-    "url": "/previews/run/undeprecation/pankosmia-project/#project-distinctives",
-    
-    "relUrl": "/pankosmia-project/#project-distinctives"
-  },"29": {
-    "doc": "The Pankosmia Project",
-    "title": "Architecture",
-    "content": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes . | a localhost HTTP server, written in Rust, that handles . | access to local burritos | language and font options | access to burrito servers (when Internet is enabled) | shared application state between clients | . | multiple clients, served as built HTML/CSS/Javascript: . | core clients use React and MUI, use of other frameworks is possible | . | core Node libraries to simplify the creation of new clients | an extensive online build toolchain for multiple operating systems | . ",
-    "url": "/previews/run/undeprecation/pankosmia-project/#architecture",
-    
-    "relUrl": "/pankosmia-project/#architecture"
-  },"30": {
-    "doc": "Dev Quickstart",
-    "title": "Dev Quickstart",
-    "content": " ",
-    "url": "/previews/run/undeprecation/dev-quickstart/",
-    
-    "relUrl": "/dev-quickstart/"
-  },"31": {
     "doc": "Dev Reference Manual",
     "title": "Dev Reference Manual",
     "content": " ",
     "url": "/previews/run/undeprecation/dev-reference-manual/",
     
     "relUrl": "/dev-reference-manual/"
-  },"32": {
+  },"26": {
+    "doc": "The Pankosmia Project",
+    "title": "The Pankosmia Project",
+    "content": " ",
+    "url": "/previews/run/undeprecation/pankosmia-project/",
+    
+    "relUrl": "/pankosmia-project/"
+  },"27": {
+    "doc": "The Pankosmia Project",
+    "title": "Table of Contents",
+    "content": ". | Philosophy | Project Distinctives | Architecture | . ",
+    "url": "/previews/run/undeprecation/pankosmia-project/#table-of-contents",
+    
+    "relUrl": "/pankosmia-project/#table-of-contents"
+  },"28": {
+    "doc": "The Pankosmia Project",
+    "title": "Philosophy",
+    "content": "Pankosmia began with a conversation about the First the monkey principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don’t focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger. Some corollaries of “First the Monkey” for us are . | focus on the hard and unsolved problems | the working but clunky solution we can build and ship is better than both the lovely solution we can’t build and ship and the lovely UI we can ship that doesn’t do the right thing under the hood | polishing things that we know how to polish is rarely urgent | users need happy devs because devs build the systems the users need | . ",
+    "url": "/previews/run/undeprecation/pankosmia-project/#philosophy",
+    
+    "relUrl": "/pankosmia-project/#philosophy"
+  },"29": {
+    "doc": "The Pankosmia Project",
+    "title": "Project Distinctives",
+    "content": ". | open source (but third-party products may include closed-source clients) | radically offline-first | support for graphite-enabled fonts | built around Scripture Burrito for all content | multiple “white app” products that can be branded and maintained by different organizations and developed to meet different user needs | multiple clients per product, including standard clients for core functionality | . ",
+    "url": "/previews/run/undeprecation/pankosmia-project/#project-distinctives",
+    
+    "relUrl": "/pankosmia-project/#project-distinctives"
+  },"30": {
+    "doc": "The Pankosmia Project",
+    "title": "Architecture",
+    "content": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes . | a localhost HTTP server, written in Rust, that handles . | access to local burritos | language and font options | access to burrito servers (when Internet is enabled) | shared application state between clients | . | multiple clients, served as built HTML/CSS/Javascript: . | core clients use React and MUI, use of other frameworks is possible | . | core Node libraries to simplify the creation of new clients | an extensive online build toolchain for multiple operating systems | . ",
+    "url": "/previews/run/undeprecation/pankosmia-project/#architecture",
+    
+    "relUrl": "/pankosmia-project/#architecture"
+  },"31": {
     "doc": "Build Versions",
     "title": "Build Versions",
-    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: c8fdbbcb73aad0ca2b00e83c003ab7df33011cbd GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 1d37e8f22539b46dab715db30f196dda5961949f GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
     "url": "/previews/run/undeprecation/versions/",
     
     "relUrl": "/versions/"
+  },"32": {
+    "doc": "Dev Quickstart",
+    "title": "Dev Quickstart",
+    "content": " ",
+    "url": "/previews/run/undeprecation/dev-quickstart/",
+    
+    "relUrl": "/dev-quickstart/"
   },"33": {
     "doc": "Home",
     "title": "Pankosmia",
