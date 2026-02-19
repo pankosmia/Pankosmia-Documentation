@@ -1,8 +1,8 @@
 ---
 layout: default
 nav_order: 3
-title: Developer Scripts
-permalink: /developer-scripts/
+title: Dev Scripts
+permalink: /dev-scripts/
 parent: Dev Quickstart
 ---
 # Developer Scripts
@@ -25,11 +25,11 @@ Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a 
 - Only one instance of the server can be running at a time.<sup id="a3">[[3]](#f3)</sup>
 
 ### Client development:
-Manually build the client(s) changed, stop the server it is is running, then start the server (`run`).  The `run` script will re-assemble the environment to include your build.
+Manually build the client(s) changed, stop the server if is is running, then start the server (`run`).  The `run` script will re-assemble the environment to include your build.
 
-Run the `viewer` script to use the Electronite viewer with the local dev build environment.
+See also [Running your setup]()../app-spin-up/#running-your-setup).
 
-To generate a release package for the OS you are using, edit the version number for the release in `app_config.env` then run<sup id="a1">[[1]](#f1)</sup> the `bundle_...` script.
+To generate a release package for the OS you are using, edit the version number for the release in `app_config.env` then see the next section below, or [Local installer build](../electronite-local-dev/#local-installer-build) or the bundle scripts in [Dev script reference](../dev-script-reference/)
 
 ### To generate artifacts:
 [Manually run the desired workflow](https://docs.github.com/en/actions/how-tos/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow#running-a-workflow) (Actions > [select workflow] > Run workflow).

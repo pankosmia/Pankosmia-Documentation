@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Developer Script Reference
-permalink: /script-reference/
+title: Dev Script Reference
+permalink: /dev-script-reference/
 parent: Dev Reference Manual
 ---
 # Developer  Script Reference
@@ -41,7 +41,7 @@ The local_server (pankosmia_web) serves compiled files from the `build` director
 This is handled by the `clone` and `build_clients` scripts, though can also all be run manually which is helpful during development.
 ```
 # In each client repo, NOT this repo!
-npm install
+npm ci
 npm run build
 ```
 Running `run`, `build_server`, or `bundle_...` all copy the latest build to the build environment.
@@ -53,7 +53,7 @@ Config files must match clients and assets utilized. Scripts that write them are
 
 | Linux | Windows | MacOS |
 |-------|---------|-------|
-| <pre>buildSpec.json<br />/globalBuildResources/i18nPatch.json<br />/globalBuildResources/product.json<br />/linux/buildResources/setup/app_setup.json</pre> | <pre>buildSpec.json<br />\globalBuildResources\i18nPatch.json<br />\globalBuildResources\product.json<br />\windows\buildResources\setup\app_setup.json</pre> | <pre>buildSpec.json<br />/globalBuildResources/i18nPatch.json<br />/globalBuildResources/product.json<br />/macos/buildResources/setup/app_setup.json</pre> 
+| buildSpec.json<br />/globalBuildResources/i18nPatch.json<br />/globalBuildResources/product.json<br />/linux/buildResources/setup/app_setup.json | buildSpec.json<br />\globalBuildResources\i18nPatch.json<br />\globalBuildResources\product.json<br />\windows\buildResources\setup\app_setup.json | buildSpec.json<br />/globalBuildResources/i18nPatch.json<br />/globalBuildResources/product.json<br />/macos/buildResources/setup/app_setup.json |
 
 Review `app_config.env` and adjust as needed, then run one of the setup scripts that follow.  Re-run the app_setup script anytime `app_config.env` is changed.
 
@@ -70,7 +70,7 @@ Run from the provided location:
 | Description | Linux:<br />*cd linux/scripts* | Windows:<br />*cd windows/scripts* | MacOS:<br />*cd macos/scripts* |
 |-------|-------|---------|-------|
 | Clones all repos in `/app_config.env` if a directory by that name does not already exit | ./clone.bsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.bsh -s`<br /> Clones via SSH. | .\clone.bat<br /> Default clones via HTTPS.<br />Optional argument:<br />`.\clone.bat -s`<br /> Clones via SSH. | ./clone.zsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.zsh -s`<br /> Clones via SSH. |
-| For each asset repo in `/app_config.env`: git checkout main, git pull<br />For each client repo in  `/app_config.env`: `git checkout main`, `git pull`, `npm install`, and `npm run build`.<br />***Dev's should build manually when testing branch(es).*** | ./build_clients.bsh | .\build_clients.bat | ./build_clients.zsh |
+| For each asset repo in `/app_config.env`: git checkout main, git pull<br />For each client repo in  `/app_config.env`: `git checkout main`, `git pull`, `npm ci`, and `npm run build`.<br />***Dev's should build manually when testing branch(es).*** | ./build_clients.bsh | .\build_clients.bat | ./build_clients.zsh |
 | Create an Electronite viewer for use with the local dev build environment. | ./build_viewer.bsh | .\build_viewer.ps1<br />(use a powershell terminal) | ./build_viewer.zsh |
 
 #### Usage scripts:
@@ -82,9 +82,9 @@ Note: Multiple arguments can be applied in any order, e.g., `./run.zsh -s -d` is
 | runs cargo build, and `node build.js` | ./build_server.bsh<br />Optional arguments:<br />`./build_server.bsh -s`<br /> Will not ask if server is off <br />`./build_server.bsh -d`<br /> Builds server in debug mode | .\build_server.bat<br />Optional arguments:<br />`.\build_server.bat -s`<br /> Will not ask if server is off<br />`.\build_server.bat -d`<br /> Builds server in debug mode | ./build_server.zsh<br />Optional arguments:<br />`./build_server.zsh -s`<br /> Will not ask if server is off <br />`./build_server.zsh -d`<br /> Builds server in debug mode |
 | Assembles the build environment (clients) and starts the server **(*)** | ./run.bsh<br />Optional arguments:<br />`./run.bsh -s`<br /> Will not ask if server is off<br />`.\run.bsh -d`<br /> Runs with server in debug mode | .\run.bat<br />Optional arguments:<br />`.\run.bat -s`<br /> Will not ask if server is off<br />`.\run.bat -d`<br /> Runs with server in debug mode | ./run.zsh<br />Optional arguments:<br />`./run.zsh -s`<br /> Will not ask if server is off<br />`.\run.zsh -d`<br /> Runs with server in debug mode |
 | Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the `build_viewer` script.) | ./viewer.bsh<br />Dev Tools: Ctrl + Shift + I<br />Optional argument:<br />`./viewer.bsh [PORT#]`<br />(default is 19119) | .\viewer.bat<br />Dev Tools: Ctrl + Shift + I<br />Optional argument:<br />`.\viewer.bat [PORT#]`<br />(default is 19119) | ./viewer.zsh<br />Dev Tools: Cmd + Option + I<br />Optional argument:<br />`./viewer.zsh [PORT#]`<br />(default is 19119) |
-| Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs `git checkout main`, `git pull`, and `npm install`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle and a stand-alone installer. **(*) (•)** | ./bundle_viewer.bsh<br />(Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.) | .\bundle_viewer.ps1<br />Optional arguments:<br /><nobr>`.\bundle_viewer.ps1 -ServerOff "Y"`</nobr><br /> or: "y"; Will not ask if server is off | ./bundle_viewer.zsh<br />Optional arguments:<br />`./bundle_viewer.zsh -s`<br> Will not ask if server is off |
-| Deletes the last .zip release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm install`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle **(*)** | ./bundle_tgz.bsh<br />Optional arguments:<br />`./bundle_tgz.bsh -s`<br /> Will not ask if server is off<br />`/bundle_tgz.bsh -g`<br /> Run from Github Actions | .\bundle_zip.ps1<br />Optional arguments:<br />-ServerOff "Y"<br /> or: "y"; Will not ask if server is off<br />-IsGHA "Y"<br /> or: "y"; Run from Gihtub Actions | ./bundle_zip.zsh<br />Optional arguments:<br />`/bundle_zip.zsh -s`<br /> Will not ask if server is off<br />`/bundle_zip.zsh -g`<br /> Run from Github Actions |
-| Deletes the last .exe release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm install`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes an exe installer **(*)** **(&bull;)** | | .\bundle_exe.ps1<br />Optional arguments:<br /><nobr>`bundle_exe.ps1 -ServerOff "Y"`</nobr><br /> or: "y"; Will not ask if server is off<br />**(&bull;)** | |
+| Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle and a stand-alone installer. **(*) (•)** | ./bundle_viewer.bsh<br />(Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.) | .\bundle_viewer.ps1<br />Optional arguments:<br /><nobr>`.\bundle_viewer.ps1 -ServerOff "Y"`</nobr><br /> or: "y"; Will not ask if server is off | ./bundle_viewer.zsh<br />Optional arguments:<br />`./bundle_viewer.zsh -s`<br> Will not ask if server is off |
+| Deletes the last .zip release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle **(*)** | ./bundle_tgz.bsh<br />Optional arguments:<br />`./bundle_tgz.bsh -s`<br /> Will not ask if server is off<br />`/bundle_tgz.bsh -g`<br /> Run from Github Actions | .\bundle_zip.ps1<br />Optional arguments:<br />-ServerOff "Y"<br /> or: "y"; Will not ask if server is off<br />-IsGHA "Y"<br /> or: "y"; Run from Gihtub Actions | ./bundle_zip.zsh<br />Optional arguments:<br />`/bundle_zip.zsh -s`<br /> Will not ask if server is off<br />`/bundle_zip.zsh -g`<br /> Run from Github Actions |
+| Deletes the last .exe release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes an exe installer **(*)** **(&bull;)** | | .\bundle_exe.ps1<br />Optional arguments:<br /><nobr>`bundle_exe.ps1 -ServerOff "Y"`</nobr><br /> or: "y"; Will not ask if server is off<br />**(&bull;)** | |
 
 **(*)** ***Ensure the server (build_server.bat) is current!***<br />
 **(&bull;)** ***Environment prerequisite for running the exe build locally: Install [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3***<br />

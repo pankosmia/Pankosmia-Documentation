@@ -97,19 +97,19 @@ Test by either building locally on all three operating systems, or by pushing a 
   - Optional arguments:
     - `.\bundle_viewer.ps1 -ServerOff "Y"`  
        or: "y"; Will not ask if server is off
-  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm install, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
+  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
 
 
 - MacOS - `cd /macos/scripts` the `./bundle_viewer.zsh`
   - Optional arguments:
     - `./bundle_viewer.zsh -s`  
        Will not ask if server is off
-  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm install, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
+  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
 
 - Linux - `cd /linux/scripts` the `./bundle_viewer.bsh`
   - Before running:
     - manually delete prior local builds
-    - npm install (if not already run)
+    - npm ci (if not already run)
     - app_setup.bat to ensure version consistency (unless already current)
     - run run `./bundle_tgz.bsh`
     - then run `./bundle_viewer.bsh`
