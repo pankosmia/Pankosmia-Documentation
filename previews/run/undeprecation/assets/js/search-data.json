@@ -57,7 +57,7 @@
   },"8": {
     "doc": "Dev Environment Requirements",
     "title": "Tested on:",
-    "content": "Ubuntu 24.04 with: . | npm 9.2.0 | node 20.18.1 | rustc 1.88.0 – curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \\| sh | . Windows 11 with: . | git 2.44.0; See https://git-scm.com/install/windows | npm 10.7.0 | node 20.18.1 | rustc 1.88.0 – See https://www.rust-lang.org/tools/install | cmake 3.31.0 – Version 3 is required. See https://cmake.org/download/ | Depending on your system, powershell might need permission to run scripts. | Running exe builds locally (optional) needs installation of Inno Setup -tested with v6.4.3 | . MacOS with: . | npm 10.7.0 (tested on Monterey) | npm 10.8.2 (tested on Sequoia) | node 20.18.1 | rustc 1.88.0 – curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \\| sh | OpenSSL 3.5.0 – brew install openssl | . ",
+    "content": "Ubuntu 24.04 with: . | npm 9.2.0 | node 20.18.1 | rustc 1.88.0 – curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh | . Windows 11 with: . | git 2.44.0; See https://git-scm.com/install/windows | npm 10.7.0 | node 20.18.1 | rustc 1.88.0 – See https://www.rust-lang.org/tools/install | cmake 3.31.0 – Version 3 is required. See https://cmake.org/download/ | Depending on your system, powershell might need permission to run scripts. | Running exe builds locally (optional) needs installation of Inno Setup -tested with v6.4.3 | . MacOS with: . | npm 10.7.0 (tested on Monterey) | npm 10.8.2 (tested on Sequoia) | node 20.18.1 | rustc 1.88.0 – curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh | OpenSSL 3.5.0 – brew install openssl | . ",
     "url": "/previews/run/undeprecation/dev-environment-requirements/#tested-on",
     
     "relUrl": "/dev-environment-requirements/#tested-on"
@@ -174,61 +174,61 @@
     
     "relUrl": "/electronite-local-dev/"
   },"25": {
-    "doc": "Dev Reference Manual",
-    "title": "Dev Reference Manual",
-    "content": " ",
-    "url": "/previews/run/undeprecation/dev-reference-manual/",
-    
-    "relUrl": "/dev-reference-manual/"
-  },"26": {
     "doc": "The Pankosmia Project",
     "title": "The Pankosmia Project",
     "content": " ",
     "url": "/previews/run/undeprecation/pankosmia-project/",
     
     "relUrl": "/pankosmia-project/"
-  },"27": {
+  },"26": {
     "doc": "The Pankosmia Project",
     "title": "Table of Contents",
     "content": ". | Philosophy | Project Distinctives | Architecture | . ",
     "url": "/previews/run/undeprecation/pankosmia-project/#table-of-contents",
     
     "relUrl": "/pankosmia-project/#table-of-contents"
-  },"28": {
+  },"27": {
     "doc": "The Pankosmia Project",
     "title": "Philosophy",
     "content": "Pankosmia began with a conversation about the First the monkey principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don’t focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger. Some corollaries of “First the Monkey” for us are . | focus on the hard and unsolved problems | the working but clunky solution we can build and ship is better than both the lovely solution we can’t build and ship and the lovely UI we can ship that doesn’t do the right thing under the hood | polishing things that we know how to polish is rarely urgent | users need happy devs because devs build the systems the users need | . ",
     "url": "/previews/run/undeprecation/pankosmia-project/#philosophy",
     
     "relUrl": "/pankosmia-project/#philosophy"
-  },"29": {
+  },"28": {
     "doc": "The Pankosmia Project",
     "title": "Project Distinctives",
     "content": ". | open source (but third-party products may include closed-source clients) | radically offline-first | support for graphite-enabled fonts | built around Scripture Burrito for all content | multiple “white app” products that can be branded and maintained by different organizations and developed to meet different user needs | multiple clients per product, including standard clients for core functionality | . ",
     "url": "/previews/run/undeprecation/pankosmia-project/#project-distinctives",
     
     "relUrl": "/pankosmia-project/#project-distinctives"
-  },"30": {
+  },"29": {
     "doc": "The Pankosmia Project",
     "title": "Architecture",
     "content": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes . | a localhost HTTP server, written in Rust, that handles . | access to local burritos | language and font options | access to burrito servers (when Internet is enabled) | shared application state between clients | . | multiple clients, served as built HTML/CSS/Javascript: . | core clients use React and MUI, use of other frameworks is possible | . | core Node libraries to simplify the creation of new clients | an extensive online build toolchain for multiple operating systems | . ",
     "url": "/previews/run/undeprecation/pankosmia-project/#architecture",
     
     "relUrl": "/pankosmia-project/#architecture"
-  },"31": {
-    "doc": "Build Versions",
-    "title": "Build Versions",
-    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 758ee90d1a728d6624467c3afb121bd5ea0c7c0a GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
-    "url": "/previews/run/undeprecation/versions/",
-    
-    "relUrl": "/versions/"
-  },"32": {
+  },"30": {
     "doc": "Dev Quickstart",
     "title": "Dev Quickstart",
     "content": " ",
     "url": "/previews/run/undeprecation/dev-quickstart/",
     
     "relUrl": "/dev-quickstart/"
+  },"31": {
+    "doc": "Dev Reference Manual",
+    "title": "Dev Reference Manual",
+    "content": " ",
+    "url": "/previews/run/undeprecation/dev-reference-manual/",
+    
+    "relUrl": "/dev-reference-manual/"
+  },"32": {
+    "doc": "Build Versions",
+    "title": "Build Versions",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: c8fdbbcb73aad0ca2b00e83c003ab7df33011cbd GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "url": "/previews/run/undeprecation/versions/",
+    
+    "relUrl": "/versions/"
   },"33": {
     "doc": "Home",
     "title": "Pankosmia",
