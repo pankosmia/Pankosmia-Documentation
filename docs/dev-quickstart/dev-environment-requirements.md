@@ -22,7 +22,7 @@ Local dev environment requirements for AppDev of a Desktop App repo built on Pan
 ### Ubuntu 24.04 with:
 - npm 9.2.0
 - node 20.18.1
-- rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \| sh`
+- rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
 
 ### Windows 11 with:
 - git 2.44.0; See https://git-scm.com/install/windows
@@ -37,5 +37,5 @@ Local dev environment requirements for AppDev of a Desktop App repo built on Pan
 - npm 10.7.0 (tested on Monterey)
 - npm 10.8.2 (tested on Sequoia)
 - node 20.18.1
-- rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \| sh`
+- rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
 - OpenSSL 3.5.0 -- `brew install openssl`
