@@ -94,7 +94,7 @@ Run from the provided location:
 | Facilitates syncing with upstream with exclusion of files expected to differ: | ./sync.bsh<br />Optional arguments:<br />`./sync.bsh -p`<br /> Will not ask if latest is already pulled. | .\sync.bat<br />Optional arguments:<br />`.\sync.bat -p`<br /> Will not ask if latest is already pulled | ./sync.zsh<br />Optional arguments:<br />`./sync.zsh -p`<br /> Will not ask if latest is already pulled. |
 
 ## Footnotes
-[<b id="f1">1</b>] ... When running a bat script from a command prompt, leave off the `.\` included in the examples.
+[<b id="f1">1</b>] ... When running a bat script from a command prompt, the `.\` included in the examples is optional.
 
 [<b id="f2">2</b>] ... Ensure the server (build_server.bat) is current!
 
