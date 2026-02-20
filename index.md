@@ -19,17 +19,11 @@ translation tools, using shared components.
 
 ## Contents
 
-* ### [The Pankosmia Project](./docs/pankosmia-project/index.md)
+* ### [The Pankosmia Project](pankosmia-project/)
 
-* ### [Dev Environment Requirements](./docs/dev-enviornment-requirements/index.md)
+* ### [Dev Quickstart](dev-quickstart/)
 
-* ### [App Spin-Up](./docs/app-spin-up/index.md)
-
-* ### [AppDev](./docs/app-dev/index.md)
-
-* ### [Dev Quickstart](./docs/dev-quickstart/index.md)
-
-* ### [Dev Reference Manual](./docs/dev-reference-manual/index.md)
+* ### [Dev Reference Manual](dev-reference-manual/)
 
 ---
-[Legal Notices](./legal-notices/)
+[Legal Notices](legal-notices/)

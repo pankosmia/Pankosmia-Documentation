@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Local setup
-permalink: /local-setup/
-parent: Electronite
+title: Electronite Local Development
+permalink: /electronite-local-development/
+parent: Dev Reference Manual
 ---
-# Electronite tips
+# Electronite local dev
 {: .no_toc }
 
-How to develop quickly on the Electronite app while using a local dev server.
+How to make dev changes to Electronite while using a local dev server.
 {: .fs-6 .fw-300 }
 
 ## Table of Contents
@@ -86,6 +86,8 @@ Test by either building locally on all three operating systems, or by pushing a 
 ### Local Installer Build
 {: .no_toc }
 
+Before doing this, also consider [To Generate Artifacts](../scripts/#to-generate-artifacts)
+
 #### Prerequisites:
   - Ensure the server (`build_server` script) is current!
   - Windows has an additional requirement for running this `bundle_viewer` build locally:
@@ -97,19 +99,19 @@ Test by either building locally on all three operating systems, or by pushing a 
   - Optional arguments:
     - `.\bundle_viewer.ps1 -ServerOff "Y"`  
        or: "y"; Will not ask if server is off
-  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm install, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
+  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
 
 
 - MacOS - `cd /macos/scripts` the `./bundle_viewer.zsh`
   - Optional arguments:
     - `./bundle_viewer.zsh -s`  
        Will not ask if server is off
-  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm install, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
+  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
 
 - Linux - `cd /linux/scripts` the `./bundle_viewer.bsh`
   - Before running:
     - manually delete prior local builds
-    - npm install (if not already run)
+    - npm ci (if not already run)
     - app_setup.bat to ensure version consistency (unless already current)
     - run run `./bundle_tgz.bsh`
     - then run `./bundle_viewer.bsh`

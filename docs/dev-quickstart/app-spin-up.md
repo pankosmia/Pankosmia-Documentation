@@ -1,8 +1,9 @@
 ---
 layout: default
-nav_order: 4
+nav_order: 2
 title: App Spin-up
 permalink: /app-spin-up/
+parent: Dev Quickstart
 ---
 # App Spin-up
 {: .no_toc }
@@ -39,7 +40,7 @@ Replace all instances of "desktop-app-template" in package.json with "[your-desk
 
 ### At the root of your clone of this repo, run:
 <ul><pre>
-npm install
+npm ci
 </pre></ul>
 
 ### Edit app_config.env
@@ -86,11 +87,12 @@ Run<sup id="a1">[[1]](#f1)</sup> the `build_server` script to build the Pankosmi
 ## Running your Setup
 
 Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.
-  - Only one instance of the server can be running at a time.<sup id="a3">[[3]](#f3)</sup>
+- Only one instance of the server can be running at a time.<sup id="a3">[[3]](#f3)</sup>
 
 Run the `viewer` script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated.
-  - The Electronite viewer is Chromium compiled with [Graphite](https://graphite.sil.org/){:target="_blank" :rel="noopener noreferrer"}
-  - Some browsers that support graphite include [Firefox](https://www.firefox.com/){:target="_blank" :rel="noopener noreferrer"}, [Zen Browser](https://zen-browser.app/){:target="_blank" :rel="noopener noreferrer"}, and [LibreWolf](https://librewolf.net/){:target="_blank" :rel="noopener noreferrer"}.
+- The Electronite viewer is Chromium compiled with [Graphite](https://graphite.sil.org/){:target="_blank" :rel="noopener noreferrer"}
+- Some browsers that support graphite include [Firefox](https://www.firefox.com/){:target="_blank" :rel="noopener noreferrer"}, [Zen Browser](https://zen-browser.app/){:target="_blank" :rel="noopener noreferrer"}, and [LibreWolf](https://librewolf.net/){:target="_blank" :rel="noopener noreferrer"}.
+- See [Electronite Local Dev](../electronite-local-development/) for additional detail.
 
 ## Footnotes
 [<b id="f1">1</b>] ...  Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command terminal</b>:<br />
