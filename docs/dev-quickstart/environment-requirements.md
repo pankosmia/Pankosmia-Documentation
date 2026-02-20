@@ -1,11 +1,11 @@
 ---
 layout: default
 nav_order: 1
-title: Dev Environment Requirements
-permalink: /dev-environment-requirements/
+title: Environment Requirements
+permalink: /environment-requirements/
 parent: Dev Quickstart
 ---
-# Dev Environment Requirements
+# Environment Requirements
 {: .no_toc }
 
 Local dev environment requirements for AppDev of a Desktop App repo built on Pankosmia
