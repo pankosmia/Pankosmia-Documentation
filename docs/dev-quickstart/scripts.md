@@ -1,8 +1,8 @@
 ---
 layout: default
 nav_order: 3
-title: Dev Scripts
-permalink: /dev-scripts/
+title: Scripts
+permalink: /scripts/
 parent: Dev Quickstart
 ---
 # Developer Scripts
@@ -29,7 +29,7 @@ Manually build the client(s) changed, stop the server if is is running, then sta
 
 See also [Running your setup](../app-spin-up/#running-your-setup).
 
-To generate a release package for the OS you are using, edit the version number for the release in `app_config.env` then see the next section below, or [Local installer build](../electronite-local-dev/#local-installer-build) or the bundle scripts in [Dev script reference](../dev-script-reference/)
+To generate a release package for the OS you are using, edit the version number for the release in `app_config.env` then see the next section below, or [Local installer build](../electronite-local-development/#local-installer-build) or the bundle scripts in [Dev script reference](../script-reference/)
 
 ### To generate artifacts:
 [Manually run the desired workflow](https://docs.github.com/en/actions/how-tos/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow#running-a-workflow) (Actions > [select workflow] > Run workflow).

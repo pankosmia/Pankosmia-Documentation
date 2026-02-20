@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Electronite Local Dev
-permalink: /electronite-local-dev/
+title: Electronite Local Development
+permalink: /electronite-local-development/
 parent: Dev Reference Manual
 ---
 # Electronite local dev
@@ -86,7 +86,7 @@ Test by either building locally on all three operating systems, or by pushing a 
 ### Local Installer Build
 {: .no_toc }
 
-Before doing this, also consider [To Generate Artifacts](../dev-scripts/#to-generate-artifacts)
+Before doing this, also consider [To Generate Artifacts](../scripts/#to-generate-artifacts)
 
 #### Prerequisites:
   - Ensure the server (`build_server` script) is current!

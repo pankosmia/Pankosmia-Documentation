@@ -92,7 +92,7 @@ Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a 
 Run the `viewer` script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated.
 - The Electronite viewer is Chromium compiled with [Graphite](https://graphite.sil.org/){:target="_blank" :rel="noopener noreferrer"}
 - Some browsers that support graphite include [Firefox](https://www.firefox.com/){:target="_blank" :rel="noopener noreferrer"}, [Zen Browser](https://zen-browser.app/){:target="_blank" :rel="noopener noreferrer"}, and [LibreWolf](https://librewolf.net/){:target="_blank" :rel="noopener noreferrer"}.
-- See [Electronite Local Dev](../electronite-local-dev/) for additional detail.
+- See [Electronite Local Dev](../electronite-local-development/) for additional detail.
 
 ## Footnotes
 [<b id="f1">1</b>] ...  Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command terminal</b>:<br />

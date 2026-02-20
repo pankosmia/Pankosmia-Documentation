@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Dev Script Reference
-permalink: /dev-script-reference/
+title: Script Reference
+permalink: /script-reference/
 parent: Dev Reference Manual
 ---
 # Developer  Script Reference
