@@ -5,7 +5,7 @@ title: Scripts
 permalink: /scripts/
 parent: Dev Quickstart
 ---
-# Developer Scripts
+# Scripts
 {: .no_toc }
 
 Developer scripts for an app repos built on Pankosmia
@@ -22,7 +22,7 @@ Developer scripts for an app repos built on Pankosmia
 Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.
 - Consider also if you need to delete ~/pankosmia_working first.
 - You'll want to restart the server if deleting ~/pankosmia_working after starting the server. To restart, exit the terminal window where the server is running the run the `run` script<sup id="a1">[[1]](#f1)</sup> again.
-- Only one instance of the server can be running at a time.<sup id="a3">[[3]](#f3)</sup>
+- Only one instance of the server can be running at a time.<sup id="a2">[[2]](#f2)</sup>
 
 ### Client development:
 Manually build the client(s) changed, stop the server if is is running, then start the server (`run`).  The `run` script will re-assemble the environment to include your build.
@@ -52,8 +52,9 @@ To update the server, change the [latest version](https://crates.io/search?q=pan
 To sync this repo with its upstream, run the `sync` script.
 
 ## Footnotes
-[<b id="f1">1</b>] ...  Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command terminal</b>:<br />
+[<b id="f1">1</b>] ...  Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command prompt</b>:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_...repos\pankosmia\[your-desktop-app-repo-name]\windows\scripts>_ `.\[scriptname].bat`<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The `.\` is optional from a command prompt.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use a **powershell** terminal for the **.ps1** build scripts.
 <br />
 MacOS developers, run .bsh scripts from a **MacOS terminal**:<br />
@@ -62,6 +63,4 @@ MacOS developers, run .bsh scripts from a **MacOS terminal**:<br />
 Linux developers, run .zsh scripts from a **linux terminal**:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`
 
-[<b id="f2">2</b>] ... The build script will fail on any clients set to a different branch with uncommitted changes or with conflicts vs, the latest main pull. Scroll back up in the terminal to find any build errors and address them.
-
-[<b id="f3">3</b>] ... If running into an error saying that another instance is running, you can either find the other instance and stop it, or simply reboot. Another instance could be one started from a .zip, .tgz, installed version, run from a different repo, or a manually started panksomia-web.
+[<b id="f2">2</b>] ... If running into an error saying that another instance is running, you can either find the other instance and stop it, or simply reboot. Another instance could be one started from a .zip, .tgz, installed version, run from a different repo, or a manually started panksomia-web.
