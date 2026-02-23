@@ -4,10 +4,10 @@ title: Electronite Local Development
 permalink: /electronite-local-development/
 parent: Dev Reference Manual
 ---
-# Electronite local dev
+# Electronite Local Development
 {: .no_toc }
 
-How to make dev changes to Electronite while using a local dev server.
+How to make changes to Electronite while using a local development server.
 {: .fs-6 .fw-300 }
 
 ## Table of Contents
@@ -21,8 +21,8 @@ How to make dev changes to Electronite while using a local dev server.
 ### Prerequisites
 {: .no_toc }
 
-1. See [README 'Environment requirements for this repo'](https://github.com/pankosmia/desktop-app-template/blob/main/README.md#environment-requirements-for-this-repo).
-2. Follow the [README 'Setup'](https://github.com/pankosmia/desktop-app-template/blob/main/README.md#setup).
+1. See [Environment Requirements](../environment-requirements/).
+2. Consider [App Spin-up](../app-spin-up/) and [Scripts](../scripts/).
 
 ### Electronite Dev Viewer
 
