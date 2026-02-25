@@ -87,7 +87,7 @@ Run<sup id="a1">[[1]](#f1)</sup> the `build_server` script to build the Pankosmi
 ## Running your Setup
 
 Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.
-- Only one instance of the server can be running at a time.<sup id="a3">[[3]](#f3)</sup>
+- Only one instance of the server can be running at a time.<sup id="a2">[[2]](#f2)</sup>
 
 Run the `viewer` script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated.
 - The Electronite viewer is Chromium compiled with [Graphite](https://graphite.sil.org/){:target="_blank" :rel="noopener noreferrer"}
@@ -106,6 +106,4 @@ MacOS developers, run .bsh scripts from a **MacOS terminal**:<br />
 Linux developers, run .zsh scripts from a **linux terminal**:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`
 
-[<b id="f2">2</b>] ... The build script may fail on any clients set to a different branch with uncommitted changes or with conflicts vs, the latest main pull. Scroll back up in the terminal to find any build errors and address them.
-
-[<b id="f3">3</b>] ... If running into an error saying that another instance is running, you can either find the other instance and stop it, or simply reboot. Another instance could be one started from a .zip, .tgz, installed version, run from a different repo, or a manually started panksomia-web.
+[<b id="f2">2</b>] ... If running into an error saying that another instance is running, you can either find the other instance and stop it, or simply reboot. Another instance could be one started from a .zip, .tgz, installed version, run from a different repo, or a manually started panksomia-web.
