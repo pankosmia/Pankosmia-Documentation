@@ -20,7 +20,7 @@ Local dev environment requirements for AppDev of a Desktop App repo built on Pan
 ## Tested on:
 
 ### Ubuntu 24.04 with:
-- npm 9.2.0
+- npm 10.7.0
 - node 20.18.1
 - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
 
