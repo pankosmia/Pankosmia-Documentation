@@ -22,7 +22,7 @@ Developer scripts for an app repos built on Pankosmia
 Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.
 - Consider also if you need to delete ~/pankosmia_working first.
 - You'll want to restart the server if deleting ~/pankosmia_working after starting the server. To restart, exit the terminal window where the server is running the run the `run` script<sup id="a1">[[1]](#f1)</sup> again.
-- Only one instance of the server can be running at a time.<sup id="a2">[[2]](#f2)</sup>
+- Only one instance of the same server can be running at a time.
 
 ### Client development:
 Manually build the client(s) changed, stop the server if is is running, then start the server (`run`).  The `run` script will re-assemble the environment to include your build.
@@ -62,5 +62,3 @@ MacOS developers, run .bsh scripts from a **MacOS terminal**:<br />
 <br />
 Linux developers, run .zsh scripts from a **linux terminal**:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`
-
-[<b id="f2">2</b>] ... If running into an error saying that another instance is running, you can either find the other instance and stop it, or simply reboot. Another instance could be one started from a .zip, .tgz, installed version, run from a different repo, or a manually started panksomia-web.
