@@ -1,0 +1,6 @@
+{%- if page.toc -%}
+<nav aria-label="{{ site.data.ui-text[page.lang].toc_label }}" class="toc">
+  <h2 class="text-delta">{{ site.data.ui-text[page.lang].toc_label }}</h2>
+  {%- include toc_pure_liquid.html html=content sanitize=true class="list-unstyled" id="toc-list" h_min=2 h_max=6 -%}
+</nav>
+{%- endif -%}
