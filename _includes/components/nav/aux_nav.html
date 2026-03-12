@@ -1,0 +1,27 @@
+<nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    {% for link in site.aux_links %}
+      <li class="aux-nav-list-item">
+        {% if link.last contains "://" %}
+          {%- comment -%}External link - use as-is{%- endcomment -%}
+          <a href="{{ link.last }}" class="site-button"
+            {% if site.aux_links_new_tab %}
+            target="_blank" rel="noopener noreferrer"
+            {% endif %}
+          >
+            {{ link.first }}
+          </a>
+        {% else %}
+          {%- comment -%}Internal link - prepend baseurl{%- endcomment -%}
+          <a href="{{ link.last | relative_url }}" class="site-button"
+            {% if site.aux_links_new_tab %}
+            target="_blank" rel="noopener noreferrer"
+            {% endif %}
+          >
+            {{ link.first }}
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
