@@ -29,7 +29,28 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # twitter_username: jekyllrb
 github_username: Pankosmia
 
-aux_links: # external links at the top right on all pages
+# Set the default language
+lang: en
+
+# Enable multi-language support
+languages:
+  - en
+  - fr
+
+# Configure language-specific settings
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: en
+  - scope:
+      path: "fr"
+    values:
+      lang: fr
+
+aux_links: # external links at the top right on all pages (includes language navigation labels)
+  "EN": "/"
+  "FR": "/fr/"
   "Pankosmia on GitHub": "https://github.com/pankosmia"
 aux_links_new_tab: false
 
