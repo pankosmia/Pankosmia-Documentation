@@ -13,7 +13,7 @@
           </a>
         {% else %}
           {%- comment -%}Internal link - prepend baseurl{%- endcomment -%}
-          <a href="{{ link.last | relative_url }}" class="site-button"
+          <a href="{{ site.baseurl }}{{ link.last }}" class="site-button"
             {% if site.aux_links_new_tab %}
             target="_blank" rel="noopener noreferrer"
             {% endif %}
