@@ -1,6 +1,7 @@
 ---
 layout: default
 title: UX/UI guidelines
+lang: en
 permalink: /uxui-guidelines/
 parent: Dev Reference Manual
 ---

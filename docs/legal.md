@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Legal Notices
+lang: en
 permalink: /legal-notices/
 ---
 # Legal Notices

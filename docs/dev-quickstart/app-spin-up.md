@@ -2,6 +2,7 @@
 layout: default
 nav_order: 2
 title: App Spin-up
+lang: en
 permalink: /app-spin-up/
 parent: Dev Quickstart
 ---

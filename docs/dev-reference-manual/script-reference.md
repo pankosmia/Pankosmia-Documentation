@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Script Reference
+lang: en
 permalink: /script-reference/
 parent: Dev Reference Manual
 ---

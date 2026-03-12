@@ -2,6 +2,7 @@
 layout: default
 nav_order: 2
 title: The Pankosmia Project
+lang: en
 permalink: /pankosmia-project/
 ---
 # The Pankosmia Project

@@ -2,6 +2,7 @@
 layout: default
 nav_order: 1
 title: Environment Requirements
+lang: en
 permalink: /environment-requirements/
 parent: Dev Quickstart
 ---

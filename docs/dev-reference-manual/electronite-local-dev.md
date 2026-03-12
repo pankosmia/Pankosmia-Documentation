@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Electronite Local Development
+lang: en
 permalink: /electronite-local-development/
 parent: Dev Reference Manual
 ---
