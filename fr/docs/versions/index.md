@@ -3,7 +3,7 @@ title: Build Versions
 lang: fr
 layout: versions
 nav_exclude: true
-permalink: /versions/
+permalink: /fr/versions/
 ---
 
 # Build Versions

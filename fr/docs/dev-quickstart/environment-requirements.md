@@ -3,7 +3,7 @@ layout: default
 nav_order: 1
 title: Environment Requirements
 lang: fr
-permalink: /environment-requirements/
+permalink: /fr/environment-requirements/
 parent: Dev Quickstart
 ---
 # Environment Requirements

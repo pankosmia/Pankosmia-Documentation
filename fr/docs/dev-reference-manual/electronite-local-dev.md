@@ -2,7 +2,7 @@
 layout: default
 title: Electronite Local Development
 lang: fr
-permalink: /electronite-local-development/
+permalink: /fr/electronite-local-development/
 parent: Dev Reference Manual
 ---
 # Electronite Local Development

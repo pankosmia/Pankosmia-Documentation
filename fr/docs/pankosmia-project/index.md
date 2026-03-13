@@ -3,7 +3,7 @@ layout: default
 nav_order: 2
 title: The Pankosmia Project
 lang: fr
-permalink: /pankosmia-project/
+permalink: /fr/pankosmia-project/
 ---
 # The Pankosmia Project
 {: .no_toc }

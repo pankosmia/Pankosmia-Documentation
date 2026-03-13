@@ -3,7 +3,7 @@ layout: default
 nav_order: 2
 title: App Spin-up
 lang: fr
-permalink: /app-spin-up/
+permalink: /fr/app-spin-up/
 parent: Dev Quickstart
 ---
 # App Spin-up

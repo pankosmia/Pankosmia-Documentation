@@ -2,7 +2,7 @@
 layout: default
 title: Legal Notices
 lang: fr
-permalink: /legal-notices/
+permalink: /fr/legal-notices/
 ---
 # Legal Notices
 {: .no_toc }

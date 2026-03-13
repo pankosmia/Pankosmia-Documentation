@@ -2,7 +2,7 @@
 layout: default
 title: UX/UI guidelines
 lang: fr
-permalink: /uxui-guidelines/
+permalink: /fr/uxui-guidelines/
 parent: Dev Reference Manual
 ---
 # UX/UI Guidelines

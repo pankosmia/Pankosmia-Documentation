@@ -2,7 +2,7 @@
 layout: default
 title: Script Reference
 lang: fr
-permalink: /script-reference/
+permalink: /fr/script-reference/
 parent: Dev Reference Manual
 ---
 # Script Reference

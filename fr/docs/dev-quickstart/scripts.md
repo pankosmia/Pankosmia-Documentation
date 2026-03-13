@@ -3,7 +3,7 @@ layout: default
 nav_order: 3
 title: Scripts
 lang: fr
-permalink: /scripts/
+permalink: /fr/scripts/
 parent: Dev Quickstart
 ---
 # Scripts
