@@ -11,6 +11,7 @@
 <ul class="nav-list">
   {%- for node in include.pages -%}
   {%- if include.all == true or node.nav_exclude != true -%}
+  <!-- DEBUG: node.title={{ node.title }}, node.lang={{ node.lang }}, page.lang={{ page.lang }} -->
   {%- if node.lang == page.lang or node.lang == nil -%}
 
   {%- if include.ancestors contains node.title -%}
