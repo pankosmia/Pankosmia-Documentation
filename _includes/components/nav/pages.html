@@ -8,16 +8,25 @@
     nav_parenthood, nav_top_nodes, nav_top_node_titles, nav_ancestors.
 {%- endcomment -%}
 
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- if page.url contains "/fr/" -%}
+  {%- assign current_lang = "fr" -%}
+{%- endif -%}
+
 {%- assign filtered_pages = "" | split: "" -%}
 {%- for item in include.pages -%}
   {%- if item.title != nil -%}
-    {%- if item.lang == page.lang or item.lang == nil -%}
+    {%- assign item_lang = item.lang | default: "en" -%}
+    {%- if item.url contains "/fr/" -%}
+      {%- assign item_lang = "fr" -%}
+    {%- endif -%}
+    {%- if item_lang == current_lang -%}
       {%- assign filtered_pages = filtered_pages | push: item -%}
     {%- endif -%}
   {%- endif -%}
 {%- endfor -%}
 
-<!-- DEBUG pages.html: page.lang={{ page.lang }}, filtered {{ filtered_pages.size }} pages from {{ include.pages.size }} total -->
+<!-- DEBUG pages.html: page.lang={{ page.lang }}, page.url={{ page.url }}, current_lang={{ current_lang }}, filtered {{ filtered_pages.size }} pages from {{ include.pages.size }} total -->
 
 {%- assign nav_parenthood = filtered_pages | group_by: "parent" -%}
 
