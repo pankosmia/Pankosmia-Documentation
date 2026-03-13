@@ -2,9 +2,10 @@
   <ul class="aux-nav-list">
     {% for link in site.aux_links %}
       <li class="aux-nav-list-item">
-        {% if link.last contains "://" %}
+        {% assign link_url = link.last %}
+        {% if link_url contains "://" %}
           {%- comment -%}External link - use as-is{%- endcomment -%}
-          <a href="{{ link.last }}" class="site-button"
+          <a href="{{ link_url }}" class="site-button"
             {% if site.aux_links_new_tab %}
             target="_blank" rel="noopener noreferrer"
             {% endif %}
@@ -13,7 +14,11 @@
           </a>
         {% else %}
           {%- comment -%}Internal link - prepend baseurl{%- endcomment -%}
-          <a href="{{ site.baseurl }}{{ link.last }}" class="site-button"
+          {% if site.baseurl != "" %}
+            <a href="{{ site.baseurl }}{{ link_url }}" class="site-button"
+          {% else %}
+            <a href="{{ link_url }}" class="site-button"
+          {% endif %}
             {% if site.aux_links_new_tab %}
             target="_blank" rel="noopener noreferrer"
             {% endif %}
