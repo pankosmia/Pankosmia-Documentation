@@ -10,6 +10,9 @@ nav_order: 1
 title: Home
 lang: fr
 ---
+
+DEBUG: page.lang = {{ page.lang }}, site.lang = {{ site.lang }}
+
 # Pankosmia
 
 *An ecosystem to build custom-made translation tools*
