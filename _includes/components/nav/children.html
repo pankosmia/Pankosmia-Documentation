@@ -1,6 +1,6 @@
 {%- comment -%}
-  Include as: {%- include components/nav/children.html node=node ancestors=title_array all=bool -%}
-  Depends on: include.node, include.ancestors, include.all, nav_parenthood, nav_top_node_titles.
+  Include as: {%- include components/nav/children.html node=node ancestors=title_array all=bool page_lang=string -%}
+  Depends on: include.node, include.ancestors, include.all, include.page_lang, nav_parenthood, nav_top_node_titles.
   Includes: components/nav/sorted.html.
   Assigns to: nav_children.
   Overwrites:
@@ -18,7 +18,7 @@
     {%- assign nav_child_ok = true -%}
 
     {%- comment -%}Language filter: only include children matching current page language{%- endcomment -%}
-    {%- if nav_child.lang != page.lang and nav_child.lang != nil -%}
+    {%- if nav_child.lang != include.page_lang and nav_child.lang != nil -%}
       {%- assign nav_child_ok = false -%}
     {%- endif -%}
 

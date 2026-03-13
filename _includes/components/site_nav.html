@@ -1,7 +1,7 @@
 {%- comment -%}
-  Include as: {%- include components/site_nav.html all=bool -%}
-  Depends on: site.
-  Results in: HTML for the main navigation when `all` is nil or false;
+  Include as: {%- include components/site_nav.html all=bool page_lang=string -%}
+  Depends on: site, include.page_lang.
+  Results in: cached HTML for the main navigation when `all` is nil or false;
     includes links to pages excluded from the main navigation when `all` is true.
   Includes:
     components/nav/pages.html
@@ -17,7 +17,7 @@
         | where_exp:"item", "item.nav_exclude != true"
         | size %}
   {% if pages_top_size > 0 %}
-    {% include components/nav/pages.html pages=site.html_pages all=include.all %}
+    {% include components/nav/pages.html pages=site.html_pages all=include.all page_lang=include.page_lang %}
   {% endif %}
   {%- if site.nav_external_links -%}
     <ul class="nav-list">
@@ -52,15 +52,15 @@
                 </button>
                 {%- endif -%}
                 <div class="nav-category">{{ collection_value.name }}</div>
-                {% include components/nav/pages.html pages=collection all=include.all %}
+                {% include components/nav/pages.html pages=collection all=include.all page_lang=include.page_lang %}
               </li>
             </ul>
           {% else %}
             <div class="nav-category">{{ collection_value.name }}</div>
-            {% include components/nav/pages.html pages=collection all=include.all %}
+            {% include components/nav/pages.html pages=collection all=include.all page_lang=include.page_lang %}
           {% endif %}
         {% else %}
-          {% include components/nav/pages.html pages=collection all=include.all %}
+          {% include components/nav/pages.html pages=collection all=include.all page_lang=include.page_lang %}
         {% endif %}
       {% endif %}
     {% endfor %}

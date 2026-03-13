@@ -1,6 +1,6 @@
 {%- comment -%}
-  Include as: {%- include components/nav/links.html pages=page_array ancestors=title_array all=bool -%}
-  Depends on: include.pages, include.ancestors, include.all.
+  Include as: {%- include components/nav/links.html pages=page_array ancestors=title_array all=bool page_lang=string -%}
+  Depends on: include.pages, include.ancestors, include.all, include.page_lang.
   Results in: HTML for the main navigation when all is nil or false;
     includes links to pages excluded from the main navigation when all is true.
   Includes: components/nav/sorted.html, components/nav/children.html, components/nav/links.html.
@@ -11,8 +11,7 @@
 <ul class="nav-list">
   {%- for node in include.pages -%}
   {%- if include.all == true or node.nav_exclude != true -%}
-  <!-- DEBUG: node.title={{ node.title }}, node.lang={{ node.lang }}, page.lang={{ page.lang }} -->
-  {%- if node.lang == page.lang or node.lang == nil -%}
+  {%- if node.lang == include.page_lang or node.lang == nil -%}
 
   {%- if include.ancestors contains node.title -%}
 
@@ -29,7 +28,7 @@
 
   {%- else -%}
 
-    {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all -%}
+    {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all page_lang=include.page_lang -%}
 
     <li class="nav-list-item">
       {%- if nav_children.size >= 1 -%}
@@ -43,7 +42,7 @@
           {%- assign nav_children = nav_children | reverse -%}
         {%- endif -%}
         {%- assign nav_ancestors = include.ancestors | push: node.title -%}
-        {%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors all=include.all -%}
+        {%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors all=include.all page_lang=include.page_lang -%}
       {%- endif -%}
     </li>
 
