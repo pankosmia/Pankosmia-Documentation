@@ -17,6 +17,8 @@
   {%- endif -%}
 {%- endfor -%}
 
+<!-- DEBUG pages.html: page.lang={{ page.lang }}, filtered {{ filtered_pages.size }} pages from {{ include.pages.size }} total -->
+
 {%- assign nav_parenthood = filtered_pages | group_by: "parent" -%}
 
 {%- assign nav_top_nodes = nav_parenthood
