@@ -37,16 +37,16 @@ languages:
   - en
   - fr
 
-# Configure language-specific settings. The default needs to be listed last.
+# Configure language-specific settings.
 defaults:
-  - scope:
-      path: "fr"
-    values:
-      lang: fr
   - scope:
       path: ""
     values:
       lang: en
+  - scope:
+      path: "fr"
+    values:
+      lang: fr
 
 aux_links: # external links at the top right on all pages (includes language navigation labels)
   "EN": "/"
