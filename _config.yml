@@ -48,9 +48,7 @@ defaults:
     values:
       lang: fr
 
-aux_links: # external links at the top right on all pages (includes language navigation labels)
-  "EN": "/"
-  "FR": "/fr/"
+aux_links: # external links at the top right on all pages
   "Pankosmia on GitHub": "https://github.com/pankosmia"
 aux_links_new_tab: false
 

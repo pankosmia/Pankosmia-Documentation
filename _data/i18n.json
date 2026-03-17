@@ -1,0 +1,16 @@
+{
+  "en": {
+    "site_title": "Documentation",
+    "search_placeholder": "Search",
+    "toc_label": "Contents",
+    "home": "Home",
+    "language_name": "English"
+  },
+  "fr": {
+    "site_title": "Documentation",
+    "search_placeholder": "Rechercher",
+    "toc_label": "Matières",
+    "home": "Accueil",
+    "language_name": "Français"
+  }
+}

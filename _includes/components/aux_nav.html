@@ -1,11 +1,25 @@
 <nav aria-label="Auxiliary" class="aux-nav">
   <ul class="aux-nav-list">
+    {%- comment -%}Language switcher{%- endcomment -%}
+    {% for lang in site.languages %}
+      <li class="aux-nav-list-item">
+        {% if lang == "en" %}
+          <a href="{{ site.baseurl }}/" class="site-button{% if page.lang == lang %} active{% endif %}">
+            {{ site.data.i18n[lang].language_name }}
+          </a>
+        {% else %}
+          <a href="{{ site.baseurl }}/{{ lang }}/" class="site-button{% if page.lang == lang %} active{% endif %}">
+            {{ site.data.i18n[lang].language_name }}
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+    
+    {%- comment -%}Other aux links{%- endcomment -%}
     {% for link in site.aux_links %}
       <li class="aux-nav-list-item">
-        {% assign link_url = link.last %}
-        {% if link_url contains "://" %}
-          {%- comment -%}External link - use as-is{%- endcomment -%}
-          <a href="{{ link_url }}" class="site-button"
+        {% if link.last contains "://" %}
+          <a href="{{ link.last }}" class="site-button"
             {% if site.aux_links_new_tab %}
             target="_blank" rel="noopener noreferrer"
             {% endif %}
@@ -13,12 +27,7 @@
             {{ link.first }}
           </a>
         {% else %}
-          {%- comment -%}Internal link - prepend baseurl{%- endcomment -%}
-          {% if site.baseurl != "" %}
-            <a href="{{ site.baseurl }}{{ link_url }}" class="site-button"
-          {% else %}
-            <a href="{{ link_url }}" class="site-button"
-          {% endif %}
+          <a href="{{ site.baseurl }}{{ link.last }}" class="site-button"
             {% if site.aux_links_new_tab %}
             target="_blank" rel="noopener noreferrer"
             {% endif %}
