@@ -1,3 +1,5 @@
+puts "Lang plugin loaded"
+
 module Jekyll
   class LangPageGenerator < Generator
     safe true
