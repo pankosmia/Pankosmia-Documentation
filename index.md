@@ -12,6 +12,8 @@ i18n_key: home
 lang: en
 ---
 
+DEBUG: current_lang={{ current_lang }}, i18n_key={{ page.i18n_key }}, p={{ p }}
+
 # {% include t.html key="heading_main" %}
 
 {% capture temp %}{% include t.html key="subheading_main" %}{% endcapture %}{{ temp | markdownify }}
