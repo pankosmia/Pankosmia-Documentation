@@ -5,8 +5,12 @@
     {%- comment -%}Language switcher{%- endcomment -%}
     {% for lang in site.languages %}
       <li class="aux-nav-list-item">
-        <a href="{{ site.baseurl }}{{ page.url }}?lang={{ lang }}" class="site-button{% if current_lang == lang %} active{% endif %}">
-          {{ site.data.i18n.language_name[lang] }}
+        {% if lang == site.lang %}
+          <a href="{{ site.baseurl }}/" class="site-button{% if current_lang == lang %} active{% endif %}">
+        {% else %}
+          <a href="{{ site.baseurl }}/{{ lang }}/" class="site-button{% if current_lang == lang %} active{% endif %}">
+        {% endif %}
+        {{ site.data.i18n.language_name[lang] }}
         </a>
       </li>
     {% endfor %}
