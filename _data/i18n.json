@@ -1,16 +1,56 @@
 {
-  "en": {
-    "site_title": "Documentation",
-    "search_placeholder": "Search",
-    "toc_label": "Contents",
-    "home": "Home",
-    "language_name": "English"
+  "language_name": {
+    "en": "English",
+    "fr": "Français"
   },
-  "fr": {
-    "site_title": "Documentation",
-    "search_placeholder": "Rechercher",
-    "toc_label": "Matières",
-    "home": "Accueil",
-    "language_name": "Français"
+  "site_title": {
+    "en": "Documentation",
+    "fr": "Documentation",
+    "es": "Documentación"
+  },
+  "search_placeholder": {
+    "en": "Search",
+    "fr": "Rechercher",
+    "es": "Buscar"
+  },
+  "toc_label": {
+    "en": "Contents",
+    "fr": "Matières"
+  },
+  "home": {
+    "en": "Home",
+    "fr": "Accueil",
+    "es": "Inicio"
+  },
+  "pages": {
+    "home": {
+      "title": {
+        "en": "Home"
+      },
+      "nav_title": {
+        "en": "Home"
+      },
+      "heading_main": {
+        "en": "Pankosmia"
+      },
+      "subheading_main": {
+        "en": "*An ecosystem to build custom-made translation tools*"
+      },
+      "intro": {
+        "en": "Pankosmia is a scripture translation software Ecosystem. It is used to build multiple translation tools, using shared components."
+      },
+      "the_pankosmia_project": {
+        "en": "The Pankosmia Project"
+      },
+      "dev_quickstart": {
+        "en": "Dev Quickstart"
+      },
+      "dev_reference_manual": {
+        "en": "Dev Reference Manual"
+      },
+      "legal_notices": {
+        "en": "Legal Notices"
+      }
+    }
   }
 }

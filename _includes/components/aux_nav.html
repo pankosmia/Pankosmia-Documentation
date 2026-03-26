@@ -1,17 +1,13 @@
+{%- assign current_lang = page.lang | default: site.lang | default: "en" -%}
+
 <nav aria-label="Auxiliary" class="aux-nav">
   <ul class="aux-nav-list">
     {%- comment -%}Language switcher{%- endcomment -%}
-    {% for lang in site.languages %}
+    {% for lang in site.data.i18n.language_name %}
       <li class="aux-nav-list-item">
-        {% if lang == "en" %}
-          <a href="{{ site.baseurl }}/" class="site-button{% if page.lang == lang %} active{% endif %}">
-            {{ site.data.i18n[lang].language_name }}
-          </a>
-        {% else %}
-          <a href="{{ site.baseurl }}/{{ lang }}/" class="site-button{% if page.lang == lang %} active{% endif %}">
-            {{ site.data.i18n[lang].language_name }}
-          </a>
-        {% endif %}
+        <a href="{{ site.baseurl }}{{ page.url }}?lang={{ lang }}" class="site-button{% if current_lang == lang %} active{% endif %}">
+          {{ site.data.i18n.language_name[lang] }}
+        </a>
       </li>
     {% endfor %}
     

@@ -17,11 +17,6 @@
   {%- for nav_child in nav_candidates -%}
     {%- assign nav_child_ok = true -%}
 
-    {%- comment -%}Language filter: only include children matching current page language{%- endcomment -%}
-    {%- if nav_child.lang != include.page_lang and nav_child.lang != nil -%}
-      {%- assign nav_child_ok = false -%}
-    {%- endif -%}
-
     {%- if nav_child.grand_parent and nav_child.grand_parent != include.node.parent -%}
       {%- assign nav_child_ok = false -%}
     {%- endif -%}
