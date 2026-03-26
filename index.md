@@ -14,7 +14,7 @@ lang: en
 
 # {% include t.html key="heading_main" %}
 
-{% include t.html key="subheading_main" | markdownify %}
+{% capture temp %}{% include t.html key="subheading_main" %}{% endcapture %}{{ temp | markdownify }}
 {: .fs-6 .fw-300 }
 
 {% include t.html key="intro" %}
