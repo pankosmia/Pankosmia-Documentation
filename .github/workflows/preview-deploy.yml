@@ -72,6 +72,11 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Debug plugin presence
+        run: |
+          ls -la _plugins/
+          cat _plugins/lang_pages.rb
+
       - name: Download built preview
         uses: actions/download-artifact@v4
         with:
