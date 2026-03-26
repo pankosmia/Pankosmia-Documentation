@@ -35,6 +35,7 @@ lang: en
 languages:
   - en
   - fr
+  - es
 
 aux_links: # external links at the top right on all pages
   "Pankosmia on GitHub": "https://github.com/pankosmia"
