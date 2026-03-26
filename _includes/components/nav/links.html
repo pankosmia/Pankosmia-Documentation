@@ -29,7 +29,7 @@
 
   {%- else -%}
 
-    {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all page_lang=include.page_lang -%}
+    {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all -%}
 
     {%- comment -%}Determine link text: use i18n if available, otherwise fall back to node.title{%- endcomment -%}
     {%- assign link_text = node.title -%}
@@ -49,7 +49,7 @@
           {%- assign nav_children = nav_children | reverse -%}
         {%- endif -%}
         {%- assign nav_ancestors = include.ancestors | push: node.title -%}
-        {%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors all=include.all page_lang=include.page_lang -%}
+        {%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors all=include.all -%}
       {%- endif -%}
     </li>
 
