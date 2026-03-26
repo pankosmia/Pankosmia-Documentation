@@ -5,7 +5,15 @@ layout: table_wrappers
 {%- comment -%}
 Language detection
 {%- endcomment -%}
-{%- assign current_lang = page.lang | default: site.lang -%}
+{%- if page.url contains "?" -%}
+  {%- assign url_params = page.url | split: "?" | last | split: "&" -%}
+  {%- for param in url_params -%}
+    {%- if param contains "lang=" -%}
+      {%- assign page_lang_param = param | remove: "lang=" -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- assign current_lang = page_lang_param | default: page.lang | default: site.lang -%}
 {%- assign p = site.data.i18n.pages[page.i18n_key] -%}
 
 

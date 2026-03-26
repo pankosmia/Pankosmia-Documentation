@@ -6,8 +6,8 @@
     {% for lang in site.data.i18n.language_name %}
       <li class="aux-nav-list-item">
         <a href="{{ site.baseurl }}{{ page.url }}?lang={{ lang }}" class="site-button{% if current_lang == lang %} active{% endif %}">
-          {{ site.data.i18n.language_name[lang] }}
         </a>
+          {{ site.data.i18n.language_name[lang] }}
       </li>
     {% endfor %}
     
