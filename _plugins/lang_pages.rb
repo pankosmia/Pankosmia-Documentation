@@ -22,8 +22,13 @@ module Jekyll
   class PageWithLang < Page
     def initialize(site, base, dir, name, lang)
       super(site, base, dir, name)
-      self.data['lang'] = lang
-      self.data['permalink'] = "/#{lang}#{self.data['permalink'] || self.url}"
+      @data = @data.dup
+      @data['lang'] = lang
+      if lang == site.config['lang']
+        @data['permalink'] = @data['permalink'] || url
+      else
+        @data['permalink'] = "/#{lang}#{@data['permalink'] || url}"
+      end
     end
   end
 end
