@@ -1,5 +1,5 @@
 {%- comment -%}
-  Include as: {%- include components/sidebar.html page_lang=page.lang -%}
+  Include as: {%- include components/sidebar.html -%}
   Depends on: page(?), site, include.page_lang.
   Results in: HTML for the side bar.
   Includes:
@@ -17,7 +17,7 @@
     </button>
   </div>
 
-  {% include components/site_nav.html page_lang=page.lang %}
+  {% include components/site_nav.html %}
 
   {%- comment -%}
     note: nav_footer_custom and/or this "site footer" appear in components/footer.html for the mobile view.

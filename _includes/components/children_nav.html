@@ -20,7 +20,7 @@
 {%- else -%}
 
   {%- capture site_nav -%}
-  {%- include components/site_nav.html all=true page_lang=page.lang -%}
+  {%- include components/site_nav.html all=true -%}
   {%- endcapture -%}
 
   {%- assign nav_children = nil -%}
@@ -67,7 +67,7 @@
 
   {% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
 
-  {%- include components/nav/children.html node=page ancestors=nav_ancestors all=true page_lang=page.lang -%}
+  {%- include components/nav/children.html node=page ancestors=nav_ancestors all=true -%}
 
 {%- endunless -%}
 
