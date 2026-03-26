@@ -5,17 +5,12 @@ layout: table_wrappers
 {%- comment -%}
 Language detection
 {%- endcomment -%}
-{%- if page.url contains "?" -%}
-  {%- assign url_params = page.url | split: "?" | last | split: "&" -%}
-  {%- for param in url_params -%}
-    {%- if param contains "lang=" -%}
-      {%- assign page_lang_param = param | remove: "lang=" -%}
-    {%- endif -%}
-  {%- endfor -%}
+{%- assign lang_param = page.url | split: "?lang=" | last | split: "&" | first -%}
+{%- if lang_param != page.url -%}
+  {%- assign url_lang = lang_param -%}
 {%- endif -%}
-{%- assign current_lang = page_lang_param | default: page.lang | default: site.lang -%}
+{%- assign current_lang = url_lang | default: page.lang | default: site.lang -%}
 {%- assign p = site.data.i18n.pages[page.i18n_key] -%}
-
 
 <!DOCTYPE html>
 
