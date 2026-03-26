@@ -3,11 +3,11 @@
 <nav aria-label="Auxiliary" class="aux-nav">
   <ul class="aux-nav-list">
     {%- comment -%}Language switcher{%- endcomment -%}
-    {% for lang in site.data.i18n.language_name %}
+    {% for lang in site.data.i18n.language_name.keys %}
       <li class="aux-nav-list-item">
         <a href="{{ site.baseurl }}{{ page.url }}?lang={{ lang }}" class="site-button{% if current_lang == lang %} active{% endif %}">
-        </a>
           {{ site.data.i18n.language_name[lang] }}
+        </a>
       </li>
     {% endfor %}
     
