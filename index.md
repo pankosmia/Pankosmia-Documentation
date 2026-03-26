@@ -9,7 +9,6 @@ layout: default
 nav_order: 1
 title: Home # used for Jekyll metadata and fallback
 i18n_key: home
-lang: en
 ---
 
 DEBUG: current_lang={{ current_lang }}, i18n_key={{ page.i18n_key }}, p={{ p }}
