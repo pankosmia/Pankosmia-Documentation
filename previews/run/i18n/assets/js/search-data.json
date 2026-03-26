@@ -118,26 +118,26 @@
     
     "relUrl": "/pankosmia-project/#architecture"
   },"17": {
-    "doc": "Dev Quickstart",
-    "title": "Dev Quickstart",
-    "content": " ",
-    "url": "/previews/run/i18n/dev-quickstart/",
-    
-    "relUrl": "/dev-quickstart/"
-  },"18": {
     "doc": "Dev Reference Manual",
     "title": "Dev Reference Manual",
     "content": " ",
     "url": "/previews/run/i18n/dev-reference-manual/",
     
     "relUrl": "/dev-reference-manual/"
-  },"19": {
+  },"18": {
     "doc": "Build Versions",
     "title": "Build Versions",
-    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 5425f754b0070101cf16758980689b153b426aad GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 834216510f630a95a86a5b5568681f427768c17f GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
     "url": "/previews/run/i18n/versions/",
     
     "relUrl": "/versions/"
+  },"19": {
+    "doc": "Dev Quickstart",
+    "title": "Dev Quickstart",
+    "content": " ",
+    "url": "/previews/run/i18n/dev-quickstart/",
+    
+    "relUrl": "/dev-quickstart/"
   },"20": {
     "doc": "Home",
     "title": "Contents",
