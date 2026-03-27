@@ -48,8 +48,7 @@ module Jekyll
         self.data['permalink'] = self.data['permalink'] || self.url
       else
         original_url = self.data['permalink'] || self.url
-        baseurl = site.config['baseurl'] || ''
-        self.data['permalink'] = "#{baseurl}/#{lang}#{original_url}"
+        self.data['permalink'] = "/#{lang}#{original_url}".sub(/\/$/, '') + '/'
       end
     end
     
