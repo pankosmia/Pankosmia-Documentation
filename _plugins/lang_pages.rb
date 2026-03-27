@@ -1,3 +1,19 @@
+Jekyll.logger.warn "=== Plugin file loaded ==="
+
+module Jekyll
+  class LangPageGenerator < Generator
+    safe true
+    priority :low
+
+    def generate(site)
+      Jekyll.logger.warn "=== Generator.generate called ==="
+      Jekyll.logger.warn "Languages: #{site.config['languages'].inspect}"
+      
+      # rest of generate method
+    end
+  end
+end
+
 module Jekyll
   Jekyll.logger.info "Lang plugin loaded"
 
