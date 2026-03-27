@@ -9,9 +9,11 @@ source "https://rubygems.org"
 # Happy Jekylling!
 ruby "3.3.6"
 # gem "jekyll", "~> 4.4.1"
-gem "github-pages", "~> 232", group: :jekyll_plugins
+gem "jekyll", "~> 3.10.0"
+gem "kramdown-parser-gfm"
+# gem "github-pages", "~> 232", group: :jekyll_plugins
 gem "logger"
-gem "jekyll"
+# gem "jekyll"
 gem "just-the-docs"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 #gem "minima", "~> 2.5"

@@ -118,256 +118,277 @@
     
     "relUrl": "/pankosmia-project/#architecture"
   },"17": {
-    "doc": "Dev Quickstart",
-    "title": "Dev Quickstart",
-    "content": " ",
-    "url": "/previews/run/i18n/dev-quickstart/",
-    
-    "relUrl": "/dev-quickstart/"
-  },"18": {
     "doc": "Dev Reference Manual",
     "title": "Dev Reference Manual",
     "content": " ",
     "url": "/previews/run/i18n/dev-reference-manual/",
     
     "relUrl": "/dev-reference-manual/"
-  },"19": {
+  },"18": {
     "doc": "Build Versions",
     "title": "Build Versions",
-    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 2f492100cbf4b0ba2be6bb95c4ab861bf083c13c GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
     "url": "/previews/run/i18n/versions/",
     
     "relUrl": "/versions/"
+  },"19": {
+    "doc": "Dev Quickstart",
+    "title": "Dev Quickstart",
+    "content": " ",
+    "url": "/previews/run/i18n/dev-quickstart/",
+    
+    "relUrl": "/dev-quickstart/"
   },"20": {
     "doc": "Home",
+    "title": "Pankosmia",
+    "content": "An ecosystem to build custom-made translation tools . Pankosmia is a scripture translation software Ecosystem. It is used to build multiple translation tools, using shared components. ",
+    "url": "/previews/run/i18n/#pankosmia",
+    
+    "relUrl": "/#pankosmia"
+  },"21": {
+    "doc": "Home",
     "title": "Contents",
-    "content": ". | [ . ](pankosmia-project/) . | [ . ](dev-quickstart/) . | [ . ](dev-reference-manual/) . | . ",
+    "content": ". | The Pankosmia Project . | Dev Quickstart . | Dev Reference Manual . | . Legal Notices . ",
     "url": "/previews/run/i18n/#contents",
     
     "relUrl": "/#contents"
-  },"21": {
+  },"22": {
     "doc": "Home",
     "title": "Home",
-    "content": "DEBUG: current_lang=, i18n_key=home, p= . # . ",
+    "content": " ",
     "url": "/previews/run/i18n/",
     
     "relUrl": "/"
-  },"22": {
+  },"23": {
     "doc": "Legal Notices",
     "title": "Legal Notices",
     "content": " ",
     "url": "/previews/run/i18n/legal-notices/",
     
     "relUrl": "/legal-notices/"
-  },"23": {
+  },"24": {
     "doc": "Legal Notices",
     "title": "Table of Contents",
     "content": ". | Contact | Hosting | Terms of use | Property | Hypertext links | GDPR | Site content | Cookies | . ",
     "url": "/previews/run/i18n/legal-notices/#table-of-contents",
     
     "relUrl": "/legal-notices/#table-of-contents"
-  },"24": {
+  },"25": {
     "doc": "Legal Notices",
     "title": "Contact",
     "content": "CEO: Mark Howe email: webmaster@mvhsolutions.com . ",
     "url": "/previews/run/i18n/legal-notices/#contact",
     
     "relUrl": "/legal-notices/#contact"
-  },"25": {
+  },"26": {
     "doc": "Legal Notices",
     "title": "Hosting",
     "content": "The https://pankosmia.dev website is hosted by MVH SOLUTIONS via https://github.com. Address: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon. ",
     "url": "/previews/run/i18n/legal-notices/#hosting",
     
     "relUrl": "/legal-notices/#hosting"
-  },"26": {
+  },"27": {
     "doc": "Legal Notices",
     "title": "Terms of use",
     "content": "Use of the https://pankosmia.dev website is subject to compliance with the following general terms and conditions. By opening the https://pankosmia.dev website, you declare that you are aware of these general terms and conditions of use and accept them unreservedly. ",
     "url": "/previews/run/i18n/legal-notices/#terms-of-use",
     
     "relUrl": "/legal-notices/#terms-of-use"
-  },"27": {
+  },"28": {
     "doc": "Legal Notices",
     "title": "Property",
     "content": "All components of the https://pankosmia.dev website (text, logos, images, audio, software, icons, layout, databases, etc.) are protected by national and international intellectual property laws. These components remain the sole property of their respective owners. Users may not reproduce, represent, adapt, translate or transform any component of the https://pankosmia.dev website in part or in whole, or transfer it to any other website, except by the prior written permission of MVH solutions (🚧). ",
     "url": "/previews/run/i18n/legal-notices/#property",
     
     "relUrl": "/legal-notices/#property"
-  },"28": {
+  },"29": {
     "doc": "Legal Notices",
     "title": "Hypertext links",
     "content": "MVH Solutions may not be held liable for the destination anchors of any hypertext links installed as part of the https://pankosmia.dev website pointing to other resources on the Internet. Similarly, it may not be held liable in respect of the content and relevance of the information provided by sites published by third parties that can be accessed from the https://pankosmia.dev website via hypertext links. ",
     "url": "/previews/run/i18n/legal-notices/#hypertext-links",
     
     "relUrl": "/legal-notices/#hypertext-links"
-  },"29": {
+  },"30": {
     "doc": "Legal Notices",
     "title": "GDPR",
     "content": "MVH Solutions does not collect any personal data unless the user initiates contact by email of via the Github interface. For details of how Github itself manages data, please see https://docs.github.com/fr/site-policy/github-terms/github-terms-of-service . The French Data Protection Act 78-17 of January 6, 1978 as amended in 2004 grants you the right to access and/or rectify personal data. You can exercise this right by contacting the webmaster. You may also refuse processing of your personal data if you have legitimate grounds. Pursuant to the General Data Protection Regulation in force as of 25 May 2018, the data gathered will be used for internal purposes only. To request rectification or erasure of your personal data, please contact us at the following address: webmaster@mvhsolutions.com. ",
     "url": "/previews/run/i18n/legal-notices/#gdpr",
     
     "relUrl": "/legal-notices/#gdpr"
-  },"30": {
+  },"31": {
     "doc": "Legal Notices",
     "title": "Site content",
     "content": "MVH Solutions provides users of the https://pankosmia.dev website with available, verified information, but may not be held liable should any information be unavailable. No guarantee is made that information made available on the https://pankosmia.dev website is correct, accurate or exhaustive. Authors retain liability for the content they provide. MVH Solutions (🚧) reserves the right to amend and/or delete all or part of the https://pankosmia.dev website without notice. ",
     "url": "/previews/run/i18n/legal-notices/#site-content",
     
     "relUrl": "/legal-notices/#site-content"
-  },"31": {
+  },"32": {
     "doc": "Legal Notices",
     "title": "Cookies",
     "content": "Please see Github’s policy above. ",
     "url": "/previews/run/i18n/legal-notices/#cookies",
     
     "relUrl": "/legal-notices/#cookies"
-  },"32": {
+  },"33": {
     "doc": "Script Reference",
     "title": "Script Reference",
     "content": "Additional Info TL;DR - For reference when needed on developer scripts for an app repos built on Pankosmia . ",
     "url": "/previews/run/i18n/script-reference/",
     
     "relUrl": "/script-reference/"
-  },"33": {
+  },"34": {
     "doc": "Script Reference",
     "title": "Table of Contents",
     "content": ". | Ecosystem setup and configuration | Installing the clients | Scripts . | Configuration . | Config scripts: | Setup scripts: | Usage scripts: | Maintenance scripts: | . | . | Footnotes | . ",
     "url": "/previews/run/i18n/script-reference/#table-of-contents",
     
     "relUrl": "/script-reference/#table-of-contents"
-  },"34": {
+  },"35": {
     "doc": "Script Reference",
     "title": "Ecosystem setup and configuration",
     "content": "This repo pulls together several libraries and projects into a single app. The projects are spread across several repos to allow modular reuse. Scripts follow for assisting in setup, though it can also all be setup manually. The following assume the repos are installed with the following directory structure. This is an example. Clients in use may vary. Configuration is handled via app_config.envand the app_setup script. |-- repos |-- pankosmia |-- core-client-content repository |-- core-client-dashboard repository |-- core-client-i18n-editor repository |-- core-client-remote-repos repository |-- core-client-settings repository |-- core-client-workspace repository |-- [your-desktop-app-repo-name] (30 characters or less on windows!) |-- resource-core |-- webfonts-core . ",
     "url": "/previews/run/i18n/script-reference/#ecosystem-setup-and-configuration",
     
     "relUrl": "/script-reference/#ecosystem-setup-and-configuration"
-  },"35": {
+  },"36": {
     "doc": "Script Reference",
     "title": "Installing the clients",
     "content": "The local_server (pankosmia_web) serves compiled files from the build directory of each client, each client must be built. This is handled by the clone and build_clients scripts, though can also all be run manually which is helpful during development. # In each client repo, NOT this repo! npm ci npm run build . Running run, build_server, or bundle_... all copy the latest build to the build environment. ",
     "url": "/previews/run/i18n/script-reference/#installing-the-clients",
     
     "relUrl": "/script-reference/#installing-the-clients"
-  },"36": {
+  },"37": {
     "doc": "Script Reference",
     "title": "Scripts",
     "content": "Configuration . Config files must match clients and assets utilized. Scripts that write them are provided, as per app_config.env. Files created by the app_setup script are: . | Linux | Windows | MacOS | . | buildSpec.json/globalBuildResources/i18nPatch.json/globalBuildResources/product.json/linux/buildResources/setup/app_setup.json | buildSpec.json\\globalBuildResources\\i18nPatch.json\\globalBuildResources\\product.json\\windows\\buildResources\\setup\\app_setup.json | buildSpec.json/globalBuildResources/i18nPatch.json/globalBuildResources/product.json/macos/buildResources/setup/app_setup.json | . Review app_config.env and adjust as needed, then run one of the setup scripts that follow. Re-run the app_setup script anytime app_config.env is changed. Config scripts: . Run from the provided location: . | Description | Linux:cd linux/scripts | Windows:[1]cd windows/scripts | MacOS:cd macos/scripts | . | Uses app_config.env to generate/rebuild/replace app_setup.json, buildSpec.json, product.json, and i18nPatch.json | ./app_setup.bsh | .\\app_setup.bat | ./app_setup.zsh | . Setup scripts: . Run from the provided location: . | Description | Linux:cd linux/scripts | Windows:[1]cd windows/scripts | MacOS:cd macos/scripts | . | Clones all repos in /app_config.env if a directory by that name does not already exit | ./clone.bsh Default clones via HTTPS.Optional argument:./clone.bsh -s Clones via SSH. | .\\clone.bat Default clones via HTTPS.Optional argument:.\\clone.bat -s Clones via SSH. | ./clone.zsh Default clones via HTTPS.Optional argument:./clone.zsh -s Clones via SSH. | . | For each asset repo in /app_config.env: git checkout main, git pullFor each client repo in /app_config.env: git checkout main, git pull, npm ci, and npm run build.Dev’s should build manually when testing branch(es). | ./build_clients.bshOptional argument:./build_clients.bsh -d Deletes past logs without asking. | .\\build_clients.batOptional argument:.\\build_clients.bat -d Deletes past logs without asking. | ./build_clients.zshOptional argument:./build_clients.zsh -d Deletes past logs without asking. | . | Create an Electronite viewer for use with the local dev build environment. | ./build_viewer.bsh | .\\build_viewer.ps1(use a powershell terminal) | ./build_viewer.zsh | . Usage scripts: . Note: Multiple arguments can be applied in any order, e.g., ./run.zsh -s -d is the same as ./run.zsh -d -s . | Description | Linux:cd linux/scripts | Windows:[1]cd windows/scripts | MacOS:cd macos/scripts | . | removes the build directory and runs cargo clean[4] | ./clean.bshOptional arguments:./clean.bsh -s Will not ask if server is off | .\\clean.batOptional arguments:.\\clean.bat -s Will not ask if server is off | ./clean.zshOptional arguments:./clean.zsh -s Will not ask if server is off | . | runs cargo build, and node build.js | ./build_server.bshOptional arguments:./build_server.bsh -s Will not ask if server is off ./build_server.bsh -d Builds server in debug mode | .\\build_server.batOptional arguments:.\\build_server.bat -s Will not ask if server is off.\\build_server.bat -d Builds server in debug mode | ./build_server.zshOptional arguments:./build_server.zsh -s Will not ask if server is off ./build_server.zsh -d Builds server in debug mode | . | Assembles the build environment (clients) and starts the server [2] | ./run.bshOptional arguments:./run.bsh -s Will not ask if server is off.\\run.bsh -d Runs with server in debug mode | .\\run.batOptional arguments:.\\run.bat -s Will not ask if server is off.\\run.bat -d Runs with server in debug mode | ./run.zshOptional arguments:./run.zsh -s Will not ask if server is off.\\run.zsh -d Runs with server in debug mode | . | Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the build_viewer script.) | ./viewer.bshDev Tools: Ctrl + Shift + IOptional argument:./viewer.bsh [PORT#](default is 19119) | .\\viewer.batDev Tools: Ctrl + Shift + IOptional argument:.\\viewer.bat [PORT#](default is 19119) | ./viewer.zshDev Tools: Cmd + Option + IOptional argument:./viewer.zsh [PORT#](default is 19119) | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone installer. (*) (•) | ./bundle_viewer.bsh(Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.) | .\\bundle_viewer.ps1Optional arguments:`.\\bundle_viewer.ps1 -ServerOff \"Y\"` or: “y”; Will not ask if server is off | ./bundle_viewer.zshOptional arguments:./bundle_viewer.zsh -s Will not ask if server is off | . | Deletes the last .zip release bundle if it it exists, then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle [2] | ./bundle_tgz.bshOptional arguments:./bundle_tgz.bsh -s Will not ask if server is off/bundle_tgz.bsh -g Run from Github Actions | .\\bundle_zip.ps1Optional arguments:-ServerOff “Y” or: “y”; Will not ask if server is off-IsGHA “Y” or: “y”; Run from Gihtub Actions | ./bundle_zip.zshOptional arguments:/bundle_zip.zsh -s Will not ask if server is off/bundle_zip.zsh -g Run from Github Actions | . | Deletes the last .exe release bundle if it it exists, then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes an exe installer [2][3] |   | .\\bundle_exe.ps1Optional arguments:`bundle_exe.ps1 -ServerOff \"Y\"` or: “y”; Will not ask if server is off[3] |   | . Maintenance scripts: . Run from the provided location: . | Description | Linux:cd linux/scripts | Windows[1]:cd windows/scripts | MacOS:cd macos/scripts | . | Facilitates syncing with upstream with exclusion of files expected to differ: | ./sync.bshOptional arguments:./sync.bsh -p Will not ask if latest is already pulled. | .\\sync.batOptional arguments:.\\sync.bat -p Will not ask if latest is already pulled | ./sync.zshOptional arguments:./sync.zsh -p Will not ask if latest is already pulled. | . ",
     "url": "/previews/run/i18n/script-reference/#scripts",
     
     "relUrl": "/script-reference/#scripts"
-  },"37": {
+  },"38": {
     "doc": "Script Reference",
     "title": "Footnotes",
     "content": "[1] … When running a bat script from a command prompt, the .\\ included in the examples is optional. [2] … Ensure the server (build_server.bat) is current! . [3] … Environment prerequisite for running the exe build locally: Install Inno Setup -tested with v6.4.3 . [4] … Targeted clean tips: . | To clean just the dev server: cd to the /local_server directory and run cargo clean --target-dir target/debug | To clean just the dev server: cd to the /local_server directory and run cargo clean --target-dir target/release | To clean just the build environment, cd to the subdirectory for your OS (i.e., /macos, /linux, or /windows), then recursively remove its build subdirectory. | (The clean script does all of the above.) | . ",
     "url": "/previews/run/i18n/script-reference/#footnotes",
     
     "relUrl": "/script-reference/#footnotes"
-  },"38": {
+  },"39": {
     "doc": "Scripts",
     "title": "Scripts",
     "content": "Developer scripts for an app repos built on Pankosmia . ",
     "url": "/previews/run/i18n/scripts/",
     
     "relUrl": "/scripts/"
-  },"39": {
+  },"40": {
     "doc": "Scripts",
     "title": "Table of Contents",
     "content": ". | Use . | Client development: | To generate artifacts: | . | Maintenance | Footnotes | . ",
     "url": "/previews/run/i18n/scripts/#table-of-contents",
     
     "relUrl": "/scripts/#table-of-contents"
-  },"40": {
+  },"41": {
     "doc": "Scripts",
     "title": "Use",
     "content": "Run[1] the run script to start the server without a browser launch. | Consider also if you need to delete ~/pankosmia_working first. | You’ll want to restart the server if deleting ~/pankosmia_working after starting the server. To restart, exit the terminal window where the server is running the run the run script[1] again. | Only one instance of the same server can be running at a time. | . Client development: . Manually build the client(s) changed, stop the server if is is running, then start the server (run). The run script will re-assemble the environment to include your build. See also Running your setup. To generate a release package for the OS you are using, edit the version number for the release in app_config.env then see the next section below, or Local installer build or the bundle scripts in Dev script reference . To generate artifacts: . Manually run the desired workflow (Actions &gt; [select workflow] &gt; Run workflow). | The current main branch of client repo and resource at the time of running the workflow will be used. | . Download resulting artifacts (Actions &gt; click the name of a run to see the workflow run summary &gt; scroll down to the bottom to the Artifacts section &gt; to download, click either the name of each artifact or the down arrow on each row . Any double-compressed artifacts should have one layer uncompressed before release, e.g.: . | Strip *.tgz.zip down to *.tgz | Strip *.zip.zip down to *.zip | If working from windows, avoid releasing a re-zipping a macos or linux zip package if a .pkg, .sh, .bsh, .zsh was in the layer re-zipped in windows. Doing so would otherwise remove file permission settings of chmod +x where they are needed. | Release the *.pkg.zip layer as .zip as it includes a README file in the same layer as the pkg, which contains installation and upgrade instructions / info. | . Upload releases manually by going to the Release section of your repo and selecting “Draft a new release”. ",
     "url": "/previews/run/i18n/scripts/#use",
     
     "relUrl": "/scripts/#use"
-  },"41": {
+  },"42": {
     "doc": "Scripts",
     "title": "Maintenance",
     "content": "To update the server, change the latest version of panksomia-web in /local_server/Cargo.toml and re-run the build_server script. To sync this repo with its upstream, run the sync script. ",
     "url": "/previews/run/i18n/scripts/#maintenance",
     
     "relUrl": "/scripts/#maintenance"
-  },"42": {
+  },"43": {
     "doc": "Scripts",
     "title": "Footnotes",
     "content": "[1] … Windows developers, run .bat scripts from a Powershell or Command prompt:              …repos\\pankosmia[your-desktop-app-repo-name]\\windows\\scripts&gt; .\\[scriptname].bat              The .\\ is optional from a command prompt.              Use a powershell terminal for the .ps1 build scripts. MacOS developers, run .bsh scripts from a MacOS terminal:              …repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts&gt; ./[scriptname].bsh Linux developers, run .zsh scripts from a linux terminal:              …repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts&gt; ./[scriptname].zsh . ",
     "url": "/previews/run/i18n/scripts/#footnotes",
     
     "relUrl": "/scripts/#footnotes"
-  },"43": {
+  },"44": {
     "doc": "UX/UI guidelines",
     "title": "UX/UI Guidelines",
     "content": " ",
     "url": "/previews/run/i18n/uxui-guidelines/#uxui-guidelines",
     
     "relUrl": "/uxui-guidelines/#uxui-guidelines"
-  },"44": {
+  },"45": {
     "doc": "UX/UI guidelines",
     "title": "Table of contents",
     "content": ". | General page template | Data grid | Dialog | Icons | Required fields | Theme | Tooltip | . ",
     "url": "/previews/run/i18n/uxui-guidelines/#table-of-contents",
     
     "relUrl": "/uxui-guidelines/#table-of-contents"
-  },"45": {
+  },"46": {
     "doc": "UX/UI guidelines",
     "title": "General page template",
     "content": " ",
     "url": "/previews/run/i18n/uxui-guidelines/#general-page-template",
     
     "relUrl": "/uxui-guidelines/#general-page-template"
-  },"46": {
+  },"47": {
     "doc": "UX/UI guidelines",
     "title": "Data grid",
     "content": " ",
     "url": "/previews/run/i18n/uxui-guidelines/#data-grid",
     
     "relUrl": "/uxui-guidelines/#data-grid"
-  },"47": {
+  },"48": {
     "doc": "UX/UI guidelines",
     "title": "Dialog",
     "content": "💡 Use the Dialog component instead of a modal. The modal is the low-level element meant to block the interaction. The Dialog is based on a modal, but specializes in providing information and further actions. A Dialog is composed of three main parts: . | Title. Contain a brief, clear statement or question. It should communicate the Dialog’s purpose. Background color is secondary. | Content. Anything needed for the context, from supporting text to full-size form. With long content, use the scroll=paper. | Actions. There’s always a way to go back (Cancel). And the main action is on the right. The label should reflect the action performed when clicked. If any required field is in the content, the action button is disabled until they are completed. Cancel. Text button, primary color. Action. Contained button, primary color. | . Responsiveness is configured as follow: . &gt; 🚧 TBD (full-width + variable maxWidth depending on breakpoints?). ",
     "url": "/previews/run/i18n/uxui-guidelines/#dialog",
     
     "relUrl": "/uxui-guidelines/#dialog"
-  },"48": {
+  },"49": {
     "doc": "UX/UI guidelines",
     "title": "Icons",
     "content": "Material Icons should be in the Outlined style by default. ",
     "url": "/previews/run/i18n/uxui-guidelines/#icons",
     
     "relUrl": "/uxui-guidelines/#icons"
-  },"49": {
+  },"50": {
     "doc": "UX/UI guidelines",
     "title": "Required fields",
     "content": "When information is required to proceed: . | Required field(s) should show an asterisk * after the label. | Above required field(s), explain what the asterisk does. This message is displayed once, after any title and before required field(s). Add * Required fields., with the typography style subtitle2. | The action button below the field(s) is enabled only when all required fields are completed. | . ",
     "url": "/previews/run/i18n/uxui-guidelines/#required-fields",
     
     "relUrl": "/uxui-guidelines/#required-fields"
-  },"50": {
+  },"51": {
     "doc": "UX/UI guidelines",
     "title": "Theme",
     "content": "Main colors . | You can find matching primary and secondary colors using a palette generator like Coolors. If you already have a primary color in mind, you can also generate a matching secondary color with a Color Wheel. | . Generate MUI color variants for theme.json . | Use the MUI Theme Creator. On the bottom-right you can edit a main color to automatically generate its light and dark variants, and the corresponding contrastText color. Note those are different from a light/dark app theme. They are a lighter and darker shade of the main color. You can use them to play with contrast in the interface. | . Check contrast . | It’s a good practice to check contrast. Online palette and color tools tend to rely on varying contrast standards. Better to double check and choose which contrast standard you want to aim for. | MUI uses colors in different contexts. To prevent any issue, try your colors’ contrasts accordingly. Check primary and secondary as text for both white and black background. Note that you don’t necessarily need your colors to have a good contrast with white and black out-of-the-box. This is to make sure light and dark mode will work. But colors can also be further adjusted to better work in a specific mode. | It’s good to have some contrast between primary and secondary. You don’t need a standard-level contrast. But a secondary component on a primary background can be a thing (like a badge with number of notifications). If primary and secondary are too close, the interface will become less clear. | . Generate appbar-chip-inactive colors . | If your primary color is darker than your secondary. Use secondary dark as appbar-chip-inactive main and Generate MUI color variants from it. | If your primary color is lighter than your secondary. Use secondary light as appbar-chip-inactive main and Generate MUI color variants from it. | . ",
     "url": "/previews/run/i18n/uxui-guidelines/#theme",
     
     "relUrl": "/uxui-guidelines/#theme"
-  },"51": {
+  },"52": {
     "doc": "UX/UI guidelines",
     "title": "Tooltip",
     "content": " ",
     "url": "/previews/run/i18n/uxui-guidelines/#tooltip",
     
     "relUrl": "/uxui-guidelines/#tooltip"
-  },"52": {
+  },"53": {
     "doc": "UX/UI guidelines",
     "title": "UX/UI guidelines",
     "content": " ",
     "url": "/previews/run/i18n/uxui-guidelines/",
     
     "relUrl": "/uxui-guidelines/"
+  },"54": {
+    "doc": "Home",
+    "title": "Home",
+    "content": "{%- assign current_lang = page.lang | default: site.lang | default: \"en\" -%} {%- assign p = site.data.i18n.pages[page.i18n_key] -%} # {% include t.html key=\"heading_main\" %} {% capture temp %}{% include t.html key=\"subheading_main\" %}{% endcapture %}{{ temp | markdownify }} {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * {% include t.html key=\"the_pankosmia_project\" %} . * {% include t.html key=\"dev_quickstart\" %} . * {% include t.html key=\"dev_reference_manual\" %} . --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
+    "url": "/previews/run/i18n/fr",
+    
+    "relUrl": "/fr"
+  },"55": {
+    "doc": "Home",
+    "title": "Home",
+    "content": "{%- assign current_lang = page.lang | default: site.lang | default: \"en\" -%} {%- assign p = site.data.i18n.pages[page.i18n_key] -%} # {% include t.html key=\"heading_main\" %} {% capture temp %}{% include t.html key=\"subheading_main\" %}{% endcapture %}{{ temp | markdownify }} {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * {% include t.html key=\"the_pankosmia_project\" %} . * {% include t.html key=\"dev_quickstart\" %} . * {% include t.html key=\"dev_reference_manual\" %} . --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
+    "url": "/previews/run/i18n/es",
+    
+    "relUrl": "/es"
   }
 }
