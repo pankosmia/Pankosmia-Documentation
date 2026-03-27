@@ -8,8 +8,16 @@
     nav_parenthood, nav_top_nodes, nav_top_node_titles, nav_ancestors.
 {%- endcomment -%}
 
-{%- assign nav_parenthood = include.pages
-  | where_exp: "item", "item.title != nil" | group_by: "parent" -%}
+{%- assign current_lang = page.lang | default: site.lang | default: "en" -%}
+{%- assign filtered_pages = "" | split: "" -%}
+{%- for item in include.pages -%}
+  {%- if item.title != nil -%}
+    {%- if item.lang == current_lang or item.lang == nil -%}
+      {%- assign filtered_pages = filtered_pages | push: item -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign nav_parenthood = filtered_pages | group_by: "parent" -%}
 
 {%- assign nav_top_nodes = nav_parenthood
       | where_exp: "item", "item.name == ''" | map: "items" | first -%}
