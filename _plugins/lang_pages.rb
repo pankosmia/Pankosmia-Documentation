@@ -1,6 +1,6 @@
-puts "Lang plugin loaded"
-
 module Jekyll
+  Jekyll.logger.info "Lang plugin loaded"
+
   class LangPageGenerator < Generator
     safe true
     priority :low

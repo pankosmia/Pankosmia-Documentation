@@ -63,6 +63,11 @@ jobs:
             --baseurl "${{ steps.set-ref.outputs.base_path }}" \
             --destination ./_site
 
+      - name: Check generated pages
+        run: |
+          echo "Pages in _site:"
+          find ./_site -name "*.html" | head -20
+
       - name: Upload built preview
         uses: actions/upload-artifact@v4
         with:
