@@ -9,9 +9,11 @@ layout: default
 nav_order: 1
 title: Home # used for Jekyll metadata and fallback
 i18n_key: home
+lang: en
 ---
 
-DEBUG: current_lang={{ current_lang }}, i18n_key={{ page.i18n_key }}, p={{ p }}
+{%- assign current_lang = page.lang | default: site.lang | default: "en" -%}
+{%- assign p = site.data.i18n.pages[page.i18n_key] -%}
 
 # {% include t.html key="heading_main" %}
 
@@ -23,11 +25,11 @@ DEBUG: current_lang={{ current_lang }}, i18n_key={{ page.i18n_key }}, p={{ p }}
 
 ## Contents
 
-* ### [{% include t.html key=".the_pankosmia_project" %}](pankosmia-project/)
+* <h3><a href="pankosmia-project/">{% include t.html key="the_pankosmia_project" %}</a></h3>
 
-* ### [{% include t.html key=".dev_quickstart" %}](dev-quickstart/)
+* <h3><a href="dev-quickstart/">{% include t.html key="dev_quickstart" %}</a></h3>
 
-* ### [{% include t.html key=".dev_reference_manual" %}](dev-reference-manual/)
+* <h3><a href="dev-reference-manual/">{% include t.html key="dev_reference_manual" %}</a></h3>
 
 ---
-[{% include t.html key=".legal_notices" %}](legal-notices/)
+[{% include t.html key="legal_notices" %}](legal-notices/)
