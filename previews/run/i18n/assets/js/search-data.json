@@ -134,7 +134,7 @@
   },"19": {
     "doc": "Build Versions",
     "title": "Build Versions",
-    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 9fed56f16008445ebf6875cfd5881168eab436c1 GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false GitHub Pages info Build revision: 2f492100cbf4b0ba2be6bb95c4ab861bf083c13c GitHub env: production Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
     "url": "/previews/run/i18n/versions/",
     
     "relUrl": "/versions/"
