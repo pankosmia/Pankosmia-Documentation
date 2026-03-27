@@ -22,9 +22,12 @@ module Jekyll
     priority :low
 
     def generate(site)
+      original_pages = site.pages.dup  # Copy the array before iterating
+      
       site.config['languages'].each do |lang|
-        site.pages.each do |page|
+        original_pages.each do |page|
           next unless page.data['i18n_key']
+          next if page.data['lang'] == lang  # Skip if already this language
           
           if lang != site.config['lang']
             new_page = PageWithLang.new(site, site.source, page.dir, page.name, lang)
