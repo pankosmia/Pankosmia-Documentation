@@ -22,12 +22,12 @@ module Jekyll
     priority :low
 
     def generate(site)
-      original_pages = site.pages.dup  # Copy the array before iterating
+      original_pages = site.pages.dup
       
       site.config['languages'].each do |lang|
         original_pages.each do |page|
           next unless page.data['i18n_key']
-          next if page.data['lang'] == lang  # Skip if already this language
+          next if page.data['lang'] == lang
           
           if lang != site.config['lang']
             new_page = PageWithLang.new(site, site.source, page.dir, page.name, lang)
@@ -41,13 +41,19 @@ module Jekyll
   class PageWithLang < Page
     def initialize(site, base, dir, name, lang)
       super(site, base, dir, name)
-      @data = @data.dup
-      @data['lang'] = lang
+      self.data = self.data.dup
+      self.data['lang'] = lang
+      
       if lang == site.config['lang']
-        @data['permalink'] = @data['permalink'] || url
+        self.data['permalink'] = self.data['permalink'] || self.url
       else
-        @data['permalink'] = "/#{lang}#{@data['permalink'] || url}"
+        original_url = self.data['permalink'] || self.url
+        self.data['permalink'] = "/#{lang}#{original_url}"
       end
+    end
+    
+    def url
+      @url ||= self.data['permalink']
     end
   end
 end
