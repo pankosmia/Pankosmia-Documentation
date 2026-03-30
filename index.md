@@ -17,7 +17,7 @@ lang: en
 
 # {% include t.html key="heading_main" %}
 
-*{%- include t.html key="subheading_main" -%}*
+*{% include t.html key="subheading_main" %}*
 {: .fs-6 .fw-300 }
 
 {% include t.html key="intro" %}
@@ -25,11 +25,11 @@ lang: en
 
 ## Contents
 
-* ### [{%- include t.html key="the_pankosmia_project" -%}](pankosmia-project/)
+* ### [{% include t.html key="the_pankosmia_project" %}](pankosmia-project/)
 
-* ### [{%- include t.html key="dev_quickstart" -%}](dev-quickstart/)
+* ### [{% include t.html key="dev_quickstart" %}](dev-quickstart/)
 
-* ### [{%- include t.html key="dev_reference_manual" -%}](dev-reference-manual/)
+* ### [{% include t.html key="dev_reference_manual" %}](dev-reference-manual/)
 
 ---
 [{% include t.html key="legal_notices" %}](legal-notices/)
