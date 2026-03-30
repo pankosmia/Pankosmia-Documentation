@@ -1,2 +1,2 @@
 {%- assign key = include.key -%}
-{{ p[key][current_lang] | default: p[key][site.lang] }}
+{{- p[key][current_lang] | default: p[key][site.lang] | markdownify | strip_html | strip -}}

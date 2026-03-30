@@ -17,7 +17,7 @@ lang: en
 
 # {% include t.html key="heading_main" %}
 
-{% capture temp %}{% include t.html key="subheading_main" %}{% endcapture %}{{ temp | markdownify }}
+*{%- include t.html key="subheading_main" -%}*
 {: .fs-6 .fw-300 }
 
 {% include t.html key="intro" %}
@@ -25,11 +25,11 @@ lang: en
 
 ## Contents
 
-* <h3><a href="pankosmia-project/">{% include t.html key="the_pankosmia_project" %}</a></h3>
+* ### [{%- include t.html key="the_pankosmia_project" -%}](pankosmia-project/)
 
-* <h3><a href="dev-quickstart/">{% include t.html key="dev_quickstart" %}</a></h3>
+* ### [{%- include t.html key="dev_quickstart" -%}](dev-quickstart/)
 
-* <h3><a href="dev-reference-manual/">{% include t.html key="dev_reference_manual" %}</a></h3>
+* ### [{%- include t.html key="dev_reference_manual" -%}](dev-reference-manual/)
 
 ---
 [{% include t.html key="legal_notices" %}](legal-notices/)
