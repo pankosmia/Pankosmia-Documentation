@@ -379,14 +379,14 @@
   },"54": {
     "doc": "Home",
     "title": "Home",
-    "content": "{%- assign current_lang = page.lang | default: site.lang | default: \"en\" -%} {%- assign p = site.data.i18n.pages[page.i18n_key] -%} # {% include t.html key=\"heading_main\" %} *{%- include t.html key=\"subheading_main\" -%}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{%- include t.html key=\"the_pankosmia_project\" -%}](pankosmia-project/) * ### [{%- include t.html key=\"dev_quickstart\" -%}](dev-quickstart/) * ### [{%- include t.html key=\"dev_reference_manual\" -%}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
+    "content": "{%- assign current_lang = page.lang | default: site.lang | default: \"en\" -%} {%- assign p = site.data.i18n.pages[page.i18n_key] -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
     "url": "/previews/run/i18n/fr/",
     
     "relUrl": "/fr/"
   },"55": {
     "doc": "Home",
     "title": "Home",
-    "content": "{%- assign current_lang = page.lang | default: site.lang | default: \"en\" -%} {%- assign p = site.data.i18n.pages[page.i18n_key] -%} # {% include t.html key=\"heading_main\" %} *{%- include t.html key=\"subheading_main\" -%}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{%- include t.html key=\"the_pankosmia_project\" -%}](pankosmia-project/) * ### [{%- include t.html key=\"dev_quickstart\" -%}](dev-quickstart/) * ### [{%- include t.html key=\"dev_reference_manual\" -%}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
+    "content": "{%- assign current_lang = page.lang | default: site.lang | default: \"en\" -%} {%- assign p = site.data.i18n.pages[page.i18n_key] -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
     "url": "/previews/run/i18n/es/",
     
     "relUrl": "/es/"
