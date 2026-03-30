@@ -18,18 +18,17 @@
     "en": "Contents",
     "fr": "Matières"
   },
-  "home": {
-    "en": "Home",
-    "fr": "Accueil",
-    "es": "Inicio"
-  },
   "pages": {
     "home": {
       "title": {
-        "en": "Home"
+        "en": "Home Page",
+        "fr": "Page d'accueil",
+        "es": "Página de inicio"
       },
       "nav_title": {
-        "en": "Home"
+        "en": "Home",
+        "fr": "Accueil",
+        "es": "Inicio"
       },
       "heading_main": {
         "en": "Pankosmia"

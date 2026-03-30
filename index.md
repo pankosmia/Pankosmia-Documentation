@@ -7,13 +7,11 @@
 # This documentation presents {{ site.data.lexicon.app-name }} as an example of how Pankosmia works and what it can do.
 layout: default
 nav_order: 1
-title: Home # used for Jekyll metadata and fallback
+title: Home # required for Jekyll metadata and fallback
 i18n_key: home
-lang: en
+lang: en # used on initial load, before a language has been selected
 ---
-
-{%- assign current_lang = page.lang | default: site.lang | default: "en" -%}
-{%- assign p = site.data.i18n.pages[page.i18n_key] -%}
+{%- include init_i18n.html -%}
 
 # {% include t.html key="heading_main" %}
 
