@@ -4,9 +4,9 @@
 - Previews of branches, pr's or other ref's are deployable at `https://pankosmia.dev/previews/[branch, tag, PR ref, or commit]` via github actions.
 
 ## To build and run locally:
-1. Install Ruby+Devkit 3.3.6-1 from: https://rubyinstaller.org/downloads/ to match the current github workflow version.
+1. Install Ruby+Devkit 3.3.6-1 from: https://rubyinstaller.org/downloads/ to match the current github workflow version. This includes Bundler version 2.5.22.
 2. After installing, restart your terminal.
-3. Run `gem install bundler`
+3. `bundle install`
 4. Run `bundle exec jekyll serve`.  This builds files in the `_site/` directory and serves them at `http://localhost:4000`.
 
 ## i18n Front Matter
