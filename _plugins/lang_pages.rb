@@ -30,7 +30,7 @@ module Jekyll
           next if page.data['lang'] == lang
           
           if lang != site.config['lang']
-            new_page = PageWithLang.new(site, site.source, page.dir, page.name, lang)
+            new_page = PageWithLang.new(site, site.source, lang, page)
             site.pages << new_page
           end
         end
@@ -39,21 +39,30 @@ module Jekyll
   end
 
   class PageWithLang < Page
-    def initialize(site, base, dir, name, lang)
-      super(site, base, dir, name)
-      self.data = self.data.dup
-      self.data['lang'] = lang
+    def initialize(site, base, lang, original_page)
+      @site = site
+      @base = base
+      @dir = original_page.dir
+      @name = original_page.name
       
-      if lang == site.config['lang']
-        self.data['permalink'] = self.data['permalink'] || self.url
-      else
-        original_url = self.data['permalink'] || self.url
-        self.data['permalink'] = "/#{lang}#{original_url}".sub(/\/$/, '') + '/'
-      end
+      self.process(@name)
+      
+      @content = original_page.content  # Copy the markdown content
+      
+      @data = {
+        'layout' => original_page.data['layout'],
+        'title' => original_page.data['title'],
+        'i18n_key' => original_page.data['i18n_key'],
+        'nav_order' => original_page.data['nav_order'],
+        'lang' => lang
+      }
+      
+      original_url = original_page.data['permalink'] || original_page.url
+      @data['permalink'] = "/#{lang}#{original_url}"
     end
     
     def url
-      @url ||= self.data['permalink']
+      @url ||= @data['permalink']
     end
   end
 end
