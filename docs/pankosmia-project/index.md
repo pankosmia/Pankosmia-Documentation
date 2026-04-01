@@ -2,9 +2,13 @@
 layout: default
 nav_order: 2
 title: The Pankosmia Project
+i18n_key: the_pankosmia_project
 lang: en
 permalink: /pankosmia-project/
 ---
+
+{%- include init_i18n.html -%}
+
 # The Pankosmia Project
 {: .no_toc }
 
@@ -15,7 +19,8 @@ permalink: /pankosmia-project/
 {:toc}
 
 ## Philosophy
-Pankosmia began with a conversation about the [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d) principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don't focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger.
+{% include tm.html key="philosophy_intro_paragraph" %}
+
 
 Some corollaries of "First the Monkey" for us are 
 - focus on the hard and unsolved problems

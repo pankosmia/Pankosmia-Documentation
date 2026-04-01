@@ -14,11 +14,14 @@
 title: Home # required for Jekyll metadata and fallback
 i18n_key: home
 lang: en # used on initial load, before a language has been selected
+permalink: /match-subdir-or-file-name-without-extension/
 ---
 {%- include init_i18n.html -%}
 
 # {% include t.html key="title" %}
-{% include t.html key="sample_i18n_key" %}
+{% include t.html key="sample_i18n_key_without_markdown" %}
+
+{% include tm.html key="sample_i18n_key_with_markdown" %}
 ```
 Corresponding `_data/i18n.json` keys:
 
@@ -38,8 +41,11 @@ Corresponding `_data/i18n.json` keys:
         "fr": "Accueil",
         "es": "Inicio"
       },
-      "sample_i18n_key": {
+      "sample_i18n_key_without_markdown": {
         "en": "Sample i18n Text"
+      },
+      "sample_i18n_key_with_markdown": {
+        "en": "Sample text with a [link](https://pankosmia.dev/)."
       }
     }
   }
