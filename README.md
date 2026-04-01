@@ -18,7 +18,7 @@ lang: en # used on initial load, before a language has been selected
 {%- include init_i18n.html -%}
 
 # {% include t.html key="title" %}
-{% include t.html key="sample_i18n_text" %}
+{% include t.html key="sample_i18n_key" %}
 ```
 Corresponding `_data/i18n.json` keys:
 
@@ -38,7 +38,7 @@ Corresponding `_data/i18n.json` keys:
         "fr": "Accueil",
         "es": "Inicio"
       },
-      "sample_i18n_text": {
+      "sample_i18n_key": {
         "en": "Sample i18n Text"
       }
     }
@@ -64,3 +64,58 @@ languages:
     "es": "Español"
   },
 ```
+
+### Default language / i18n Fallback language
+
+This is set to English in:
+
+_config.yml: 
+```
+# Set the default language
+lang: en
+```
+
+_includes\components\aux_nav.html:
+```
+{%- assign current_lang = page.lang | default: site.lang | default: "en" -%}
+```
+
+_includes\components\nav\pages.html:
+```
+{%- assign current_lang = page.lang | default: site.lang | default: "en" -%}
+```
+
+and in markdown front matter:
+```
+lang: en # used on initial load, before a language has been selected
+---
+```
+
+### Customizations to just-the-docs
+
+The following is for reference on future ruby / jekyll / just-the-docs upgrades, just in case. 
+
+#### New files added
+- _plugins\lang_pages.rb: A custom plugin to create permalinks and pages from i18n for each language on build in language code subdirectories.
+- _data\i18n.json
+- _includes\search_placeholder_custom.html (1 line)
+- _includes\toc_heading_custom.html (1 line)
+- _includes\init_i18n.html: for shorter md file i18n config with `{%- include init_i18n.html -%}`
+- _includes\t.html: for shorter i18n key reference in md with `{% include t.html key="sample_i18n_key" %}`
+- _includes\debug-info.html: Unrelated to i18n, rather used to show  current version info at https://pankosmia.dev/versions/
+
+### Files copied over from just-the-docs repo, then edited for i18n
+Differences cited below vs. [just-the-docs repo](https://github.com/just-the-docs/just-the-docs/) are current as of [just-the-docs commits on Mar 31, 2026](https://github.com/just-the-docs/just-the-docs/tree/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1).
+
+Run a diff between "customized file" and "before edits" to see customizations. Run a diff between "before edits" and "latest before edits" to see if just-the-docs has made any changes.
+
+| Customized File | just-the-docs before edits | latest just-the-docs version |
+|---|---|---|
+| `_includes\components\aux_nav.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/aux_nav.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/aux_nav.html) |
+| `_includes\components\sidebar.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/sidebar.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/sidebar.html) |
+| `_includes\components\site_nav.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/site_nav.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/site_nav.html) |
+| `_includes\components\children_nav.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/children_nav.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/children_nav.html) |
+| `_includes\components\nav\children.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/nav/children.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/nav/children.html) |
+| `_includes\components\nav\links.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/nav/links.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/nav/links.html) |
+| `_includes\components\nav\pages.html` | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/nav/pages.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/nav/pages.html) |
+| `_layouts\default.html` | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_layouts/default.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_layouts/default.html) |
