@@ -377,16 +377,30 @@
     
     "relUrl": "/uxui-guidelines/"
   },"54": {
-    "doc": "Home",
-    "title": "Home",
-    "content": "{%- assign current_lang = page.lang | default: site.lang | default: \"en\" -%} {%- assign p = site.data.i18n.pages[page.i18n_key] -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
-    "url": "/previews/run/i18n/fr/",
+    "doc": "The Pankosmia Project",
+    "title": "The Pankosmia Project",
+    "content": "{%- include init_i18n.html -%} # The Pankosmia Project {: .no_toc } ## Table of Contents {: .no_toc .text-delta } - TOC {:toc} ## Philosophy {% include tm.html key=\"philosophy_intro_paragraph\" %} Some corollaries of \"First the Monkey\" for us are - focus on the hard and unsolved problems - the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood - polishing things that we know how to polish is rarely urgent - users need happy devs because devs build the systems the users need ## Project Distinctives - open source (but third-party products may include closed-source clients) - radically offline-first - support for graphite-enabled fonts - built around Scripture Burrito for all content - multiple \"white app\" products that can be branded and maintained by different organizations and developed to meet different user needs - multiple clients per product, including standard clients for core functionality ## Architecture Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes - a localhost HTTP server, written in Rust, that handles - access to local burritos - language and font options - access to burrito servers (when Internet is enabled) - shared application state between clients - multiple clients, served as built HTML/CSS/Javascript: - core clients use React and MUI, use of other frameworks is possible - core Node libraries to simplify the creation of new clients - an extensive online build toolchain for multiple operating systems ",
+    "url": "/previews/run/i18n/fr/pankosmia-project/",
     
-    "relUrl": "/fr/"
+    "relUrl": "/fr/pankosmia-project/"
   },"55": {
     "doc": "Home",
     "title": "Home",
-    "content": "{%- assign current_lang = page.lang | default: site.lang | default: \"en\" -%} {%- assign p = site.data.i18n.pages[page.i18n_key] -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
+    "url": "/previews/run/i18n/fr/",
+    
+    "relUrl": "/fr/"
+  },"56": {
+    "doc": "The Pankosmia Project",
+    "title": "The Pankosmia Project",
+    "content": "{%- include init_i18n.html -%} # The Pankosmia Project {: .no_toc } ## Table of Contents {: .no_toc .text-delta } - TOC {:toc} ## Philosophy {% include tm.html key=\"philosophy_intro_paragraph\" %} Some corollaries of \"First the Monkey\" for us are - focus on the hard and unsolved problems - the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood - polishing things that we know how to polish is rarely urgent - users need happy devs because devs build the systems the users need ## Project Distinctives - open source (but third-party products may include closed-source clients) - radically offline-first - support for graphite-enabled fonts - built around Scripture Burrito for all content - multiple \"white app\" products that can be branded and maintained by different organizations and developed to meet different user needs - multiple clients per product, including standard clients for core functionality ## Architecture Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes - a localhost HTTP server, written in Rust, that handles - access to local burritos - language and font options - access to burrito servers (when Internet is enabled) - shared application state between clients - multiple clients, served as built HTML/CSS/Javascript: - core clients use React and MUI, use of other frameworks is possible - core Node libraries to simplify the creation of new clients - an extensive online build toolchain for multiple operating systems ",
+    "url": "/previews/run/i18n/es/pankosmia-project/",
+    
+    "relUrl": "/es/pankosmia-project/"
+  },"57": {
+    "doc": "Home",
+    "title": "Home",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
     "url": "/previews/run/i18n/es/",
     
     "relUrl": "/es/"
