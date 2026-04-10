@@ -99,7 +99,7 @@
   },"14": {
     "doc": "The Pankosmia Project",
     "title": "Philosophy",
-    "content": "Pankosmia began with a conversation about the First the monkey principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don’t focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger. Some corollaries of “First the Monkey” for us are . | focus on the hard and unsolved problems | the working but clunky solution we can build and ship is better than both the lovely solution we can’t build and ship and the lovely UI we can ship that doesn’t do the right thing under the hood | polishing things that we know how to polish is rarely urgent | users need happy devs because devs build the systems the users need | . ",
+    "content": "Pankosmia began with a conversation about the First the monkey principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don’t focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger. Some corollaries of “First the Monkey” for us are: . | focus on the hard and unsolved problems | the working but clunky solution we can build and ship is better than both the lovely solution we can’t build and ship and the lovely UI we can ship that doesn’t do the right thing under the hood | polishing things that we know how to polish is rarely urgent | users need happy devs because devs build the systems the users need | . ",
     "url": "/previews/run/i18n/pankosmia-project/#philosophy",
     
     "relUrl": "/pankosmia-project/#philosophy"
@@ -113,7 +113,7 @@
   },"16": {
     "doc": "The Pankosmia Project",
     "title": "Architecture",
-    "content": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes . | a localhost HTTP server, written in Rust, that handles . | access to local burritos | language and font options | access to burrito servers (when Internet is enabled) | shared application state between clients | . | multiple clients, served as built HTML/CSS/Javascript: . | core clients use React and MUI, use of other frameworks is possible | . | core Node libraries to simplify the creation of new clients | an extensive online build toolchain for multiple operating systems | . ",
+    "content": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes: . | a localhost HTTP server, written in Rust, that handles . | access to local burritos | language and font options | access to burrito servers (when Internet is enabled) | shared application state between clients | . | multiple clients, served as built HTML/CSS/Javascript: . | core clients use React and MUI, use of other frameworks is possible | . | core Node libraries to simplify the creation of new clients | an extensive online build toolchain for multiple operating systems | . ",
     "url": "/previews/run/i18n/pankosmia-project/#architecture",
     
     "relUrl": "/pankosmia-project/#architecture"
@@ -125,19 +125,19 @@
     
     "relUrl": "/dev-reference-manual/"
   },"18": {
-    "doc": "Build Versions",
-    "title": "Build Versions",
-    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
-    "url": "/previews/run/i18n/versions/",
-    
-    "relUrl": "/versions/"
-  },"19": {
     "doc": "Dev Quickstart",
     "title": "Dev Quickstart",
     "content": " ",
     "url": "/previews/run/i18n/dev-quickstart/",
     
     "relUrl": "/dev-quickstart/"
+  },"19": {
+    "doc": "Build Versions",
+    "title": "Build Versions",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "url": "/previews/run/i18n/versions/",
+    
+    "relUrl": "/versions/"
   },"20": {
     "doc": "Home",
     "title": "Pankosmia",
@@ -197,7 +197,7 @@
   },"28": {
     "doc": "Legal Notices",
     "title": "Property",
-    "content": "All components of the https://pankosmia.dev website (text, logos, images, audio, software, icons, layout, databases, etc.) are protected by national and international intellectual property laws. These components remain the sole property of their respective owners. Users may not reproduce, represent, adapt, translate or transform any component of the https://pankosmia.dev website in part or in whole, or transfer it to any other website, except by the prior written permission of MVH solutions (🚧). ",
+    "content": "All components of the https://pankosmia.dev website (text, logos, images, audio, software, icons, layout, databases, etc.) are protected by national and international intellectual property laws. These components remain the sole property of their respective owners. Users may not reproduce, represent, adapt, translate or transform any component of the https://pankosmia.dev website in part or in whole, or transfer it to any other website, except by the prior written permission of MVH solutions. (🚧) . ",
     "url": "/previews/run/i18n/legal-notices/#property",
     
     "relUrl": "/legal-notices/#property"
@@ -379,7 +379,7 @@
   },"54": {
     "doc": "The Pankosmia Project",
     "title": "The Pankosmia Project",
-    "content": "{%- include init_i18n.html -%} # The Pankosmia Project {: .no_toc } ## Table of Contents {: .no_toc .text-delta } - TOC {:toc} ## Philosophy {% include tm.html key=\"philosophy_intro_paragraph\" %} Some corollaries of \"First the Monkey\" for us are - focus on the hard and unsolved problems - the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood - polishing things that we know how to polish is rarely urgent - users need happy devs because devs build the systems the users need ## Project Distinctives - open source (but third-party products may include closed-source clients) - radically offline-first - support for graphite-enabled fonts - built around Scripture Burrito for all content - multiple \"white app\" products that can be branded and maintained by different organizations and developed to meet different user needs - multiple clients per product, including standard clients for core functionality ## Architecture Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes - a localhost HTTP server, written in Rust, that handles - access to local burritos - language and font options - access to burrito servers (when Internet is enabled) - shared application state between clients - multiple clients, served as built HTML/CSS/Javascript: - core clients use React and MUI, use of other frameworks is possible - core Node libraries to simplify the creation of new clients - an extensive online build toolchain for multiple operating systems ",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_philosophy\" %} {% include tm.html key=\"philosophy_intro_paragraph\" %} {% include t.html key=\"philosophy_corollaries\" %} - {% include t.html key=\"philosophy_corollary1\" %} - {% include t.html key=\"philosophy_corollary2\" %} - {% include t.html key=\"philosophy_corollary3\" %} - {% include t.html key=\"philosophy_corollary4\" %} ## {% include t.html key=\"heading_distinctives\" %} - {% include t.html key=\"distinctive1\" %} - {% include t.html key=\"distinctive2\" %} - {% include t.html key=\"distinctive3\" %} - {% include t.html key=\"distinctive4\" %} - {% include t.html key=\"distinctive5\" %} - {% include t.html key=\"distinctive6\" %} ## {% include t.html key=\"heading_architecture\" %} {% include t.html key=\"architecture_paragraph\" %} - {% include t.html key=\"architecture1\" %} - {% include t.html key=\"architecture1a\" %} - {% include t.html key=\"architecture1b\" %} - {% include t.html key=\"architecture1c\" %} - {% include t.html key=\"architecture1d\" %} - {% include t.html key=\"architecture2\" %} - {% include t.html key=\"architecture2a\" %} - {% include t.html key=\"architecture3\" %} - {% include t.html key=\"architecture4\" %} ",
     "url": "/previews/run/i18n/fr/pankosmia-project/",
     
     "relUrl": "/fr/pankosmia-project/"
@@ -391,18 +391,32 @@
     
     "relUrl": "/fr/"
   },"56": {
+    "doc": "Legal Notices",
+    "title": "Legal Notices",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_contact\" %} {% include t.html key=\"ceo\" %}: Mark Howe {% include t.html key=\"email\" %}: webmaster@mvhsolutions.com ## {% include t.html key=\"heading_hosting\" %} {% include t.html key=\"hosting_paragraph\" %} {% include t.html key=\"address\" %}: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon. ## {% include t.html key=\"heading_terms\" %} {% include t.html key=\"terms_paragraphs\" %} ## {% include t.html key=\"heading_property\" %} {% include t.html key=\"property_paragraphs\" %} (🚧) ## {% include t.html key=\"heading_links\" %} {% include t.html key=\"links_paragraphs\" %} ## {% include t.html key=\"heading_gdpr\" %} {% include t.html key=\"gdpr_paragraphs\" %} ## {% include t.html key=\"heading_content\" %} {% include t.html key=\"content_paragraphs\" %} ## {% include t.html key=\"heading_cookies\" %} {% include t.html key=\"cookies_paragraphs\" %} ",
+    "url": "/previews/run/i18n/fr/legal-notices/",
+    
+    "relUrl": "/fr/legal-notices/"
+  },"57": {
     "doc": "The Pankosmia Project",
     "title": "The Pankosmia Project",
-    "content": "{%- include init_i18n.html -%} # The Pankosmia Project {: .no_toc } ## Table of Contents {: .no_toc .text-delta } - TOC {:toc} ## Philosophy {% include tm.html key=\"philosophy_intro_paragraph\" %} Some corollaries of \"First the Monkey\" for us are - focus on the hard and unsolved problems - the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood - polishing things that we know how to polish is rarely urgent - users need happy devs because devs build the systems the users need ## Project Distinctives - open source (but third-party products may include closed-source clients) - radically offline-first - support for graphite-enabled fonts - built around Scripture Burrito for all content - multiple \"white app\" products that can be branded and maintained by different organizations and developed to meet different user needs - multiple clients per product, including standard clients for core functionality ## Architecture Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes - a localhost HTTP server, written in Rust, that handles - access to local burritos - language and font options - access to burrito servers (when Internet is enabled) - shared application state between clients - multiple clients, served as built HTML/CSS/Javascript: - core clients use React and MUI, use of other frameworks is possible - core Node libraries to simplify the creation of new clients - an extensive online build toolchain for multiple operating systems ",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_philosophy\" %} {% include tm.html key=\"philosophy_intro_paragraph\" %} {% include t.html key=\"philosophy_corollaries\" %} - {% include t.html key=\"philosophy_corollary1\" %} - {% include t.html key=\"philosophy_corollary2\" %} - {% include t.html key=\"philosophy_corollary3\" %} - {% include t.html key=\"philosophy_corollary4\" %} ## {% include t.html key=\"heading_distinctives\" %} - {% include t.html key=\"distinctive1\" %} - {% include t.html key=\"distinctive2\" %} - {% include t.html key=\"distinctive3\" %} - {% include t.html key=\"distinctive4\" %} - {% include t.html key=\"distinctive5\" %} - {% include t.html key=\"distinctive6\" %} ## {% include t.html key=\"heading_architecture\" %} {% include t.html key=\"architecture_paragraph\" %} - {% include t.html key=\"architecture1\" %} - {% include t.html key=\"architecture1a\" %} - {% include t.html key=\"architecture1b\" %} - {% include t.html key=\"architecture1c\" %} - {% include t.html key=\"architecture1d\" %} - {% include t.html key=\"architecture2\" %} - {% include t.html key=\"architecture2a\" %} - {% include t.html key=\"architecture3\" %} - {% include t.html key=\"architecture4\" %} ",
     "url": "/previews/run/i18n/es/pankosmia-project/",
     
     "relUrl": "/es/pankosmia-project/"
-  },"57": {
+  },"58": {
     "doc": "Home",
     "title": "Home",
     "content": "{%- include init_i18n.html -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
     "url": "/previews/run/i18n/es/",
     
     "relUrl": "/es/"
+  },"59": {
+    "doc": "Legal Notices",
+    "title": "Legal Notices",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_contact\" %} {% include t.html key=\"ceo\" %}: Mark Howe {% include t.html key=\"email\" %}: webmaster@mvhsolutions.com ## {% include t.html key=\"heading_hosting\" %} {% include t.html key=\"hosting_paragraph\" %} {% include t.html key=\"address\" %}: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon. ## {% include t.html key=\"heading_terms\" %} {% include t.html key=\"terms_paragraphs\" %} ## {% include t.html key=\"heading_property\" %} {% include t.html key=\"property_paragraphs\" %} (🚧) ## {% include t.html key=\"heading_links\" %} {% include t.html key=\"links_paragraphs\" %} ## {% include t.html key=\"heading_gdpr\" %} {% include t.html key=\"gdpr_paragraphs\" %} ## {% include t.html key=\"heading_content\" %} {% include t.html key=\"content_paragraphs\" %} ## {% include t.html key=\"heading_cookies\" %} {% include t.html key=\"cookies_paragraphs\" %} ",
+    "url": "/previews/run/i18n/es/legal-notices/",
+    
+    "relUrl": "/es/legal-notices/"
   }
 }
