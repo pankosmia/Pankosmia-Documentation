@@ -52,6 +52,22 @@ Corresponding `_data/i18n.json` keys:
 }
 ```
 
+## Terms common to multiple pages
+
+For terms that appear on multiple pages, there is a "common" namespace in i18n.json from which keys can be pulled in with `{% include tc.html key="heading_toc" %}` or with `{% include tcm.html key="with_markdown" %}`.
+
+```
+{
+  "common": {
+    "heading_toc": {
+      "en": "Table of Contents",
+      "fr": "Table des matières",
+      "es": "Tabla de contenidos"
+    }
+  }
+}
+```
+
 ## Adding a new language:
 
 1. Add to the languages list in `_config.yml`:
@@ -119,6 +135,7 @@ Run a diff between "customized file" and "before edits" to see customizations. R
 |---|---|---|
 | `_includes\components\aux_nav.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/aux_nav.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/aux_nav.html) |
 | `_includes\components\sidebar.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/sidebar.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/sidebar.html) |
+| `_includes\components\footer.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/footer.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/footer.html) |
 | `_includes\components\site_nav.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/site_nav.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/site_nav.html) |
 | `_includes\components\children_nav.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/children_nav.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/children_nav.html) |
 | `_includes\components\nav\children.html`: | [before edits](https://github.com/just-the-docs/just-the-docs/blob/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1/_includes/components/nav/children.html) | [latest before edits](https://github.com/just-the-docs/just-the-docs/blob/main/_includes/components/nav/children.html) |

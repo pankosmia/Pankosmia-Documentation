@@ -1,0 +1,2 @@
+{%- assign key = include.key -%}
+{{- site.data.i18n.common[key][current_lang] | default: site.data.i18n.common[key][site.lang] | markdownify -}}
