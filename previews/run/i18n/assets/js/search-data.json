@@ -384,34 +384,62 @@
     
     "relUrl": "/fr/pankosmia-project/"
   },"55": {
+    "doc": "Dev Reference Manual",
+    "title": "Dev Reference Manual",
+    "content": "{%- include init_i18n.html -%} ",
+    "url": "/previews/run/i18n/fr/dev-reference-manual/",
+    
+    "relUrl": "/fr/dev-reference-manual/"
+  },"56": {
+    "doc": "Dev Quickstart",
+    "title": "Dev Quickstart",
+    "content": "{%- include init_i18n.html -%} ",
+    "url": "/previews/run/i18n/fr/dev-quickstart/",
+    
+    "relUrl": "/fr/dev-quickstart/"
+  },"57": {
     "doc": "Home",
     "title": "Home",
     "content": "{%- include init_i18n.html -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
     "url": "/previews/run/i18n/fr/",
     
     "relUrl": "/fr/"
-  },"56": {
+  },"58": {
     "doc": "Legal Notices",
     "title": "Legal Notices",
     "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_contact\" %} {% include t.html key=\"ceo\" %}: Mark Howe {% include t.html key=\"email\" %}: webmaster@mvhsolutions.com ## {% include t.html key=\"heading_hosting\" %} {% include t.html key=\"hosting_paragraph\" %} {% include t.html key=\"address\" %}: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon. ## {% include t.html key=\"heading_terms\" %} {% include t.html key=\"terms_paragraphs\" %} ## {% include t.html key=\"heading_property\" %} {% include t.html key=\"property_paragraphs\" %} (🚧) ## {% include t.html key=\"heading_links\" %} {% include t.html key=\"links_paragraphs\" %} ## {% include t.html key=\"heading_gdpr\" %} {% include t.html key=\"gdpr_paragraphs\" %} ## {% include t.html key=\"heading_content\" %} {% include t.html key=\"content_paragraphs\" %} ## {% include t.html key=\"heading_cookies\" %} {% include t.html key=\"cookies_paragraphs\" %} ",
     "url": "/previews/run/i18n/fr/legal-notices/",
     
     "relUrl": "/fr/legal-notices/"
-  },"57": {
+  },"59": {
     "doc": "The Pankosmia Project",
     "title": "The Pankosmia Project",
     "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_philosophy\" %} {% include tm.html key=\"philosophy_intro_paragraph\" %} {% include t.html key=\"philosophy_corollaries\" %} - {% include t.html key=\"philosophy_corollary1\" %} - {% include t.html key=\"philosophy_corollary2\" %} - {% include t.html key=\"philosophy_corollary3\" %} - {% include t.html key=\"philosophy_corollary4\" %} ## {% include t.html key=\"heading_distinctives\" %} - {% include t.html key=\"distinctive1\" %} - {% include t.html key=\"distinctive2\" %} - {% include t.html key=\"distinctive3\" %} - {% include t.html key=\"distinctive4\" %} - {% include t.html key=\"distinctive5\" %} - {% include t.html key=\"distinctive6\" %} ## {% include t.html key=\"heading_architecture\" %} {% include t.html key=\"architecture_paragraph\" %} - {% include t.html key=\"architecture1\" %} - {% include t.html key=\"architecture1a\" %} - {% include t.html key=\"architecture1b\" %} - {% include t.html key=\"architecture1c\" %} - {% include t.html key=\"architecture1d\" %} - {% include t.html key=\"architecture2\" %} - {% include t.html key=\"architecture2a\" %} - {% include t.html key=\"architecture3\" %} - {% include t.html key=\"architecture4\" %} ",
     "url": "/previews/run/i18n/es/pankosmia-project/",
     
     "relUrl": "/es/pankosmia-project/"
-  },"58": {
+  },"60": {
+    "doc": "Dev Reference Manual",
+    "title": "Dev Reference Manual",
+    "content": "{%- include init_i18n.html -%} ",
+    "url": "/previews/run/i18n/es/dev-reference-manual/",
+    
+    "relUrl": "/es/dev-reference-manual/"
+  },"61": {
+    "doc": "Dev Quickstart",
+    "title": "Dev Quickstart",
+    "content": "{%- include init_i18n.html -%} ",
+    "url": "/previews/run/i18n/es/dev-quickstart/",
+    
+    "relUrl": "/es/dev-quickstart/"
+  },"62": {
     "doc": "Home",
     "title": "Home",
     "content": "{%- include init_i18n.html -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
     "url": "/previews/run/i18n/es/",
     
     "relUrl": "/es/"
-  },"59": {
+  },"63": {
     "doc": "Legal Notices",
     "title": "Legal Notices",
     "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_contact\" %} {% include t.html key=\"ceo\" %}: Mark Howe {% include t.html key=\"email\" %}: webmaster@mvhsolutions.com ## {% include t.html key=\"heading_hosting\" %} {% include t.html key=\"hosting_paragraph\" %} {% include t.html key=\"address\" %}: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon. ## {% include t.html key=\"heading_terms\" %} {% include t.html key=\"terms_paragraphs\" %} ## {% include t.html key=\"heading_property\" %} {% include t.html key=\"property_paragraphs\" %} (🚧) ## {% include t.html key=\"heading_links\" %} {% include t.html key=\"links_paragraphs\" %} ## {% include t.html key=\"heading_gdpr\" %} {% include t.html key=\"gdpr_paragraphs\" %} ## {% include t.html key=\"heading_content\" %} {% include t.html key=\"content_paragraphs\" %} ## {% include t.html key=\"heading_cookies\" %} {% include t.html key=\"cookies_paragraphs\" %} ",
