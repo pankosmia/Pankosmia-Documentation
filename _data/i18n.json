@@ -149,6 +149,16 @@
         "en": "an extensive online build toolchain for multiple operating systems"
       }
     },
+    "dev_quickstart": {
+      "title": {
+        "en": "Dev Quickstart"
+      }
+    },
+    "dev_reference_manual": {
+      "title": {
+        "en": "Dev Reference Manual"
+      }
+    },
     "legal_notices": {
       "title": {
         "en": "Legal Notices"

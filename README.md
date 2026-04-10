@@ -13,7 +13,7 @@
 ```
 title: Home # required for Jekyll metadata and fallback
 i18n_key: home
-lang: en # used on initial load, before a language has been selected
+lang: en # must follow i18n_key; used on initial load, before a language has been selected
 permalink: /match-subdir-or-file-name-without-extension/
 ---
 {%- include init_i18n.html -%}
