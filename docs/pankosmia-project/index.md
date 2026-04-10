@@ -9,45 +9,44 @@ permalink: /pankosmia-project/
 
 {%- include init_i18n.html -%}
 
-# The Pankosmia Project
+# {% include t.html key="title" %}
 {: .no_toc }
 
-## Table of Contents
+## {% include tc.html key="heading_toc" %}
 {: .no_toc .text-delta }
 
 - TOC
 {:toc}
 
-## Philosophy
+## {% include t.html key="heading_philosophy" %}
 {% include tm.html key="philosophy_intro_paragraph" %}
 
+{% include t.html key="philosophy_corollaries" %}
+- {% include t.html key="philosophy_corollary1" %}
+- {% include t.html key="philosophy_corollary2" %}
+- {% include t.html key="philosophy_corollary3" %}
+- {% include t.html key="philosophy_corollary4" %}
 
-Some corollaries of "First the Monkey" for us are 
-- focus on the hard and unsolved problems
-- the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood
-- polishing things that we know how to polish is rarely urgent
-- users need happy devs because devs build the systems the users need
+## {% include t.html key="heading_distinctives" %}
 
-## Project Distinctives
+- {% include t.html key="distinctive1" %}
+- {% include t.html key="distinctive2" %}
+- {% include t.html key="distinctive3" %}
+- {% include t.html key="distinctive4" %}
+- {% include t.html key="distinctive5" %}
+- {% include t.html key="distinctive6" %}
 
-- open source (but third-party products may include closed-source clients)
-- radically offline-first
-- support for graphite-enabled fonts
-- built around Scripture Burrito for all content
-- multiple "white app" products that can be branded and maintained by different organizations and developed to meet different user needs
-- multiple clients per product, including standard clients for core functionality
+## {% include t.html key="heading_architecture" %}
 
-## Architecture
+{% include t.html key="architecture_paragraph" %}
 
-Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes
-
-- a localhost HTTP server, written in Rust, that handles
-  - access to local burritos
-  - language and font options
-  - access to burrito servers (when Internet is enabled)
-  - shared application state between clients
-- multiple clients, served as built HTML/CSS/Javascript:
-  - core clients use React and MUI, use of other frameworks is possible
-- core Node libraries to simplify the creation of new clients
-- an extensive online build toolchain for multiple operating systems
+- {% include t.html key="architecture1" %}
+  - {% include t.html key="architecture1a" %}
+  - {% include t.html key="architecture1b" %}
+  - {% include t.html key="architecture1c" %}
+  - {% include t.html key="architecture1d" %}
+- {% include t.html key="architecture2" %}
+  - {% include t.html key="architecture2a" %}
+- {% include t.html key="architecture3" %}
+- {% include t.html key="architecture4" %}
 

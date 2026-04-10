@@ -73,9 +73,80 @@
       "title": {
         "en": "The Pankosmia Project"
       },
-
+      "heading_philosophy": {
+        "en": "Philosophy"
+      },
       "philosophy_intro_paragraph": {
         "en": "Pankosmia began with a conversation about the [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d) principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don't focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger."
+      },
+      "philosophy_corollaries": {
+        "en": "Some corollaries of \"First the Monkey\" for us are:"
+      },
+      "philosophy_corollary1": {
+        "en": "focus on the hard and unsolved problems"
+      },
+      "philosophy_corollary2": {
+        "en": "the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood"
+      },
+      "philosophy_corollary3": {
+        "en": "polishing things that we know how to polish is rarely urgent"
+      },
+      "philosophy_corollary4": {
+        "en": "users need happy devs because devs build the systems the users need"
+      },
+      "heading_distinctives": {
+        "en": "Project Distinctives"
+      },
+      "distinctive1": {
+        "en": "open source (but third-party products may include closed-source clients)"
+      },
+      "distinctive2": {
+        "en": "radically offline-first"
+      },
+      "distinctive3": {
+        "en": "support for graphite-enabled fonts"
+      },
+      "distinctive4": {
+        "en": "built around Scripture Burrito for all content"
+      },
+      "distinctive5": {
+        "en": "multiple \"white app\" products that can be branded and maintained by different organizations and developed to meet different user needs"
+      },
+      "distinctive6": {
+        "en": "multiple clients per product, including standard clients for core functionality"
+      },
+      "heading_architecture": {
+        "en": "Architecture"
+      },
+      "architecture_paragraph": {
+        "en": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes:"
+      },
+      "architecture1": {
+        "en": "a localhost HTTP server, written in Rust, that handles"
+      },
+      "architecture1a": {
+        "en": "access to local burritos"
+      },
+      "architecture1b": {
+        "en": "language and font options"
+      },
+      "architecture1c": {
+        "en": "access to burrito servers (when Internet is enabled)"
+      },
+      "architecture1d": {
+        "en": "shared application state between clients"
+      },
+      "architecture2": {
+        "en": "multiple clients, served as built HTML/CSS/Javascript:"
+      },
+      "architecture2a": {
+        "en": "core clients use React and MUI, use of other frameworks is possible"
+      },
+      "architecture3": {
+        "en": "core Node libraries to simplify the creation of new clients"
+      },
+      "architecture4": {
+        "en": "an extensive online build toolchain for multiple operating systems"
       }
     },
     "legal_notices": {
@@ -102,8 +173,7 @@
       },
       "heading_terms": {
         "en": "Terms of use"
-      }
-      ,
+      },
       "terms_paragraphs": {
         "en": "Use of the https://pankosmia.dev website is subject to compliance with the following general terms and conditions.\n\nBy opening the https://pankosmia.dev website, you declare that you are aware of these general terms and conditions of use and accept them unreservedly."
       },
