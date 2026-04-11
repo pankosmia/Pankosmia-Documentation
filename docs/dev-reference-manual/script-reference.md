@@ -1,26 +1,29 @@
 ---
 layout: default
 title: Script Reference
+i18n_key: script_reference
 lang: en
 permalink: /script-reference/
 parent: Dev Reference Manual
 ---
-# Script Reference
+{%- include init_i18n.html -%}
+
+# {% include t.html key="title" %}
 {: .no_toc }
 
-Additional Info TL;DR - For reference when needed on developer scripts for an app repos built on Pankosmia
+{% include t.html key="additional_info" %}
 {: .fs-6 .fw-300 }
 
-## Table of Contents
+## {% include tc.html key="heading_toc" %}
 {: .no_toc .text-delta }
 
 - TOC
 {:toc}
 
-## Ecosystem setup and configuration
-This repo pulls together several libraries and projects into a single app. The projects are spread across several repos to allow modular reuse. Scripts follow for assisting in setup, though it can also all be setup manually. The following assume [the repos](https://github.com/pankosmia/repositories) are installed with the following directory structure.
+## {% include t.html key="heading_ecosystem_setup" %}
+{% include tm.html key="ecosystem_setup_intro" %}
 
-This is an example. Clients in use may vary. Configuration is handled via `app_config.env`and the `app_setup` script.
+{% include tm.html key="ecosystem_setup_example" %}
 
 <pre>
 |-- repos
@@ -36,73 +39,69 @@ This is an example. Clients in use may vary. Configuration is handled via `app_c
         |-- webfonts-core
 </pre>
 
-## Installing the clients
-The local_server (pankosmia_web) serves compiled files from the `build` directory of each client, each client must be built. 
+## {% include t.html key="heading_installing_clients" %}
+{% include tm.html key="installing_clients_intro" %}
 
-This is handled by the `clone` and `build_clients` scripts, though can also all be run manually which is helpful during development.
+{% include tm.html key="installing_clients_script" %}
 ```
-# In each client repo, NOT this repo!
+# {% include t.html key="run_where" %}
 npm ci
 npm run build
 ```
-Running `run`, `build_server`, or `bundle_...` all copy the latest build to the build environment.
+{% include tm.html key="installing_clients_run_note" %}
 
-## Scripts
+## {% include t.html key="heading_scripts" %}
 
-### Configuration
-Config files must match clients and assets utilized. Scripts that write them are provided, as per `app_config.env`. Files created by the app_setup script are:
+### {% include t.html key="heading_configuration" %}
+{% include tm.html key="configuration_intro" %}
 
-| Linux | Windows | MacOS |
+| {% include t.html key="table_header_linux" %} | {% include t.html key="table_header_windows" %} | {% include t.html key="table_header_macos" %} |
 |-------|---------|-------|
-| buildSpec.json<br />/globalBuildResources/i18nPatch.json<br />/globalBuildResources/product.json<br />/linux/buildResources/setup/app_setup.json | buildSpec.json<br />\globalBuildResources\i18nPatch.json<br />\globalBuildResources\product.json<br />\windows\buildResources\setup\app_setup.json | buildSpec.json<br />/globalBuildResources/i18nPatch.json<br />/globalBuildResources/product.json<br />/macos/buildResources/setup/app_setup.json |
+| {% include tmp.html key="config_files_linux" %} | {% include tmp.html key="config_files_windows" %} | {% include tmp.html key="config_files_macos" %} |
 
-Review `app_config.env` and adjust as needed, then run one of the setup scripts that follow.  Re-run the app_setup script anytime `app_config.env` is changed.
+{% include tm.html key="configuration_review" %}
 
-#### Config scripts:
-Run from the provided location:
+#### {% include t.html key="heading_config_scripts" %}
+{% include t.html key="config_scripts_run_from" %}
 
-| Description | Linux:<br />*cd linux/scripts* | Windows:<sup>[[1]](#f1)</sup><br />*cd windows/scripts* | MacOS:<br />*cd macos/scripts* |
+| {% include t.html key="table_header_description" %} | {% include tmp.html key="table_header_linux_cd" %} | {% include tmp.html key="table_header_windows_cd" %} | {% include tmp.html key="table_header_macos_cd" %} |
 |-------------|-------|---------|-------|
-| Uses app_config.env to generate/rebuild/replace app_setup.json, buildSpec.json, product.json, and i18nPatch.json| `./app_setup.bsh` | `.\app_setup.bat` | `./app_setup.zsh` |
+| {% include t.html key="config_script_desc" %} | {% include tmp.html key="config_script_linux" %} | {% include tmp.html key="config_script_windows" %} | {% include tmp.html key="config_script_macos" %} |
 
-#### Setup scripts:
-Run from the provided location:
+#### {% include t.html key="heading_setup_scripts" %}
+{% include t.html key="setup_scripts_run_from" %}
 
-| Description | Linux:<br />*cd linux/scripts* | Windows:<sup>[[1]](#f1)</sup><br />*cd windows/scripts* | MacOS:<br />*cd macos/scripts* |
+| {% include t.html key="table_header_description" %} | {% include tmp.html key="table_header_linux_cd" %} | {% include tmp.html key="table_header_windows_cd" %} | {% include tmp.html key="table_header_macos_cd" %} |
 |-------|-------|---------|-------|
-| Clones all repos in `/app_config.env` if a directory by that name does not already exit | ./clone.bsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.bsh -s`<br /> Clones via SSH. | .\clone.bat<br /> Default clones via HTTPS.<br />Optional argument:<br />`.\clone.bat -s`<br /> Clones via SSH. | ./clone.zsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.zsh -s`<br /> Clones via SSH. |
-| For each asset repo in `/app_config.env`: git checkout main, git pull<br />For each client repo in  `/app_config.env`: `git checkout main`, `git pull`, `npm ci`, and `npm run build`.<br />***Dev's should build manually when testing branch(es).*** | ./build_clients.bsh<br />Optional argument:<br />`./build_clients.bsh -d`<br /> Deletes past logs without asking. | .\build_clients.bat<br />Optional argument:<br />`.\build_clients.bat -d`<br /> Deletes past logs without asking. | ./build_clients.zsh<br />Optional argument:<br />`./build_clients.zsh -d`<br /> Deletes past logs without asking. |
-| Create an Electronite viewer for use with the local dev build environment. | ./build_viewer.bsh | .\build_viewer.ps1<br />(use a powershell terminal) | ./build_viewer.zsh |
+| {% include tmp.html key="clone_desc" %} | {% include tmp.html key="clone_linux" %} | {% include tmp.html key="clone_windows" %} | {% include tmp.html key="clone_macos" %} |
+| {% include tmp.html key="build_clients_desc" %} | {% include tmp.html key="build_clients_linux" %} | {% include tmp.html key="build_clients_windows" %} | {% include tmp.html key="build_clients_macos" %} |
+| {% include t.html key="build_viewer_desc" %} | {% include tmp.html key="build_viewer_linux" %} | {% include tmp.html key="build_viewer_windows" %} | {% include tmp.html key="build_viewer_macos" %} |
 
-#### Usage scripts:
-Note: Multiple arguments can be applied in any order, e.g., `./run.zsh -s -d` is the same as `./run.zsh -d -s`
+#### {% include t.html key="heading_usage_scripts" %}
+{% include tm.html key="usage_scripts_note" %}
 
-| Description | Linux:<br />*cd linux/scripts* | Windows:<sup>[[1]](#f1)</sup><br />*cd windows/scripts* | MacOS:<br />*cd macos/scripts* |
+| {% include t.html key="table_header_description" %} | {% include tmp.html key="table_header_linux_cd" %} | {% include tmp.html key="table_header_windows_cd" %} | {% include tmp.html key="table_header_macos_cd" %} |
 |-------|-------|---------|-------|
-| removes the build directory and runs `cargo clean`<br /><sup>[[4]](#f4)</sup> | ./clean.bsh<br />Optional arguments:<br />`./clean.bsh -s`<br /> Will not ask if server is off  | .\clean.bat<br />Optional arguments:<br />`.\clean.bat -s`<br /> Will not ask if server is off | ./clean.zsh<br />Optional arguments:<br />`./clean.zsh -s`<br /> Will not ask if server is off |
-| runs cargo build, and `node build.js` | ./build_server.bsh<br />Optional arguments:<br />`./build_server.bsh -s`<br /> Will not ask if server is off <br />`./build_server.bsh -d`<br /> Builds server in debug mode | .\build_server.bat<br />Optional arguments:<br />`.\build_server.bat -s`<br /> Will not ask if server is off<br />`.\build_server.bat -d`<br /> Builds server in debug mode | ./build_server.zsh<br />Optional arguments:<br />`./build_server.zsh -s`<br /> Will not ask if server is off <br />`./build_server.zsh -d`<br /> Builds server in debug mode |
-| Assembles the build environment (clients) and starts the server <sup>[[2]](#f2)</sup>| ./run.bsh<br />Optional arguments:<br />`./run.bsh -s`<br /> Will not ask if server is off<br />`.\run.bsh -d`<br /> Runs with server in debug mode | .\run.bat<br />Optional arguments:<br />`.\run.bat -s`<br /> Will not ask if server is off<br />`.\run.bat -d`<br /> Runs with server in debug mode | ./run.zsh<br />Optional arguments:<br />`./run.zsh -s`<br /> Will not ask if server is off<br />`.\run.zsh -d`<br /> Runs with server in debug mode |
-| Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the `build_viewer` script.) | ./viewer.bsh<br />Dev Tools: Ctrl + Shift + I<br />Optional argument:<br />`./viewer.bsh [PORT#]`<br />(default is 19119) | .\viewer.bat<br />Dev Tools: Ctrl + Shift + I<br />Optional argument:<br />`.\viewer.bat [PORT#]`<br />(default is 19119) | ./viewer.zsh<br />Dev Tools: Cmd + Option + I<br />Optional argument:<br />`./viewer.zsh [PORT#]`<br />(default is 19119) |
-| Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle and a stand-alone installer. **(*) (•)** | ./bundle_viewer.bsh<br />(Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.) | .\bundle_viewer.ps1<br />Optional arguments:<br /><nobr>`.\bundle_viewer.ps1 -ServerOff "Y"`</nobr><br /> or: "y"; Will not ask if server is off | ./bundle_viewer.zsh<br />Optional arguments:<br />`./bundle_viewer.zsh -s`<br> Will not ask if server is off |
-| Deletes the last .zip release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle <sup>[[2]](#f2)</sup>| ./bundle_tgz.bsh<br />Optional arguments:<br />`./bundle_tgz.bsh -s`<br /> Will not ask if server is off<br />`/bundle_tgz.bsh -g`<br /> Run from Github Actions | .\bundle_zip.ps1<br />Optional arguments:<br />-ServerOff "Y"<br /> or: "y"; Will not ask if server is off<br />-IsGHA "Y"<br /> or: "y"; Run from Gihtub Actions | ./bundle_zip.zsh<br />Optional arguments:<br />`/bundle_zip.zsh -s`<br /> Will not ask if server is off<br />`/bundle_zip.zsh -g`<br /> Run from Github Actions |
-| Deletes the last .exe release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes an exe installer <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup> | | .\bundle_exe.ps1<br />Optional arguments:<br /><nobr>`bundle_exe.ps1 -ServerOff "Y"`</nobr><br /> or: "y"; Will not ask if server is off<br /><sup>[[3]](#f3)</sup> | |
+| {% include tmp.html key="clean_desc" %} | {% include tmp.html key="clean_linux" %} | {% include tmp.html key="clean_windows" %} | {% include tmp.html key="clean_macos" %} |
+| {% include tmp.html key="build_server_desc" %} | {% include tmp.html key="build_server_linux" %} | {% include tmp.html key="build_server_windows" %} | {% include tmp.html key="build_server_macos" %} |
+| {% include tmp.html key="run_desc" %} | {% include tmp.html key="run_linux" %} | {% include tmp.html key="run_windows" %} | {% include tmp.html key="run_macos" %} |
+| {% include tmp.html key="viewer_desc" %} | {% include tmp.html key="viewer_linux" %} | {% include tmp.html key="viewer_windows" %} | {% include tmp.html key="viewer_macos" %} |
+| {% include tmp.html key="bundle_viewer_desc" %} | {% include tmp.html key="bundle_viewer_script_linux" %} | {% include tmp.html key="bundle_viewer_script_windows" %} | {% include tmp.html key="bundle_viewer_script_macos" %} |
+| {% include tmp.html key="bundle_zip_desc" %} | {% include tmp.html key="bundle_zip_linux" %} | {% include tmp.html key="bundle_zip_windows" %} | {% include tmp.html key="bundle_zip_macos" %} |
+| {% include tmp.html key="bundle_exe_desc" %} | | {% include tmp.html key="bundle_exe_windows" %} | |
 
-#### Maintenance scripts:
-Run from the provided location:
+#### {% include t.html key="heading_maintenance_scripts" %}
+{% include t.html key="maintenance_scripts_run_from" %}
 
-| Description | Linux:<br />*cd linux/scripts* | Windows<sup>[[1]](#f1)</sup>:<br />*cd windows/scripts* | MacOS:<br />*cd macos/scripts* |
+| {% include t.html key="table_header_description" %} | {% include tmp.html key="table_header_linux_cd" %} | {% include tmp.html key="table_header_windows_cd" %} | {% include tmp.html key="table_header_macos_cd" %} |
 |-------|-------|---------|-------|
-| Facilitates syncing with upstream with exclusion of files expected to differ: | ./sync.bsh<br />Optional arguments:<br />`./sync.bsh -p`<br /> Will not ask if latest is already pulled. | .\sync.bat<br />Optional arguments:<br />`.\sync.bat -p`<br /> Will not ask if latest is already pulled | ./sync.zsh<br />Optional arguments:<br />`./sync.zsh -p`<br /> Will not ask if latest is already pulled. |
+| {% include t.html key="sync_desc" %} | {% include tmp.html key="sync_linux" %} | {% include tmp.html key="sync_windows" %} | {% include tmp.html key="sync_macos" %} |
 
-## Footnotes
-[<b id="f1">1</b>] ... When running a bat script from a command prompt, the `.\` included in the examples is optional.
+## {% include tc.html key="heading_footnotes" %}
+{% include tm.html key="footnote1" %}
 
-[<b id="f2">2</b>] ... Ensure the server (build_server.bat) is current!
+{% include tm.html key="footnote2" %}
 
-[<b id="f3">3</b>] ... Environment prerequisite for running the exe build locally: Install [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3
+{% include tm.html key="footnote3" %}
 
-[<b id="f4">4</b>] ... Targeted clean tips:
-- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/debug`
-- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/release`
-- To clean just the build environment, cd to the subdirectory for your OS (i.e., /macos, /linux, or /windows), then recursively remove its build subdirectory.
-- (The clean script does all of the above.)
+{% include tm.html key="footnote4" %}

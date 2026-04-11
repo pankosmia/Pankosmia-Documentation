@@ -2,41 +2,45 @@
 layout: default
 nav_order: 1
 title: Environment Requirements
+i18n_key: environment_requirements
 lang: en
 permalink: /environment-requirements/
 parent: Dev Quickstart
 ---
-# Environment Requirements
+{%- include init_i18n.html -%}
+
+# {% include t.html key="title" %}
 {: .no_toc }
 
 Local dev environment requirements for AppDev of a Desktop App repo built on Pankosmia
 {: .fs-6 .fw-300 }
 
-## Table of Contents
+## {% include tc.html key="heading_toc" %}
 {: .no_toc .text-delta }
 
 - TOC
 {:toc}
 
-## Tested on:
+## {% include t.html key="heading_tested_on" %}
 
-### Ubuntu 24.04 with:
-- npm 10.7.0
-- node 20.18.1
-- rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
+### {% include t.html key="heading_ubuntu" %}
+- {% include t.html key="ubuntu_npm" %}
+- {% include t.html key="ubuntu_node" %}
+- {% include tm.html key="ubuntu_rustc" %}
 
-### Windows 11 with:
-- git 2.44.0; See https://git-scm.com/install/windows
-- npm 10.7.0
-- node 20.18.1
-- rustc 1.88.0 -- See https://www.rust-lang.org/tools/install
-- cmake 3.31.0 -- Version 3 is required. See https://cmake.org/download/
-- Depending on your system, powershell might need permission to run scripts.
-- Running exe builds locally (optional) needs installation of [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3
+### {% include t.html key="heading_windows" %}
+- {% include tm.html key="windows_git" %}
+- {% include t.html key="windows_npm" %}
+- {% include t.html key="windows_node" %}
+- {% include tm.html key="windows_rustc" %}
+- {% include tm.html key="windows_cmake" %}
+- {% include t.html key="windows_powershell" %}
+- {% include tm.html key="windows_inno_setup" %}
 
-### MacOS with:
-- npm 10.7.0 (tested on Monterey)
-- npm 10.8.2 (tested on Sequoia)
-- node 20.18.1
-- rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
-- OpenSSL 3.5.0 -- `brew install openssl`
+### {% include t.html key="heading_macos" %}
+- {% include t.html key="macos_npm_monterey" %}
+- {% include t.html key="macos_npm_sequoia" %}
+- {% include t.html key="macos_node" %}
+- {% include tm.html key="macos_rustc" %}
+- {% include tm.html key="macos_openssl" %}
+
