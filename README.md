@@ -68,6 +68,16 @@ For terms that appear on multiple pages, there is a "common" namespace in i18n.j
 }
 ```
 
+## Pulling in markdown from i18n inside Jekyll markdown
+
+When i18n return markdown, it gets converted to html by `tm.html` or `tcm.html`. But when that is rendered inside Jekyll markdown (an .md page in this site), then a p tag needs to be removed. To strip the p tag from onscreen display, change `tm.html` to `tmp.html`, or `tcm.html` to `tcmp.html`.
+
+## Summary
+
+| Namespace | Plain Text i18n | Markdown i18n | Markdown i18n inside Jekyll Markdown |
+| pages | `t.html` | `tm.html` | `tmp.html` |
+| common | `tc.html` | `tcm.html` | `tcmp.html` |
+
 ## Adding a new language:
 
 1. Add to the languages list in `_config.yml`:
