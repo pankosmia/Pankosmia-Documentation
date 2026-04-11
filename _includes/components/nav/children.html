@@ -37,6 +37,11 @@
       {%- assign nav_child_ok = false -%}
     {%- endif -%}
 
+    {%- comment -%}Filter out pages not matching current language{%- endcomment -%}
+    {%- if nav_child.lang != page.lang and nav_child.lang != nil -%}
+      {%- assign nav_child_ok = false -%}
+    {%- endif -%}
+
     {%- if nav_child_ok -%}
       {%- assign nav_children = nav_children | push: nav_child -%}
     {%- endif -%}

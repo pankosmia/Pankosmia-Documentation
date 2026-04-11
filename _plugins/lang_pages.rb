@@ -54,6 +54,10 @@ module Jekyll
         'title' => original_page.data['title'],
         'i18n_key' => original_page.data['i18n_key'],
         'nav_order' => original_page.data['nav_order'],
+        'parent' => original_page.data['parent'],
+        'grand_parent' => original_page.data['grand_parent'],
+        'has_children' => original_page.data['has_children'],
+        'nav_exclude' => original_page.data['nav_exclude'],
         'lang' => lang
       }
       
