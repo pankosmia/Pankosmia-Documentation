@@ -75,6 +75,7 @@ When i18n return markdown, it gets converted to html by `tm.html` or `tcm.html`.
 ## Summary
 
 | Namespace | Plain Text i18n | Markdown i18n | Markdown i18n inside Jekyll Markdown |
+|---|---|---|---|
 | pages | `t.html` | `tm.html` | `tmp.html` |
 | common | `tc.html` | `tcm.html` | `tcmp.html` |
 
