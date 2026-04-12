@@ -24,7 +24,7 @@ How to fork and configure a Desktop App repo built on Pankosmia
 ## {% include t.html key="heading_fork_template" %}
 {% include tm.html key="fork_template_intro" %}
 
-1. {% include t.html key="fork_step1" %}
+1. {% include t.html key="fork_step1" %} [https://github.com/pankosmia/desktop-app-template/fork](https://github.com/pankosmia/desktop-app-template/fork)
 
 2. {% include t.html key="fork_step2" %}
 
@@ -36,7 +36,7 @@ How to fork and configure a Desktop App repo built on Pankosmia
 <ul><pre>
 |-- repos
     |-- pankosmia
-        |-- [your-desktop-app-repo-name] <b><em>(30 characters or less on windows!)</em></b>
+        |-- [your-desktop-app-repo-name] <b><em>({% include t.html key="30_chars" %})</em></b>
 </pre></ul>
 
 ### package.json
@@ -81,7 +81,7 @@ npm install
 {% include tm.html key="setup_scripts_app_setup" %}
 
 {% include tm.html key="setup_scripts_build_clients" %}
-- {% include tm.html key="setup_scripts_build_clients_note1" %}
+- {% include tmp.html key="setup_scripts_build_clients_note1" %}
 - {% include t.html key="setup_scripts_build_clients_note2" %}
 
 {% include tm.html key="setup_scripts_build_server" %}
@@ -94,9 +94,9 @@ npm install
 - {% include t.html key="running_one_instance" %}
 
 {% include tm.html key="running_viewer_script" %}
-- {% include tm.html key="running_viewer_graphite" %}
-- {% include tm.html key="running_viewer_browsers" %}
-- {% include tm.html key="running_viewer_see_also" %}
+- {% include tmp.html key="running_viewer_graphite" %}
+- {% include tmp.html key="running_viewer_browsers" %}
+- {% include tmp.html key="running_viewer_see_also" %}
 
 ## {% include tc.html key="heading_footnotes" %}
 {% include tcm.html key="footnote1" %}

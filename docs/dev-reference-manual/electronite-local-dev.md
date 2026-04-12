@@ -71,8 +71,8 @@ How to make changes to Electronite while using a local development server.
 <pre>
 |-- buildResources
     |-- electron
-        |-- electronDevStartup.js (used by the viewer and the Linux app; launches the viewer without starting the server)
-        |-- electronStartup.js (used by the Windows and MacOS apps; starts the server then launches the viewer)
+        |-- electronDevStartup.js ({% include t.html key="electron_dev_startup" %})
+        |-- electronStartup.js ({% include t.html key="electron_startup" %})
 
 </pre>
 

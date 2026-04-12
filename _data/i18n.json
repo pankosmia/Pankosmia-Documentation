@@ -253,9 +253,9 @@
         "es": "[Desktop-app-template](https://github.com/pankosmia/desktop-app-template) es un repositorio diseñado para ser bifurcado (fork) para crear y mantener nuevos repositorios de aplicaciones de escritorio basados en Pankosmia."
       },
       "fork_step1": {
-        "en": "Start at https://github.com/pankosmia/desktop-app-template/fork",
-        "fr": "Commencez à https://github.com/pankosmia/desktop-app-template/fork",
-        "es": "Comience en https://github.com/pankosmia/desktop-app-template/fork"
+        "en": "Start at",
+        "fr": "Commencez à",
+        "es": "Comience en"
       },
       "fork_step2": {
         "en": "Choose a repository name of 30 characters or less if you want to keep **Windows developers** from needing to clone to a shorter local repo name. The windows cargo build c compiler requires repos names of 30 characters or less.",
@@ -277,12 +277,17 @@
         "fr": "Structure de répertoires recommandée :",
         "es": "Estructura de directorios recomendada:"
       },
+      "30_chars": {
+        "en": "30 characters or less on windows!",
+        "fr": "30 caractères ou moins sous Windows !",
+        "es": "¡30 caracteres o menos en Windows!"
+      },
       "package_json_instructions": {
         "en": "Replace all instances of \"desktop-app-template\" in package.json with \"[your-desktop-app-repo-name]\"",
         "fr": "Remplacez toutes les occurrences de « desktop-app-template » dans package.json par « [your-desktop-app-repo-name] »",
         "es": "Reemplace todas las instancias de \"desktop-app-template\" en package.json por \"[your-desktop-app-repo-name]\""
       },
-      "heading_npm_insatall": {
+      "heading_npm_install": {
         "en": "At the root of your clone of this repo, run:",
         "fr": "À la racine de votre clone de ce dépôt, exécutez :",
         "es": "En la raíz de su clon de este repositorio, ejecute:"
@@ -654,6 +659,16 @@
         "en": "If changes to `electronStartup.js` are required, reproduce these changes in the following two files:",
         "fr": "Si des modifications de `electronStartup.js` sont nécessaires, reproduisez ces modifications dans les deux fichiers suivants :",
         "es": "Si se requieren cambios en `electronStartup.js`, reproduzca estos cambios en los dos archivos siguientes:"
+      },
+      "electron_dev_startup": {
+        "en": "used by the viewer and the Linux app; launches the viewer without starting the server",
+        "fr": "utilisé par la visionneuse et l'application Linux ; lance la visionneuse sans démarrer le serveur",
+        "es": "utilizado por el visor y la aplicación Linux; lanza el visor sin iniciar el servidor"
+      },
+      "electron_startup": {
+        "en": "used by the Windows and MacOS apps; starts the server then launches the viewer",
+        "fr": "utilisé par les applications Windows et MacOS ; démarre le serveur puis lance la visionneuse",
+        "es": "utilizado por las aplicaciones Windows y MacOS; inicia el servidor y luego lanza el visor"
       },
       "deploy_test_dev_startup": {
         "en": "Test `electronDevStartup.js` by re-running the `build_viewer` script. See [Electronite Dev Viewer](#electronite-dev-viewer) above. Also used in the Linux app.",
