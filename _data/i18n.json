@@ -16,7 +16,8 @@
   },
   "toc_label": {
     "en": "Contents",
-    "fr": "Matières"
+    "fr": "Matières",
+    "es": "Contenidos"
   },
   "common": {
     "heading_toc": {
@@ -35,10 +36,19 @@
       "es": "Este sitio utiliza [Just the Docs](https://github.com/just-the-docs/just-the-docs), un tema de documentación para Jekyll."
     },
     "heading_footnotes": {
-      "en": "Footnotes"
+      "en": "Footnotes",
+      "fr": "Notes de bas de page",
+      "es": "Notas al pie"
     },
     "footnote1": {
-      "en": "[<b id=\"f1\">1</b>] ...  Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command prompt</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>The `.\\` is optional from a command prompt.<br /><span style=\"margin-left:3.25em\"></span>Use a **powershell** terminal for the **.ps1** build scripts.<br />MacOS developers, run .bsh scripts from a **MacOS terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Linux developers, run .zsh scripts from a **linux terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`"
+      "en": "[<b id=\"f1\">1</b>] ...  Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command prompt</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>The `.\\` is optional from a command prompt.<br /><span style=\"margin-left:3.25em\"></span>Use a **powershell** terminal for the **.ps1** build scripts.<br />MacOS developers, run .bsh scripts from a **MacOS terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Linux developers, run .zsh scripts from a **linux terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
+      "fr": "[<b id=\"f1\">1</b>] ...  Développeurs Windows, exécutez les scripts <b>.bat</b> depuis un <b>Powershell ou une invite de commandes</b> :<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>Le `.\\` est facultatif depuis une invite de commandes.<br /><span style=\"margin-left:3.25em\"></span>Utilisez un terminal **powershell** pour les scripts de build **.ps1**.<br />Développeurs MacOS, exécutez les scripts .bsh depuis un **terminal MacOS** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Développeurs Linux, exécutez les scripts .zsh depuis un **terminal linux** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
+      "es": "[<b id=\"f1\">1</b>] ...  Desarrolladores Windows, ejecuten los scripts <b>.bat</b> desde un <b>Powershell o símbolo del sistema</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>El `.\\` es opcional desde un símbolo del sistema.<br /><span style=\"margin-left:3.25em\"></span>Use un terminal **powershell** para los scripts de build **.ps1**.<br />Desarrolladores MacOS, ejecuten los scripts .bsh desde un **terminal MacOS**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Desarrolladores Linux, ejecuten los scripts .zsh desde un **terminal linux**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`"
+    },
+    "use_powershell": {
+      "en": "use a powershell terminal",
+      "fr": "utilisez un terminal powershell",
+      "es": "use un terminal powershell"
     }
   },
   "pages": {
@@ -57,978 +67,1349 @@
         "en": "Pankosmia"
       },
       "subheading_main": {
-        "en": "An ecosystem to build custom-made translation tools"
+        "en": "An ecosystem to build custom-made translation tools",
+        "fr": "Un écosystème pour créer des outils de traduction sur mesure",
+        "es": "Un ecosistema para crear herramientas de traducción a medida"
       },
       "intro": {
-        "en": "Pankosmia is a scripture translation software Ecosystem. It is used to build multiple translation tools, using shared components."
+        "en": "Pankosmia is a scripture translation software Ecosystem. It is used to build multiple translation tools, using shared components.",
+        "fr": "Pankosmia est un écosystème logiciel de traduction des Écritures. Il est utilisé pour créer plusieurs outils de traduction à partir de composants partagés.",
+        "es": "Pankosmia es un ecosistema de software de traducción de las Escrituras. Se utiliza para crear múltiples herramientas de traducción mediante componentes compartidos."
       },
       "the_pankosmia_project": {
-        "en": "The Pankosmia Project"
+        "en": "The Pankosmia Project",
+        "fr": "Le projet Pankosmia",
+        "es": "El proyecto Pankosmia"
       },
       "dev_quickstart": {
-        "en": "Dev Quickstart"
+        "en": "Dev Quickstart",
+        "fr": "Démarrage rapide pour développeurs",
+        "es": "Inicio rápido para desarrolladores"
       },
       "dev_reference_manual": {
-        "en": "Dev Reference Manual"
+        "en": "Dev Reference Manual",
+        "fr": "Manuel de référence pour développeurs",
+        "es": "Manual de referencia para desarrolladores"
       },
       "legal_notices": {
-        "en": "Legal Notices"
+        "en": "Legal Notices",
+        "fr": "Mentions légales",
+        "es": "Avisos legales"
       }
     },
     "the_pankosmia_project": {
       "title": {
-        "en": "The Pankosmia Project"
+        "en": "The Pankosmia Project",
+        "fr": "Le projet Pankosmia",
+        "es": "El proyecto Pankosmia"
       },
       "heading_philosophy": {
-        "en": "Philosophy"
+        "en": "Philosophy",
+        "fr": "Philosophie",
+        "es": "Filosofía"
       },
       "philosophy_intro_paragraph": {
-        "en": "Pankosmia began with a conversation about the [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d) principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don't focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger."
+        "en": "Pankosmia began with a conversation about the [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d) principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don't focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger.",
+        "fr": "Pankosmia est né d'une conversation autour du principe [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d). En résumé, si votre projet consiste à faire réciter Shakespeare à un singe sur un piédestal, ne vous concentrez pas sur le piédestal. Autrement dit, attaquez-vous d'abord à la partie difficile. Pour nous, deux des parties difficiles étaient la prise en charge de Graphite et la garantie d'une expérience hors ligne d'abord, car ne pas le faire pourrait mettre des personnes en danger.",
+        "es": "Pankosmia comenzó con una conversación sobre el principio [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d). En resumen, si tu proyecto consiste en que un mono recite Shakespeare sobre un pedestal, no te concentres en el pedestal. En otras palabras, aborda primero lo difícil. Para nosotros, dos de las partes difíciles eran el soporte de Graphite y garantizar una experiencia offline-first, ya que no hacerlo podría poner a personas en peligro."
       },
       "philosophy_corollaries": {
-        "en": "Some corollaries of \"First the Monkey\" for us are:"
+        "en": "Some corollaries of \"First the Monkey\" for us are:",
+        "fr": "Quelques corollaires de « First the Monkey » pour nous :",
+        "es": "Algunos corolarios de \"First the Monkey\" para nosotros son:"
       },
       "philosophy_corollary1": {
-        "en": "focus on the hard and unsolved problems"
+        "en": "focus on the hard and unsolved problems",
+        "fr": "se concentrer sur les problèmes difficiles et non résolus",
+        "es": "centrarse en los problemas difíciles y no resueltos"
       },
       "philosophy_corollary2": {
-        "en": "the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood"
+        "en": "the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood",
+        "fr": "la solution fonctionnelle mais maladroite que nous pouvons construire et livrer vaut mieux que la belle solution que nous ne pouvons ni construire ni livrer, et que la belle interface que nous pouvons livrer mais qui ne fait pas ce qu'il faut sous le capot",
+        "es": "la solución funcional pero tosca que podemos construir y entregar es mejor que la solución bonita que no podemos construir ni entregar, y que la interfaz bonita que podemos entregar pero que no hace lo correcto internamente"
       },
       "philosophy_corollary3": {
-        "en": "polishing things that we know how to polish is rarely urgent"
+        "en": "polishing things that we know how to polish is rarely urgent",
+        "fr": "peaufiner ce que nous savons déjà peaufiner est rarement urgent",
+        "es": "pulir cosas que ya sabemos pulir rara vez es urgente"
       },
       "philosophy_corollary4": {
-        "en": "users need happy devs because devs build the systems the users need"
+        "en": "users need happy devs because devs build the systems the users need",
+        "fr": "les utilisateurs ont besoin de développeurs heureux, car ce sont les développeurs qui construisent les systèmes dont les utilisateurs ont besoin",
+        "es": "los usuarios necesitan desarrolladores contentos porque los desarrolladores construyen los sistemas que los usuarios necesitan"
       },
       "heading_distinctives": {
-        "en": "Project Distinctives"
+        "en": "Project Distinctives",
+        "fr": "Caractéristiques du projet",
+        "es": "Características del proyecto"
       },
       "distinctive1": {
-        "en": "open source (but third-party products may include closed-source clients)"
+        "en": "open source (but third-party products may include closed-source clients)",
+        "fr": "open source (mais les produits tiers peuvent inclure des clients à code source fermé)",
+        "es": "código abierto (pero los productos de terceros pueden incluir clientes de código cerrado)"
       },
       "distinctive2": {
-        "en": "radically offline-first"
+        "en": "radically offline-first",
+        "fr": "radicalement hors ligne d'abord",
+        "es": "radicalmente offline-first"
       },
       "distinctive3": {
-        "en": "support for graphite-enabled fonts"
+        "en": "support for graphite-enabled fonts",
+        "fr": "prise en charge des polices compatibles Graphite",
+        "es": "compatibilidad con fuentes habilitadas para Graphite"
       },
       "distinctive4": {
-        "en": "built around Scripture Burrito for all content"
+        "en": "built around Scripture Burrito for all content",
+        "fr": "construit autour de Scripture Burrito pour tout le contenu",
+        "es": "construido en torno a Scripture Burrito para todo el contenido"
       },
       "distinctive5": {
-        "en": "multiple \"white app\" products that can be branded and maintained by different organizations and developed to meet different user needs"
+        "en": "multiple \"white app\" products that can be branded and maintained by different organizations and developed to meet different user needs",
+        "fr": "plusieurs produits « white app » pouvant être personnalisés et maintenus par différentes organisations et développés pour répondre à différents besoins utilisateurs",
+        "es": "múltiples productos \"white app\" que pueden ser personalizados y mantenidos por diferentes organizaciones y desarrollados para satisfacer diferentes necesidades de los usuarios"
       },
       "distinctive6": {
-        "en": "multiple clients per product, including standard clients for core functionality"
+        "en": "multiple clients per product, including standard clients for core functionality",
+        "fr": "plusieurs clients par produit, y compris des clients standard pour les fonctionnalités de base",
+        "es": "múltiples clientes por producto, incluyendo clientes estándar para la funcionalidad principal"
       },
       "heading_architecture": {
-        "en": "Architecture"
+        "en": "Architecture",
+        "fr": "Architecture",
+        "es": "Arquitectura"
       },
       "architecture_paragraph": {
-        "en": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes:"
+        "en": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes:",
+        "fr": "Les produits sont livrés sous forme d'application Electronite, c'est-à-dire Electron avec la prise en charge des polices compatibles Graphite. Un produit comprend généralement :",
+        "es": "Los productos se distribuyen como una aplicación Electronite, es decir, Electron con soporte añadido para fuentes habilitadas para Graphite. Un producto típicamente incluye:"
       },
       "architecture1": {
-        "en": "a localhost HTTP server, written in Rust, that handles"
+        "en": "a localhost HTTP server, written in Rust, that handles",
+        "fr": "un serveur HTTP localhost, écrit en Rust, qui gère",
+        "es": "un servidor HTTP localhost, escrito en Rust, que gestiona"
       },
       "architecture1a": {
-        "en": "access to local burritos"
+        "en": "access to local burritos",
+        "fr": "l'accès aux burritos locaux",
+        "es": "el acceso a los burritos locales"
       },
       "architecture1b": {
-        "en": "language and font options"
+        "en": "language and font options",
+        "fr": "les options de langue et de police",
+        "es": "las opciones de idioma y fuente"
       },
       "architecture1c": {
-        "en": "access to burrito servers (when Internet is enabled)"
+        "en": "access to burrito servers (when Internet is enabled)",
+        "fr": "l'accès aux serveurs burrito (lorsque Internet est activé)",
+        "es": "el acceso a los servidores burrito (cuando Internet está habilitado)"
       },
       "architecture1d": {
-        "en": "shared application state between clients"
+        "en": "shared application state between clients",
+        "fr": "l'état partagé de l'application entre les clients",
+        "es": "el estado compartido de la aplicación entre los clientes"
       },
       "architecture2": {
-        "en": "multiple clients, served as built HTML/CSS/Javascript:"
+        "en": "multiple clients, served as built HTML/CSS/Javascript:",
+        "fr": "plusieurs clients, servis sous forme de HTML/CSS/Javascript compilé :",
+        "es": "múltiples clientes, servidos como HTML/CSS/Javascript compilado:"
       },
       "architecture2a": {
-        "en": "core clients use React and MUI, use of other frameworks is possible"
+        "en": "core clients use React and MUI, use of other frameworks is possible",
+        "fr": "les clients principaux utilisent React et MUI, l'utilisation d'autres frameworks est possible",
+        "es": "los clientes principales usan React y MUI, el uso de otros frameworks es posible"
       },
       "architecture3": {
-        "en": "core Node libraries to simplify the creation of new clients"
+        "en": "core Node libraries to simplify the creation of new clients",
+        "fr": "des bibliothèques Node de base pour simplifier la création de nouveaux clients",
+        "es": "bibliotecas Node principales para simplificar la creación de nuevos clientes"
       },
       "architecture4": {
-        "en": "an extensive online build toolchain for multiple operating systems"
+        "en": "an extensive online build toolchain for multiple operating systems",
+        "fr": "une chaîne d'outils de build en ligne étendue pour plusieurs systèmes d'exploitation",
+        "es": "una amplia cadena de herramientas de build en línea para múltiples sistemas operativos"
       }
     },
     "dev_quickstart": {
       "title": {
-        "en": "Dev Quickstart"
+        "en": "Dev Quickstart",
+        "fr": "Démarrage rapide pour développeurs",
+        "es": "Inicio rápido para desarrolladores"
       }
     },
     "app_spin-up": {
       "title": {
-        "en": "App Spin-up"
+        "en": "App Spin-up",
+        "fr": "Mise en route de l'application",
+        "es": "Puesta en marcha de la aplicación"
       },
-            "heading_fork_template": {
-        "en": "Fork desktop-app-template"
+      "heading_fork_template": {
+        "en": "Fork desktop-app-template",
+        "fr": "Forker desktop-app-template",
+        "es": "Hacer fork de desktop-app-template"
       },
       "fork_template_intro": {
-        "en": "[Desktop-app-template](https://github.com/pankosmia/desktop-app-template) is a repo designed to be forked to spin up and maintain new Desktop App repos built on Pankosmia."
+        "en": "[Desktop-app-template](https://github.com/pankosmia/desktop-app-template) is a repo designed to be forked to spin up and maintain new Desktop App repos built on Pankosmia.",
+        "fr": "[Desktop-app-template](https://github.com/pankosmia/desktop-app-template) est un dépôt conçu pour être forké afin de créer et maintenir de nouveaux dépôts d'applications de bureau basés sur Pankosmia.",
+        "es": "[Desktop-app-template](https://github.com/pankosmia/desktop-app-template) es un repositorio diseñado para ser bifurcado (fork) para crear y mantener nuevos repositorios de aplicaciones de escritorio basados en Pankosmia."
       },
       "fork_step1": {
-        "en": "Start at https://github.com/pankosmia/desktop-app-template/fork"
+        "en": "Start at https://github.com/pankosmia/desktop-app-template/fork",
+        "fr": "Commencez à https://github.com/pankosmia/desktop-app-template/fork",
+        "es": "Comience en https://github.com/pankosmia/desktop-app-template/fork"
       },
       "fork_step2": {
-        "en": "Choose a repository name of 30 characters or less if you want to keep **Windows developers** from needing to clone to a shorter local repo name. The windows cargo build c compiler requires repos names of 30 characters or less."
+        "en": "Choose a repository name of 30 characters or less if you want to keep **Windows developers** from needing to clone to a shorter local repo name. The windows cargo build c compiler requires repos names of 30 characters or less.",
+        "fr": "Choisissez un nom de dépôt de 30 caractères ou moins si vous voulez éviter aux **développeurs Windows** de devoir cloner avec un nom de dépôt local plus court. Le compilateur C de cargo build sous Windows exige des noms de dépôt de 30 caractères ou moins.",
+        "es": "Elija un nombre de repositorio de 30 caracteres o menos si desea evitar que los **desarrolladores Windows** necesiten clonar con un nombre de repositorio local más corto. El compilador C de cargo build en Windows requiere nombres de repositorio de 30 caracteres o menos."
       },
       "fork_step3": {
-        "en": "Create Fork"
+        "en": "Create Fork",
+        "fr": "Créer le fork",
+        "es": "Crear el fork"
       },
       "heading_setup": {
-        "en": "Setup"
+        "en": "Setup",
+        "fr": "Configuration",
+        "es": "Configuración"
       },
       "heading_directory_structure": {
-        "en": "Recommended directory structure:"
-      },
-      "heading_package_json": {
-        "en": "package.json"
+        "en": "Recommended directory structure:",
+        "fr": "Structure de répertoires recommandée :",
+        "es": "Estructura de directorios recomendada:"
       },
       "package_json_instructions": {
-        "en": "Replace all instances of \"desktop-app-template\" in package.json with \"[your-desktop-app-repo-name]\""
+        "en": "Replace all instances of \"desktop-app-template\" in package.json with \"[your-desktop-app-repo-name]\"",
+        "fr": "Remplacez toutes les occurrences de « desktop-app-template » dans package.json par « [your-desktop-app-repo-name] »",
+        "es": "Reemplace todas las instancias de \"desktop-app-template\" en package.json por \"[your-desktop-app-repo-name]\""
       },
-      "heading_run_npm_ci": {
-        "en": "At the root of your clone of this repo, run:"
+      "heading_npm_insatall": {
+        "en": "At the root of your clone of this repo, run:",
+        "fr": "À la racine de votre clone de ce dépôt, exécutez :",
+        "es": "En la raíz de su clon de este repositorio, ejecute:"
       },
       "heading_edit_app_config": {
-        "en": "Edit app_config.env"
+        "en": "Edit app_config.env",
+        "fr": "Modifier app_config.env",
+        "es": "Editar app_config.env"
       },
       "edit_app_config_intro": {
-        "en": "Entering the App Name, version number, Apps Short Name for working directory, assets, and clients."
+        "en": "Entering the App Name, version number, Apps Short Name for working directory, assets, and clients.",
+        "fr": "Saisir le nom de l'application, le numéro de version, le nom court de l'application pour le répertoire de travail, les assets et les clients.",
+        "es": "Ingrese el nombre de la aplicación, el número de versión, el nombre corto de la aplicación para el directorio de trabajo, los assets y los clientes."
       },
       "heading_required_assets": {
-        "en": "Required Assets:"
-      },
-      "asset1": {
-        "en": "ASSET1=resource-core"
-      },
-      "asset1_path": {
-        "en": "ASSET1_PATH=/runtime_resources"
-      },
-      "asset1_name": {
-        "en": "ASSET1_NAME=app_resources"
-      },
-      "asset2": {
-        "en": "ASSET2=resource-core"
-      },
-      "asset2_path": {
-        "en": "ASSET2_PATH=/templates"
-      },
-      "asset2_name": {
-        "en": "ASSET2_NAME=templates"
-      },
-      "asset3": {
-        "en": "ASSET3=webfonts-core"
-      },
-      "asset3_path": {
-        "en": "ASSET3_PATH=/"
-      },
-      "asset3_name": {
-        "en": "ASSET3_NAME=webfonts"
+        "en": "Required Assets:",
+        "fr": "Assets requis :",
+        "es": "Assets requeridos:"
       },
       "heading_required_clients": {
-        "en": "Required Clients:"
+        "en": "Required Clients:",
+        "fr": "Clients requis :",
+        "es": "Clientes requeridos:"
       },
-      "client1": {
-        "en": "CLIENT1=core-client-dashboard"
-      },
-      "client2": {
-        "en": "CLIENT2=core-client-content"
-      },
-      "client_settings": {
-        "en": "CLIENT***[any number]***=core-client-settings"
+      "any_number": {
+        "en": "any number",
+        "fr": "n'importe quel nombre",
+        "es": "cualquier número"
       },
       "heading_branding": {
-        "en": "Branding"
+        "en": "Branding",
+        "fr": "Image de marque",
+        "es": "Marca"
       },
       "branding_theme": {
-        "en": "Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see the [Theme section of UX/UI guidelines](https://pankosmia.dev/uxui-guidelines/#theme)."
+        "en": "Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see the [Theme section of UX/UI guidelines](https://pankosmia.dev/uxui-guidelines/#theme).",
+        "fr": "Modifiez directement /globalBuildResources/theme.json pour personnaliser votre application. Pour des conseils utiles, consultez la [section Thème des directives UX/UI](https://pankosmia.dev/uxui-guidelines/#theme).",
+        "es": "Modifique /globalBuildResources/theme.json directamente para personalizar su aplicación. Para consejos útiles, consulte la [sección Tema de las directrices UX/UI](https://pankosmia.dev/uxui-guidelines/#theme)."
       },
       "branding_logo": {
-        "en": "For implementing your logo, see the [Branding README](https://github.com/pankosmia/desktop-app-template/tree/main/branding#readme){:target=\"_blank\" :rel=\"noopener noreferrer\"} for scripts to customize /globalBuildResources/*.ico, /globalBuildResources/*.png, and /globalBuildResources/icon.icns, along with info on how each is used."
+        "en": "For implementing your logo, see the [Branding README](https://github.com/pankosmia/desktop-app-template/tree/main/branding#readme){:target=\"_blank\" :rel=\"noopener noreferrer\"} for scripts to customize /globalBuildResources/*.ico, /globalBuildResources/*.png, and /globalBuildResources/icon.icns, along with info on how each is used.",
+        "fr": "Pour implémenter votre logo, consultez le [README Branding](https://github.com/pankosmia/desktop-app-template/tree/main/branding#readme){:target=\"_blank\" :rel=\"noopener noreferrer\"} pour les scripts de personnalisation de /globalBuildResources/*.ico, /globalBuildResources/*.png et /globalBuildResources/icon.icns, ainsi que des informations sur l'utilisation de chacun.",
+        "es": "Para implementar su logo, consulte el [README de Branding](https://github.com/pankosmia/desktop-app-template/tree/main/branding#readme){:target=\"_blank\" :rel=\"noopener noreferrer\"} para los scripts de personalización de /globalBuildResources/*.ico, /globalBuildResources/*.png y /globalBuildResources/icon.icns, junto con información sobre cómo se usa cada uno."
       },
       "heading_setup_scripts": {
-        "en": "Setup Scripts"
-      },
-      "setup_scripts_cd": {
-        "en": "`cd [os]/scripts`"
+        "en": "Setup Scripts",
+        "fr": "Scripts de configuration",
+        "es": "Scripts de configuración"
       },
       "setup_scripts_clone": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `clone` script to clone all repos listed in `app_config.env` (assets and clients)"
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `clone` script to clone all repos listed in `app_config.env` (assets and clients)",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `clone` pour cloner tous les dépôts listés dans `app_config.env` (assets et clients)",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `clone` para clonar todos los repositorios listados en `app_config.env` (assets y clientes)"
       },
       "setup_scripts_app_setup": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `app_setup` script to generate the config files to match `app_config.env`. Re-run<sup id=\"a1\">[[1]](#f1)</sup> the `app_setup` script anytime `app_config.env` is modified."
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `app_setup` script to generate the config files to match `app_config.env`. Re-run<sup id=\"a1\">[[1]](#f1)</sup> the `app_setup` script anytime `app_config.env` is modified.",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `app_setup` pour générer les fichiers de configuration correspondant à `app_config.env`. Ré-exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `app_setup` chaque fois que `app_config.env` est modifié.",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `app_setup` para generar los archivos de configuración que correspondan a `app_config.env`. Vuelva a ejecutar<sup id=\"a1\">[[1]](#f1)</sup> el script `app_setup` cada vez que se modifique `app_config.env`."
       },
       "setup_scripts_build_clients": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_clients` script to build all clients. Be patient. This will take a while."
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_clients` script to build all clients. Be patient. This will take a while.",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_clients` pour compiler tous les clients. Soyez patient. Cela prendra du temps.",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_clients` para compilar todos los clientes. Tenga paciencia. Esto tomará un tiempo."
       },
       "setup_scripts_build_clients_note1": {
-        "en": "This script is intended for setting all clients up for <b>first use</b>, or for rebuilding <b>all</b> clients to their <b>latest main</b> branch. It changes to the main branch, pulls the latest, and builds (or rebuilds) every client every time it is run.<br />"
+        "en": "This script is intended for setting all clients up for <b>first use</b>, or for rebuilding <b>all</b> clients to their <b>latest main</b> branch. It changes to the main branch, pulls the latest, and builds (or rebuilds) every client every time it is run.<br />",
+        "fr": "Ce script est destiné à configurer tous les clients pour une <b>première utilisation</b>, ou à reconstruire <b>tous</b> les clients vers leur branche <b>main la plus récente</b>. Il bascule sur la branche main, récupère la dernière version et compile (ou recompile) chaque client à chaque exécution.<br />",
+        "es": "Este script está destinado a configurar todos los clientes para el <b>primer uso</b>, o para reconstruir <b>todos</b> los clientes a su rama <b>main más reciente</b>. Cambia a la rama main, obtiene la última versión y compila (o recompila) cada cliente cada vez que se ejecuta.<br />"
       },
       "setup_scripts_build_clients_note2": {
-        "en": "Build client manually when you want to use a branch or when you only need to rebuild one client or when you do not want all clients built from their latest main branch!"
+        "en": "Build client manually when you want to use a branch or when you only need to rebuild one client or when you do not want all clients built from their latest main branch!",
+        "fr": "Compilez le client manuellement lorsque vous souhaitez utiliser une branche spécifique, lorsque vous n'avez besoin de recompiler qu'un seul client, ou lorsque vous ne souhaitez pas que tous les clients soient compilés depuis leur dernière branche main !",
+        "es": "¡Compile el cliente manualmente cuando desee usar una rama específica, cuando solo necesite recompilar un cliente, o cuando no desee que todos los clientes se compilen desde su última rama main!"
       },
       "setup_scripts_build_server": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.)"
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.)",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_server` pour compiler le serveur Pankosmia et assembler l'environnement de build. (soyez patient, cela prendra aussi du temps.)",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_server` para compilar el servidor Pankosmia y ensamblar el entorno de build. (tenga paciencia, esto también tomará un tiempo.)"
       },
       "setup_scripts_build_viewer": {
-        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local dev build environment."
+        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local dev build environment.",
+        "fr": "(Optionnel) Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_viewer` pour créer une visionneuse Electronite à utiliser avec l'environnement de build de développement local.",
+        "es": "(Opcional) Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_viewer` para crear un visor Electronite para usar con el entorno de build de desarrollo local."
       },
       "heading_running_your_setup": {
-        "en": "Running your Setup"
+        "en": "Running your Setup",
+        "fr": "Exécuter votre configuration",
+        "es": "Ejecutar su configuración"
       },
       "running_run_script": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `run` script to start the server without a browser launch."
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `run` pour démarrer le serveur sans lancer de navigateur.",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `run` para iniciar el servidor sin abrir un navegador."
       },
       "running_one_instance": {
-        "en": "Only one instance of the same server can be running at a time."
+        "en": "Only one instance of the same server can be running at a time.",
+        "fr": "Une seule instance du même serveur peut s'exécuter à la fois.",
+        "es": "Solo puede ejecutarse una instancia del mismo servidor a la vez."
       },
       "running_viewer_script": {
-        "en": "Run the `viewer` script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated."
+        "en": "Run the `viewer` script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated.",
+        "fr": "Exécutez le script `viewer` pour utiliser la visionneuse Electronite avec l'environnement de build de développement local, ou lancez un navigateur à l'emplacement indiqué.",
+        "es": "Ejecute el script `viewer` para usar el visor Electronite con el entorno de build de desarrollo local, o abra un navegador en la ubicación indicada."
       },
       "running_viewer_graphite": {
-        "en": "The Electronite viewer is Chromium compiled with [Graphite](https://graphite.sil.org/){:target=\"_blank\" :rel=\"noopener noreferrer\"}"
+        "en": "The Electronite viewer is Chromium compiled with [Graphite](https://graphite.sil.org/){:target=\"_blank\" :rel=\"noopener noreferrer\"}",
+        "fr": "La visionneuse Electronite est Chromium compilé avec [Graphite](https://graphite.sil.org/){:target=\"_blank\" :rel=\"noopener noreferrer\"}",
+        "es": "El visor Electronite es Chromium compilado con [Graphite](https://graphite.sil.org/){:target=\"_blank\" :rel=\"noopener noreferrer\"}"
       },
       "running_viewer_browsers": {
-        "en": "Some browsers that support graphite include [Firefox](https://www.firefox.com/){:target=\"_blank\" :rel=\"noopener noreferrer\"}, [Zen Browser](https://zen-browser.app/){:target=\"_blank\" :rel=\"noopener noreferrer\"}, and [LibreWolf](https://librewolf.net/){:target=\"_blank\" :rel=\"noopener noreferrer\"}."
+        "en": "Some browsers that support graphite include [Firefox](https://www.firefox.com/){:target=\"_blank\" :rel=\"noopener noreferrer\"}, [Zen Browser](https://zen-browser.app/){:target=\"_blank\" :rel=\"noopener noreferrer\"}, and [LibreWolf](https://librewolf.net/){:target=\"_blank\" :rel=\"noopener noreferrer\"}.",
+        "fr": "Parmi les navigateurs prenant en charge Graphite, on trouve [Firefox](https://www.firefox.com/){:target=\"_blank\" :rel=\"noopener noreferrer\"}, [Zen Browser](https://zen-browser.app/){:target=\"_blank\" :rel=\"noopener noreferrer\"} et [LibreWolf](https://librewolf.net/){:target=\"_blank\" :rel=\"noopener noreferrer\"}.",
+        "es": "Algunos navegadores compatibles con Graphite incluyen [Firefox](https://www.firefox.com/){:target=\"_blank\" :rel=\"noopener noreferrer\"}, [Zen Browser](https://zen-browser.app/){:target=\"_blank\" :rel=\"noopener noreferrer\"} y [LibreWolf](https://librewolf.net/){:target=\"_blank\" :rel=\"noopener noreferrer\"}."
       },
       "running_viewer_see_also": {
-        "en": "See [Electronite Local Dev](../electronite-local-development/) for additional detail."
+        "en": "See [Electronite Local Dev](../electronite-local-development/) for additional detail.",
+        "fr": "Voir [Développement local Electronite](../electronite-local-development/) pour plus de détails.",
+        "es": "Vea [Desarrollo local de Electronite](../electronite-local-development/) para más detalles."
       }
     },
     "environment_requirements": {
       "title": {
-        "en": "Environment Requirements"
+        "en": "Environment Requirements",
+        "fr": "Exigences de l'environnement",
+        "es": "Requisitos del entorno"
       },
-            "heading_tested_on": {
-        "en": "Tested on:"
+      "heading_tested_on": {
+        "en": "Tested on:",
+        "fr": "Testé sur :",
+        "es": "Probado en:"
       },
-      "heading_ubuntu": {
-        "en": "Ubuntu 24.04 with:"
+      "with": {
+        "en": "with:",
+        "fr": "avec :",
+        "es": "con:"
       },
-      "ubuntu_npm": {
-        "en": "npm 10.7.0"
+      "see": {
+        "en": "See",
+        "fr": "Voir",
+        "es": "Ver"
       },
-      "ubuntu_node": {
-        "en": "node 20.18.1"
-      },
-      "ubuntu_rustc": {
-        "en": "rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`"
-      },
-      "heading_windows": {
-        "en": "Windows 11 with:"
-      },
-      "windows_git": {
-        "en": "git 2.44.0; See https://git-scm.com/install/windows"
-      },
-      "windows_npm": {
-        "en": "npm 10.7.0"
-      },
-      "windows_node": {
-        "en": "node 20.18.1"
-      },
-      "windows_rustc": {
-        "en": "rustc 1.88.0 -- See https://www.rust-lang.org/tools/install"
-      },
-      "windows_cmake": {
-        "en": "cmake 3.31.0 -- Version 3 is required. See https://cmake.org/download/"
+      "windows_cmake_ver": {
+        "en": "Version 3 is required.",
+        "fr": "La version 3 est requise.",
+        "es": "Se requiere la versión 3."
       },
       "windows_powershell": {
-        "en": "Depending on your system, powershell might need permission to run scripts."
+        "en": "Depending on your system, powershell might need permission to run scripts.",
+        "fr": "Selon votre système, powershell pourrait avoir besoin d'une autorisation pour exécuter des scripts.",
+        "es": "Dependiendo de su sistema, powershell podría necesitar permiso para ejecutar scripts."
       },
       "windows_inno_setup": {
-        "en": "Running exe builds locally (optional) needs installation of [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3"
+        "en": "Running exe builds locally (optional) needs installation of [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3",
+        "fr": "L'exécution locale de builds exe (optionnel) nécessite l'installation de [Inno Setup](https://jrsoftware.org/isdl.php) - testé avec la v6.4.3",
+        "es": "Ejecutar builds exe localmente (opcional) requiere la instalación de [Inno Setup](https://jrsoftware.org/isdl.php) - probado con v6.4.3"
       },
-      "heading_macos": {
-        "en": "MacOS with:"
-      },
-      "macos_npm_monterey": {
-        "en": "npm 10.7.0 (tested on Monterey)"
-      },
-      "macos_npm_sequoia": {
-        "en": "npm 10.8.2 (tested on Sequoia)"
-      },
-      "macos_node": {
-        "en": "node 20.18.1"
-      },
-      "macos_rustc": {
-        "en": "rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`"
-      },
-      "macos_openssl": {
-        "en": "OpenSSL 3.5.0 -- `brew install openssl`"
+      "tested_on": {
+        "en": "tested on",
+        "fr": "testé sur",
+        "es": "probado en"
       }
     },
     "scripts": {
       "title": {
-        "en": "Scripts"
+        "en": "Scripts",
+        "fr": "Scripts",
+        "es": "Scripts"
       },
-            "heading_use": {
-        "en": "Use"
+      "heading_use": {
+        "en": "Use",
+        "fr": "Utilisation",
+        "es": "Uso"
       },
       "use_intro": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `run` script to start the server without a browser launch."
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `run` pour démarrer le serveur sans lancer de navigateur.",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `run` para iniciar el servidor sin abrir un navegador."
       },
       "use_delete_working": {
-        "en": "Consider also if you need to delete ~/pankosmia_working first."
+        "en": "Consider also if you need to delete `~/pankosmia/[App Short Name]/` first.",
+        "fr": "Vérifiez également si vous devez d'abord supprimer `~/pankosmia/[Nom court de l'application]/`.",
+        "es": "Considere también si necesita eliminar `~/pankosmia/[Nombre corto de la aplicación]/` primero."
       },
       "use_restart_server": {
-        "en": "You'll want to restart the server if deleting ~/pankosmia_working after starting the server. To restart, exit the terminal window where the server is running the run the `run` script<sup id=\"a1\">[[1]](#f1)</sup> again."
+        "en": "You'll want to restart the server if deleting ~/pankosmia_working after starting the server. To restart, exit the terminal window where the server is running the run the `run` script<sup id=\"a1\">[[1]](#f1)</sup> again.",
+        "fr": "Vous devrez redémarrer le serveur si vous supprimez ~/pankosmia_working après avoir démarré le serveur. Pour redémarrer, fermez la fenêtre du terminal où le serveur s'exécute, puis relancez le script `run`<sup id=\"a1\">[[1]](#f1)</sup>.",
+        "es": "Deberá reiniciar el servidor si elimina ~/pankosmia_working después de haberlo iniciado. Para reiniciar, cierre la ventana del terminal donde se ejecuta el servidor y vuelva a ejecutar el script `run`<sup id=\"a1\">[[1]](#f1)</sup>."
       },
       "use_one_instance": {
-        "en": "Only one instance of the same server can be running at a time."
+        "en": "Only one instance of the same server can be running at a time.",
+        "fr": "Une seule instance du même serveur peut s'exécuter à la fois.",
+        "es": "Solo puede ejecutarse una instancia del mismo servidor a la vez."
       },
       "heading_client_development": {
-        "en": "Client development:"
+        "en": "Client development:",
+        "fr": "Développement de clients :",
+        "es": "Desarrollo de clientes:"
       },
       "client_dev_intro": {
-        "en": "Manually build the client(s) changed, stop the server if is is running, then start the server (`run`).  The `run` script will re-assemble the environment to include your build."
+        "en": "Manually build the client(s) changed, stop the server if is is running, then start the server (`run`).  The `run` script will re-assemble the environment to include your build.",
+        "fr": "Compilez manuellement le(s) client(s) modifié(s), arrêtez le serveur s'il est en cours d'exécution, puis démarrez le serveur (`run`). Le script `run` réassemblera l'environnement pour inclure votre build.",
+        "es": "Compile manualmente el/los cliente(s) modificado(s), detenga el servidor si está en ejecución, luego inicie el servidor (`run`). El script `run` reensamblará el entorno para incluir su build."
       },
       "client_dev_see_also": {
-        "en": "See also [Running your setup](../app-spin-up/#running-your-setup)."
+        "en": "See also [Running your setup](../app-spin-up/#running-your-setup).",
+        "fr": "Voir aussi [Exécuter votre configuration](../app-spin-up/#running-your-setup).",
+        "es": "Vea también [Ejecutar su configuración](../app-spin-up/#running-your-setup)."
       },
       "client_dev_release": {
-        "en": "To generate a release package for the OS you are using, edit the version number for the release in `app_config.env` then see the next section below, or [Local installer build](../electronite-local-development/#local-installer-build) or the bundle scripts in [Dev script reference](../script-reference/)"
+        "en": "To generate a release package for the OS you are using, edit the version number for the release in `app_config.env` then see the next section below, or [Local installer build](../electronite-local-development/#local-installer-build) or the bundle scripts in [Dev script reference](../script-reference/)",
+        "fr": "Pour générer un package de release pour le système d'exploitation que vous utilisez, modifiez le numéro de version de la release dans `app_config.env` puis consultez la section suivante ci-dessous, ou [Build d'installateur local](../electronite-local-development/#local-installer-build) ou les scripts de bundle dans [Référence des scripts de développement](../script-reference/)",
+        "es": "Para generar un paquete de release para el sistema operativo que está usando, edite el número de versión del release en `app_config.env` y luego consulte la siguiente sección a continuación, o [Build de instalador local](../electronite-local-development/#local-installer-build) o los scripts de bundle en [Referencia de scripts de desarrollo](../script-reference/)"
       },
       "heading_generate_artifacts": {
-        "en": "To generate artifacts:"
+        "en": "To generate artifacts:",
+        "fr": "Pour générer des artefacts :",
+        "es": "Para generar artefactos:"
       },
       "artifacts_intro": {
-        "en": "[Manually run the desired workflow](https://docs.github.com/en/actions/how-tos/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow#running-a-workflow) (Actions > [select workflow] > Run workflow)."
+        "en": "[Manually run the desired workflow](https://docs.github.com/en/actions/how-tos/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow#running-a-workflow) (Actions > [select workflow] > Run workflow).",
+        "fr": "[Exécutez manuellement le workflow souhaité](https://docs.github.com/en/actions/how-tos/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow#running-a-workflow) (Actions > [sélectionner le workflow] > Run workflow).",
+        "es": "[Ejecute manualmente el workflow deseado](https://docs.github.com/en/actions/how-tos/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow#running-a-workflow) (Actions > [seleccionar workflow] > Run workflow)."
       },
       "artifacts_main_branch": {
-        "en": "The current main branch of client repo and resource at the time of running the workflow will be used."
+        "en": "The current main branch of client repo and resource at the time of running the workflow will be used.",
+        "fr": "La branche main actuelle du dépôt client et des ressources au moment de l'exécution du workflow sera utilisée.",
+        "es": "Se utilizará la rama main actual del repositorio del cliente y de los recursos en el momento de ejecutar el workflow."
       },
       "artifacts_download": {
-        "en": "Download resulting artifacts (Actions > click the name of a run to see the workflow run summary > scroll down to the bottom to the Artifacts section > to download, click either the name of each artifact or the down arrow on each row"
+        "en": "Download resulting artifacts (Actions > click the name of a run to see the workflow run summary > scroll down to the bottom to the Artifacts section > to download, click either the name of each artifact or the down arrow on each row",
+        "fr": "Téléchargez les artefacts résultants (Actions > cliquez sur le nom d'une exécution pour voir le résumé du workflow > faites défiler vers le bas jusqu'à la section Artifacts > pour télécharger, cliquez sur le nom de chaque artefact ou sur la flèche vers le bas de chaque ligne",
+        "es": "Descargue los artefactos resultantes (Actions > haga clic en el nombre de una ejecución para ver el resumen del workflow > desplácese hacia abajo hasta la sección Artifacts > para descargar, haga clic en el nombre de cada artefacto o en la flecha hacia abajo de cada fila"
       },
       "artifacts_double_compressed": {
-        "en": "Any double-compressed artifacts should have one layer uncompressed before release, e.g.:"
+        "en": "Any double-compressed artifacts should have one layer uncompressed before release, e.g.:",
+        "fr": "Tout artefact doublement compressé doit être décompressé d'une couche avant la publication, par exemple :",
+        "es": "Cualquier artefacto doblemente comprimido debe descomprimirse una capa antes de la publicación, por ejemplo:"
       },
       "artifacts_strip_tgz": {
-        "en": "Strip *.tgz.zip down to *.tgz"
+        "en": "Strip *.tgz.zip down to *.tgz",
+        "fr": "Réduire *.tgz.zip à *.tgz",
+        "es": "Reducir *.tgz.zip a *.tgz"
       },
       "artifacts_strip_zip": {
-        "en": "Strip *.zip.zip down to *.zip"
+        "en": "Strip *.zip.zip down to *.zip",
+        "fr": "Réduire *.zip.zip à *.zip",
+        "es": "Reducir *.zip.zip a *.zip"
       },
       "artifacts_windows_warning": {
-        "en": "If working from windows, avoid releasing a re-zipping a macos or linux zip package if a .pkg, .sh, .bsh, .zsh was in the layer re-zipped in windows. Doing so would otherwise remove file permission settings of `chmod +x` where they are needed."
+        "en": "If working from windows, avoid releasing a re-zipping a macos or linux zip package if a .pkg, .sh, .bsh, .zsh was in the layer re-zipped in windows. Doing so would otherwise remove file permission settings of `chmod +x` where they are needed.",
+        "fr": "Si vous travaillez sous Windows, évitez de publier en re-zippant un package zip macOS ou Linux si un .pkg, .sh, .bsh, .zsh se trouvait dans la couche re-zippée sous Windows. Cela supprimerait les permissions de fichier `chmod +x` là où elles sont nécessaires.",
+        "es": "Si trabaja desde Windows, evite publicar re-comprimiendo un paquete zip de macOS o Linux si un .pkg, .sh, .bsh, .zsh estaba en la capa re-comprimida en Windows. Hacerlo eliminaría los permisos de archivo `chmod +x` donde son necesarios."
       },
       "artifacts_pkg_zip": {
-        "en": "Release the *.pkg.zip layer as .zip as it includes a README file in the same layer as the pkg, which contains installation and upgrade instructions / info."
+        "en": "Release the *.pkg.zip layer as .zip as it includes a README file in the same layer as the pkg, which contains installation and upgrade instructions / info.",
+        "fr": "Publiez la couche *.pkg.zip en tant que .zip car elle inclut un fichier README dans la même couche que le pkg, contenant les instructions et informations d'installation et de mise à jour.",
+        "es": "Publique la capa *.pkg.zip como .zip ya que incluye un archivo README en la misma capa que el pkg, que contiene instrucciones e información de instalación y actualización."
       },
       "artifacts_upload_releases": {
-        "en": "Upload releases manually by going to the Release section of your repo and selecting \"Draft a new release\"."
+        "en": "Upload releases manually by going to the Release section of your repo and selecting \"Draft a new release\".",
+        "fr": "Téléversez les releases manuellement en allant dans la section Release de votre dépôt et en sélectionnant « Draft a new release ».",
+        "es": "Suba los releases manualmente yendo a la sección Release de su repositorio y seleccionando \"Draft a new release\"."
       },
       "heading_maintenance": {
-        "en": "Maintenance"
+        "en": "Maintenance",
+        "fr": "Maintenance",
+        "es": "Mantenimiento"
       },
       "maintenance_update_server": {
-        "en": "To update the server, change the [latest version](https://crates.io/search?q=pankosmia-web) of [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) in `/local_server/Cargo.toml` and re-run the `build_server` script."
+        "en": "To update the server, change the [latest version](https://crates.io/search?q=pankosmia-web) of [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) in `/local_server/Cargo.toml` and re-run the `build_server` script.",
+        "fr": "Pour mettre à jour le serveur, changez la [dernière version](https://crates.io/search?q=pankosmia-web) de [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) dans `/local_server/Cargo.toml` et relancez le script `build_server`.",
+        "es": "Para actualizar el servidor, cambie la [última versión](https://crates.io/search?q=pankosmia-web) de [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) en `/local_server/Cargo.toml` y vuelva a ejecutar el script `build_server`."
       },
       "maintenance_sync": {
-        "en": "To sync this repo with its upstream, run the `sync` script."
+        "en": "To sync this repo with its upstream, run the `sync` script.",
+        "fr": "Pour synchroniser ce dépôt avec son upstream, exécutez le script `sync`.",
+        "es": "Para sincronizar este repositorio con su upstream, ejecute el script `sync`."
       }
     },
     "dev_reference_manual": {
       "title": {
-        "en": "Dev Reference Manual"
+        "en": "Dev Reference Manual",
+        "fr": "Manuel de référence pour développeurs",
+        "es": "Manual de referencia para desarrolladores"
       }
     },
     "electronite_local_development": {
       "title": {
-        "en": "Electronite Local Development"
+        "en": "Electronite Local Development",
+        "fr": "Développement local Electronite",
+        "es": "Desarrollo local de Electronite"
       },
-            "heading_platforms": {
-        "en": "Windows, MacOS, or Linux"
+      "heading_platforms": {
+        "en": "Windows, MacOS, or Linux",
+        "fr": "Windows, MacOS ou Linux",
+        "es": "Windows, MacOS o Linux"
       },
       "heading_prerequisites": {
-        "en": "Prerequisites"
+        "en": "Prerequisites",
+        "fr": "Prérequis",
+        "es": "Requisitos previos"
       },
       "prereq_environment": {
-        "en": "See [Environment Requirements](../environment-requirements/)."
+        "en": "See [Environment Requirements](../environment-requirements/).",
+        "fr": "Voir [Exigences de l'environnement](../environment-requirements/).",
+        "es": "Vea [Requisitos del entorno](../environment-requirements/)."
       },
       "prereq_consider": {
-        "en": "Consider [App Spin-up](../app-spin-up/) and [Scripts](../scripts/)."
+        "en": "Consider [App Spin-up](../app-spin-up/) and [Scripts](../scripts/).",
+        "fr": "Consultez [Mise en route de l'application](../app-spin-up/) et [Scripts](../scripts/).",
+        "es": "Consulte [Puesta en marcha de la aplicación](../app-spin-up/) y [Scripts](../scripts/)."
       },
       "heading_electronite_dev_viewer": {
-        "en": "Electronite Dev Viewer"
+        "en": "Electronite Dev Viewer",
+        "fr": "Visionneuse de développement Electronite",
+        "es": "Visor de desarrollo Electronite"
       },
       "dev_viewer_create": {
-        "en": "💡 To create an Electronite viewer for use with your local dev build environment, run this script once while online:"
+        "en": "To create an Electronite viewer for use with your local dev build environment, run this script once while online:",
+        "fr": "Pour créer une visionneuse Electronite à utiliser avec votre environnement de build de développement local, exécutez ce script une fois en étant en ligne :",
+        "es": "Para crear un visor Electronite para usar con su entorno de build de desarrollo local, ejecute este script una vez estando en línea:"
       },
-      "dev_viewer_linux": {
-        "en": "Linux:\t`cd linux/scripts` then `./build_viewer.bsh`"
-      },
-      "dev_viewer_windows": {
-        "en": "Windows: `cd windows\\scripts` then `.\\build_viewer.ps1` (use a powershell terminal)"
-      },
-      "dev_viewer_macos": {
-        "en": "MacOS: `cd macos/scripts` the `./build_viewer.zsh`"
+      "then": {
+        "en": "then",
+        "fr": "puis",
+        "es": "luego"
       },
       "dev_viewer_read": {
-        "en": "Read the 'Run ...' and 'Client Development ...' bullets at the top of app [README 'Use'](https://github.com/pankosmia/desktop-app-template#use)."
+        "en": "Read the 'Use' and 'Client Development' sections at the top of [Scripts](https://pankosmia.dev/scripts/#use).",
+        "fr": "Lisez les sections « Utilisation » et « Développement de clients » en haut de [Scripts](https://pankosmia.dev/scripts/#use).",
+        "es": "Lea las secciones 'Uso' y 'Desarrollo de clientes' en la parte superior de [Scripts](https://pankosmia.dev/scripts/#use)."
       },
       "dev_viewer_run_tip": {
-        "en": "💡 When the server is running (the `run` script), start the Electronite viewer created by the `build_viewer` script:"
+        "en": "When the server is running (the `run` script), start the Electronite viewer created by the `build_viewer` script:",
+        "fr": "Lorsque le serveur est en cours d'exécution (le script `run`), démarrez la visionneuse Electronite créée par le script `build_viewer` :",
+        "es": "Cuando el servidor esté en ejecución (el script `run`), inicie el visor Electronite creado por el script `build_viewer`:"
       },
-      "dev_viewer_run_linux": {
-        "en": "Linux: `cd linux/scripts` then `./viewer.bsh` -- Dev Tools: Ctrl + Shift + I"
-      },
-      "dev_viewer_run_windows": {
-        "en": "Windows: `cd windows\\scripts` then `.\\viewer.bat` -- Dev Tools: Ctrl + Shift + I"
-      },
-      "dev_viewer_run_macos": {
-        "en": "MacOS: `cd macos/scripts` then `./viewer.zsh` -- Dev Tools: Cmd + Option + I"
+      "dev_tools": {
+        "en": "Dev Tools:",
+        "fr": "Outils de développement :",
+        "es": "Herramientas de desarrollo:"
       },
       "heading_making_dev_changes": {
-        "en": "Making dev changes to Electronite"
+        "en": "Making dev changes to Electronite",
+        "fr": "Apporter des modifications de développement à Electronite",
+        "es": "Realizar cambios de desarrollo en Electronite"
       },
       "dev_changes_intro": {
-        "en": "Electronite is a drop-in replacement for electron that provides an enhanced font rendering system. Make your dev changes the same way as for an Electron viewer."
+        "en": "Electronite is a drop-in replacement for electron that provides an enhanced font rendering system. Make your dev changes the same way as for an Electron viewer.",
+        "fr": "Electronite est un remplacement direct d'Electron qui fournit un système de rendu de polices amélioré. Effectuez vos modifications de développement de la même manière que pour une visionneuse Electron.",
+        "es": "Electronite es un reemplazo directo de Electron que proporciona un sistema de renderizado de fuentes mejorado. Realice sus cambios de desarrollo de la misma manera que para un visor Electron."
       },
       "dev_changes_browser_note": {
-        "en": "This project works in either a web browser or the Electronite viewer. Only add code to Electron/Electronite that are necessary for it to handle things that web browser already do (e.g., Print, Find, Zoom, Back, Forward). Avoid coding in such a way that prevents web browser use."
+        "en": "This project works in either a web browser or the Electronite viewer. Only add code to Electron/Electronite that are necessary for it to handle things that web browser already do (e.g., Print, Find, Zoom, Back, Forward). Avoid coding in such a way that prevents web browser use.",
+        "fr": "Ce projet fonctionne aussi bien dans un navigateur web que dans la visionneuse Electronite. N'ajoutez du code à Electron/Electronite que pour gérer ce que le navigateur web fait déjà (par exemple, Imprimer, Rechercher, Zoom, Précédent, Suivant). Évitez de coder d'une manière qui empêche l'utilisation du navigateur web.",
+        "es": "Este proyecto funciona tanto en un navegador web como en el visor Electronite. Solo agregue código a Electron/Electronite que sea necesario para manejar cosas que el navegador web ya hace (por ejemplo, Imprimir, Buscar, Zoom, Atrás, Adelante). Evite codificar de una manera que impida el uso del navegador web."
       },
       "dev_changes_tip": {
-        "en": "💡 The way to develop in Electronite is to start by modifying the code that is used by your dev viewer. The file structure to focus on is below, in particular `electronStartup.js` and `preload.js`. Make changes here first to test in local dev:"
+        "en": "The way to develop in Electronite is to start by modifying the code that is used by your dev viewer. The file structure to focus on is below, in particular `electronStartup.js` and `preload.js`. Make changes here first to test in local dev:",
+        "fr": "Pour développer dans Electronite, commencez par modifier le code utilisé par votre visionneuse de développement. La structure de fichiers sur laquelle se concentrer est ci-dessous, en particulier `electronStartup.js` et `preload.js`. Effectuez d'abord les modifications ici pour tester en développement local :",
+        "es": "La forma de desarrollar en Electronite es comenzar modificando el código utilizado por su visor de desarrollo. La estructura de archivos en la que centrarse está a continuación, en particular `electronStartup.js` y `preload.js`. Haga los cambios aquí primero para probar en desarrollo local:"
       },
       "heading_deploying_dev_changes": {
-        "en": "Deploying tested dev changes to Electronite"
+        "en": "Deploying tested dev changes to Electronite",
+        "fr": "Déployer les modifications de développement testées vers Electronite",
+        "es": "Desplegar los cambios de desarrollo probados en Electronite"
       },
       "deploy_electronstartup_intro": {
-        "en": "If changes to `electronStartup.js` are required, reproduce these changes in the following two files:"
+        "en": "If changes to `electronStartup.js` are required, reproduce these changes in the following two files:",
+        "fr": "Si des modifications de `electronStartup.js` sont nécessaires, reproduisez ces modifications dans les deux fichiers suivants :",
+        "es": "Si se requieren cambios en `electronStartup.js`, reproduzca estos cambios en los dos archivos siguientes:"
       },
       "deploy_test_dev_startup": {
-        "en": "Test `electronDevStartup.js` by re-running the `build_viewer` script. See [Electronite Dev Viewer](#electronite-dev-viewer) above. Also used in the Linux app."
+        "en": "Test `electronDevStartup.js` by re-running the `build_viewer` script. See [Electronite Dev Viewer](#electronite-dev-viewer) above. Also used in the Linux app.",
+        "fr": "Testez `electronDevStartup.js` en relançant le script `build_viewer`. Voir [Visionneuse de développement Electronite](#electronite-dev-viewer) ci-dessus. Également utilisé dans l'application Linux.",
+        "es": "Pruebe `electronDevStartup.js` volviendo a ejecutar el script `build_viewer`. Vea [Visor de desarrollo Electronite](#electronite-dev-viewer) arriba. También se usa en la aplicación Linux."
       },
       "deploy_test_startup": {
-        "en": "Test `electronStartup.js` by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs for Windows/MacOS."
+        "en": "Test `electronStartup.js` by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs for Windows/MacOS.",
+        "fr": "Testez `electronStartup.js` en compilant localement sous Windows ou MacOS, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations autonomes résultantes pour Windows/MacOS.",
+        "es": "Pruebe `electronStartup.js` compilando localmente en Windows o MacOS, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones independientes resultantes para Windows/MacOS."
       },
       "deploy_favicon": {
-        "en": "If a change needs to be made to favicon*.png, make those changes in the `globalBuildResources` directory. The same test instructions above apply."
+        "en": "If a change needs to be made to favicon*.png, make those changes in the `globalBuildResources` directory. The same test instructions above apply.",
+        "fr": "Si une modification doit être apportée à favicon*.png, effectuez ces modifications dans le répertoire `globalBuildResources`. Les mêmes instructions de test ci-dessus s'appliquent.",
+        "es": "Si se necesita un cambio en favicon*.png, realice esos cambios en el directorio `globalBuildResources`. Se aplican las mismas instrucciones de prueba anteriores."
       },
       "deploy_app_launcher_intro": {
-        "en": "If a change needs to be made to the `appLauncherElectron` script, it will need to be made in 3 different places and tested on three different operating systems. Those file lives at:"
-      },
-      "deploy_app_launcher_linux": {
-        "en": "linux\\buildResources\\appLauncherElectron.sh"
-      },
-      "deploy_app_launcher_windows": {
-        "en": "windows\\buildResources\\appLauncherElectron.bat"
-      },
-      "deploy_app_launcher_macos": {
-        "en": "macos\\buildResources\\appLauncherElectron.sh"
+        "en": "If a change needs to be made to the `appLauncherElectron` script, it will need to be made in 3 different places and tested on three different operating systems. Those file lives at:",
+        "fr": "Si une modification doit être apportée au script `appLauncherElectron`, elle devra être effectuée à 3 endroits différents et testée sur trois systèmes d'exploitation différents. Ces fichiers se trouvent à :",
+        "es": "Si se necesita un cambio en el script `appLauncherElectron`, deberá realizarse en 3 lugares diferentes y probarse en tres sistemas operativos diferentes. Esos archivos se encuentran en:"
       },
       "deploy_app_launcher_test": {
-        "en": "Test by either building locally on all three operating systems, or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs."
+        "en": "Test by either building locally on all three operating systems, or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs.",
+        "fr": "Testez en compilant localement sur les trois systèmes d'exploitation, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations autonomes résultantes.",
+        "es": "Pruebe compilando localmente en los tres sistemas operativos, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones independientes resultantes."
       },
       "heading_local_installer_build": {
-        "en": "Local Installer Build"
+        "en": "Local Installer Build",
+        "fr": "Build d'installateur local",
+        "es": "Build de instalador local"
       },
       "local_installer_consider": {
-        "en": "Before doing this, also consider [To Generate Artifacts](../scripts/#to-generate-artifacts)"
+        "en": "Before doing this, also consider [To Generate Artifacts](../scripts/#to-generate-artifacts)",
+        "fr": "Avant de procéder, consultez également [Pour générer des artefacts](../scripts/#to-generate-artifacts)",
+        "es": "Antes de hacer esto, considere también [Para generar artefactos](../scripts/#to-generate-artifacts)"
       },
       "heading_installer_prerequisites": {
-        "en": "Prerequisites:"
+        "en": "Prerequisites:",
+        "fr": "Prérequis :",
+        "es": "Requisitos previos:"
       },
       "installer_prereq_server": {
-        "en": "Ensure the server (`build_server` script) is current!"
+        "en": "Ensure the server (`build_server` script) is current!",
+        "fr": "Assurez-vous que le serveur (script `build_server`) est à jour !",
+        "es": "¡Asegúrese de que el servidor (script `build_server`) esté actualizado!"
       },
       "installer_prereq_windows": {
-        "en": "Windows has an additional requirement for running this `bundle_viewer` build locally:"
+        "en": "Windows has an additional requirement for running this `bundle_viewer` build locally:",
+        "fr": "Windows a une exigence supplémentaire pour exécuter ce build `bundle_viewer` localement :",
+        "es": "Windows tiene un requisito adicional para ejecutar este build `bundle_viewer` localmente:"
       },
       "installer_prereq_inno": {
-        "en": "Install [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3"
+        "en": "Install [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3",
+        "fr": "Installez [Inno Setup](https://jrsoftware.org/isdl.php) - testé avec la v6.4.3",
+        "es": "Instale [Inno Setup](https://jrsoftware.org/isdl.php) - probado con v6.4.3"
       },
       "heading_bundle_viewer_script": {
-        "en": "bundle_viewer script"
-      },
-      "bundle_viewer_windows": {
-        "en": "Windows - `cd windows\\scripts` then `.\\bundle_viewer.ps1`"
+        "en": "bundle_viewer script",
+        "fr": "Script bundle_viewer",
+        "es": "Script bundle_viewer"
       },
       "bundle_viewer_windows_optional": {
-        "en": "Optional arguments:"
+        "en": "Optional arguments:",
+        "fr": "Arguments optionnels :",
+        "es": "Argumentos opcionales:"
       },
       "bundle_viewer_windows_arg1": {
-        "en": "`.\\bundle_viewer.ps1 -ServerOff \"Y\"`  \n   or: \"y\"; Will not ask if server is off"
+        "en": "`.\\bundle_viewer.ps1 -ServerOff \"Y\"`  \n   or: \"y\"; Will not ask if server is off",
+        "fr": "`.\\bundle_viewer.ps1 -ServerOff \"Y\"`  \n   ou : « y » ; Ne demandera pas si le serveur est arrêté",
+        "es": "`.\\bundle_viewer.ps1 -ServerOff \"Y\"`  \n   o: \"y\"; No preguntará si el servidor está apagado"
       },
       "bundle_viewer_windows_desc": {
-        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer."
-      },
-      "bundle_viewer_macos": {
-        "en": "MacOS - `cd /macos/scripts` the `./bundle_viewer.zsh`"
+        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.",
+        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute git checkout main, git pull et npm ci, exécute app_setup.bat pour assurer la cohérence des versions, exécute node build.js, puis crée un bundle de release zip et un installateur exe autonome.",
+        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta git checkout main, git pull y npm ci, ejecuta app_setup.bat para asegurar la consistencia de versiones, ejecuta node build.js, y luego crea un bundle de release zip y un instalador exe independiente."
       },
       "bundle_viewer_macos_optional": {
-        "en": "Optional arguments:"
+        "en": "Optional arguments:",
+        "fr": "Arguments optionnels :",
+        "es": "Argumentos opcionales:"
       },
       "bundle_viewer_macos_arg1": {
-        "en": "`./bundle_viewer.zsh -s`  \n   Will not ask if server is off"
+        "en": "`./bundle_viewer.zsh -s`  \n   Will not ask if server is off",
+        "fr": "`./bundle_viewer.zsh -s`  \n   Ne demandera pas si le serveur est arrêté",
+        "es": "`./bundle_viewer.zsh -s`  \n   No preguntará si el servidor está apagado"
       },
       "bundle_viewer_macos_desc": {
-        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer."
-      },
-      "bundle_viewer_linux": {
-        "en": "Linux - `cd /linux/scripts` the `./bundle_viewer.bsh`"
+        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.",
+        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute git checkout main, git pull et npm ci, exécute app_setup.bat pour assurer la cohérence des versions, exécute node build.js, puis crée un bundle de release zip et un installateur exe autonome.",
+        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta git checkout main, git pull y npm ci, ejecuta app_setup.bat para asegurar la consistencia de versiones, ejecuta node build.js, y luego crea un bundle de release zip y un instalador exe independiente."
       },
       "bundle_viewer_linux_before": {
-        "en": "Before running:"
+        "en": "Before running:",
+        "fr": "Avant l'exécution :",
+        "es": "Antes de ejecutar:"
       },
       "bundle_viewer_linux_step1": {
-        "en": "manually delete prior local builds"
+        "en": "manually delete prior local builds",
+        "fr": "supprimez manuellement les builds locaux précédents",
+        "es": "elimine manualmente los builds locales anteriores"
       },
       "bundle_viewer_linux_step2": {
-        "en": "npm ci (if not already run)"
+        "en": "npm ci (if not already run)",
+        "fr": "npm ci (si pas déjà exécuté)",
+        "es": "npm ci (si no se ha ejecutado ya)"
       },
       "bundle_viewer_linux_step3": {
-        "en": "app_setup.bat to ensure version consistency (unless already current)"
+        "en": "app_setup.bat to ensure version consistency (unless already current)",
+        "fr": "app_setup.bat pour assurer la cohérence des versions (sauf si déjà à jour)",
+        "es": "app_setup.bat para asegurar la consistencia de versiones (a menos que ya esté actualizado)"
       },
       "bundle_viewer_linux_step4": {
-        "en": "run run `./bundle_tgz.bsh`"
+        "en": "run run `./bundle_tgz.bsh`",
+        "fr": "exécutez `./bundle_tgz.bsh`",
+        "es": "ejecute `./bundle_tgz.bsh`"
       },
       "bundle_viewer_linux_step5": {
-        "en": "then run `./bundle_viewer.bsh`"
+        "en": "then run `./bundle_viewer.bsh`",
+        "fr": "puis exécutez `./bundle_viewer.bsh`",
+        "es": "luego ejecute `./bundle_viewer.bsh`"
       },
       "heading_bundle_viewer_outputs": {
-        "en": "bundle_viewer script Outputs:"
-      },
-      "bundle_output_windows": {
-        "en": "Windows: `releases\\windows\\intel64\\[app-name]-windows-setup-standalone-[version].exe`"
-      },
-      "bundle_output_macos": {
-        "en": "MacOS: `releases/macos/[intel64|arm64]/[app-name]-macos-installer-standalone-[intel64|arm64]-[version].pkg`"
-      },
-      "bundle_output_linux": {
-        "en": "Linux: `releases/linux/[app-name]-linux-standalone-intel64-[version].deb`"
+        "en": "bundle_viewer script Outputs:",
+        "fr": "Sorties du script bundle_viewer :",
+        "es": "Salidas del script bundle_viewer:"
       }
     },
     "script_reference": {
       "title": {
-        "en": "Script Reference"
+        "en": "Script Reference",
+        "fr": "Référence des scripts",
+        "es": "Referencia de scripts"
       },
       "additional_info": {
-        "en": "Additional Info TL;DR - For reference when needed on developer scripts for an app repos built on Pankosmia"
+        "en": "Additional Info TL;DR - For reference when needed on developer scripts for an app repos built on Pankosmia",
+        "fr": "Infos supplémentaires en bref - Pour référence en cas de besoin sur les scripts de développement pour des dépôts d'applications construits sur Pankosmia",
+        "es": "Información adicional en resumen - Para referencia cuando sea necesario sobre los scripts de desarrollo para repositorios de aplicaciones construidos sobre Pankosmia"
       },
-            "heading_ecosystem_setup": {
-        "en": "Ecosystem setup and configuration"
+      "heading_ecosystem_setup": {
+        "en": "Ecosystem setup and configuration",
+        "fr": "Configuration de l'écosystème",
+        "es": "Configuración del ecosistema"
       },
       "ecosystem_setup_intro": {
-        "en": "This repo pulls together several libraries and projects into a single app. The projects are spread across several repos to allow modular reuse. Scripts follow for assisting in setup, though it can also all be setup manually. The following assume [the repos](https://github.com/pankosmia/repositories) are installed with the following directory structure."
+        "en": "This repo pulls together several libraries and projects into a single app. The projects are spread across several repos to allow modular reuse. Scripts follow for assisting in setup, though it can also all be setup manually. The following assume [the repos](https://github.com/pankosmia/repositories) are installed with the following directory structure.",
+        "fr": "Ce dépôt rassemble plusieurs bibliothèques et projets en une seule application. Les projets sont répartis sur plusieurs dépôts pour permettre une réutilisation modulaire. Des scripts suivent pour aider à la configuration, bien que tout puisse également être configuré manuellement. Ce qui suit suppose que [les dépôts](https://github.com/pankosmia/repositories) sont installés avec la structure de répertoires suivante.",
+        "es": "Este repositorio reúne varias bibliotecas y proyectos en una sola aplicación. Los proyectos están distribuidos en varios repositorios para permitir la reutilización modular. A continuación se proporcionan scripts para ayudar en la configuración, aunque todo también puede configurarse manualmente. Lo siguiente asume que [los repositorios](https://github.com/pankosmia/repositories) están instalados con la siguiente estructura de directorios."
       },
       "ecosystem_setup_example": {
-        "en": "This is an example. Clients in use may vary. Configuration is handled via `app_config.env`and the `app_setup` script."
+        "en": "This is an example. Clients in use may vary. Configuration is handled via `app_config.env`and the `app_setup` script.",
+        "fr": "Ceci est un exemple. Les clients utilisés peuvent varier. La configuration est gérée via `app_config.env` et le script `app_setup`.",
+        "es": "Esto es un ejemplo. Los clientes en uso pueden variar. La configuración se gestiona mediante `app_config.env` y el script `app_setup`."
       },
       "heading_installing_clients": {
-        "en": "Installing the clients"
+        "en": "Installing the clients",
+        "fr": "Installation des clients",
+        "es": "Instalación de los clientes"
       },
       "installing_clients_intro": {
-        "en": "The local_server (pankosmia_web) serves compiled files from the `build` directory of each client, each client must be built."
+        "en": "The local_server (pankosmia_web) serves compiled files from the `build` directory of each client, each client must be built.",
+        "fr": "Le local_server (pankosmia_web) sert les fichiers compilés depuis le répertoire `build` de chaque client, chaque client doit être compilé.",
+        "es": "El local_server (pankosmia_web) sirve los archivos compilados desde el directorio `build` de cada cliente, cada cliente debe ser compilado."
       },
       "installing_clients_script": {
-        "en": "This is handled by the `clone` and `build_clients` scripts, though can also all be run manually which is helpful during development."
+        "en": "This is handled by the `clone` and `build_clients` scripts, though can also all be run manually which is helpful during development.",
+        "fr": "Ceci est géré par les scripts `clone` et `build_clients`, bien que tout puisse également être exécuté manuellement, ce qui est utile pendant le développement.",
+        "es": "Esto se gestiona mediante los scripts `clone` y `build_clients`, aunque todo también puede ejecutarse manualmente, lo cual es útil durante el desarrollo."
       },
       "run_where": {
-        "en": "In each client repo, NOT this repo!"
+        "en": "In each client repo, NOT this repo!",
+        "fr": "Dans chaque dépôt client, PAS dans ce dépôt !",
+        "es": "¡En cada repositorio de cliente, NO en este repositorio!"
       },
       "installing_clients_run_note": {
-        "en": "Running `run`, `build_server`, or `bundle_...` all copy the latest build to the build environment."
+        "en": "Running `run`, `build_server`, or `bundle_...` all copy the latest build to the build environment.",
+        "fr": "L'exécution de `run`, `build_server` ou `bundle_...` copie la dernière version compilée vers l'environnement de build.",
+        "es": "Ejecutar `run`, `build_server` o `bundle_...` copia la última compilación al entorno de build."
       },
       "heading_scripts": {
-        "en": "Scripts"
+        "en": "Scripts",
+        "fr": "Scripts",
+        "es": "Scripts"
       },
       "heading_configuration": {
-        "en": "Configuration"
+        "en": "Configuration",
+        "fr": "Configuration",
+        "es": "Configuración"
       },
       "configuration_intro": {
-        "en": "Config files must match clients and assets utilized. Scripts that write them are provided, as per `app_config.env`. Files created by the app_setup script are:"
-      },
-      "table_header_linux": {
-        "en": "Linux"
-      },
-      "table_header_windows": {
-        "en": "Windows"
-      },
-      "table_header_macos": {
-        "en": "MacOS"
-      },
-      "config_files_linux": {
-        "en": "buildSpec.json<br />/globalBuildResources/i18nPatch.json<br />/globalBuildResources/product.json<br />/linux/buildResources/setup/app_setup.json"
-      },
-      "config_files_windows": {
-        "en": "buildSpec.json<br />\\globalBuildResources\\i18nPatch.json<br />\\globalBuildResources\\product.json<br />\\windows\\buildResources\\setup\\app_setup.json"
-      },
-      "config_files_macos": {
-        "en": "buildSpec.json<br />/globalBuildResources/i18nPatch.json<br />/globalBuildResources/product.json<br />/macos/buildResources/setup/app_setup.json"
+        "en": "Config files must match clients and assets utilized. Scripts that write them are provided, as per `app_config.env`. Files created by the app_setup script are:",
+        "fr": "Les fichiers de configuration doivent correspondre aux clients et assets utilisés. Des scripts pour les générer sont fournis, selon `app_config.env`. Les fichiers créés par le script app_setup sont :",
+        "es": "Los archivos de configuración deben coincidir con los clientes y assets utilizados. Se proporcionan scripts para generarlos, según `app_config.env`. Los archivos creados por el script app_setup son:"
       },
       "configuration_review": {
-        "en": "Review `app_config.env` and adjust as needed, then run one of the setup scripts that follow.  Re-run the app_setup script anytime `app_config.env` is changed."
+        "en": "Review `app_config.env` and adjust as needed, then run one of the setup scripts that follow.  Re-run the app_setup script anytime `app_config.env` is changed.",
+        "fr": "Vérifiez `app_config.env` et ajustez si nécessaire, puis exécutez l'un des scripts de configuration qui suivent. Relancez le script app_setup chaque fois que `app_config.env` est modifié.",
+        "es": "Revise `app_config.env` y ajuste según sea necesario, luego ejecute uno de los scripts de configuración que siguen. Vuelva a ejecutar el script app_setup cada vez que se modifique `app_config.env`."
       },
       "heading_config_scripts": {
-        "en": "Config scripts:"
+        "en": "Config scripts:",
+        "fr": "Scripts de configuration :",
+        "es": "Scripts de configuración:"
       },
       "config_scripts_run_from": {
-        "en": "Run from the provided location:"
+        "en": "Run from the provided location:",
+        "fr": "Exécutez depuis l'emplacement indiqué :",
+        "es": "Ejecute desde la ubicación proporcionada:"
       },
       "table_header_description": {
-        "en": "Description"
-      },
-      "table_header_linux_cd": {
-        "en": "Linux:<br />*cd linux/scripts*"
-      },
-      "table_header_windows_cd": {
-        "en": "Windows:<sup>[[1]](#f1)</sup><br />*cd windows/scripts*"
-      },
-      "table_header_macos_cd": {
-        "en": "MacOS:<br />*cd macos/scripts*"
+        "en": "Description",
+        "fr": "Description",
+        "es": "Descripción"
       },
       "config_script_desc": {
-        "en": "Uses app_config.env to generate/rebuild/replace app_setup.json, buildSpec.json, product.json, and i18nPatch.json"
-      },
-      "config_script_linux": {
-        "en": "`./app_setup.bsh`"
-      },
-      "config_script_windows": {
-        "en": "`.\\app_setup.bat`"
-      },
-      "config_script_macos": {
-        "en": "`./app_setup.zsh`"
+        "en": "Uses app_config.env to generate/rebuild/replace app_setup.json, buildSpec.json, product.json, and i18nPatch.json",
+        "fr": "Utilise app_config.env pour générer/reconstruire/remplacer app_setup.json, buildSpec.json, product.json et i18nPatch.json",
+        "es": "Usa app_config.env para generar/reconstruir/reemplazar app_setup.json, buildSpec.json, product.json e i18nPatch.json"
       },
       "heading_setup_scripts": {
-        "en": "Setup scripts:"
+        "en": "Setup scripts:",
+        "fr": "Scripts de configuration :",
+        "es": "Scripts de configuración:"
       },
       "setup_scripts_run_from": {
-        "en": "Run from the provided location:"
+        "en": "Run from the provided location:",
+        "fr": "Exécutez depuis l'emplacement indiqué :",
+        "es": "Ejecute desde la ubicación proporcionada:"
       },
       "clone_desc": {
-        "en": "Clones all repos in `/app_config.env` if a directory by that name does not already exit"
+        "en": "Clones all repos in `/app_config.env` if a directory by that name does not already exit",
+        "fr": "Clone tous les dépôts dans `/app_config.env` si un répertoire portant ce nom n'existe pas déjà",
+        "es": "Clona todos los repositorios en `/app_config.env` si un directorio con ese nombre no existe ya"
       },
       "clone_linux": {
-        "en": "./clone.bsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.bsh -s`<br /> Clones via SSH."
+        "en": "./clone.bsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.bsh -s`<br /> Clones via SSH.",
+        "fr": "./clone.bsh<br /> Clone par défaut via HTTPS.<br />Argument optionnel :<br />`./clone.bsh -s`<br /> Clone via SSH.",
+        "es": "./clone.bsh<br /> Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`./clone.bsh -s`<br /> Clona vía SSH."
       },
       "clone_windows": {
-        "en": ".\\clone.bat<br /> Default clones via HTTPS.<br />Optional argument:<br />`.\\clone.bat -s`<br /> Clones via SSH."
+        "en": ".\\clone.bat<br /> Default clones via HTTPS.<br />Optional argument:<br />`.\\clone.bat -s`<br /> Clones via SSH.",
+        "fr": ".\\clone.bat<br /> Clone par défaut via HTTPS.<br />Argument optionnel :<br />`.\\clone.bat -s`<br /> Clone via SSH.",
+        "es": ".\\clone.bat<br /> Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`.\\clone.bat -s`<br /> Clona vía SSH."
       },
       "clone_macos": {
-        "en": "./clone.zsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.zsh -s`<br /> Clones via SSH."
+        "en": "./clone.zsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.zsh -s`<br /> Clones via SSH.",
+        "fr": "./clone.zsh<br /> Clone par défaut via HTTPS.<br />Argument optionnel :<br />`./clone.zsh -s`<br /> Clone via SSH.",
+        "es": "./clone.zsh<br /> Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`./clone.zsh -s`<br /> Clona vía SSH."
       },
       "build_clients_desc": {
-        "en": "For each asset repo in `/app_config.env`: git checkout main, git pull<br />For each client repo in  `/app_config.env`: `git checkout main`, `git pull`, `npm ci`, and `npm run build`.<br />***Dev's should build manually when testing branch(es).***"
+        "en": "For each asset repo in `/app_config.env`: git checkout main, git pull<br />For each client repo in  `/app_config.env`: `git checkout main`, `git pull`, `npm ci`, and `npm run build`.<br />***Dev's should build manually when testing branch(es).***",
+        "fr": "Pour chaque dépôt d'assets dans `/app_config.env` : git checkout main, git pull<br />Pour chaque dépôt client dans `/app_config.env` : `git checkout main`, `git pull`, `npm ci` et `npm run build`.<br />***Les développeurs doivent compiler manuellement lorsqu'ils testent des branches.***",
+        "es": "Para cada repositorio de assets en `/app_config.env`: git checkout main, git pull<br />Para cada repositorio de cliente en `/app_config.env`: `git checkout main`, `git pull`, `npm ci` y `npm run build`.<br />***Los desarrolladores deben compilar manualmente al probar ramas.***"
       },
       "build_clients_linux": {
-        "en": "./build_clients.bsh<br />Optional argument:<br />`./build_clients.bsh -d`<br /> Deletes past logs without asking."
+        "en": "./build_clients.bsh<br />Optional argument:<br />`./build_clients.bsh -d`<br /> Deletes past logs without asking.",
+        "fr": "./build_clients.bsh<br />Argument optionnel :<br />`./build_clients.bsh -d`<br /> Supprime les anciens logs sans demander.",
+        "es": "./build_clients.bsh<br />Argumento opcional:<br />`./build_clients.bsh -d`<br /> Elimina los logs anteriores sin preguntar."
       },
       "build_clients_windows": {
-        "en": ".\\build_clients.bat<br />Optional argument:<br />`.\\build_clients.bat -d`<br /> Deletes past logs without asking."
+        "en": ".\\build_clients.bat<br />Optional argument:<br />`.\\build_clients.bat -d`<br /> Deletes past logs without asking.",
+        "fr": ".\\build_clients.bat<br />Argument optionnel :<br />`.\\build_clients.bat -d`<br /> Supprime les anciens logs sans demander.",
+        "es": ".\\build_clients.bat<br />Argumento opcional:<br />`.\\build_clients.bat -d`<br /> Elimina los logs anteriores sin preguntar."
       },
       "build_clients_macos": {
-        "en": "./build_clients.zsh<br />Optional argument:<br />`./build_clients.zsh -d`<br /> Deletes past logs without asking."
+        "en": "./build_clients.zsh<br />Optional argument:<br />`./build_clients.zsh -d`<br /> Deletes past logs without asking.",
+        "fr": "./build_clients.zsh<br />Argument optionnel :<br />`./build_clients.zsh -d`<br /> Supprime les anciens logs sans demander.",
+        "es": "./build_clients.zsh<br />Argumento opcional:<br />`./build_clients.zsh -d`<br /> Elimina los logs anteriores sin preguntar."
       },
       "build_viewer_desc": {
-        "en": "Create an Electronite viewer for use with the local dev build environment."
-      },
-      "build_viewer_linux": {
-        "en": "./build_viewer.bsh"
-      },
-      "build_viewer_windows": {
-        "en": ".\\build_viewer.ps1<br />(use a powershell terminal)"
-      },
-      "build_viewer_macos": {
-        "en": "./build_viewer.zsh"
+        "en": "Create an Electronite viewer for use with the local dev build environment.",
+        "fr": "Créer une visionneuse Electronite à utiliser avec l'environnement de build de développement local.",
+        "es": "Crear un visor Electronite para usar con el entorno de build de desarrollo local."
       },
       "heading_usage_scripts": {
-        "en": "Usage scripts:"
+        "en": "Usage scripts:",
+        "fr": "Scripts d'utilisation :",
+        "es": "Scripts de uso:"
       },
       "usage_scripts_note": {
-        "en": "Note: Multiple arguments can be applied in any order, e.g., `./run.zsh -s -d` is the same as `./run.zsh -d -s`"
+        "en": "Note: Multiple arguments can be applied in any order, e.g., `./run.zsh -s -d` is the same as `./run.zsh -d -s`",
+        "fr": "Note : Plusieurs arguments peuvent être appliqués dans n'importe quel ordre, par exemple `./run.zsh -s -d` est identique à `./run.zsh -d -s`",
+        "es": "Nota: Se pueden aplicar múltiples argumentos en cualquier orden, por ejemplo, `./run.zsh -s -d` es lo mismo que `./run.zsh -d -s`"
       },
       "clean_desc": {
-        "en": "removes the build directory and runs `cargo clean`<br /><sup>[[4]](#f4)</sup>"
+        "en": "removes the build directory and runs `cargo clean`<br /><sup>[[4]](#f4)</sup>",
+        "fr": "supprime le répertoire de build et exécute `cargo clean`<br /><sup>[[4]](#f4)</sup>",
+        "es": "elimina el directorio de build y ejecuta `cargo clean`<br /><sup>[[4]](#f4)</sup>"
       },
       "clean_linux": {
-        "en": "./clean.bsh<br />Optional arguments:<br />`./clean.bsh -s`<br /> Will not ask if server is off"
+        "en": "./clean.bsh<br />Optional arguments:<br />`./clean.bsh -s`<br /> Will not ask if server is off",
+        "fr": "./clean.bsh<br />Arguments optionnels :<br />`./clean.bsh -s`<br /> Ne demandera pas si le serveur est arrêté",
+        "es": "./clean.bsh<br />Argumentos opcionales:<br />`./clean.bsh -s`<br /> No preguntará si el servidor está apagado"
       },
       "clean_windows": {
-        "en": ".\\clean.bat<br />Optional arguments:<br />`.\\clean.bat -s`<br /> Will not ask if server is off"
+        "en": ".\\clean.bat<br />Optional arguments:<br />`.\\clean.bat -s`<br /> Will not ask if server is off",
+        "fr": ".\\clean.bat<br />Arguments optionnels :<br />`.\\clean.bat -s`<br /> Ne demandera pas si le serveur est arrêté",
+        "es": ".\\clean.bat<br />Argumentos opcionales:<br />`.\\clean.bat -s`<br /> No preguntará si el servidor está apagado"
       },
       "clean_macos": {
-        "en": "./clean.zsh<br />Optional arguments:<br />`./clean.zsh -s`<br /> Will not ask if server is off"
+        "en": "./clean.zsh<br />Optional arguments:<br />`./clean.zsh -s`<br /> Will not ask if server is off",
+        "fr": "./clean.zsh<br />Arguments optionnels :<br />`./clean.zsh -s`<br /> Ne demandera pas si le serveur est arrêté",
+        "es": "./clean.zsh<br />Argumentos opcionales:<br />`./clean.zsh -s`<br /> No preguntará si el servidor está apagado"
       },
       "build_server_desc": {
-        "en": "runs cargo build, and `node build.js`"
+        "en": "runs cargo build, and `node build.js`",
+        "fr": "exécute cargo build et `node build.js`",
+        "es": "ejecuta cargo build y `node build.js`"
       },
       "build_server_linux": {
-        "en": "./build_server.bsh<br />Optional arguments:<br />`./build_server.bsh -s`<br /> Will not ask if server is off <br />`./build_server.bsh -d`<br /> Builds server in debug mode"
+        "en": "./build_server.bsh<br />Optional arguments:<br />`./build_server.bsh -s`<br /> Will not ask if server is off <br />`./build_server.bsh -d`<br /> Builds server in debug mode",
+        "fr": "./build_server.bsh<br />Arguments optionnels :<br />`./build_server.bsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`./build_server.bsh -d`<br /> Compile le serveur en mode debug",
+        "es": "./build_server.bsh<br />Argumentos opcionales:<br />`./build_server.bsh -s`<br /> No preguntará si el servidor está apagado<br />`./build_server.bsh -d`<br /> Compila el servidor en modo debug"
       },
       "build_server_windows": {
-        "en": ".\\build_server.bat<br />Optional arguments:<br />`.\\build_server.bat -s`<br /> Will not ask if server is off<br />`.\\build_server.bat -d`<br /> Builds server in debug mode"
+        "en": ".\\build_server.bat<br />Optional arguments:<br />`.\\build_server.bat -s`<br /> Will not ask if server is off<br />`.\\build_server.bat -d`<br /> Builds server in debug mode",
+        "fr": ".\\build_server.bat<br />Arguments optionnels :<br />`.\\build_server.bat -s`<br /> Ne demandera pas si le serveur est arrêté<br />`.\\build_server.bat -d`<br /> Compile le serveur en mode debug",
+        "es": ".\\build_server.bat<br />Argumentos opcionales:<br />`.\\build_server.bat -s`<br /> No preguntará si el servidor está apagado<br />`.\\build_server.bat -d`<br /> Compila el servidor en modo debug"
       },
       "build_server_macos": {
-        "en": "./build_server.zsh<br />Optional arguments:<br />`./build_server.zsh -s`<br /> Will not ask if server is off <br />`./build_server.zsh -d`<br /> Builds server in debug mode"
+        "en": "./build_server.zsh<br />Optional arguments:<br />`./build_server.zsh -s`<br /> Will not ask if server is off <br />`./build_server.zsh -d`<br /> Builds server in debug mode",
+        "fr": "./build_server.zsh<br />Arguments optionnels :<br />`./build_server.zsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`./build_server.zsh -d`<br /> Compile le serveur en mode debug",
+        "es": "./build_server.zsh<br />Argumentos opcionales:<br />`./build_server.zsh -s`<br /> No preguntará si el servidor está apagado<br />`./build_server.zsh -d`<br /> Compila el servidor en modo debug"
       },
       "run_desc": {
-        "en": "Assembles the build environment (clients) and starts the server <sup>[[2]](#f2)</sup>"
+        "en": "Assembles the build environment (clients) and starts the server <sup>[[2]](#f2)</sup>",
+        "fr": "Assemble l'environnement de build (clients) et démarre le serveur <sup>[[2]](#f2)</sup>",
+        "es": "Ensambla el entorno de build (clientes) e inicia el servidor <sup>[[2]](#f2)</sup>"
       },
       "run_linux": {
-        "en": "./run.bsh<br />Optional arguments:<br />`./run.bsh -s`<br /> Will not ask if server is off<br />`.\\run.bsh -d`<br /> Runs with server in debug mode"
+        "en": "./run.bsh<br />Optional arguments:<br />`./run.bsh -s`<br /> Will not ask if server is off<br />`.\\run.bsh -d`<br /> Runs with server in debug mode",
+        "fr": "./run.bsh<br />Arguments optionnels :<br />`./run.bsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`.\\run.bsh -d`<br /> Exécute le serveur en mode debug",
+        "es": "./run.bsh<br />Argumentos opcionales:<br />`./run.bsh -s`<br /> No preguntará si el servidor está apagado<br />`.\\run.bsh -d`<br /> Ejecuta el servidor en modo debug"
       },
       "run_windows": {
-        "en": ".\\run.bat<br />Optional arguments:<br />`.\\run.bat -s`<br /> Will not ask if server is off<br />`.\\run.bat -d`<br /> Runs with server in debug mode"
+        "en": ".\\run.bat<br />Optional arguments:<br />`.\\run.bat -s`<br /> Will not ask if server is off<br />`.\\run.bat -d`<br /> Runs with server in debug mode",
+        "fr": ".\\run.bat<br />Arguments optionnels :<br />`.\\run.bat -s`<br /> Ne demandera pas si le serveur est arrêté<br />`.\\run.bat -d`<br /> Exécute le serveur en mode debug",
+        "es": ".\\run.bat<br />Argumentos opcionales:<br />`.\\run.bat -s`<br /> No preguntará si el servidor está apagado<br />`.\\run.bat -d`<br /> Ejecuta el servidor en modo debug"
       },
       "run_macos": {
-        "en": "./run.zsh<br />Optional arguments:<br />`./run.zsh -s`<br /> Will not ask if server is off<br />`.\\run.zsh -d`<br /> Runs with server in debug mode"
+        "en": "./run.zsh<br />Optional arguments:<br />`./run.zsh -s`<br /> Will not ask if server is off<br />`.\\run.zsh -d`<br /> Runs with server in debug mode",
+        "fr": "./run.zsh<br />Arguments optionnels :<br />`./run.zsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`.\\run.zsh -d`<br /> Exécute le serveur en mode debug",
+        "es": "./run.zsh<br />Argumentos opcionales:<br />`./run.zsh -s`<br /> No preguntará si el servidor está apagado<br />`.\\run.zsh -d`<br /> Ejecuta el servidor en modo debug"
       },
       "viewer_desc": {
-        "en": "Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the `build_viewer` script.)"
+        "en": "Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the `build_viewer` script.)",
+        "fr": "Lance la visionneuse Electronite pour l'utiliser avec l'environnement de développement. (Nécessite que la visionneuse ait été préalablement créée via le script `build_viewer`.)",
+        "es": "Lanza el visor Electronite para usar con el entorno de desarrollo. (Requiere que el visor haya sido previamente creado mediante el script `build_viewer`.)"
       },
       "viewer_linux": {
-        "en": "./viewer.bsh<br />Dev Tools: Ctrl + Shift + I<br />Optional argument:<br />`./viewer.bsh [PORT#]`<br />(default is 19119)"
+        "en": "./viewer.bsh<br />Dev Tools: Ctrl + Shift + I<br />Optional argument:<br />`./viewer.bsh [PORT#]`<br />(default is 19119)",
+        "fr": "./viewer.bsh<br />Outils de développement : Ctrl + Shift + I<br />Argument optionnel :<br />`./viewer.bsh [PORT#]`<br />(par défaut 19119)",
+        "es": "./viewer.bsh<br />Herramientas de desarrollo: Ctrl + Shift + I<br />Argumento opcional:<br />`./viewer.bsh [PORT#]`<br />(por defecto 19119)"
       },
       "viewer_windows": {
-        "en": ".\\viewer.bat<br />Dev Tools: Ctrl + Shift + I<br />Optional argument:<br />`.\\viewer.bat [PORT#]`<br />(default is 19119)"
+        "en": ".\\viewer.bat<br />Dev Tools: Ctrl + Shift + I<br />Optional argument:<br />`.\\viewer.bat [PORT#]`<br />(default is 19119)",
+        "fr": ".\\viewer.bat<br />Outils de développement : Ctrl + Shift + I<br />Argument optionnel :<br />`.\\viewer.bat [PORT#]`<br />(par défaut 19119)",
+        "es": ".\\viewer.bat<br />Herramientas de desarrollo: Ctrl + Shift + I<br />Argumento opcional:<br />`.\\viewer.bat [PORT#]`<br />(por defecto 19119)"
       },
       "viewer_macos": {
-        "en": "./viewer.zsh<br />Dev Tools: Cmd + Option + I<br />Optional argument:<br />`./viewer.zsh [PORT#]`<br />(default is 19119)"
+        "en": "./viewer.zsh<br />Dev Tools: Cmd + Option + I<br />Optional argument:<br />`./viewer.zsh [PORT#]`<br />(default is 19119)",
+        "fr": "./viewer.zsh<br />Outils de développement : Cmd + Option + I<br />Argument optionnel :<br />`./viewer.zsh [PORT#]`<br />(par défaut 19119)",
+        "es": "./viewer.zsh<br />Herramientas de desarrollo: Cmd + Option + I<br />Argumento opcional:<br />`./viewer.zsh [PORT#]`<br />(por defecto 19119)"
       },
       "bundle_viewer_desc": {
-        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle and a stand-alone installer. **(*) (•)**"
+        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle and a stand-alone installer. **(*) (•)**",
+        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute `git checkout main`, `git pull` et `npm ci`, exécute `app_setup.bat` pour assurer la cohérence des versions, exécute `node build.js`, puis crée un bundle de release zip et un installateur autonome. **(*) (•)**",
+        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta `git checkout main`, `git pull` y `npm ci`, ejecuta `app_setup.bat` para asegurar la consistencia de versiones, ejecuta `node build.js`, y luego crea un bundle de release zip y un instalador independiente. **(*) (•)**"
       },
       "bundle_viewer_script_linux": {
-        "en": "./bundle_viewer.bsh<br />(Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.)"
+        "en": "./bundle_viewer.bsh<br />(Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.)",
+        "fr": "./bundle_viewer.bsh<br />(Ne compile et ne crée le bundle que pour la visionneuse. Faites tout le reste de la description manuellement ou via d'autres scripts listés ici.)",
+        "es": "./bundle_viewer.bsh<br />(Solo compila y empaqueta el visor. Haga todo lo demás de la descripción manualmente o mediante otros scripts listados aquí.)"
       },
       "bundle_viewer_script_windows": {
-        "en": ".\\bundle_viewer.ps1<br />Optional arguments:<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br /> or: \"y\"; Will not ask if server is off"
+        "en": ".\\bundle_viewer.ps1<br />Optional arguments:<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br /> or: \"y\"; Will not ask if server is off",
+        "fr": ".\\bundle_viewer.ps1<br />Arguments optionnels :<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br /> ou : « y » ; Ne demandera pas si le serveur est arrêté",
+        "es": ".\\bundle_viewer.ps1<br />Argumentos opcionales:<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br /> o: \"y\"; No preguntará si el servidor está apagado"
       },
       "bundle_viewer_script_macos": {
-        "en": "./bundle_viewer.zsh<br />Optional arguments:<br />`./bundle_viewer.zsh -s`<br> Will not ask if server is off"
+        "en": "./bundle_viewer.zsh<br />Optional arguments:<br />`./bundle_viewer.zsh -s`<br> Will not ask if server is off",
+        "fr": "./bundle_viewer.zsh<br />Arguments optionnels :<br />`./bundle_viewer.zsh -s`<br> Ne demandera pas si le serveur est arrêté",
+        "es": "./bundle_viewer.zsh<br />Argumentos opcionales:<br />`./bundle_viewer.zsh -s`<br> No preguntará si el servidor está apagado"
       },
       "bundle_zip_desc": {
-        "en": "Deletes the last .zip release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle <sup>[[2]](#f2)</sup>"
+        "en": "Deletes the last .zip release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes a zip release bundle <sup>[[2]](#f2)</sup>",
+        "fr": "Supprime le dernier bundle de release .zip s'il existe, puis sur ce dépôt exécute `git checkout main`, `git pull` et `npm ci`, exécute `app_setup.bat` pour assurer la cohérence des versions, exécute `node build.js`, puis crée un bundle de release zip <sup>[[2]](#f2)</sup>",
+        "es": "Elimina el último bundle de release .zip si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `npm ci`, ejecuta `app_setup.bat` para asegurar la consistencia de versiones, ejecuta `node build.js`, y luego crea un bundle de release zip <sup>[[2]](#f2)</sup>"
       },
       "bundle_zip_linux": {
-        "en": "./bundle_tgz.bsh<br />Optional arguments:<br />`./bundle_tgz.bsh -s`<br /> Will not ask if server is off<br />`/bundle_tgz.bsh -g`<br /> Run from Github Actions"
+        "en": "./bundle_tgz.bsh<br />Optional arguments:<br />`./bundle_tgz.bsh -s`<br /> Will not ask if server is off<br />`/bundle_tgz.bsh -g`<br /> Run from Github Actions",
+        "fr": "./bundle_tgz.bsh<br />Arguments optionnels :<br />`./bundle_tgz.bsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`/bundle_tgz.bsh -g`<br /> Exécuter depuis Github Actions",
+        "es": "./bundle_tgz.bsh<br />Argumentos opcionales:<br />`./bundle_tgz.bsh -s`<br /> No preguntará si el servidor está apagado<br />`/bundle_tgz.bsh -g`<br /> Ejecutar desde Github Actions"
       },
       "bundle_zip_windows": {
-        "en": ".\\bundle_zip.ps1<br />Optional arguments:<br />-ServerOff \"Y\"<br /> or: \"y\"; Will not ask if server is off<br />-IsGHA \"Y\"<br /> or: \"y\"; Run from Gihtub Actions"
+        "en": ".\\bundle_zip.ps1<br />Optional arguments:<br />-ServerOff \"Y\"<br /> or: \"y\"; Will not ask if server is off<br />-IsGHA \"Y\"<br /> or: \"y\"; Run from Gihtub Actions",
+        "fr": ".\\bundle_zip.ps1<br />Arguments optionnels :<br />-ServerOff \"Y\"<br /> ou : « y » ; Ne demandera pas si le serveur est arrêté<br />-IsGHA \"Y\"<br /> ou : « y » ; Exécuter depuis Github Actions",
+        "es": ".\\bundle_zip.ps1<br />Argumentos opcionales:<br />-ServerOff \"Y\"<br /> o: \"y\"; No preguntará si el servidor está apagado<br />-IsGHA \"Y\"<br /> o: \"y\"; Ejecutar desde Github Actions"
       },
       "bundle_zip_macos": {
-        "en": "./bundle_zip.zsh<br />Optional arguments:<br />`/bundle_zip.zsh -s`<br /> Will not ask if server is off<br />`/bundle_zip.zsh -g`<br /> Run from Github Actions"
+        "en": "./bundle_zip.zsh<br />Optional arguments:<br />`/bundle_zip.zsh -s`<br /> Will not ask if server is off<br />`/bundle_zip.zsh -g`<br /> Run from Github Actions",
+        "fr": "./bundle_zip.zsh<br />Arguments optionnels :<br />`/bundle_zip.zsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`/bundle_zip.zsh -g`<br /> Exécuter depuis Github Actions",
+        "es": "./bundle_zip.zsh<br />Argumentos opcionales:<br />`/bundle_zip.zsh -s`<br /> No preguntará si el servidor está apagado<br />`/bundle_zip.zsh -g`<br /> Ejecutar desde Github Actions"
       },
       "bundle_exe_desc": {
-        "en": "Deletes the last .exe release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes an exe installer <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>"
+        "en": "Deletes the last .exe release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes an exe installer <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>",
+        "fr": "Supprime le dernier bundle de release .exe s'il existe, puis sur ce dépôt exécute `git checkout main`, `git pull` et `npm ci`, exécute `app_setup.bat` pour assurer la cohérence des versions, exécute `node build.js`, puis crée un installateur exe <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>",
+        "es": "Elimina el último bundle de release .exe si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `npm ci`, ejecuta `app_setup.bat` para asegurar la consistencia de versiones, ejecuta `node build.js`, y luego crea un instalador exe <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>"
       },
       "bundle_exe_windows": {
-        "en": ".\\bundle_exe.ps1<br />Optional arguments:<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br /> or: \"y\"; Will not ask if server is off<br /><sup>[[3]](#f3)</sup>"
+        "en": ".\\bundle_exe.ps1<br />Optional arguments:<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br /> or: \"y\"; Will not ask if server is off<br /><sup>[[3]](#f3)</sup>",
+        "fr": ".\\bundle_exe.ps1<br />Arguments optionnels :<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br /> ou : « y » ; Ne demandera pas si le serveur est arrêté<br /><sup>[[3]](#f3)</sup>",
+        "es": ".\\bundle_exe.ps1<br />Argumentos opcionales:<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br /> o: \"y\"; No preguntará si el servidor está apagado<br /><sup>[[3]](#f3)</sup>"
       },
       "heading_maintenance_scripts": {
-        "en": "Maintenance scripts:"
+        "en": "Maintenance scripts:",
+        "fr": "Scripts de maintenance :",
+        "es": "Scripts de mantenimiento:"
       },
       "maintenance_scripts_run_from": {
-        "en": "Run from the provided location:"
+        "en": "Run from the provided location:",
+        "fr": "Exécutez depuis l'emplacement indiqué :",
+        "es": "Ejecute desde la ubicación proporcionada:"
       },
       "sync_desc": {
-        "en": "Facilitates syncing with upstream with exclusion of files expected to differ:"
+        "en": "Facilitates syncing with upstream with exclusion of files expected to differ:",
+        "fr": "Facilite la synchronisation avec l'upstream en excluant les fichiers susceptibles de différer :",
+        "es": "Facilita la sincronización con el upstream excluyendo los archivos que se espera que difieran:"
       },
       "sync_linux": {
-        "en": "./sync.bsh<br />Optional arguments:<br />`./sync.bsh -p`<br /> Will not ask if latest is already pulled."
+        "en": "./sync.bsh<br />Optional arguments:<br />`./sync.bsh -p`<br /> Will not ask if latest is already pulled.",
+        "fr": "./sync.bsh<br />Arguments optionnels :<br />`./sync.bsh -p`<br /> Ne demandera pas si la dernière version est déjà récupérée.",
+        "es": "./sync.bsh<br />Argumentos opcionales:<br />`./sync.bsh -p`<br /> No preguntará si la última versión ya fue obtenida."
       },
       "sync_windows": {
-        "en": ".\\sync.bat<br />Optional arguments:<br />`.\\sync.bat -p`<br /> Will not ask if latest is already pulled"
+        "en": ".\\sync.bat<br />Optional arguments:<br />`.\\sync.bat -p`<br /> Will not ask if latest is already pulled",
+        "fr": ".\\sync.bat<br />Arguments optionnels :<br />`.\\sync.bat -p`<br /> Ne demandera pas si la dernière version est déjà récupérée",
+        "es": ".\\sync.bat<br />Argumentos opcionales:<br />`.\\sync.bat -p`<br /> No preguntará si la última versión ya fue obtenida"
       },
       "sync_macos": {
-        "en": "./sync.zsh<br />Optional arguments:<br />`./sync.zsh -p`<br /> Will not ask if latest is already pulled."
+        "en": "./sync.zsh<br />Optional arguments:<br />`./sync.zsh -p`<br /> Will not ask if latest is already pulled.",
+        "fr": "./sync.zsh<br />Arguments optionnels :<br />`./sync.zsh -p`<br /> Ne demandera pas si la dernière version est déjà récupérée.",
+        "es": "./sync.zsh<br />Argumentos opcionales:<br />`./sync.zsh -p`<br /> No preguntará si la última versión ya fue obtenida."
       },
       "footnote1": {
-        "en": "[<b id=\"f1\">1</b>] ... When running a bat script from a command prompt, the `.\\` included in the examples is optional."
+        "en": "[<b id=\"f1\">1</b>] ... When running a bat script from a command prompt, the `.\\` included in the examples is optional.",
+        "fr": "[<b id=\"f1\">1</b>] ... Lors de l'exécution d'un script bat depuis une invite de commandes, le `.\\` inclus dans les exemples est facultatif.",
+        "es": "[<b id=\"f1\">1</b>] ... Al ejecutar un script bat desde un símbolo del sistema, el `.\\` incluido en los ejemplos es opcional."
       },
       "footnote2": {
-        "en": "[<b id=\"f2\">2</b>] ... Ensure the server (build_server.bat) is current!"
+        "en": "[<b id=\"f2\">2</b>] ... Ensure the server (build_server.bat) is current!",
+        "fr": "[<b id=\"f2\">2</b>] ... Assurez-vous que le serveur (build_server.bat) est à jour !",
+        "es": "[<b id=\"f2\">2</b>] ... ¡Asegúrese de que el servidor (build_server.bat) esté actualizado!"
       },
       "footnote3": {
-        "en": "[<b id=\"f3\">3</b>] ... Environment prerequisite for running the exe build locally: Install [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3"
+        "en": "[<b id=\"f3\">3</b>] ... Environment prerequisite for running the exe build locally: Install [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3",
+        "fr": "[<b id=\"f3\">3</b>] ... Prérequis d'environnement pour exécuter le build exe localement : Installez [Inno Setup](https://jrsoftware.org/isdl.php) - testé avec la v6.4.3",
+        "es": "[<b id=\"f3\">3</b>] ... Requisito previo del entorno para ejecutar el build exe localmente: Instale [Inno Setup](https://jrsoftware.org/isdl.php) - probado con v6.4.3"
       },
       "footnote4": {
-        "en": "[<b id=\"f4\">4</b>] ... Targeted clean tips:\n- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/debug`\n- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/release`\n- To clean just the build environment, cd to the subdirectory for your OS (i.e., /macos, /linux, or /windows), then recursively remove its build subdirectory.\n- (The clean script does all of the above.)"
+        "en": "[<b id=\"f4\">4</b>] ... Targeted clean tips:\n- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/debug`\n- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/release`\n- To clean just the build environment, cd to the subdirectory for your OS (i.e., /macos, /linux, or /windows), then recursively remove its build subdirectory.\n- (The clean script does all of the above.)",
+        "fr": "[<b id=\"f4\">4</b>] ... Conseils de nettoyage ciblé :\n- Pour nettoyer uniquement le serveur de développement : allez dans le répertoire /local_server et exécutez `cargo clean --target-dir target/debug`\n- Pour nettoyer uniquement le serveur de développement : allez dans le répertoire /local_server et exécutez `cargo clean --target-dir target/release`\n- Pour nettoyer uniquement l'environnement de build, allez dans le sous-répertoire de votre OS (c'est-à-dire /macos, /linux ou /windows), puis supprimez récursivement son sous-répertoire build.\n- (Le script clean fait tout ce qui précède.)",
+        "es": "[<b id=\"f4\">4</b>] ... Consejos de limpieza específica:\n- Para limpiar solo el servidor de desarrollo: vaya al directorio /local_server y ejecute `cargo clean --target-dir target/debug`\n- Para limpiar solo el servidor de desarrollo: vaya al directorio /local_server y ejecute `cargo clean --target-dir target/release`\n- Para limpiar solo el entorno de build, vaya al subdirectorio de su SO (es decir, /macos, /linux o /windows), luego elimine recursivamente su subdirectorio build.\n- (El script clean hace todo lo anterior.)"
       }
     },
     "ux_ui_guidelines": {
       "title": {
-        "en": "UX/UI guidelines"
+        "en": "UX/UI guidelines",
+        "fr": "Directives UX/UI",
+        "es": "Directrices UX/UI"
       },
-            "heading_general_page_template": {
-        "en": "General page template"
+      "heading_general_page_template": {
+        "en": "General page template",
+        "fr": "Modèle de page général",
+        "es": "Plantilla de página general"
       },
       "heading_data_grid": {
-        "en": "Data grid"
+        "en": "Data grid",
+        "fr": "Grille de données",
+        "es": "Cuadrícula de datos"
       },
       "heading_dialog": {
-        "en": "Dialog"
+        "en": "Dialog",
+        "fr": "Dialogue",
+        "es": "Diálogo"
       },
       "dialog_tip": {
-        "en": "Use the [Dialog](https://mui.com/material-ui/react-dialog/) component instead of a [modal](https://mui.com/material-ui/react-modal/). The modal is the low-level element meant to block the interaction. The Dialog is based on a modal, but specializes in providing information and further actions."
+        "en": "Use the [Dialog](https://mui.com/material-ui/react-dialog/) component instead of a [modal](https://mui.com/material-ui/react-modal/). The modal is the low-level element meant to block the interaction. The Dialog is based on a modal, but specializes in providing information and further actions.",
+        "fr": "Utilisez le composant [Dialog](https://mui.com/material-ui/react-dialog/) plutôt qu'un [modal](https://mui.com/material-ui/react-modal/). Le modal est l'élément de bas niveau destiné à bloquer l'interaction. Le Dialog est basé sur un modal, mais est spécialisé dans la fourniture d'informations et d'actions supplémentaires.",
+        "es": "Use el componente [Dialog](https://mui.com/material-ui/react-dialog/) en lugar de un [modal](https://mui.com/material-ui/react-modal/). El modal es el elemento de bajo nivel destinado a bloquear la interacción. El Dialog está basado en un modal, pero se especializa en proporcionar información y acciones adicionales."
       },
       "dialog_composed": {
-        "en": "A Dialog is composed of three main parts:"
+        "en": "A Dialog is composed of three main parts:",
+        "fr": "Un Dialog est composé de trois parties principales :",
+        "es": "Un Dialog se compone de tres partes principales:"
       },
       "dialog_title": {
-        "en": "**Title**. Contain a brief, clear statement or question. It should communicate the Dialog's purpose."
+        "en": "**Title**. Contain a brief, clear statement or question. It should communicate the Dialog's purpose.",
+        "fr": "**Titre**. Contient une déclaration ou question brève et claire. Il doit communiquer l'objectif du Dialog.",
+        "es": "**Título**. Contiene una declaración o pregunta breve y clara. Debe comunicar el propósito del Dialog."
       },
       "dialog_title_note": {
-        "en": "Background color is `secondary`."
+        "en": "Background color is `secondary`.",
+        "fr": "La couleur de fond est `secondary`.",
+        "es": "El color de fondo es `secondary`."
       },
       "dialog_content": {
-        "en": "**Content**. Anything needed for the context, from supporting text to full-size form."
+        "en": "**Content**. Anything needed for the context, from supporting text to full-size form.",
+        "fr": "**Contenu**. Tout ce qui est nécessaire au contexte, du texte d'accompagnement au formulaire complet.",
+        "es": "**Contenido**. Todo lo necesario para el contexto, desde texto de apoyo hasta un formulario completo."
       },
       "dialog_content_note": {
-        "en": "With long content, use the [`scroll=paper`](https://mui.com/material-ui/react-dialog/#scrolling-long-content)."
+        "en": "With long content, use the [`scroll=paper`](https://mui.com/material-ui/react-dialog/#scrolling-long-content).",
+        "fr": "Pour un contenu long, utilisez [`scroll=paper`](https://mui.com/material-ui/react-dialog/#scrolling-long-content).",
+        "es": "Con contenido largo, use [`scroll=paper`](https://mui.com/material-ui/react-dialog/#scrolling-long-content)."
       },
       "dialog_actions": {
-        "en": "**Actions**. There's always a way to go back (*Cancel*). And the main action is on the right. The label should reflect the action performed when clicked."
+        "en": "**Actions**. There's always a way to go back (*Cancel*). And the main action is on the right. The label should reflect the action performed when clicked.",
+        "fr": "**Actions**. Il y a toujours un moyen de revenir en arrière (*Annuler*). Et l'action principale est à droite. Le libellé doit refléter l'action effectuée au clic.",
+        "es": "**Acciones**. Siempre hay una forma de volver atrás (*Cancelar*). Y la acción principal está a la derecha. La etiqueta debe reflejar la acción realizada al hacer clic."
       },
       "dialog_actions_required": {
-        "en": "If any [required field](https://pankosmia.dev/uxui-guidelines/#required-fields) is in the content, the action button is disabled until they are completed."
+        "en": "If any [required field](https://pankosmia.dev/uxui-guidelines/#required-fields) is in the content, the action button is disabled until they are completed.",
+        "fr": "Si un [champ obligatoire](https://pankosmia.dev/uxui-guidelines/#required-fields) se trouve dans le contenu, le bouton d'action est désactivé jusqu'à ce qu'ils soient complétés.",
+        "es": "Si algún [campo obligatorio](https://pankosmia.dev/uxui-guidelines/#required-fields) está en el contenido, el botón de acción está desactivado hasta que se completen."
       },
       "dialog_actions_cancel": {
-        "en": "*Cancel*. Text button, primary color."
+        "en": "*Cancel*. Text button, primary color.",
+        "fr": "*Annuler*. Bouton texte, couleur primary.",
+        "es": "*Cancelar*. Botón de texto, color primary."
       },
       "dialog_actions_action": {
-        "en": "*Action*. Contained button, primary color."
+        "en": "*Action*. Contained button, primary color.",
+        "fr": "*Action*. Bouton contained, couleur primary.",
+        "es": "*Acción*. Botón contained, color primary."
       },
       "dialog_responsiveness": {
-        "en": "Responsiveness is configured as follow:"
+        "en": "Responsiveness is configured as follow:",
+        "fr": "La réactivité est configurée comme suit :",
+        "es": "La responsividad se configura de la siguiente manera:"
       },
       "dialog_responsiveness_tbd": {
-        "en": "TBD (full-width + variable maxWidth depending on breakpoints?)."
+        "en": "TBD (full-width + variable maxWidth depending on breakpoints?).",
+        "fr": "À définir (full-width + maxWidth variable selon les breakpoints ?).",
+        "es": "Por definir (full-width + maxWidth variable según los breakpoints?)."
       },
       "heading_icons": {
-        "en": "Icons"
+        "en": "Icons",
+        "fr": "Icônes",
+        "es": "Iconos"
       },
       "icons_intro": {
-        "en": "[Material Icons](https://mui.com/material-ui/material-icons/?theme=Outlined) should be in the `Outlined style` by default."
+        "en": "[Material Icons](https://mui.com/material-ui/material-icons/?theme=Outlined) should be in the `Outlined style` by default.",
+        "fr": "Les [Material Icons](https://mui.com/material-ui/material-icons/?theme=Outlined) doivent être dans le style `Outlined` par défaut.",
+        "es": "Los [Material Icons](https://mui.com/material-ui/material-icons/?theme=Outlined) deben estar en el estilo `Outlined` por defecto."
       },
       "heading_required_fields": {
-        "en": "Required fields"
+        "en": "Required fields",
+        "fr": "Champs obligatoires",
+        "es": "Campos obligatorios"
       },
       "required_fields_intro": {
-        "en": "When information is required to proceed:"
+        "en": "When information is required to proceed:",
+        "fr": "Lorsque des informations sont requises pour continuer :",
+        "es": "Cuando se requiere información para continuar:"
       },
       "required_fields_asterisk": {
-        "en": "Required field(s) should show an asterisk `*` after the label."
+        "en": "Required field(s) should show an asterisk `*` after the label.",
+        "fr": "Le(s) champ(s) obligatoire(s) doivent afficher un astérisque `*` après le libellé.",
+        "es": "El/los campo(s) obligatorio(s) deben mostrar un asterisco `*` después de la etiqueta."
       },
       "required_fields_explain": {
-        "en": "Above required field(s), explain what the asterisk does. This message is displayed once, after any title and before required field(s)."
+        "en": "Above required field(s), explain what the asterisk does. This message is displayed once, after any title and before required field(s).",
+        "fr": "Au-dessus du/des champ(s) obligatoire(s), expliquez la signification de l'astérisque. Ce message est affiché une seule fois, après le titre et avant le(s) champ(s) obligatoire(s).",
+        "es": "Encima del/de los campo(s) obligatorio(s), explique qué significa el asterisco. Este mensaje se muestra una sola vez, después del título y antes del/de los campo(s) obligatorio(s)."
       },
       "required_fields_explain_note": {
-        "en": "Add `* Required fields.`, with the typography style `subtitle2`."
+        "en": "Add `* Required fields.`, with the typography style `subtitle2`.",
+        "fr": "Ajoutez `* Champs obligatoires.`, avec le style typographique `subtitle2`.",
+        "es": "Agregue `* Campos obligatorios.`, con el estilo tipográfico `subtitle2`."
       },
       "required_fields_action_button": {
-        "en": "The action button below the field(s) is enabled only when all required fields are completed."
+        "en": "The action button below the field(s) is enabled only when all required fields are completed.",
+        "fr": "Le bouton d'action sous le(s) champ(s) n'est activé que lorsque tous les champs obligatoires sont remplis.",
+        "es": "El botón de acción debajo del/de los campo(s) se habilita solo cuando todos los campos obligatorios están completos."
       },
       "heading_theme": {
-        "en": "Theme"
+        "en": "Theme",
+        "fr": "Thème",
+        "es": "Tema"
       },
       "heading_main_colors": {
-        "en": "Main colors"
+        "en": "Main colors",
+        "fr": "Couleurs principales",
+        "es": "Colores principales"
       },
       "main_colors_intro": {
-        "en": "You can find matching primary and secondary colors using a palette generator like [Coolors](https://coolors.co/d4e09b-f6f4d2-cbdfbd-f19c79-a44a3f). If you already have a primary color in mind, you can also generate a matching secondary color with a [Color Wheel](https://www.figma.com/color-wheel/)."
+        "en": "You can find matching primary and secondary colors using a palette generator like [Coolors](https://coolors.co/d4e09b-f6f4d2-cbdfbd-f19c79-a44a3f). If you already have a primary color in mind, you can also generate a matching secondary color with a [Color Wheel](https://www.figma.com/color-wheel/).",
+        "fr": "Vous pouvez trouver des couleurs primaires et secondaires assorties en utilisant un générateur de palette comme [Coolors](https://coolors.co/d4e09b-f6f4d2-cbdfbd-f19c79-a44a3f). Si vous avez déjà une couleur primaire en tête, vous pouvez également générer une couleur secondaire assortie avec un [Color Wheel](https://www.figma.com/color-wheel/).",
+        "es": "Puede encontrar colores primarios y secundarios que combinen usando un generador de paletas como [Coolors](https://coolors.co/d4e09b-f6f4d2-cbdfbd-f19c79-a44a3f). Si ya tiene un color primario en mente, también puede generar un color secundario que combine con un [Color Wheel](https://www.figma.com/color-wheel/)."
       },
       "heading_generate_mui_variants": {
-        "en": "Generate MUI color variants for *theme.json*"
+        "en": "Generate MUI color variants for *theme.json*",
+        "fr": "Générer les variantes de couleurs MUI pour *theme.json*",
+        "es": "Generar variantes de color MUI para *theme.json*"
       },
       "generate_mui_variants_intro": {
-        "en": "Use the [MUI Theme Creator](https://zenoo.github.io/mui-theme-creator/). On the bottom-right you can edit a `main` color to automatically generate its `light` and `dark` variants, and the corresponding `contrastText` color."
+        "en": "Use the [MUI Theme Creator](https://zenoo.github.io/mui-theme-creator/). On the bottom-right you can edit a `main` color to automatically generate its `light` and `dark` variants, and the corresponding `contrastText` color.",
+        "fr": "Utilisez le [MUI Theme Creator](https://zenoo.github.io/mui-theme-creator/). En bas à droite, vous pouvez modifier une couleur `main` pour générer automatiquement ses variantes `light` et `dark`, ainsi que la couleur `contrastText` correspondante.",
+        "es": "Use el [MUI Theme Creator](https://zenoo.github.io/mui-theme-creator/). En la parte inferior derecha puede editar un color `main` para generar automáticamente sus variantes `light` y `dark`, y el color `contrastText` correspondiente."
       },
       "generate_mui_variants_note": {
-        "en": "Note those are different from a light/dark app theme. They are a lighter and darker shade of the main color. You can use them to play with contrast in the interface."
+        "en": "Note those are different from a light/dark app theme. They are a lighter and darker shade of the main color. You can use them to play with contrast in the interface.",
+        "fr": "Notez que ceux-ci sont différents d'un thème d'application clair/sombre. Ce sont des nuances plus claires et plus foncées de la couleur principale. Vous pouvez les utiliser pour jouer avec le contraste dans l'interface.",
+        "es": "Tenga en cuenta que estos son diferentes de un tema de aplicación claro/oscuro. Son tonos más claros y más oscuros del color principal. Puede usarlos para jugar con el contraste en la interfaz."
       },
       "heading_check_contrast": {
-        "en": "Check contrast"
+        "en": "Check contrast",
+        "fr": "Vérifier le contraste",
+        "es": "Verificar el contraste"
       },
       "check_contrast_intro": {
-        "en": "It's a good practice to [check contrast](https://app.contrast-finder.org/?lang=en). Online palette and color tools tend to rely on varying contrast standards. Better to double check and choose which contrast standard you want to aim for."
+        "en": "It's a good practice to [check contrast](https://app.contrast-finder.org/?lang=en). Online palette and color tools tend to rely on varying contrast standards. Better to double check and choose which contrast standard you want to aim for.",
+        "fr": "C'est une bonne pratique de [vérifier le contraste](https://app.contrast-finder.org/?lang=en). Les outils en ligne de palette et de couleurs ont tendance à s'appuyer sur des normes de contraste variées. Mieux vaut vérifier et choisir la norme de contraste que vous souhaitez viser.",
+        "es": "Es una buena práctica [verificar el contraste](https://app.contrast-finder.org/?lang=en). Las herramientas en línea de paletas y colores tienden a basarse en estándares de contraste variados. Es mejor verificar y elegir el estándar de contraste que desea alcanzar."
       },
       "check_contrast_contexts": {
-        "en": "MUI uses colors in different contexts. To prevent any issue, try your colors' contrasts accordingly. Check primary and secondary as text for both white and black background."
+        "en": "MUI uses colors in different contexts. To prevent any issue, try your colors' contrasts accordingly. Check primary and secondary as text for both white and black background.",
+        "fr": "MUI utilise les couleurs dans différents contextes. Pour éviter tout problème, testez les contrastes de vos couleurs en conséquence. Vérifiez primary et secondary comme texte sur fond blanc et fond noir.",
+        "es": "MUI usa colores en diferentes contextos. Para prevenir cualquier problema, pruebe los contrastes de sus colores en consecuencia. Verifique primary y secondary como texto tanto sobre fondo blanco como negro."
       },
       "check_contrast_contexts_note": {
-        "en": "Note that you don't necessarily need your colors to have a good contrast with white **and** black out-of-the-box. This is to make sure light and dark mode will work. But colors can also be further adjusted to better work in a specific mode."
+        "en": "Note that you don't necessarily need your colors to have a good contrast with white **and** black out-of-the-box. This is to make sure light and dark mode will work. But colors can also be further adjusted to better work in a specific mode.",
+        "fr": "Notez que vos couleurs n'ont pas nécessairement besoin d'avoir un bon contraste avec le blanc **et** le noir d'emblée. C'est pour s'assurer que les modes clair et sombre fonctionneront. Mais les couleurs peuvent aussi être ajustées davantage pour mieux fonctionner dans un mode spécifique.",
+        "es": "Tenga en cuenta que sus colores no necesariamente necesitan tener un buen contraste con blanco **y** negro de forma predeterminada. Esto es para asegurarse de que los modos claro y oscuro funcionen. Pero los colores también pueden ajustarse más para funcionar mejor en un modo específico."
       },
       "check_contrast_primary_secondary": {
-        "en": "It's good to have some contrast between primary and secondary. You don't need a standard-level contrast. But a secondary component on a primary background can be a thing (like a badge with number of notifications). If primary and secondary are too close, the interface will become less clear."
+        "en": "It's good to have some contrast between primary and secondary. You don't need a standard-level contrast. But a secondary component on a primary background can be a thing (like a badge with number of notifications). If primary and secondary are too close, the interface will become less clear.",
+        "fr": "Il est bon d'avoir un certain contraste entre primary et secondary. Vous n'avez pas besoin d'un contraste de niveau standard. Mais un composant secondary sur un fond primary peut arriver (comme un badge avec le nombre de notifications). Si primary et secondary sont trop proches, l'interface deviendra moins lisible.",
+        "es": "Es bueno tener algo de contraste entre primary y secondary. No necesita un contraste de nivel estándar. Pero un componente secondary sobre un fondo primary puede ocurrir (como una insignia con el número de notificaciones). Si primary y secondary son demasiado cercanos, la interfaz será menos clara."
       },
       "heading_generate_appbar_chip": {
-        "en": "Generate *appbar-chip-inactive* colors"
+        "en": "Generate *appbar-chip-inactive* colors",
+        "fr": "Générer les couleurs *appbar-chip-inactive*",
+        "es": "Generar colores *appbar-chip-inactive*"
       },
       "appbar_chip_darker": {
-        "en": "If your primary color is **darker** than your secondary. Use `secondary dark` as `appbar-chip-inactive main` and [Generate MUI color variants](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) from it."
+        "en": "If your primary color is **darker** than your secondary. Use `secondary dark` as `appbar-chip-inactive main` and [Generate MUI color variants](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) from it.",
+        "fr": "Si votre couleur primaire est **plus foncée** que votre secondaire. Utilisez `secondary dark` comme `appbar-chip-inactive main` et [Générez les variantes de couleurs MUI](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) à partir de celle-ci.",
+        "es": "Si su color primario es **más oscuro** que su secundario. Use `secondary dark` como `appbar-chip-inactive main` y [Genere las variantes de color MUI](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) a partir de él."
       },
       "appbar_chip_lighter": {
-        "en": "If your primary color is **lighter** than your secondary. Use `secondary light` as `appbar-chip-inactive main` and [Generate MUI color variants](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) from it."
+        "en": "If your primary color is **lighter** than your secondary. Use `secondary light` as `appbar-chip-inactive main` and [Generate MUI color variants](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) from it.",
+        "fr": "Si votre couleur primaire est **plus claire** que votre secondaire. Utilisez `secondary light` comme `appbar-chip-inactive main` et [Générez les variantes de couleurs MUI](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) à partir de celle-ci.",
+        "es": "Si su color primario es **más claro** que su secundario. Use `secondary light` como `appbar-chip-inactive main` y [Genere las variantes de color MUI](https://pankosmia.dev/uxui-guidelines/#generate-mui-color-variants-for-themejson) a partir de él."
       },
       "heading_tooltip": {
-        "en": "Tooltip"
+        "en": "Tooltip",
+        "fr": "Infobulle",
+        "es": "Tooltip"
       }
     },
     "legal_notices": {
       "title": {
-        "en": "Legal Notices"
+        "en": "Legal Notices",
+        "fr": "Mentions légales",
+        "es": "Avisos legales"
       },
       "heading_contact": {
-        "en": "Contact"
+        "en": "Contact",
+        "fr": "Contact",
+        "es": "Contacto"
       },
       "ceo": {
-        "en": "CEO"
+        "en": "CEO",
+        "fr": "PDG",
+        "es": "Director ejecutivo"
       },
       "email": {
-        "en": "email"
+        "en": "email",
+        "fr": "e-mail",
+        "es": "correo electrónico"
       },
       "heading_hosting": {
-        "en": "Hosting"
+        "en": "Hosting",
+        "fr": "Hébergement",
+        "es": "Alojamiento"
       },
       "hosting_paragraph": {
-        "en": "The https://pankosmia.dev website is hosted by MVH SOLUTIONS via https://github.com."
+        "en": "The https://pankosmia.dev website is hosted by MVH SOLUTIONS via https://github.com.",
+        "fr": "Le site https://pankosmia.dev est hébergé par MVH SOLUTIONS via https://github.com.",
+        "es": "El sitio web https://pankosmia.dev está alojado por MVH SOLUTIONS a través de https://github.com."
       },
       "address": {
-        "en": "Address"
+        "en": "Address",
+        "fr": "Adresse",
+        "es": "Dirección"
       },
       "heading_terms": {
-        "en": "Terms of use"
+        "en": "Terms of use",
+        "fr": "Conditions d'utilisation",
+        "es": "Términos de uso"
       },
       "terms_paragraphs": {
-        "en": "Use of the https://pankosmia.dev website is subject to compliance with the following general terms and conditions.\n\nBy opening the https://pankosmia.dev website, you declare that you are aware of these general terms and conditions of use and accept them unreservedly."
+        "en": "Use of the https://pankosmia.dev website is subject to compliance with the following general terms and conditions.\n\nBy opening the https://pankosmia.dev website, you declare that you are aware of these general terms and conditions of use and accept them unreservedly.",
+        "fr": "L'utilisation du site https://pankosmia.dev est soumise au respect des conditions générales suivantes.\n\nEn ouvrant le site https://pankosmia.dev, vous déclarez avoir pris connaissance de ces conditions générales d'utilisation et les accepter sans réserve.",
+        "es": "El uso del sitio web https://pankosmia.dev está sujeto al cumplimiento de los siguientes términos y condiciones generales.\n\nAl abrir el sitio web https://pankosmia.dev, usted declara que conoce estos términos y condiciones generales de uso y los acepta sin reservas."
       },
       "heading_property": {
-        "en": "Property"
+        "en": "Property",
+        "fr": "Propriété",
+        "es": "Propiedad"
       },
       "property_paragraphs": {
-        "en": "All components of the https://pankosmia.dev website (text, logos, images, audio, software, icons, layout, databases, etc.) are protected by national and international intellectual property laws. These components remain the sole property of their respective owners.\n\nUsers may not reproduce, represent, adapt, translate or transform any component of the https://pankosmia.dev website in part or in whole, or transfer it to any other website, except by the prior written permission of MVH solutions."
+        "en": "All components of the https://pankosmia.dev website (text, logos, images, audio, software, icons, layout, databases, etc.) are protected by national and international intellectual property laws. These components remain the sole property of their respective owners.\n\nUsers may not reproduce, represent, adapt, translate or transform any component of the https://pankosmia.dev website in part or in whole, or transfer it to any other website, except by the prior written permission of MVH solutions.",
+        "fr": "Tous les composants du site https://pankosmia.dev (textes, logos, images, audio, logiciels, icônes, mise en page, bases de données, etc.) sont protégés par les lois nationales et internationales sur la propriété intellectuelle. Ces composants restent la propriété exclusive de leurs propriétaires respectifs.\n\nLes utilisateurs ne peuvent pas reproduire, représenter, adapter, traduire ou transformer tout composant du site https://pankosmia.dev en partie ou en totalité, ni le transférer vers un autre site web, sauf autorisation écrite préalable de MVH Solutions.",
+        "es": "Todos los componentes del sitio web https://pankosmia.dev (textos, logotipos, imágenes, audio, software, iconos, diseño, bases de datos, etc.) están protegidos por las leyes nacionales e internacionales de propiedad intelectual. Estos componentes siguen siendo propiedad exclusiva de sus respectivos propietarios.\n\nLos usuarios no pueden reproducir, representar, adaptar, traducir o transformar ningún componente del sitio web https://pankosmia.dev en parte o en su totalidad, ni transferirlo a cualquier otro sitio web, salvo autorización previa por escrito de MVH Solutions."
       },
       "heading_links": {
-        "en": "Hypertext links"
+        "en": "Hypertext links",
+        "fr": "Liens hypertextes",
+        "es": "Enlaces de hipertexto"
       },
       "links_paragraphs": {
-        "en": "MVH Solutions may not be held liable for the destination anchors of any hypertext links installed as part of the https://pankosmia.dev website pointing to other resources on the Internet.\n\nSimilarly, it may not be held liable in respect of the content and relevance of the information provided by sites published by third parties that can be accessed from the https://pankosmia.dev website via hypertext links."
+        "en": "MVH Solutions may not be held liable for the destination anchors of any hypertext links installed as part of the https://pankosmia.dev website pointing to other resources on the Internet.\n\nSimilarly, it may not be held liable in respect of the content and relevance of the information provided by sites published by third parties that can be accessed from the https://pankosmia.dev website via hypertext links.",
+        "fr": "MVH Solutions ne saurait être tenue responsable des ancres de destination de tout lien hypertexte installé dans le cadre du site https://pankosmia.dev pointant vers d'autres ressources sur Internet.\n\nDe même, elle ne saurait être tenue responsable du contenu et de la pertinence des informations fournies par des sites publiés par des tiers accessibles depuis le site https://pankosmia.dev via des liens hypertextes.",
+        "es": "MVH Solutions no puede ser considerada responsable de los destinos de cualquier enlace de hipertexto instalado como parte del sitio web https://pankosmia.dev que apunte a otros recursos en Internet.\n\nDel mismo modo, no puede ser considerada responsable del contenido y la relevancia de la información proporcionada por sitios publicados por terceros a los que se puede acceder desde el sitio web https://pankosmia.dev a través de enlaces de hipertexto."
       },
       "heading_gdpr": {
-        "en": "GDPR"
+        "en": "GDPR",
+        "fr": "RGPD",
+        "es": "RGPD"
       },
       "gdpr_paragraphs": {
-        "en": "MVH Solutions does not collect any personal data unless the user initiates contact by email of via the Github interface. For details of how Github itself manages data, please see https://docs.github.com/fr/site-policy/github-terms/github-terms-of-service\n\nThe French Data Protection Act 78-17 of January 6, 1978 as amended in 2004 grants you the right to access and/or rectify personal data. You can exercise this right by contacting the webmaster.\n\nYou may also refuse processing of your personal data if you have legitimate grounds.\n\nPursuant to the General Data Protection Regulation in force as of 25 May 2018, the data gathered will be used for internal purposes only. To request rectification or erasure of your personal data, please contact us at the following address: webmaster@mvhsolutions.com."
+        "en": "MVH Solutions does not collect any personal data unless the user initiates contact by email of via the Github interface. For details of how Github itself manages data, please see https://docs.github.com/fr/site-policy/github-terms/github-terms-of-service\n\nThe French Data Protection Act 78-17 of January 6, 1978 as amended in 2004 grants you the right to access and/or rectify personal data. You can exercise this right by contacting the webmaster.\n\nYou may also refuse processing of your personal data if you have legitimate grounds.\n\nPursuant to the General Data Protection Regulation in force as of 25 May 2018, the data gathered will be used for internal purposes only. To request rectification or erasure of your personal data, please contact us at the following address: webmaster@mvhsolutions.com.",
+        "fr": "MVH Solutions ne collecte aucune donnée personnelle sauf si l'utilisateur prend contact par e-mail ou via l'interface Github. Pour les détails sur la gestion des données par Github, veuillez consulter https://docs.github.com/fr/site-policy/github-terms/github-terms-of-service\n\nLa loi Informatique et Libertés 78-17 du 6 janvier 1978 modifiée en 2004 vous accorde le droit d'accéder à vos données personnelles et/ou de les rectifier. Vous pouvez exercer ce droit en contactant le webmaster.\n\nVous pouvez également refuser le traitement de vos données personnelles si vous avez des motifs légitimes.\n\nConformément au Règlement Général sur la Protection des Données en vigueur depuis le 25 mai 2018, les données collectées seront utilisées uniquement à des fins internes. Pour demander la rectification ou la suppression de vos données personnelles, veuillez nous contacter à l'adresse suivante : webmaster@mvhsolutions.com.",
+        "es": "MVH Solutions no recopila ningún dato personal a menos que el usuario inicie contacto por correo electrónico o a través de la interfaz de Github. Para los detalles sobre cómo Github gestiona los datos, consulte https://docs.github.com/fr/site-policy/github-terms/github-terms-of-service\n\nLa Ley francesa de Protección de Datos 78-17 del 6 de enero de 1978, modificada en 2004, le otorga el derecho de acceder y/o rectificar sus datos personales. Puede ejercer este derecho contactando al webmaster.\n\nTambién puede negarse al tratamiento de sus datos personales si tiene motivos legítimos.\n\nDe conformidad con el Reglamento General de Protección de Datos vigente desde el 25 de mayo de 2018, los datos recopilados se utilizarán únicamente con fines internos. Para solicitar la rectificación o eliminación de sus datos personales, contáctenos en la siguiente dirección: webmaster@mvhsolutions.com."
       },
       "heading_content": {
-        "en": "Site content"
+        "en": "Site content",
+        "fr": "Contenu du site",
+        "es": "Contenido del sitio"
       },
       "content_paragraphs": {
-        "en": "MVH Solutions provides users of the https://pankosmia.dev website with available, verified information, but may not be held liable should any information be unavailable.\n\nNo guarantee is made that information made available on the https://pankosmia.dev website is correct, accurate or exhaustive.\n\nAuthors retain liability for the content they provide. MVH Solutions (🚧) reserves the right to amend and/or delete all or part of the https://pankosmia.dev website without notice."
+        "en": "MVH Solutions provides users of the https://pankosmia.dev website with available, verified information, but may not be held liable should any information be unavailable.\n\nNo guarantee is made that information made available on the https://pankosmia.dev website is correct, accurate or exhaustive.\n\nAuthors retain liability for the content they provide. MVH Solutions (🚧) reserves the right to amend and/or delete all or part of the https://pankosmia.dev website without notice.",
+        "fr": "MVH Solutions fournit aux utilisateurs du site https://pankosmia.dev des informations disponibles et vérifiées, mais ne saurait être tenue responsable en cas d'indisponibilité d'une information.\n\nAucune garantie n'est donnée que les informations mises à disposition sur le site https://pankosmia.dev sont correctes, exactes ou exhaustives.\n\nLes auteurs restent responsables du contenu qu'ils fournissent. MVH Solutions (🚧) se réserve le droit de modifier et/ou supprimer tout ou partie du site https://pankosmia.dev sans préavis.",
+        "es": "MVH Solutions proporciona a los usuarios del sitio web https://pankosmia.dev información disponible y verificada, pero no puede ser considerada responsable en caso de que alguna información no esté disponible.\n\nNo se garantiza que la información disponible en el sitio web https://pankosmia.dev sea correcta, precisa o exhaustiva.\n\nLos autores conservan la responsabilidad del contenido que proporcionan. MVH Solutions (🚧) se reserva el derecho de modificar y/o eliminar todo o parte del sitio web https://pankosmia.dev sin previo aviso."
       },
       "heading_cookies": {
-        "en": "Cookies"
+        "en": "Cookies",
+        "fr": "Cookies",
+        "es": "Cookies"
       },
       "cookies_paragraphs": {
-        "en": "Please see Github's policy above."
+        "en": "Please see Github's policy above.",
+        "fr": "Veuillez consulter la politique de Github ci-dessus.",
+        "es": "Consulte la política de Github mencionada anteriormente."
       }
     }
   }

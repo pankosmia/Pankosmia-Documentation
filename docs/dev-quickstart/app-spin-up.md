@@ -39,32 +39,32 @@ How to fork and configure a Desktop App repo built on Pankosmia
         |-- [your-desktop-app-repo-name] <b><em>(30 characters or less on windows!)</em></b>
 </pre></ul>
 
-### {% include t.html key="heading_package_json" %}
+### package.json
 {% include t.html key="package_json_instructions" %}
 
-### {% include t.html key="heading_run_npm_ci" %}
+### {% include t.html key="heading_npm_install" %}
 <ul><pre>
-npm ci
+npm install
 </pre></ul>
 
 ### {% include t.html key="heading_edit_app_config" %}
 {% include t.html key="edit_app_config_intro" %}
 
 #### {% include t.html key="heading_required_assets" %}
-- {% include t.html key="asset1" %}
-- {% include t.html key="asset1_path" %}
-- {% include t.html key="asset1_name" %}
-- {% include t.html key="asset2" %}
-- {% include t.html key="asset2_path" %}
-- {% include t.html key="asset2_name" %}
-- {% include t.html key="asset3" %}
-- {% include t.html key="asset3_path" %}
-- {% include t.html key="asset3_name" %}
+- ASSET1=resource-core
+- ASSET1_PATH=/runtime_resources
+- ASSET1_NAME=app_resources
+- ASSET2=resource-core
+- ASSET2_PATH=/templates
+- ASSET2_NAME=templates
+- ASSET3=webfonts-core
+- ASSET3_PATH=/
+- ASSET3_NAME=webfonts
 
 #### {% include t.html key="heading_required_clients" %}
-- {% include t.html key="client1" %}
-- {% include t.html key="client2" %}
-- {% include tm.html key="client_settings" %}
+- CLIENT1=core-client-dashboard
+- CLIENT2=core-client-content
+- CLIENT***[{% include t.html key="any_number" %}]***=core-client-settings
 
 ### {% include t.html key="heading_branding" %}
 
@@ -74,7 +74,7 @@ npm ci
 
 ### {% include t.html key="heading_setup_scripts" %}
 
-{% include tm.html key="setup_scripts_cd" %}
+`cd [os]/scripts`
 
 {% include tm.html key="setup_scripts_clone" %}
 

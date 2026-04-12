@@ -24,8 +24,8 @@ Developer scripts for an app repos built on Pankosmia
 ## {% include t.html key="heading_use" %}
 
 {% include tm.html key="use_intro" %}
-- {% include t.html key="use_delete_working" %}
-- {% include tm.html key="use_restart_server" %}
+- {% include tmp.html key="use_delete_working" %}
+- {% include tmp.html key="use_restart_server" %}
 - {% include t.html key="use_one_instance" %}
 
 ### {% include t.html key="heading_client_development" %}

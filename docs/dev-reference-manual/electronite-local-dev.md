@@ -30,16 +30,16 @@ How to make changes to Electronite while using a local development server.
 
 ### {% include t.html key="heading_electronite_dev_viewer" %}
 
-1. {% include t.html key="dev_viewer_create" %}
-  - {% include tm.html key="dev_viewer_linux" %}
-  - {% include tm.html key="dev_viewer_windows" %}
-  - {% include tm.html key="dev_viewer_macos" %}
+1. 💡 {% include t.html key="dev_viewer_create" %}
+  - Linux: `cd linux/scripts` {% include t.html key="then" %} `./build_viewer.bsh`
+  - Windows: `cd windows\\scripts` {% include t.html key="then" %} `.\build_viewer.ps1` ({% include tc.html key="use_powershell" %})
+  - MacOS: `cd macos/scripts` {% include t.html key="then" %} `./build_viewer.zsh`
 
 2. {% include tm.html key="dev_viewer_read" %}
-  - {% include tm.html key="dev_viewer_run_tip" %}
-    - {% include tm.html key="dev_viewer_run_linux" %}
-    - {% include tm.html key="dev_viewer_run_windows" %}
-    - {% include tm.html key="dev_viewer_run_macos" %}
+  - 💡 {% include tmp.html key="dev_viewer_run_tip" %}
+    - Linux: `cd linux/scripts` {% include t.html key="then" %} `./viewer.bsh` -- {% include t.html key="dev_tools" %} Ctrl + Shift + I"
+    - Windows: `cd windows\scripts` {% include t.html key="then" %} `.\viewer.bat` -- {% include t.html key="dev_tools" %} Ctrl + Shift + I"
+    - MacOS: `cd macos/scripts` {% include t.html key="then" %} `./viewer.zsh` -- {% include t.html key="dev_tools" %} Cmd + Option + I"
 
 ### {% include t.html key="heading_making_dev_changes" %}
 
@@ -47,7 +47,7 @@ How to make changes to Electronite while using a local development server.
 
 {% include t.html key="dev_changes_browser_note" %}
 
-{% include tm.html key="dev_changes_tip" %}
+💡 {% include tm.html key="dev_changes_tip" %}
 <pre>
 |-- [linux | windows | macos]
     |-- viewer
@@ -82,9 +82,9 @@ How to make changes to Electronite while using a local development server.
 {% include tm.html key="deploy_favicon" %}
 
 {% include t.html key="deploy_app_launcher_intro" %}
-  - {% include t.html key="deploy_app_launcher_linux" %}
-  - {% include t.html key="deploy_app_launcher_windows" %}
-  - {% include t.html key="deploy_app_launcher_macos" %}
+  - linux\buildResources\appLauncherElectron.sh
+  - windows\buildResources\appLauncherElectron.bat
+  - macos\buildResources\appLauncherElectron.sh
 
 {% include t.html key="deploy_app_launcher_test" %}
 
@@ -100,18 +100,18 @@ How to make changes to Electronite while using a local development server.
 
 #### {% include t.html key="heading_bundle_viewer_script" %}
 
-- {% include tm.html key="bundle_viewer_windows" %}
+- Windows - `cd windows\scripts` {% include t.html key="then" %} `.\bundle_viewer.ps1`
   - {% include t.html key="bundle_viewer_windows_optional" %}
     - {% include tm.html key="bundle_viewer_windows_arg1" %}
   - {% include t.html key="bundle_viewer_windows_desc" %}
 
 
-- {% include tm.html key="bundle_viewer_macos" %}
+- MacOS - `cd /macos/scripts` {% include t.html key="then" %} `./bundle_viewer.zsh`
   - {% include t.html key="bundle_viewer_macos_optional" %}
     - {% include tm.html key="bundle_viewer_macos_arg1" %}
   - {% include t.html key="bundle_viewer_macos_desc" %}
 
-- {% include tm.html key="bundle_viewer_linux" %}
+- Linux - `cd /linux/scripts` {% include t.html key="then" %} `./bundle_viewer.bsh`
   - {% include t.html key="bundle_viewer_linux_before" %}
     - {% include t.html key="bundle_viewer_linux_step1" %}
     - {% include t.html key="bundle_viewer_linux_step2" %}
@@ -120,6 +120,6 @@ How to make changes to Electronite while using a local development server.
     - {% include tm.html key="bundle_viewer_linux_step5" %}
 
 #### {% include t.html key="heading_bundle_viewer_outputs" %}
-- {% include tm.html key="bundle_output_windows" %}
-- {% include tm.html key="bundle_output_macos" %}
-- {% include tm.html key="bundle_output_linux" %}
+- Windows: `releases\\windows\\intel64\\[app-name]-windows-setup-standalone-[version].exe`
+- MacOS: `releases/macos/[intel64|arm64]/[app-name]-macos-installer-standalone-[intel64|arm64]-[version].pkg`
+- Linux: `releases/linux/[app-name]-linux-standalone-intel64-[version].deb`

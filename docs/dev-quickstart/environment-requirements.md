@@ -23,24 +23,24 @@ Local dev environment requirements for AppDev of a Desktop App repo built on Pan
 
 ## {% include t.html key="heading_tested_on" %}
 
-### {% include t.html key="heading_ubuntu" %}
-- {% include t.html key="ubuntu_npm" %}
-- {% include t.html key="ubuntu_node" %}
-- {% include tm.html key="ubuntu_rustc" %}
+### Ubuntu 24.04 {% include t.html key="with" %}
+- npm 10.7.0
+- node 20.18.1
+- rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
 
-### {% include t.html key="heading_windows" %}
-- {% include tm.html key="windows_git" %}
-- {% include t.html key="windows_npm" %}
-- {% include t.html key="windows_node" %}
-- {% include tm.html key="windows_rustc" %}
-- {% include tm.html key="windows_cmake" %}
+### Windows 11 {% include t.html key="with" %}
+- git 2.44.0; {% include t.html key="see" %} [https://git-scm.com/install/windows](https://git-scm.com/install/windows)
+- npm 10.7.0
+- node 20.18.1
+- rustc 1.88.0 -- {% include t.html key="see" %} [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
+- cmake 3.31.0 -- {% include tmp.html key="windows_cmake_ver" %} {% include t.html key="see" %} [https://cmake.org/download/](https://cmake.org/download/)
 - {% include t.html key="windows_powershell" %}
-- {% include tm.html key="windows_inno_setup" %}
+- {% include tmp.html key="windows_inno_setup" %}
 
-### {% include t.html key="heading_macos" %}
-- {% include t.html key="macos_npm_monterey" %}
-- {% include t.html key="macos_npm_sequoia" %}
-- {% include t.html key="macos_node" %}
-- {% include tm.html key="macos_rustc" %}
-- {% include tm.html key="macos_openssl" %}
+### MacOS {% include t.html key="with" %}
+- npm 10.7.0 ({% include t.html key="tested_on" %} Monterey)
+- npm 10.8.2 ({% include t.html key="tested_on" %} Sequoia)
+- node 20.18.1
+- rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
+- OpenSSL 3.5.0 -- `brew install openssl`
 
