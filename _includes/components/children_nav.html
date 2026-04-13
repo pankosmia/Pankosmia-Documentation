@@ -81,8 +81,13 @@
 {% include toc_heading_custom.html %}
 <ul>
   {% for nav_child in nav_children %}
+  {%- comment -%}Determine link text: use i18n if available, otherwise fall back to nav_child.title{%- endcomment -%}
+  {%- assign link_text = nav_child.title -%}
+  {%- if nav_child.i18n_key -%}
+    {%- assign link_text = site.data.i18n.pages[nav_child.i18n_key].nav_title[current_lang] | default: site.data.i18n.pages[nav_child.i18n_key].title[current_lang] | default: nav_child.title -%}
+  {%- endif -%}
   <li>
-    <a href="{{ nav_child.url | relative_url }}">{{ nav_child.title }}</a>{% if nav_child.summary %} - {{ nav_child.summary }}{% endif %}
+    <a href="{{ nav_child.url | relative_url }}">{{ link_text }}</a>{% if nav_child.summary %} - {{ nav_child.summary }}{% endif %}
   </li>
   {% endfor %}
 </ul>
