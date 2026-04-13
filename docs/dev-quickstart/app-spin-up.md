@@ -12,7 +12,7 @@ parent: Dev Quickstart
 # {% include t.html key="title" %}
 {: .no_toc }
 
-How to fork and configure a Desktop App repo built on Pankosmia
+{% include t.html key="subtitle" %}
 {: .fs-6 .fw-300 }
 
 ## {% include tc.html key="heading_toc" %}

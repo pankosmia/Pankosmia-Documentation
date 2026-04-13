@@ -11,7 +11,7 @@ parent: Dev Reference Manual
 # {% include t.html key="title" %}
 {: .no_toc }
 
-How to make changes to Electronite while using a local development server.
+{% include t.html key="subtitle" %}
 {: .fs-6 .fw-300 }
 
 ## {% include tc.html key="heading_toc" %}

@@ -242,6 +242,11 @@
         "fr": "Mise en route de l'application",
         "es": "Puesta en marcha de la aplicación"
       },
+      "subtitle": {
+        "en": "How to fork and configure a Desktop App repo built on Pankosmia",
+        "fr": "Comment forker et configurer un dépôt d'application de bureau basé sur Pankosmia",
+        "es": "Cómo hacer fork y configurar un repositorio de aplicación de escritorio basado en Pankosmia"
+      },
       "heading_fork_template": {
         "en": "Fork desktop-app-template",
         "fr": "Forker desktop-app-template",
@@ -414,6 +419,11 @@
         "fr": "Exigences de l'environnement",
         "es": "Requisitos del entorno"
       },
+      "subtitle": {
+        "en": "Local dev environment requirements for AppDev of a Desktop App repo built on Pankosmia",
+        "fr": "Exigences de l'environnement de développement local pour le développement d'un dépôt d'application de bureau basé sur Pankosmia",
+        "es": "Requisitos del entorno de desarrollo local para el desarrollo de un repositorio de aplicación de escritorio basado en Pankosmia"
+      },
       "heading_tested_on": {
         "en": "Tested on:",
         "fr": "Testé sur :",
@@ -455,6 +465,11 @@
         "en": "Scripts",
         "fr": "Scripts",
         "es": "Scripts"
+      },
+      "subtitle": {
+        "en": "Developer scripts for an app repos built on Pankosmia",
+        "fr": "Scripts de développement pour des dépôts d'applications basés sur Pankosmia",
+        "es": "Scripts de desarrollo para repositorios de aplicaciones basados en Pankosmia"
       },
       "heading_use": {
         "en": "Use",
@@ -579,6 +594,11 @@
         "en": "Electronite Local Development",
         "fr": "Développement local Electronite",
         "es": "Desarrollo local de Electronite"
+      },
+      "subtitle": {
+        "en": "How to make changes to Electronite while using a local development server.",
+        "fr": "Comment apporter des modifications à Electronite en utilisant un serveur de développement local.",
+        "es": "Cómo realizar cambios en Electronite mientras se usa un servidor de desarrollo local."
       },
       "heading_platforms": {
         "en": "Windows, MacOS, or Linux",
