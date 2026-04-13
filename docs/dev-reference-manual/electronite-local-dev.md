@@ -47,7 +47,7 @@ How to make changes to Electronite while using a local development server.
 
 {% include t.html key="dev_changes_browser_note" %}
 
-💡 {% include tm.html key="dev_changes_tip" %}
+💡 {% include tmp.html key="dev_changes_tip" %}
 <pre>
 |-- [linux | windows | macos]
     |-- viewer
