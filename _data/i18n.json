@@ -73,7 +73,7 @@
       },
       "intro": {
         "en": "Pankosmia is a scripture translation software Ecosystem. It is used to build multiple translation tools, using shared components.",
-        "fr": "Pankosmia est un écosystème logiciel de traduction des Écritures. Il est utilisé pour créer plusieurs outils de traduction à partir de composants partagés.",
+        "fr": "Pankosmia est un écosystème de logiciels pour traduire la Bible. Il permet de créer plusieurs outils de traduction à partir de composants partagés.",
         "es": "Pankosmia es un ecosistema de software de traducción de las Escrituras. Se utiliza para crear múltiples herramientas de traducción mediante componentes compartidos."
       },
       "the_pankosmia_project": {
@@ -110,7 +110,7 @@
       },
       "philosophy_intro_paragraph": {
         "en": "Pankosmia began with a conversation about the [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d) principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don't focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger.",
-        "fr": "Pankosmia est né d'une conversation autour du principe [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d). En résumé, si votre projet consiste à faire réciter Shakespeare à un singe sur un piédestal, ne vous concentrez pas sur le piédestal. Autrement dit, attaquez-vous d'abord à la partie difficile. Pour nous, deux des parties difficiles étaient la prise en charge de Graphite et la garantie d'une expérience hors ligne d'abord, car ne pas le faire pourrait mettre des personnes en danger.",
+        "fr": "Pankosmia est né d'une conversation autour du principe [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d). Pour faire court, si votre projet consiste à faire réciter Shakespeare à un singe sur un piédestal, ne vous concentrez pas sur le piédestal. Autrement dit, attaquez-vous d'abord à la partie difficile. Pour nous, deux des parties difficiles étaient la prise en charge de Graphite et la garantie d'une expérience hors ligne d'abord, car ne pas le faire pourrait mettre des personnes en danger.",
         "es": "Pankosmia comenzó con una conversación sobre el principio [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d). En resumen, si tu proyecto consiste en que un mono recite Shakespeare sobre un pedestal, no te concentres en el pedestal. En otras palabras, aborda primero lo difícil. Para nosotros, dos de las partes difíciles eran el soporte de Graphite y garantizar una experiencia offline-first, ya que no hacerlo podría poner a personas en peligro."
       },
       "philosophy_corollaries": {
@@ -125,7 +125,7 @@
       },
       "philosophy_corollary2": {
         "en": "the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood",
-        "fr": "la solution fonctionnelle mais maladroite que nous pouvons construire et livrer vaut mieux que la belle solution que nous ne pouvons ni construire ni livrer, et que la belle interface que nous pouvons livrer mais qui ne fait pas ce qu'il faut sous le capot",
+        "fr": "la solution fonctionnelle mais maladroite que nous pouvons construire et livrer vaut mieux que la belle solution que nous ne pouvons ni construire ni livrer, et elle vaut aussi plus que la belle interface que nous pouvons livrer mais qui ne fait pas ce qu'il faut sous le capot",
         "es": "la solución funcional pero tosca que podemos construir y entregar es mejor que la solución bonita que no podemos construir ni entregar, y que la interfaz bonita que podemos entregar pero que no hace lo correcto internamente"
       },
       "philosophy_corollary3": {
@@ -145,12 +145,12 @@
       },
       "distinctive1": {
         "en": "open source (but third-party products may include closed-source clients)",
-        "fr": "open source (mais les produits tiers peuvent inclure des clients à code source fermé)",
+        "fr": "logiciel libre (mais les produits tiers peuvent inclure des clients à code source fermé)",
         "es": "código abierto (pero los productos de terceros pueden incluir clientes de código cerrado)"
       },
       "distinctive2": {
         "en": "radically offline-first",
-        "fr": "radicalement hors ligne d'abord",
+        "fr": "radicalement 'hors ligne d'abord'",
         "es": "radicalmente offline-first"
       },
       "distinctive3": {
@@ -160,12 +160,12 @@
       },
       "distinctive4": {
         "en": "built around Scripture Burrito for all content",
-        "fr": "construit autour de Scripture Burrito pour tout le contenu",
+        "fr": "construit autour de Scripture Burrito pour tout type de contenu",
         "es": "construido en torno a Scripture Burrito para todo el contenido"
       },
       "distinctive5": {
         "en": "multiple \"white app\" products that can be branded and maintained by different organizations and developed to meet different user needs",
-        "fr": "plusieurs produits « white app » pouvant être personnalisés et maintenus par différentes organisations et développés pour répondre à différents besoins utilisateurs",
+        "fr": "plusieurs produits « white app » (basés sur le même code qui n'affiche aucun nom de produit en soi) pouvant être personnalisés et maintenus par différentes organisations et développés pour répondre à différents besoins utilisateurs",
         "es": "múltiples productos \"white app\" que pueden ser personalizados y mantenidos por diferentes organizaciones y desarrollados para satisfacer diferentes necesidades de los usuarios"
       },
       "distinctive6": {
@@ -215,7 +215,7 @@
       },
       "architecture2a": {
         "en": "core clients use React and MUI, use of other frameworks is possible",
-        "fr": "les clients principaux utilisent React et MUI, l'utilisation d'autres frameworks est possible",
+        "fr": "les clients principaux utilisent React et MUI, mais l'utilisation d'autres frameworks est possible",
         "es": "los clientes principales usan React y MUI, el uso de otros frameworks es posible"
       },
       "architecture3": {
@@ -225,7 +225,7 @@
       },
       "architecture4": {
         "en": "an extensive online build toolchain for multiple operating systems",
-        "fr": "une chaîne d'outils de build en ligne étendue pour plusieurs systèmes d'exploitation",
+        "fr": "une chaîne de compilation en ligne étendue qui gère des builds pour plusieurs systèmes d'exploitation",
         "es": "una amplia cadena de herramientas de build en línea para múltiples sistemas operativos"
       }
     },
