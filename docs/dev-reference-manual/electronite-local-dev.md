@@ -1,49 +1,53 @@
 ---
 layout: default
 title: Electronite Local Development
+i18n_key: electronite_local_development
+lang: en
 permalink: /electronite-local-development/
 parent: Dev Reference Manual
 ---
-# Electronite Local Development
+{%- include init_i18n.html -%}
+
+# {% include t.html key="title" %}
 {: .no_toc }
 
-How to make changes to Electronite while using a local development server.
+{% include t.html key="subtitle" %}
 {: .fs-6 .fw-300 }
 
-## Table of Contents
+## {% include tc.html key="heading_toc" %}
 {: .no_toc .text-delta }
 
 - TOC
 {:toc}
 
-## Windows, MacOS, or Linux
+## {% include t.html key="heading_platforms" %}
 
-### Prerequisites
+### {% include t.html key="heading_prerequisites" %}
 {: .no_toc }
 
-1. See [Environment Requirements](../environment-requirements/).
-2. Consider [App Spin-up](../app-spin-up/) and [Scripts](../scripts/).
+1. {% include tm.html key="prereq_environment" %}
+2. {% include tm.html key="prereq_consider" %}
 
-### Electronite Dev Viewer
+### {% include t.html key="heading_electronite_dev_viewer" %}
 
-1. 💡 To create an Electronite viewer for use with your local dev build environment, run this script once while online:
-  - Linux:	`cd linux/scripts` then `./build_viewer.bsh`
-  - Windows: `cd windows\scripts` then `.\build_viewer.ps1` (use a powershell terminal)
-  - MacOS: `cd macos/scripts` the `./build_viewer.zsh`
+1. 💡 {% include t.html key="dev_viewer_create" %}
+  - Linux: `cd linux/scripts` {% include t.html key="then" %} `./build_viewer.bsh`
+  - Windows: `cd windows\\scripts` {% include t.html key="then" %} `.\build_viewer.ps1` ({% include tc.html key="use_powershell" %})
+  - MacOS: `cd macos/scripts` {% include t.html key="then" %} `./build_viewer.zsh`
 
-2. Read the 'Run ...' and 'Client Development ...' bullets at the top of app [README 'Use'](https://github.com/pankosmia/desktop-app-template#use).
-  - 💡 When the server is running (the `run` script), start the Electronite viewer created by the `build_viewer` script:
-    - Linux: `cd linux/scripts` then `./viewer.bsh` -- Dev Tools: Ctrl + Shift + I
-    - Windows: `cd windows\scripts` then `.\viewer.bat` -- Dev Tools: Ctrl + Shift + I
-    - MacOS: `cd macos/scripts` then `./viewer.zsh` -- Dev Tools: Cmd + Option + I
+2. {% include tm.html key="dev_viewer_read" %}
+  - 💡 {% include tmp.html key="dev_viewer_run_tip" %}
+    - Linux: `cd linux/scripts` {% include t.html key="then" %} `./viewer.bsh` -- {% include t.html key="dev_tools" %} Ctrl + Shift + I"
+    - Windows: `cd windows\scripts` {% include t.html key="then" %} `.\viewer.bat` -- {% include t.html key="dev_tools" %} Ctrl + Shift + I"
+    - MacOS: `cd macos/scripts` {% include t.html key="then" %} `./viewer.zsh` -- {% include t.html key="dev_tools" %} Cmd + Option + I"
 
-### Making dev changes to Electronite
+### {% include t.html key="heading_making_dev_changes" %}
 
-Electronite is a drop-in replacement for electron that provides an enhanced font rendering system. Make your dev changes the same way as for an Electron viewer.
+{% include t.html key="dev_changes_intro" %}
 
-This project works in either a web browser or the Electronite viewer. Only add code to Electron/Electronite that are necessary for it to handle things that web browser already do (e.g., Print, Find, Zoom, Back, Forward). Avoid coding in such a way that prevents web browser use.
+{% include t.html key="dev_changes_browser_note" %}
 
-💡 The way to develop in Electronite is to start by modifying the code that is used by your dev viewer. The file structure to focus on is below, in particular `electronStartup.js` and `preload.js`. Make changes here first to test in local dev:
+💡 {% include tmp.html key="dev_changes_tip" %}
 <pre>
 |-- [linux | windows | macos]
     |-- viewer
@@ -56,67 +60,66 @@ This project works in either a web browser or the Electronite viewer. Only add c
                         |-- favicon.png
                         |-- favicon@1.5x.png
                         |-- favicon@1.25x.png
+                        |-- favicon@1.75x.png
                         |-- favicon@2x.png
                         |-- preload.js
 </pre>
 
-### Deploying tested dev changes to Electronite
+### {% include t.html key="heading_deploying_dev_changes" %}
 
-If changes to `electronStartup.js` are required, reproduce these changes in the following two files:
+{% include tm.html key="deploy_electronstartup_intro" %}
 <pre>
 |-- buildResources
     |-- electron
-        |-- electronDevStartup.js (used by the viewer and the Linux app; launches the viewer without starting the server)
-        |-- electronStartup.js (used by the Windows and MacOS apps; starts the server then launches the viewer)
+        |-- electronDevStartup.js ({% include t.html key="electron_dev_startup" %})
+        |-- electronStartup.js ({% include t.html key="electron_startup" %})
 
 </pre>
 
-Test `electronDevStartup.js` by re-running the `build_viewer` script. See [Electronite Dev Viewer](#electronite-dev-viewer) above. Also used in the Linux app.
-Test `electronStartup.js` by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs for Windows/MacOS.
+{% include tm.html key="deploy_test_dev_startup" %}
+{% include tm.html key="deploy_test_startup" %}
 
-If a change needs to be made to favicon*.png, make those changes in the `globalBuildResources` directory. The same test instructions above apply.
+{% include tm.html key="deploy_favicon" %}
 
-If a change needs to be made to the `appLauncherElectron` script, it will need to be made in 3 different places and tested on three different operating systems. Those file lives at:
+{% include t.html key="deploy_app_launcher_intro" %}
   - linux\buildResources\appLauncherElectron.sh
   - windows\buildResources\appLauncherElectron.bat
   - macos\buildResources\appLauncherElectron.sh
 
-Test by either building locally on all three operating systems, or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs.
+{% include t.html key="deploy_app_launcher_test" %}
 
-### Local Installer Build
+### {% include t.html key="heading_local_installer_build" %}
 {: .no_toc }
 
-Before doing this, also consider [To Generate Artifacts](../scripts/#to-generate-artifacts)
+{% include tm.html key="local_installer_consider" %}
 
-#### Prerequisites:
-  - Ensure the server (`build_server` script) is current!
-  - Windows has an additional requirement for running this `bundle_viewer` build locally:
-    - Install [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3
+#### {% include t.html key="heading_installer_prerequisites" %}
+  - {% include tm.html key="installer_prereq_server" %}
+  - {% include t.html key="installer_prereq_windows" %}
+    - {% include tm.html key="installer_prereq_inno" %}
 
-#### `bundle_viewer` script
+#### {% include t.html key="heading_bundle_viewer_script" %}
 
-- Windows - `cd windows\scripts` then `.\bundle_viewer.ps1`
-  - Optional arguments:
-    - `.\bundle_viewer.ps1 -ServerOff "Y"`  
-       or: "y"; Will not ask if server is off
-  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
+- Windows - `cd windows\scripts` {% include t.html key="then" %} `.\bundle_viewer.ps1`
+  - {% include t.html key="bundle_viewer_windows_optional" %}
+    - {% include tm.html key="bundle_viewer_windows_arg1" %}
+  - {% include t.html key="bundle_viewer_windows_desc" %}
 
 
-- MacOS - `cd /macos/scripts` the `./bundle_viewer.zsh`
-  - Optional arguments:
-    - `./bundle_viewer.zsh -s`  
-       Will not ask if server is off
-  - Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.
+- MacOS - `cd /macos/scripts` {% include t.html key="then" %} `./bundle_viewer.zsh`
+  - {% include t.html key="bundle_viewer_macos_optional" %}
+    - {% include tm.html key="bundle_viewer_macos_arg1" %}
+  - {% include t.html key="bundle_viewer_macos_desc" %}
 
-- Linux - `cd /linux/scripts` the `./bundle_viewer.bsh`
-  - Before running:
-    - manually delete prior local builds
-    - npm ci (if not already run)
-    - app_setup.bat to ensure version consistency (unless already current)
-    - run run `./bundle_tgz.bsh`
-    - then run `./bundle_viewer.bsh`
+- Linux - `cd /linux/scripts` {% include t.html key="then" %} `./bundle_viewer.bsh`
+  - {% include t.html key="bundle_viewer_linux_before" %}
+    - {% include t.html key="bundle_viewer_linux_step1" %}
+    - {% include t.html key="bundle_viewer_linux_step2" %}
+    - {% include t.html key="bundle_viewer_linux_step3" %}
+    - {% include tm.html key="bundle_viewer_linux_step4" %}
+    - {% include tm.html key="bundle_viewer_linux_step5" %}
 
-#### `bundle_viewer` script Outputs:
-- Windows: `releases\windows\intel64\[app-name]-windows-setup-standalone-[version].exe`
+#### {% include t.html key="heading_bundle_viewer_outputs" %}
+- Windows: `releases\\windows\\intel64\\[app-name]-windows-setup-standalone-[version].exe`
 - MacOS: `releases/macos/[intel64|arm64]/[app-name]-macos-installer-standalone-[intel64|arm64]-[version].pkg`
 - Linux: `releases/linux/[app-name]-linux-standalone-intel64-[version].deb`

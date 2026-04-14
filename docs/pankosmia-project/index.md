@@ -2,46 +2,51 @@
 layout: default
 nav_order: 2
 title: The Pankosmia Project
+i18n_key: the_pankosmia_project
+lang: en
 permalink: /pankosmia-project/
 ---
-# The Pankosmia Project
+
+{%- include init_i18n.html -%}
+
+# {% include t.html key="title" %}
 {: .no_toc }
 
-## Table of Contents
+## {% include tc.html key="heading_toc" %}
 {: .no_toc .text-delta }
 
 - TOC
 {:toc}
 
-## Philosophy
-Pankosmia began with a conversation about the [First the monkey](https://blog.x.company/tackle-the-monkey-first-90fd6223e04d) principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don't focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger.
+## {% include t.html key="heading_philosophy" %}
+{% include tm.html key="philosophy_intro_paragraph" %}
 
-Some corollaries of "First the Monkey" for us are 
-- focus on the hard and unsolved problems
-- the working but clunky solution we can build and ship is better than both the lovely solution we can't build and ship and the lovely UI we can ship that doesn't do the right thing under the hood
-- polishing things that we know how to polish is rarely urgent
-- users need happy devs because devs build the systems the users need
+{% include t.html key="philosophy_corollaries" %}
+- {% include t.html key="philosophy_corollary1" %}
+- {% include t.html key="philosophy_corollary2" %}
+- {% include t.html key="philosophy_corollary3" %}
+- {% include t.html key="philosophy_corollary4" %}
 
-## Project Distinctives
+## {% include t.html key="heading_distinctives" %}
 
-- open source (but third-party products may include closed-source clients)
-- radically offline-first
-- support for graphite-enabled fonts
-- built around Scripture Burrito for all content
-- multiple "white app" products that can be branded and maintained by different organizations and developed to meet different user needs
-- multiple clients per product, including standard clients for core functionality
+- {% include t.html key="distinctive1" %}
+- {% include t.html key="distinctive2" %}
+- {% include t.html key="distinctive3" %}
+- {% include t.html key="distinctive4" %}
+- {% include t.html key="distinctive5" %}
+- {% include t.html key="distinctive6" %}
 
-## Architecture
+## {% include t.html key="heading_architecture" %}
 
-Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes
+{% include t.html key="architecture_paragraph" %}
 
-- a localhost HTTP server, written in Rust, that handles
-  - access to local burritos
-  - language and font options
-  - access to burrito servers (when Internet is enabled)
-  - shared application state between clients
-- multiple clients, served as built HTML/CSS/Javascript:
-  - core clients use React and MUI, use of other frameworks is possible
-- core Node libraries to simplify the creation of new clients
-- an extensive online build toolchain for multiple operating systems
+- {% include t.html key="architecture1" %}
+  - {% include t.html key="architecture1a" %}
+  - {% include t.html key="architecture1b" %}
+  - {% include t.html key="architecture1c" %}
+  - {% include t.html key="architecture1d" %}
+- {% include t.html key="architecture2" %}
+  - {% include t.html key="architecture2a" %}
+- {% include t.html key="architecture3" %}
+- {% include t.html key="architecture4" %}
 

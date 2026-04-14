@@ -29,6 +29,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # twitter_username: jekyllrb
 github_username: Pankosmia
 
+# Set the default language
+lang: en
+
+languages:
+  - en
+  - fr
+  - es
+
 aux_links: # external links at the top right on all pages
   "Pankosmia on GitHub": "https://github.com/pankosmia"
 aux_links_new_tab: false
@@ -80,7 +88,7 @@ search:
 
 # Add a link from the bottom of each page to its top
 back_to_top: true
-back_to_top_text: "Back to top"
+#back_to_top_text: "Back to top" # now from i18n.json in _includes/components/footer.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.

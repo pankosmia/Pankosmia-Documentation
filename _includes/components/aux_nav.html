@@ -1,0 +1,41 @@
+{%- assign base_url = page.url | remove_first: '/fr' | remove_first: '/es' -%}
+
+<nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    {%- comment -%}Language switcher{%- endcomment -%}
+    {% for lang in site.languages %}
+      <li class="aux-nav-list-item">
+        {% if lang == site.lang %}
+          <a href="{{ site.baseurl }}{{ base_url }}" class="site-button{% if current_lang == lang %} active{% endif %}">
+        {% else %}
+          <a href="{{ site.baseurl }}/{{ lang }}{{ base_url }}" class="site-button{% if current_lang == lang %} active{% endif %}">
+        {% endif %}
+          {{ site.data.i18n.language_name[lang] }}
+        </a>
+      </li>
+    {% endfor %}
+    
+    {%- comment -%}Other aux links{%- endcomment -%}
+    {% for link in site.aux_links %}
+      <li class="aux-nav-list-item">
+        {% if link.last contains "://" %}
+          <a href="{{ link.last }}" class="site-button"
+            {% if site.aux_links_new_tab %}
+            target="_blank" rel="noopener noreferrer"
+            {% endif %}
+          >
+            {{ link.first }}
+          </a>
+        {% else %}
+          <a href="{{ site.baseurl }}{{ link.last }}" class="site-button"
+            {% if site.aux_links_new_tab %}
+            target="_blank" rel="noopener noreferrer"
+            {% endif %}
+          >
+            {{ link.first }}
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

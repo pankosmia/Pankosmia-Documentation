@@ -2,51 +2,55 @@
 layout: default
 nav_order: 2
 title: App Spin-up
+i18n_key: app_spin-up
+lang: en
 permalink: /app-spin-up/
 parent: Dev Quickstart
 ---
-# App Spin-up
+{%- include init_i18n.html -%}
+
+# {% include t.html key="title" %}
 {: .no_toc }
 
-How to fork and configure a Desktop App repo built on Pankosmia
+{% include t.html key="subtitle" %}
 {: .fs-6 .fw-300 }
 
-## Table of Contents
+## {% include tc.html key="heading_toc" %}
 {: .no_toc .text-delta }
 
 - TOC
 {:toc}
 
-## Fork desktop-app-template
-[Desktop-app-template](https://github.com/pankosmia/desktop-app-template) is a repo designed to be forked to spin up and maintain new Desktop App repos built on Pankosmia.
+## {% include t.html key="heading_fork_template" %}
+{% include tm.html key="fork_template_intro" %}
 
-1. Start at https://github.com/pankosmia/desktop-app-template/fork
+1. {% include t.html key="fork_step1" %} [https://github.com/pankosmia/desktop-app-template/fork](https://github.com/pankosmia/desktop-app-template/fork)
 
-2. Choose a repository name of 30 characters or less if you want to keep **Windows developers** from needing to clone to a shorter local repo name. The windows cargo build c compiler requires repos names of 30 characters or less.
+2. {% include t.html key="fork_step2" %}
 
-3. Create Fork
+3. {% include t.html key="fork_step3" %}
 
-## Setup
+## {% include t.html key="heading_setup" %}
 
-### Recommended directory structure:
+### {% include t.html key="heading_directory_structure" %}
 <ul><pre>
 |-- repos
     |-- pankosmia
-        |-- [your-desktop-app-repo-name] <b><em>(30 characters or less on windows!)</em></b>
+        |-- [your-desktop-app-repo-name] <b><em>({% include t.html key="30_chars" %})</em></b>
 </pre></ul>
 
 ### package.json
-Replace all instances of "desktop-app-template" in package.json with "[your-desktop-app-repo-name]"
+{% include t.html key="package_json_instructions" %}
 
-### At the root of your clone of this repo, run:
+### {% include t.html key="heading_npm_install" %}
 <ul><pre>
-npm ci
+npm install
 </pre></ul>
 
-### Edit app_config.env
-Entering the App Name, version number, Apps Short Name for working directory, assets, and clients.
+### {% include t.html key="heading_edit_app_config" %}
+{% include t.html key="edit_app_config_intro" %}
 
-#### Required Assets:
+#### {% include t.html key="heading_required_assets" %}
 - ASSET1=resource-core
 - ASSET1_PATH=/runtime_resources
 - ASSET1_NAME=app_resources
@@ -57,52 +61,42 @@ Entering the App Name, version number, Apps Short Name for working directory, as
 - ASSET3_PATH=/
 - ASSET3_NAME=webfonts
 
-#### Required Clients:
+#### {% include t.html key="heading_required_clients" %}
 - CLIENT1=core-client-dashboard
 - CLIENT2=core-client-content
-- CLIENT***[any number]***=core-client-settings
+- CLIENT***[{% include t.html key="any_number" %}]***=core-client-settings
 
-### Branding
+### {% include t.html key="heading_branding" %}
 
-Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see the [Theme section of UX/UI guidelines](https://pankosmia.dev/uxui-guidelines/#theme).
+{% include tm.html key="branding_theme" %}
 
-For implementing your logo, see the [Branding README](https://github.com/pankosmia/desktop-app-template/tree/main/branding#readme){:target="_blank" :rel="noopener noreferrer"} for scripts to customize /globalBuildResources/*.ico, /globalBuildResources/*.png, and /globalBuildResources/icon.icns, along with info on how each is used.
+{% include tm.html key="branding_logo" %}
 
-### Setup Scripts
+### {% include t.html key="heading_setup_scripts" %}
 
 `cd [os]/scripts`
 
-Run<sup id="a1">[[1]](#f1)</sup> the `clone` script to clone all repos listed in `app_config.env` (assets and clients)
+{% include tm.html key="setup_scripts_clone" %}
 
-Run<sup id="a1">[[1]](#f1)</sup> the `app_setup` script to generate the config files to match `app_config.env`. Re-run<sup id="a1">[[1]](#f1)</sup> the `app_setup` script anytime `app_config.env` is modified.
+{% include tm.html key="setup_scripts_app_setup" %}
 
-Run<sup id="a1">[[1]](#f1)</sup> the `build_clients` script to build all clients. Be patient. This will take a while.
-- This script is intended for setting all clients up for <b>first use</b>, or for rebuilding <b>all</b> clients to their <b>latest main</b> branch. It changes to the main branch, pulls the latest, and builds (or rebuilds) every client every time it is run.<br />
-- Build client manually when you want to use a branch or when you only need to rebuild one client or when you do not want all clients built from their latest main branch!
+{% include tm.html key="setup_scripts_build_clients" %}
+- {% include tmp.html key="setup_scripts_build_clients_note1" %}
+- {% include t.html key="setup_scripts_build_clients_note2" %}
 
-Run<sup id="a1">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.)
+{% include tm.html key="setup_scripts_build_server" %}
 
-(Optional) Run<sup id="a1">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local dev build environment.
+{% include tm.html key="setup_scripts_build_viewer" %}
 
-## Running your Setup
+## {% include t.html key="heading_running_your_setup" %}
 
-Run<sup id="a1">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.
-- Only one instance of the same server can be running at a time.
+{% include tm.html key="running_run_script" %}
+- {% include t.html key="running_one_instance" %}
 
-Run the `viewer` script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated.
-- The Electronite viewer is Chromium compiled with [Graphite](https://graphite.sil.org/){:target="_blank" :rel="noopener noreferrer"}
-- Some browsers that support graphite include [Firefox](https://www.firefox.com/){:target="_blank" :rel="noopener noreferrer"}, [Zen Browser](https://zen-browser.app/){:target="_blank" :rel="noopener noreferrer"}, and [LibreWolf](https://librewolf.net/){:target="_blank" :rel="noopener noreferrer"}.
-- See [Electronite Local Dev](../electronite-local-development/) for additional detail.
+{% include tm.html key="running_viewer_script" %}
+- {% include tmp.html key="running_viewer_graphite" %}
+- {% include tmp.html key="running_viewer_browsers" %}
+- {% include tmp.html key="running_viewer_see_also" %}
 
-## Footnotes
-[<b id="f1">1</b>] ...  Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command terminal</b>:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_...repos\pankosmia\[your-desktop-app-repo-name]\windows\scripts>_ `.\[scriptname].bat`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The `.\` is optional from a command prompt.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use a **powershell** terminal for the **.ps1** build scripts.
-<br />
-MacOS developers, run .bsh scripts from a **MacOS terminal**:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`
-<br />
-Linux developers, run .zsh scripts from a **linux terminal**:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`
-
+## {% include tc.html key="heading_footnotes" %}
+{% include tcm.html key="footnote1" %}

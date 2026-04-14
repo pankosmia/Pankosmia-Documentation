@@ -7,23 +7,27 @@
 # This documentation presents {{ site.data.lexicon.app-name }} as an example of how Pankosmia works and what it can do.
 layout: default
 nav_order: 1
-title: Home
+title: Home # required for Jekyll metadata and fallback
+i18n_key: home
+lang: en # used on initial load, before a language has been selected
 ---
-# Pankosmia
+{%- include init_i18n.html -%}
 
-*An ecosystem to build custom-made translation tools*
+# {% include t.html key="heading_main" %}
+
+*{% include t.html key="subheading_main" %}*
 {: .fs-6 .fw-300 }
 
-Pankosmia is a scripture translation software Ecosystem. It is used to build multiple
-translation tools, using shared components.
+{% include t.html key="intro" %}
+
 
 ## Contents
 
-* ### [The Pankosmia Project](pankosmia-project/)
+* ### [{% include t.html key="the_pankosmia_project" %}](pankosmia-project/)
 
-* ### [Dev Quickstart](dev-quickstart/)
+* ### [{% include t.html key="dev_quickstart" %}](dev-quickstart/)
 
-* ### [Dev Reference Manual](dev-reference-manual/)
+* ### [{% include t.html key="dev_reference_manual" %}](dev-reference-manual/)
 
 ---
-[Legal Notices](legal-notices/)
+[{% include t.html key="legal_notices" %}](legal-notices/)
