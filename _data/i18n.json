@@ -358,14 +358,14 @@
         "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_clients` para compilar todos los clientes. Tenga paciencia. Esto tomará un tiempo."
       },
       "setup_scripts_build_clients_note1": {
-        "en": "This script is intended for setting all clients up for <b>first use</b>, or for rebuilding <b>all</b> clients to their <b>latest main</b> branch. It changes to the main branch, pulls the latest, and builds (or rebuilds) every client every time it is run.<br />",
-        "fr": "Ce script est destiné à configurer tous les clients pour une <b>première utilisation</b>, ou à reconstruire <b>tous</b> les clients vers leur branche <b>main la plus récente</b>. Il bascule sur la branche main, récupère la dernière version et compile (ou recompile) chaque client à chaque exécution.<br />",
-        "es": "Este script está destinado a configurar todos los clientes para el <b>primer uso</b>, o para reconstruir <b>todos</b> los clientes a su rama <b>main más reciente</b>. Cambia a la rama main, obtiene la última versión y compila (o recompila) cada cliente cada vez que se ejecuta.<br />"
+        "en": "This script defaults to all main branches, pulls the latest, and builds every client each time it is run. A different branch name can be added as an argument: `./build_clients.[ext] [branch]`<sup id=\"a1\">[[1]](#f1)</sup>. Use \"dev\" for all *dev* branches. Use \"qa\" for all *qa* branches. Then `npm run build` to build repos manually as needed.",
+        "fr": "Ce script utilise par défaut toutes les branches main, récupère la dernière version et compile chaque client à chaque exécution. Un nom de branche différent peut être ajouté en argument : `./build_clients.[ext] [branch]`<sup id=\"a1\">[[1]](#f1)</sup>. Utilisez « dev » pour toutes les branches *dev*. Utilisez « qa » pour toutes les branches *qa*. Puis `npm run build` pour compiler les dépôts manuellement si nécessaire.",
+        "es": "Este script usa por defecto todas las ramas main, obtiene la última versión y compila cada cliente cada vez que se ejecuta. Se puede agregar un nombre de rama diferente como argumento: `./build_clients.[ext] [branch]`<sup id=\"a1\">[[1]](#f1)</sup>. Use \"dev\" para todas las ramas *dev*. Use \"qa\" para todas las ramas *qa*. Luego `npm run build` para compilar los repositorios manualmente según sea necesario."
       },
       "setup_scripts_build_clients_note2": {
-        "en": "Build client manually when you want to use a branch or when you only need to rebuild one client or when you do not want all clients built from their latest main branch!",
-        "fr": "Compilez le client manuellement lorsque vous souhaitez utiliser une branche spécifique, lorsque vous n'avez besoin de recompiler qu'un seul client, ou lorsque vous ne souhaitez pas que tous les clients soient compilés depuis leur dernière branche main !",
-        "es": "¡Compile el cliente manualmente cuando desee usar una rama específica, cuando solo necesite recompilar un cliente, o cuando no desee que todos los clientes se compilen desde su última rama main!"
+        "en": "If working on a branch name that is unique to the client app(s) you are working on, consider using `./build_clients.[ext] [your_branch]`<sup id=\"a1\">[[1]](#f1)</sup> when you want the latest \"main\" from other repos as those without \"your_branch\" will fallback. The exception is the branch name \"dev\", which falls back to \"qa\".",
+        "fr": "Si vous travaillez sur un nom de branche unique au(x) client(s) sur le(s)quel(s) vous travaillez, envisagez d'utiliser `./build_clients.[ext] [your_branch]`<sup id=\"a1\">[[1]](#f1)</sup> lorsque vous souhaitez la dernière version « main » des autres dépôts, car ceux qui n'ont pas \"your_branch\" se replieront sur main. L'exception est le nom de branche « dev », qui se replie sur « qa ».",
+        "es": "Si trabaja en un nombre de rama que es único para la(s) aplicación(es) cliente en las que está trabajando, considere usar `./build_clients.[ext] [your_branch]`<sup id=\"a1\">[[1]](#f1)</sup> cuando desee la última versión \"main\" de otros repositorios, ya que aquellos sin \"your_branch\" recurrirán a main. La excepción es el nombre de rama \"dev\", que recurre a \"qa\"."
       },
       "setup_scripts_build_server": {
         "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.)",
@@ -848,9 +848,9 @@
         "es": "Instalación de los clientes"
       },
       "installing_clients_intro": {
-        "en": "The local_server (pankosmia_web) serves compiled files from the `build` directory of each client, each client must be built.",
-        "fr": "Le local_server (pankosmia_web) sert les fichiers compilés depuis le répertoire `build` de chaque client, chaque client doit être compilé.",
-        "es": "El local_server (pankosmia_web) sirve los archivos compilados desde el directorio `build` de cada cliente, cada cliente debe ser compilado."
+        "en": "The local_server (pankosmia_web) serves compiled files from the `build` directory of each client, so each client must be built.",
+        "fr": "Le local_server (pankosmia_web) sert les fichiers compilés depuis le répertoire `build` de chaque client, donc chaque client doit être compilé.",
+        "es": "El local_server (pankosmia_web) sirve los archivos compilados desde el directorio `build` de cada cliente, por lo que cada cliente debe ser compilado."
       },
       "installing_clients_script": {
         "en": "This is handled by the `clone` and `build_clients` scripts, though can also all be run manually which is helpful during development.",
@@ -943,19 +943,19 @@
         "es": "Para cada repositorio de assets en `/app_config.env`: git checkout main, git pull<br />Para cada repositorio de cliente en `/app_config.env`: `git checkout main`, `git pull`, `npm ci` y `npm run build`.<br />***Los desarrolladores deben compilar manualmente al probar ramas.***"
       },
       "build_clients_linux": {
-        "en": "./build_clients.bsh<br />Optional argument:<br />`./build_clients.bsh -d`<br /> Deletes past logs without asking.",
-        "fr": "./build_clients.bsh<br />Argument optionnel :<br />`./build_clients.bsh -d`<br /> Supprime les anciens logs sans demander.",
-        "es": "./build_clients.bsh<br />Argumento opcional:<br />`./build_clients.bsh -d`<br /> Elimina los logs anteriores sin preguntar."
+        "en": "./build_clients.bsh<br />Optional arguments:<br />`./build_clients.bsh [branch]`<br /> Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`./build_clients.bsh -d`<br /> Deletes past logs without asking.",
+        "fr": "./build_clients.bsh<br />Arguments optionnels :<br />`./build_clients.bsh [branch]`<br /> Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`./build_clients.bsh -d`<br /> Supprime les anciens logs sans demander.",
+        "es": "./build_clients.bsh<br />Argumentos opcionales:<br />`./build_clients.bsh [branch]`<br /> Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`./build_clients.bsh -d`<br /> Elimina los logs anteriores sin preguntar."
       },
       "build_clients_windows": {
-        "en": ".\\build_clients.bat<br />Optional argument:<br />`.\\build_clients.bat -d`<br /> Deletes past logs without asking.",
-        "fr": ".\\build_clients.bat<br />Argument optionnel :<br />`.\\build_clients.bat -d`<br /> Supprime les anciens logs sans demander.",
-        "es": ".\\build_clients.bat<br />Argumento opcional:<br />`.\\build_clients.bat -d`<br /> Elimina los logs anteriores sin preguntar."
+        "en": ".\\build_clients.bat<br />Optional argument:<br />`.\\build_clients.bat [branch]`<br /> Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`.\\build_clients.bat -d`<br /> Deletes past logs without asking.",
+        "fr": ".\\build_clients.bat<br />Arguments optionnels :<br />`.\\build_clients.bat [branch]`<br /> Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`.\\build_clients.bat -d`<br /> Supprime les anciens logs sans demander.",
+        "es": ".\\build_clients.bat<br />Argumentos opcionales:<br />`.\\build_clients.bat [branch]`<br /> Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`.\\build_clients.bat -d`<br /> Elimina los logs anteriores sin preguntar."
       },
       "build_clients_macos": {
-        "en": "./build_clients.zsh<br />Optional argument:<br />`./build_clients.zsh -d`<br /> Deletes past logs without asking.",
-        "fr": "./build_clients.zsh<br />Argument optionnel :<br />`./build_clients.zsh -d`<br /> Supprime les anciens logs sans demander.",
-        "es": "./build_clients.zsh<br />Argumento opcional:<br />`./build_clients.zsh -d`<br /> Elimina los logs anteriores sin preguntar."
+        "en": "./build_clients.zsh<br />Optional argument:<br />`./build_clients.zsh [branch]`<br /> Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`./build_clients.zsh -d`<br /> Deletes past logs without asking.",
+        "fr": "./build_clients.zsh<br />Arguments optionnels :<br />`./build_clients.zsh [branch]`<br /> Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`./build_clients.zsh -d`<br /> Supprime les anciens logs sans demander.",
+        "es": "./build_clients.zsh<br />Argumentos opcionales:<br />`./build_clients.zsh [branch]`<br /> Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`./build_clients.zsh -d`<br /> Elimina los logs anteriores sin preguntar."
       },
       "build_viewer_desc": {
         "en": "Create an Electronite viewer for use with the local dev build environment.",

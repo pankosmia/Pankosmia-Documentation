@@ -82,7 +82,7 @@ npm install
 
 {% include tm.html key="setup_scripts_build_clients" %}
 - {% include tmp.html key="setup_scripts_build_clients_note1" %}
-- {% include t.html key="setup_scripts_build_clients_note2" %}
+- {% include tmp.html key="setup_scripts_build_clients_note2" %}
 
 {% include tm.html key="setup_scripts_build_server" %}
 
