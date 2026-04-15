@@ -943,19 +943,19 @@
         "es": "Para cada repositorio de assets en `/app_config.env`: git checkout main, git pull<br />Para cada repositorio de cliente en `/app_config.env`: `git checkout main`, `git pull`, `npm ci` y `npm run build`.<br />***Los desarrolladores deben compilar manualmente al probar ramas.***"
       },
       "build_clients_linux": {
-        "en": "./build_clients.bsh<br />Optional arguments:<br /><nobr>`./build_clients.bsh [branch]`</nobr><br />&nbsp;&nbsp;Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`./build_clients.bsh -d`<br />&nbsp;&nbsp;Deletes past logs without asking.",
-        "fr": "./build_clients.bsh<br />Arguments optionnels :<br /><nobr>`./build_clients.bsh [branch]`</nobr><br />&nbsp;&nbsp;Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`./build_clients.bsh -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.",
-        "es": "./build_clients.bsh<br />Argumentos opcionales:<br /><nobr>`./build_clients.bsh [branch]`</nobr><br />&nbsp;&nbsp;Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`./build_clients.bsh -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar."
+        "en": "./build_clients.bsh<br />Optional arguments:<br /><nobr><code>./build_clients.bsh [branch]</code></nobr><br />&nbsp;&nbsp;Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`./build_clients.bsh -d`<br />&nbsp;&nbsp;Deletes past logs without asking.",
+        "fr": "./build_clients.bsh<br />Arguments optionnels :<br /><nobr><code>./build_clients.bsh [branch]</code></nobr><br />&nbsp;&nbsp;Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`./build_clients.bsh -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.",
+        "es": "./build_clients.bsh<br />Argumentos opcionales:<br /><nobr><code>./build_clients.bsh [branch]</code></nobr><br />&nbsp;&nbsp;Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`./build_clients.bsh -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar."
       },
       "build_clients_windows": {
-        "en": ".\\build_clients.bat<br />Optional argument:<br /><nobr>`.\\build_clients.bat [branch]`</nobr><br />&nbsp;&nbsp;Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`.\\build_clients.bat -d`<br />&nbsp;&nbsp;Deletes past logs without asking.",
-        "fr": ".\\build_clients.bat<br />Arguments optionnels :<br /><nobr>`.\\build_clients.bat [branch]`</nobr><br />&nbsp;&nbsp;Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`.\\build_clients.bat -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.",
-        "es": ".\\build_clients.bat<br />Argumentos opcionales:<br /><nobr>`.\\build_clients.bat [branch]`</nobr><br />&nbsp;&nbsp;Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`.\\build_clients.bat -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar."
+        "en": ".\\build_clients.bat<br />Optional argument:<br /><nobr><code>.\\build_clients.bat [branch]</code></nobr><br />&nbsp;&nbsp;Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`.\\build_clients.bat -d`<br />&nbsp;&nbsp;Deletes past logs without asking.",
+        "fr": ".\\build_clients.bat<br />Arguments optionnels :<br /><nobr><code>.\\build_clients.bat [branch]</code></nobr><br />&nbsp;&nbsp;Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`.\\build_clients.bat -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.",
+        "es": ".\\build_clients.bat<br />Argumentos opcionales:<br /><nobr><code>.\\build_clients.bat [branch]</code></nobr><br />&nbsp;&nbsp;Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`.\\build_clients.bat -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar."
       },
       "build_clients_macos": {
-        "en": "./build_clients.zsh<br />Optional argument:<br /><nobr>`./build_clients.zsh [branch]`</nobr><br />&nbsp;&nbsp;Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`./build_clients.zsh -d`<br />&nbsp;&nbsp;Deletes past logs without asking.",
-        "fr": "./build_clients.zsh<br />Arguments optionnels :<br /><nobr>`./build_clients.zsh [branch]`</nobr><br />&nbsp;&nbsp;Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`./build_clients.zsh -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.",
-        "es": "./build_clients.zsh<br />Argumentos opcionales:<br /><nobr>`./build_clients.zsh [branch]`</nobr><br />&nbsp;&nbsp;Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`./build_clients.zsh -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar."
+        "en": "./build_clients.zsh<br />Optional argument:<br /><nobr><code>./build_clients.zsh [branch]</code></nobr><br />&nbsp;&nbsp;Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`./build_clients.zsh -d`<br />&nbsp;&nbsp;Deletes past logs without asking.",
+        "fr": "./build_clients.zsh<br />Arguments optionnels :<br /><nobr><code>./build_clients.zsh [branch]</code></nobr><br />&nbsp;&nbsp;Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`./build_clients.zsh -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.",
+        "es": "./build_clients.zsh<br />Argumentos opcionales:<br /><nobr><code>./build_clients.zsh [branch]</code></nobr><br />&nbsp;&nbsp;Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`./build_clients.zsh -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar."
       },
       "build_viewer_desc": {
         "en": "Create an Electronite viewer for use with the local dev build environment.",
@@ -998,9 +998,9 @@
         "es": "ejecuta cargo build y `node build.js`"
       },
       "build_server_linux": {
-        "en": "./build_server.bsh<br />Optional arguments:<br />`<nobr>./build_server.bsh dev`</nobr><br />&nbsp;&nbsp;Uses the \"dev\" version in `/local_server.env`<br />`./build_server.bsh qa` <br />&nbsp;&nbsp;Uses the \"qa\" version in `/local_server.env`<br />`./build_server.bsh -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`./build_server.bsh -d`<br />&nbsp;&nbsp;Builds server in debug mode",
-        "fr": "./build_server.bsh<br />Arguments optionnels :<br /><nobr>`./build_server.bsh dev`</nobr><br />&nbsp;&nbsp;Utilise la version « dev » dans `/local_server.env`<br />`./build_server.bsh qa`<br />&nbsp;&nbsp;Utilise la version « qa » dans `/local_server.env`<br />`./build_server.bsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`./build_server.bsh -d`<br />&nbsp;&nbsp;Compile le serveur en mode debug",
-        "es": "./build_server.bsh<br />Argumentos opcionales:<br /><nobr>`./build_server.bsh dev`</nobr><br />&nbsp;&nbsp;Usa la versión \"dev\" en `/local_server.env`<br />`./build_server.bsh qa`<br />&nbsp;&nbsp;Usa la versión \"qa\" en `/local_server.env`<br />`./build_server.bsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`./build_server.bsh -d`<br />&nbsp;&nbsp;Compila el servidor en modo debug"
+        "en": "./build_server.bsh<br />Optional arguments:<br /><nobr><code>./build_server.bsh dev</code></nobr><br />&nbsp;&nbsp;Uses the \"dev\" version in `/local_server.env`<br />`./build_server.bsh qa` <br />&nbsp;&nbsp;Uses the \"qa\" version in `/local_server.env`<br />`./build_server.bsh -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`./build_server.bsh -d`<br />&nbsp;&nbsp;Builds server in debug mode",
+        "fr": "./build_server.bsh<br />Arguments optionnels :<br /><nobr><code>./build_server.bsh dev</code></nobr><br />&nbsp;&nbsp;Utilise la version « dev » dans `/local_server.env`<br />`./build_server.bsh qa`<br />&nbsp;&nbsp;Utilise la version « qa » dans `/local_server.env`<br />`./build_server.bsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`./build_server.bsh -d`<br />&nbsp;&nbsp;Compile le serveur en mode debug",
+        "es": "./build_server.bsh<br />Argumentos opcionales:<br /><nobr><code>./build_server.bsh dev</code></nobr><br />&nbsp;&nbsp;Usa la versión \"dev\" en `/local_server.env`<br />`./build_server.bsh qa`<br />&nbsp;&nbsp;Usa la versión \"qa\" en `/local_server.env`<br />`./build_server.bsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`./build_server.bsh -d`<br />&nbsp;&nbsp;Compila el servidor en modo debug"
       },
       "build_server_windows": {
         "en": ".\\build_server.bat<br />Optional arguments:<br />`.\\build_server.bat dev`<br />&nbsp;&nbsp;Uses the \"dev\" version in `\\local_server.env`<br />`.\\build_server.bat qa` <br />&nbsp;&nbsp;Uses the \"qa\" version in `\\local_server.env`<br />`.\\build_server.bat -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`.\\build_server.bat -d`<br />&nbsp;&nbsp;Builds server in debug mode",
@@ -1008,9 +1008,9 @@
         "es": ".\\build_server.bat<br />Argumentos opcionales:<br />`.\\build_server.bat dev`<br />&nbsp;&nbsp;Usa la versión \"dev\" en `\\local_server.env`<br />`.\\build_server.bat qa`<br />&nbsp;&nbsp;Usa la versión \"qa\" en `\\local_server.env`<br />`.\\build_server.bat -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`.\\build_server.bat -d`<br />&nbsp;&nbsp;Compila el servidor en modo debug"
       },
       "build_server_macos": {
-        "en": "./build_server.zsh<br />Optional arguments:<br /><nobr>`./build_server.zsh dev`</nobr><br />&nbsp;&nbsp;Uses the \"dev\" version in `/local_server.env`<br />`./build_server.zsh qa` <br />&nbsp;&nbsp;Uses the \"qa\" version in `/local_server.env`<br />`./build_server.zsh -s`<br />&nbsp;&nbsp;Will not ask if server is off <br />`./build_server.zsh -d`<br />&nbsp;&nbsp;Builds server in debug mode",
-        "fr": "./build_server.zsh<br />Arguments optionnels :<br /><nobr>`./build_server.zsh dev`</nobr><br />&nbsp;&nbsp;Utilise la version « dev » dans `/local_server.env`<br />`./build_server.zsh qa`<br />&nbsp;&nbsp;Utilise la version « qa » dans `/local_server.env`<br />`./build_server.zsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`./build_server.zsh -d`<br />&nbsp;&nbsp;Compile le serveur en mode debug",
-        "es": "./build_server.zsh<br />Argumentos opcionales:<br /><nobr>`./build_server.zsh dev`</nobr><br />&nbsp;&nbsp;Usa la versión \"dev\" en `/local_server.env`<br />`./build_server.zsh qa`<br />&nbsp;&nbsp;Usa la versión \"qa\" en `/local_server.env`<br />`./build_server.zsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`./build_server.zsh -d`<br />&nbsp;&nbsp;Compila el servidor en modo debug"
+        "en": "./build_server.zsh<br />Optional arguments:<br /><nobr><code>./build_server.zsh dev</code></nobr><br />&nbsp;&nbsp;Uses the \"dev\" version in `/local_server.env`<br />`./build_server.zsh qa` <br />&nbsp;&nbsp;Uses the \"qa\" version in `/local_server.env`<br />`./build_server.zsh -s`<br />&nbsp;&nbsp;Will not ask if server is off <br />`./build_server.zsh -d`<br />&nbsp;&nbsp;Builds server in debug mode",
+        "fr": "./build_server.zsh<br />Arguments optionnels :<br /><nobr><code>./build_server.zsh dev</code></nobr><br />&nbsp;&nbsp;Utilise la version « dev » dans `/local_server.env`<br />`./build_server.zsh qa`<br />&nbsp;&nbsp;Utilise la version « qa » dans `/local_server.env`<br />`./build_server.zsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`./build_server.zsh -d`<br />&nbsp;&nbsp;Compile le serveur en mode debug",
+        "es": "./build_server.zsh<br />Argumentos opcionales:<br /><nobr><code>./build_server.zsh dev</code></nobr><br />&nbsp;&nbsp;Usa la versión \"dev\" en `/local_server.env`<br />`./build_server.zsh qa`<br />&nbsp;&nbsp;Usa la versión \"qa\" en `/local_server.env`<br />`./build_server.zsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`./build_server.zsh -d`<br />&nbsp;&nbsp;Compila el servidor en modo debug"
       },
       "run_desc": {
         "en": "Assembles the build environment (clients) and starts the server <sup>[[2]](#f2)</sup>",
@@ -1063,9 +1063,9 @@
         "es": "./bundle_viewer.bsh<br />(Solo compila y empaqueta el visor. Haga todo lo demás de la descripción manualmente o mediante otros scripts listados aquí.)"
       },
       "bundle_viewer_script_windows": {
-        "en": ".\\bundle_viewer.ps1<br />Optional arguments:<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off",
-        "fr": ".\\bundle_viewer.ps1<br />Arguments optionnels :<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté",
-        "es": ".\\bundle_viewer.ps1<br />Argumentos opcionales:<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado"
+        "en": ".\\bundle_viewer.ps1<br />Optional arguments:<br /><nobr><code>.\\bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off",
+        "fr": ".\\bundle_viewer.ps1<br />Arguments optionnels :<br /><nobr><code>.\\bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté",
+        "es": ".\\bundle_viewer.ps1<br />Argumentos opcionales:<br /><nobr><code>.\\bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado"
       },
       "bundle_viewer_script_macos": {
         "en": "./bundle_viewer.zsh<br />Optional arguments:<br />`./bundle_viewer.zsh -s`<br> Will not ask if server is off",
@@ -1098,9 +1098,9 @@
         "es": "Elimina el último bundle de release .exe si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `npm ci`, ejecuta `app_setup.bat` para asegurar la consistencia de versiones, ejecuta `node build.js`, y luego crea un instalador exe <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>"
       },
       "bundle_exe_windows": {
-        "en": ".\\bundle_exe.ps1<br />Optional arguments:<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off<br /><sup>[[3]](#f3)</sup>",
-        "fr": ".\\bundle_exe.ps1<br />Arguments optionnels :<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté<br /><sup>[[3]](#f3)</sup>",
-        "es": ".\\bundle_exe.ps1<br />Argumentos opcionales:<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado<br /><sup>[[3]](#f3)</sup>"
+        "en": ".\\bundle_exe.ps1<br />Optional arguments:<br /><nobr><code>bundle_exe.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off<br /><sup>[[3]](#f3)</sup>",
+        "fr": ".\\bundle_exe.ps1<br />Arguments optionnels :<br /><nobr><code>bundle_exe.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté<br /><sup>[[3]](#f3)</sup>",
+        "es": ".\\bundle_exe.ps1<br />Argumentos opcionales:<br /><nobr><code>bundle_exe.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado<br /><sup>[[3]](#f3)</sup>"
       },
       "heading_maintenance_scripts": {
         "en": "Maintenance scripts:",
