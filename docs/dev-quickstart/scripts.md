@@ -56,4 +56,4 @@ parent: Dev Quickstart
 {% include tm.html key="maintenance_sync" %}
 
 ## {% include tc.html key="heading_footnotes" %}
-{% include tcm.html key="footnote1" %}
+[<b id="f1">1</b>] ... {% include tcmp.html key="footnote1" %}

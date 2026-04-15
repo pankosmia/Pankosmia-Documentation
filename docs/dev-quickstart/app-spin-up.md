@@ -99,4 +99,4 @@ npm install
 - {% include tmp.html key="running_viewer_see_also" %}
 
 ## {% include tc.html key="heading_footnotes" %}
-{% include tcm.html key="footnote1" %}
+[<b id="f1">1</b>] ... {% include tcmp.html key="footnote1" %}
