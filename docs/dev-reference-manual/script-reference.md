@@ -98,10 +98,10 @@ npm run build
 | {% include t.html key="sync_desc" %} | {% include tmp.html key="sync_linux" %} | {% include tmp.html key="sync_windows" %} | {% include tmp.html key="sync_macos" %} |
 
 ## {% include tc.html key="heading_footnotes" %}
-{% include tm.html key="footnote1" %}
+[<b id="f1">1</b>] ... {% include tmp.html key="footnote1" %}
 
-{% include tm.html key="footnote2" %}
+[<b id="f2">2</b>] ... {% include tmp.html key="footnote2" %}
 
-{% include tm.html key="footnote3" %}
+[<b id="f3">3</b>] ... {% include tmp.html key="footnote3" %}
 
-{% include tm.html key="footnote4" %}
+[<b id="f4">4</b>] ... {% include tmp.html key="footnote4" %}

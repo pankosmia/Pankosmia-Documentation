@@ -82,7 +82,7 @@ npm install
 
 {% include tm.html key="setup_scripts_build_clients" %}
 - {% include tmp.html key="setup_scripts_build_clients_note1" %}
-- {% include t.html key="setup_scripts_build_clients_note2" %}
+- {% include tmp.html key="setup_scripts_build_clients_note2" %}
 
 {% include tm.html key="setup_scripts_build_server" %}
 
@@ -99,4 +99,4 @@ npm install
 - {% include tmp.html key="running_viewer_see_also" %}
 
 ## {% include tc.html key="heading_footnotes" %}
-{% include tcm.html key="footnote1" %}
+[<b id="f1">1</b>] ... {% include tcmp.html key="footnote1" %}

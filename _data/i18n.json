@@ -41,9 +41,9 @@
       "es": "Notas al pie"
     },
     "footnote1": {
-      "en": "[<b id=\"f1\">1</b>] ...  Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command prompt</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>The `.\\` is optional from a command prompt.<br /><span style=\"margin-left:3.25em\"></span>Use a **powershell** terminal for the **.ps1** build scripts.<br />MacOS developers, run .bsh scripts from a **MacOS terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Linux developers, run .zsh scripts from a **linux terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
-      "fr": "[<b id=\"f1\">1</b>] ...  Développeurs Windows, exécutez les scripts <b>.bat</b> depuis un <b>Powershell ou une invite de commandes</b> :<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>Le `.\\` est facultatif depuis une invite de commandes.<br /><span style=\"margin-left:3.25em\"></span>Utilisez un terminal **powershell** pour les scripts de build **.ps1**.<br />Développeurs MacOS, exécutez les scripts .bsh depuis un **terminal MacOS** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Développeurs Linux, exécutez les scripts .zsh depuis un **terminal linux** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
-      "es": "[<b id=\"f1\">1</b>] ...  Desarrolladores Windows, ejecuten los scripts <b>.bat</b> desde un <b>Powershell o símbolo del sistema</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>El `.\\` es opcional desde un símbolo del sistema.<br /><span style=\"margin-left:3.25em\"></span>Use un terminal **powershell** para los scripts de build **.ps1**.<br />Desarrolladores MacOS, ejecuten los scripts .bsh desde un **terminal MacOS**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Desarrolladores Linux, ejecuten los scripts .zsh desde un **terminal linux**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`"
+      "en": "Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command prompt</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>The `.\\` is optional from a command prompt.<br /><span style=\"margin-left:3.25em\"></span>Use a **powershell** terminal for the **.ps1** build scripts.<br />MacOS developers, run .bsh scripts from a **MacOS terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Linux developers, run .zsh scripts from a **linux terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
+      "fr": "Développeurs Windows, exécutez les scripts <b>.bat</b> depuis un <b>Powershell ou une invite de commandes</b> :<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>Le `.\\` est facultatif depuis une invite de commandes.<br /><span style=\"margin-left:3.25em\"></span>Utilisez un terminal **powershell** pour les scripts de build **.ps1**.<br />Développeurs MacOS, exécutez les scripts .bsh depuis un **terminal MacOS** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Développeurs Linux, exécutez les scripts .zsh depuis un **terminal linux** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
+      "es": "Desarrolladores Windows, ejecuten los scripts <b>.bat</b> desde un <b>Powershell o símbolo del sistema</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>El `.\\` es opcional desde un símbolo del sistema.<br /><span style=\"margin-left:3.25em\"></span>Use un terminal **powershell** para los scripts de build **.ps1**.<br />Desarrolladores MacOS, ejecuten los scripts .bsh desde un **terminal MacOS**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Desarrolladores Linux, ejecuten los scripts .zsh desde un **terminal linux**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`"
     },
     "use_powershell": {
       "en": "use a powershell terminal",
@@ -358,24 +358,24 @@
         "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_clients` para compilar todos los clientes. Tenga paciencia. Esto tomará un tiempo."
       },
       "setup_scripts_build_clients_note1": {
-        "en": "This script is intended for setting all clients up for <b>first use</b>, or for rebuilding <b>all</b> clients to their <b>latest main</b> branch. It changes to the main branch, pulls the latest, and builds (or rebuilds) every client every time it is run.<br />",
-        "fr": "Ce script est destiné à configurer tous les clients pour une <b>première utilisation</b>, ou à reconstruire <b>tous</b> les clients vers leur branche <b>main la plus récente</b>. Il bascule sur la branche main, récupère la dernière version et compile (ou recompile) chaque client à chaque exécution.<br />",
-        "es": "Este script está destinado a configurar todos los clientes para el <b>primer uso</b>, o para reconstruir <b>todos</b> los clientes a su rama <b>main más reciente</b>. Cambia a la rama main, obtiene la última versión y compila (o recompila) cada cliente cada vez que se ejecuta.<br />"
+        "en": "This script defaults to all main branches, pulls the latest, and builds every client each time it is run. A different branch name can be added as an argument: `./build_clients.[ext] [branch]`<sup id=\"a1\">[[1]](#f1)</sup>. Use \"dev\" for all *dev* branches. Use \"qa\" for all *qa* branches. Then `npm run build` to build repos manually as needed.",
+        "fr": "Ce script utilise par défaut toutes les branches main, récupère la dernière version et compile chaque client à chaque exécution. Un nom de branche différent peut être ajouté en argument : `./build_clients.[ext] [branch]`<sup id=\"a1\">[[1]](#f1)</sup>. Utilisez « dev » pour toutes les branches *dev*. Utilisez « qa » pour toutes les branches *qa*. Puis `npm run build` pour compiler les dépôts manuellement si nécessaire.",
+        "es": "Este script usa por defecto todas las ramas main, obtiene la última versión y compila cada cliente cada vez que se ejecuta. Se puede agregar un nombre de rama diferente como argumento: `./build_clients.[ext] [branch]`<sup id=\"a1\">[[1]](#f1)</sup>. Use \"dev\" para todas las ramas *dev*. Use \"qa\" para todas las ramas *qa*. Luego `npm run build` para compilar los repositorios manualmente según sea necesario."
       },
       "setup_scripts_build_clients_note2": {
-        "en": "Build client manually when you want to use a branch or when you only need to rebuild one client or when you do not want all clients built from their latest main branch!",
-        "fr": "Compilez le client manuellement lorsque vous souhaitez utiliser une branche spécifique, lorsque vous n'avez besoin de recompiler qu'un seul client, ou lorsque vous ne souhaitez pas que tous les clients soient compilés depuis leur dernière branche main !",
-        "es": "¡Compile el cliente manualmente cuando desee usar una rama específica, cuando solo necesite recompilar un cliente, o cuando no desee que todos los clientes se compilen desde su última rama main!"
+        "en": "If working on a branch name that is unique to the client app(s) you are working on, consider using `./build_clients.[ext] [your_branch]`<sup id=\"a1\">[[1]](#f1)</sup> when you want the latest \"main\" from other repos as those without \"your_branch\" will fallback. The exception is the branch name \"dev\", which falls back to \"qa\".",
+        "fr": "Si vous travaillez sur un nom de branche unique au(x) client(s) sur le(s)quel(s) vous travaillez, envisagez d'utiliser `./build_clients.[ext] [your_branch]`<sup id=\"a1\">[[1]](#f1)</sup> lorsque vous souhaitez la dernière version « main » des autres dépôts, car ceux qui n'ont pas \"your_branch\" se replieront sur main. L'exception est le nom de branche « dev », qui se replie sur « qa ».",
+        "es": "Si trabaja en un nombre de rama que es único para la(s) aplicación(es) cliente en las que está trabajando, considere usar `./build_clients.[ext] [your_branch]`<sup id=\"a1\">[[1]](#f1)</sup> cuando desee la última versión \"main\" de otros repositorios, ya que aquellos sin \"your_branch\" recurrirán a main. La excepción es el nombre de rama \"dev\", que recurre a \"qa\"."
       },
       "setup_scripts_build_server": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. (be patient. This will also take a while.)",
-        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_server` pour compiler le serveur Pankosmia et assembler l'environnement de build. (soyez patient, cela prendra aussi du temps.)",
-        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_server` para compilar el servidor Pankosmia y ensamblar el entorno de build. (tenga paciencia, esto también tomará un tiempo.)"
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. When `/local_server.env` has different versions from the panksomia_web in `/local_server/Cargo.toml`, then use `./build_server.[ext] dev` to build a local *dev* server, and `./build_server.[ext] qa` to build a local qa server. Be patient. This will take a while.",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_server` pour compiler le serveur Pankosmia et assembler l'environnement de build. Lorsque `/local_server.env` contient des versions différentes de panksomia_web dans `/local_server/Cargo.toml`, utilisez `./build_server.[ext] *dev*` pour compiler un serveur de développement local, et `./build_server.[ext] qa` pour compiler un serveur qa local. Soyez patient, cela prendra du temps.",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_server` para compilar el servidor Pankosmia y ensamblar el entorno de build. Cuando `/local_server.env` tenga versiones diferentes de panksomia_web en `/local_server/Cargo.toml`, use `./build_server.[ext] dev` para compilar un servidor de desarrollo local, y `./build_server.[ext] qa` para compilar un servidor *qa* local. Tenga paciencia, esto tomará un tiempo."
       },
       "setup_scripts_build_viewer": {
-        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local dev build environment.",
-        "fr": "(Optionnel) Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_viewer` pour créer une visionneuse Electronite à utiliser avec l'environnement de build de développement local.",
-        "es": "(Opcional) Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_viewer` para crear un visor Electronite para usar con el entorno de build de desarrollo local."
+        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local development environment. Be patient, especially in Windows.",
+        "fr": "(Optionnel) Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_viewer` pour créer une visionneuse Electronite à utiliser avec l'environnement de développement local. Soyez patient, surtout sous Windows.",
+        "es": "(Opcional) Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_viewer` para crear un visor Electronite para usar con el entorno de desarrollo local. Tenga paciencia, especialmente en Windows."
       },
       "heading_running_your_setup": {
         "en": "Running your Setup",
@@ -572,9 +572,9 @@
         "es": "Mantenimiento"
       },
       "maintenance_update_server": {
-        "en": "To update the server, change the [latest version](https://crates.io/search?q=pankosmia-web) of [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) in `/local_server/Cargo.toml` and re-run the `build_server` script.",
-        "fr": "Pour mettre à jour le serveur, changez la [dernière version](https://crates.io/search?q=pankosmia-web) de [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) dans `/local_server/Cargo.toml` et relancez le script `build_server`.",
-        "es": "Para actualizar el servidor, cambie la [última versión](https://crates.io/search?q=pankosmia-web) de [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) en `/local_server/Cargo.toml` y vuelva a ejecutar el script `build_server`."
+        "en": "To update the \"main\" [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) server version, change it in `/local_server/Cargo.toml` and run the `build_server` script to use it in local dev.\n\nTo update the \"dev\" or \"qa\" server versions, change it in `/local_server.env` and run `build_server dev` or `build_server qa` to use it in local dev.\n\nFor all available pankosmia-web version numbers see [crates.io](https://crates.io/search?q=pankosmia-web).",
+        "fr": "Pour mettre à jour la version « main » du serveur [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/), modifiez-la dans `/local_server/Cargo.toml` et exécutez le script `build_server` pour l'utiliser en développement local.\n\nPour mettre à jour les versions « dev » ou « qa » du serveur, modifiez-les dans `/local_server.env` et exécutez `build_server dev` ou `build_server qa` pour les utiliser en développement local.\n\nPour tous les numéros de version disponibles de pankosmia-web, voir [crates.io](https://crates.io/search?q=pankosmia-web).",
+        "es": "Para actualizar la versión \"main\" del servidor [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/), cámbiela en `/local_server/Cargo.toml` y ejecute el script `build_server` para usarla en desarrollo local.\n\nPara actualizar las versiones \"dev\" o \"qa\" del servidor, cámbielas en `/local_server.env` y ejecute `build_server dev` o `build_server qa` para usarlas en desarrollo local.\n\nPara todos los números de versión disponibles de pankosmia-web, vea [crates.io](https://crates.io/search?q=pankosmia-web)."
       },
       "maintenance_sync": {
         "en": "To sync this repo with its upstream, run the `sync` script.",
@@ -731,9 +731,9 @@
         "es": "Requisitos previos:"
       },
       "installer_prereq_server": {
-        "en": "Ensure the server (`build_server` script) is current!",
-        "fr": "Assurez-vous que le serveur (script `build_server`) est à jour !",
-        "es": "¡Asegúrese de que el servidor (script `build_server`) esté actualizado!"
+        "en": "Ensure the local server is current! This is the `build_server` script, or `./build_server.[ext] dev` or `./build_server.[ext] qa` if `/local_server.env` has different versions from the panksomia_web in `/local_server/Cargo.toml`.",
+        "fr": "Assurez-vous que le serveur local est à jour ! Il s'agit du script `build_server`, ou `./build_server.[ext] dev` ou `./build_server.[ext] qa` si `/local_server.env` contient des versions différentes de panksomia_web dans `/local_server/Cargo.toml`.",
+        "es": "¡Asegúrese de que el servidor local esté actualizado! Esto es el script `build_server`, o `./build_server.[ext] dev` o `./build_server.[ext] qa` si `/local_server.env` tiene versiones diferentes de panksomia_web en `/local_server/Cargo.toml`."
       },
       "installer_prereq_windows": {
         "en": "Windows has an additional requirement for running this `bundle_viewer` build locally:",
@@ -848,9 +848,9 @@
         "es": "Instalación de los clientes"
       },
       "installing_clients_intro": {
-        "en": "The local_server (pankosmia_web) serves compiled files from the `build` directory of each client, each client must be built.",
-        "fr": "Le local_server (pankosmia_web) sert les fichiers compilés depuis le répertoire `build` de chaque client, chaque client doit être compilé.",
-        "es": "El local_server (pankosmia_web) sirve los archivos compilados desde el directorio `build` de cada cliente, cada cliente debe ser compilado."
+        "en": "The local_server (pankosmia_web) serves compiled files from the `build` directory of each client, so each client must be built.",
+        "fr": "Le local_server (pankosmia_web) sert les fichiers compilés depuis le répertoire `build` de chaque client, donc chaque client doit être compilé.",
+        "es": "El local_server (pankosmia_web) sirve los archivos compilados desde el directorio `build` de cada cliente, por lo que cada cliente debe ser compilado."
       },
       "installing_clients_script": {
         "en": "This is handled by the `clone` and `build_clients` scripts, though can also all be run manually which is helpful during development.",
@@ -923,19 +923,19 @@
         "es": "Clona todos los repositorios en `/app_config.env` si un directorio con ese nombre no existe ya"
       },
       "clone_linux": {
-        "en": "./clone.bsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.bsh -s`<br /> Clones via SSH.",
-        "fr": "./clone.bsh<br /> Clone par défaut via HTTPS.<br />Argument optionnel :<br />`./clone.bsh -s`<br /> Clone via SSH.",
-        "es": "./clone.bsh<br /> Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`./clone.bsh -s`<br /> Clona vía SSH."
+        "en": "./clone.bsh<br />&nbsp;&nbsp;Default clones via HTTPS.<br />Optional argument:<br />`./clone.bsh -s`<br />&nbsp;&nbsp;Clones via SSH.",
+        "fr": "./clone.bsh<br />&nbsp;&nbsp;Clone par défaut via HTTPS.<br />Argument optionnel :<br />`./clone.bsh -s`<br />&nbsp;&nbsp;Clone via SSH.",
+        "es": "./clone.bsh<br />&nbsp;&nbsp;Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`./clone.bsh -s`<br />&nbsp;&nbsp;Clona vía SSH."
       },
       "clone_windows": {
-        "en": ".\\clone.bat<br /> Default clones via HTTPS.<br />Optional argument:<br />`.\\clone.bat -s`<br /> Clones via SSH.",
-        "fr": ".\\clone.bat<br /> Clone par défaut via HTTPS.<br />Argument optionnel :<br />`.\\clone.bat -s`<br /> Clone via SSH.",
-        "es": ".\\clone.bat<br /> Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`.\\clone.bat -s`<br /> Clona vía SSH."
+        "en": ".\\clone.bat<br />&nbsp;&nbsp;Default clones via HTTPS.<br />Optional argument:<br />`.\\clone.bat -s`<br />&nbsp;&nbsp;Clones via SSH.",
+        "fr": ".\\clone.bat<br />&nbsp;&nbsp;Clone par défaut via HTTPS.<br />Argument optionnel :<br />`.\\clone.bat -s`<br />&nbsp;&nbsp;Clone via SSH.",
+        "es": ".\\clone.bat<br />&nbsp;&nbsp;Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`.\\clone.bat -s`<br />&nbsp;&nbsp;Clona vía SSH."
       },
       "clone_macos": {
-        "en": "./clone.zsh<br /> Default clones via HTTPS.<br />Optional argument:<br />`./clone.zsh -s`<br /> Clones via SSH.",
-        "fr": "./clone.zsh<br /> Clone par défaut via HTTPS.<br />Argument optionnel :<br />`./clone.zsh -s`<br /> Clone via SSH.",
-        "es": "./clone.zsh<br /> Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`./clone.zsh -s`<br /> Clona vía SSH."
+        "en": "./clone.zsh<br />&nbsp;&nbsp;Default clones via HTTPS.<br />Optional argument:<br />`./clone.zsh -s`<br />&nbsp;&nbsp;Clones via SSH.",
+        "fr": "./clone.zsh<br />&nbsp;&nbsp;Clone par défaut via HTTPS.<br />Argument optionnel :<br />`./clone.zsh -s`<br />&nbsp;&nbsp;Clone via SSH.",
+        "es": "./clone.zsh<br />&nbsp;&nbsp;Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`./clone.zsh -s`<br />&nbsp;&nbsp;Clona vía SSH."
       },
       "build_clients_desc": {
         "en": "For each asset repo in `/app_config.env`: git checkout main, git pull<br />For each client repo in  `/app_config.env`: `git checkout main`, `git pull`, `npm ci`, and `npm run build`.<br />***Dev's should build manually when testing branch(es).***",
@@ -943,19 +943,19 @@
         "es": "Para cada repositorio de assets en `/app_config.env`: git checkout main, git pull<br />Para cada repositorio de cliente en `/app_config.env`: `git checkout main`, `git pull`, `npm ci` y `npm run build`.<br />***Los desarrolladores deben compilar manualmente al probar ramas.***"
       },
       "build_clients_linux": {
-        "en": "./build_clients.bsh<br />Optional argument:<br />`./build_clients.bsh -d`<br /> Deletes past logs without asking.",
-        "fr": "./build_clients.bsh<br />Argument optionnel :<br />`./build_clients.bsh -d`<br /> Supprime les anciens logs sans demander.",
-        "es": "./build_clients.bsh<br />Argumento opcional:<br />`./build_clients.bsh -d`<br /> Elimina los logs anteriores sin preguntar."
+        "en": "./build_clients.bsh<br />Optional arguments:<br /><nobr><code>./build_clients.bsh [branch]</code></nobr><br />&nbsp;&nbsp;Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`./build_clients.bsh -d`<br />&nbsp;&nbsp;Deletes past logs without asking.",
+        "fr": "./build_clients.bsh<br />Arguments optionnels :<br /><nobr><code>./build_clients.bsh [branch]</code></nobr><br />&nbsp;&nbsp;Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`./build_clients.bsh -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.",
+        "es": "./build_clients.bsh<br />Argumentos opcionales:<br /><nobr><code>./build_clients.bsh [branch]</code></nobr><br />&nbsp;&nbsp;Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`./build_clients.bsh -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar."
       },
       "build_clients_windows": {
-        "en": ".\\build_clients.bat<br />Optional argument:<br />`.\\build_clients.bat -d`<br /> Deletes past logs without asking.",
-        "fr": ".\\build_clients.bat<br />Argument optionnel :<br />`.\\build_clients.bat -d`<br /> Supprime les anciens logs sans demander.",
-        "es": ".\\build_clients.bat<br />Argumento opcional:<br />`.\\build_clients.bat -d`<br /> Elimina los logs anteriores sin preguntar."
+        "en": ".\\build_clients.bat<br />Optional argument:<br /><nobr><code>.\\build_clients.bat [branch]</code></nobr><br />&nbsp;&nbsp;Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`.\\build_clients.bat -d`<br />&nbsp;&nbsp;Deletes past logs without asking.",
+        "fr": ".\\build_clients.bat<br />Arguments optionnels :<br /><nobr><code>.\\build_clients.bat [branch]</code></nobr><br />&nbsp;&nbsp;Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`.\\build_clients.bat -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.",
+        "es": ".\\build_clients.bat<br />Argumentos opcionales:<br /><nobr><code>.\\build_clients.bat [branch]</code></nobr><br />&nbsp;&nbsp;Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`.\\build_clients.bat -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar."
       },
       "build_clients_macos": {
-        "en": "./build_clients.zsh<br />Optional argument:<br />`./build_clients.zsh -d`<br /> Deletes past logs without asking.",
-        "fr": "./build_clients.zsh<br />Argument optionnel :<br />`./build_clients.zsh -d`<br /> Supprime les anciens logs sans demander.",
-        "es": "./build_clients.zsh<br />Argumento opcional:<br />`./build_clients.zsh -d`<br /> Elimina los logs anteriores sin preguntar."
+        "en": "./build_clients.zsh<br />Optional argument:<br /><nobr><code>./build_clients.zsh [branch]</code></nobr><br />&nbsp;&nbsp;Build all of \"branch\" where it exists, otherwise falls back (dev → qa → main; \"other\" → main).<br />`./build_clients.zsh -d`<br />&nbsp;&nbsp;Deletes past logs without asking.",
+        "fr": "./build_clients.zsh<br />Arguments optionnels :<br /><nobr><code>./build_clients.zsh [branch]</code></nobr><br />&nbsp;&nbsp;Compile tout depuis « branch » là où elle existe, sinon se replie (dev → qa → main ; « autre » → main).<br />`./build_clients.zsh -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.",
+        "es": "./build_clients.zsh<br />Argumentos opcionales:<br /><nobr><code>./build_clients.zsh [branch]</code></nobr><br />&nbsp;&nbsp;Compila todo desde \"branch\" donde exista, de lo contrario recurre a (dev → qa → main; \"otro\" → main).<br />`./build_clients.zsh -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar."
       },
       "build_viewer_desc": {
         "en": "Create an Electronite viewer for use with the local dev build environment.",
@@ -978,19 +978,19 @@
         "es": "elimina el directorio de build y ejecuta `cargo clean`<br /><sup>[[4]](#f4)</sup>"
       },
       "clean_linux": {
-        "en": "./clean.bsh<br />Optional arguments:<br />`./clean.bsh -s`<br /> Will not ask if server is off",
-        "fr": "./clean.bsh<br />Arguments optionnels :<br />`./clean.bsh -s`<br /> Ne demandera pas si le serveur est arrêté",
-        "es": "./clean.bsh<br />Argumentos opcionales:<br />`./clean.bsh -s`<br /> No preguntará si el servidor está apagado"
+        "en": "./clean.bsh<br />Optional arguments:<br />`./clean.bsh -s`<br />&nbsp;&nbsp;Will not ask if server is off",
+        "fr": "./clean.bsh<br />Arguments optionnels :<br />`./clean.bsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté",
+        "es": "./clean.bsh<br />Argumentos opcionales:<br />`./clean.bsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
       },
       "clean_windows": {
-        "en": ".\\clean.bat<br />Optional arguments:<br />`.\\clean.bat -s`<br /> Will not ask if server is off",
-        "fr": ".\\clean.bat<br />Arguments optionnels :<br />`.\\clean.bat -s`<br /> Ne demandera pas si le serveur est arrêté",
-        "es": ".\\clean.bat<br />Argumentos opcionales:<br />`.\\clean.bat -s`<br /> No preguntará si el servidor está apagado"
+        "en": ".\\clean.bat<br />Optional arguments:<br />`.\\clean.bat -s`<br />&nbsp;&nbsp;Will not ask if server is off",
+        "fr": ".\\clean.bat<br />Arguments optionnels :<br />`.\\clean.bat -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté",
+        "es": ".\\clean.bat<br />Argumentos opcionales:<br />`.\\clean.bat -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
       },
       "clean_macos": {
-        "en": "./clean.zsh<br />Optional arguments:<br />`./clean.zsh -s`<br /> Will not ask if server is off",
-        "fr": "./clean.zsh<br />Arguments optionnels :<br />`./clean.zsh -s`<br /> Ne demandera pas si le serveur est arrêté",
-        "es": "./clean.zsh<br />Argumentos opcionales:<br />`./clean.zsh -s`<br /> No preguntará si el servidor está apagado"
+        "en": "./clean.zsh<br />Optional arguments:<br />`./clean.zsh -s`<br />&nbsp;&nbsp;Will not ask if server is off",
+        "fr": "./clean.zsh<br />Arguments optionnels :<br />`./clean.zsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté",
+        "es": "./clean.zsh<br />Argumentos opcionales:<br />`./clean.zsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
       },
       "build_server_desc": {
         "en": "runs cargo build, and `node build.js`",
@@ -998,19 +998,19 @@
         "es": "ejecuta cargo build y `node build.js`"
       },
       "build_server_linux": {
-        "en": "./build_server.bsh<br />Optional arguments:<br />`./build_server.bsh -s`<br /> Will not ask if server is off <br />`./build_server.bsh -d`<br /> Builds server in debug mode",
-        "fr": "./build_server.bsh<br />Arguments optionnels :<br />`./build_server.bsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`./build_server.bsh -d`<br /> Compile le serveur en mode debug",
-        "es": "./build_server.bsh<br />Argumentos opcionales:<br />`./build_server.bsh -s`<br /> No preguntará si el servidor está apagado<br />`./build_server.bsh -d`<br /> Compila el servidor en modo debug"
+        "en": "./build_server.bsh<br />Optional arguments:<br /><nobr><code>./build_server.bsh dev</code></nobr><br />&nbsp;&nbsp;Uses the \"dev\" version in `/local_server.env`<br />`./build_server.bsh qa` <br />&nbsp;&nbsp;Uses the \"qa\" version in `/local_server.env`<br />`./build_server.bsh -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`./build_server.bsh -d`<br />&nbsp;&nbsp;Builds server in debug mode",
+        "fr": "./build_server.bsh<br />Arguments optionnels :<br /><nobr><code>./build_server.bsh dev</code></nobr><br />&nbsp;&nbsp;Utilise la version « dev » dans `/local_server.env`<br />`./build_server.bsh qa`<br />&nbsp;&nbsp;Utilise la version « qa » dans `/local_server.env`<br />`./build_server.bsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`./build_server.bsh -d`<br />&nbsp;&nbsp;Compile le serveur en mode debug",
+        "es": "./build_server.bsh<br />Argumentos opcionales:<br /><nobr><code>./build_server.bsh dev</code></nobr><br />&nbsp;&nbsp;Usa la versión \"dev\" en `/local_server.env`<br />`./build_server.bsh qa`<br />&nbsp;&nbsp;Usa la versión \"qa\" en `/local_server.env`<br />`./build_server.bsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`./build_server.bsh -d`<br />&nbsp;&nbsp;Compila el servidor en modo debug"
       },
       "build_server_windows": {
-        "en": ".\\build_server.bat<br />Optional arguments:<br />`.\\build_server.bat -s`<br /> Will not ask if server is off<br />`.\\build_server.bat -d`<br /> Builds server in debug mode",
-        "fr": ".\\build_server.bat<br />Arguments optionnels :<br />`.\\build_server.bat -s`<br /> Ne demandera pas si le serveur est arrêté<br />`.\\build_server.bat -d`<br /> Compile le serveur en mode debug",
-        "es": ".\\build_server.bat<br />Argumentos opcionales:<br />`.\\build_server.bat -s`<br /> No preguntará si el servidor está apagado<br />`.\\build_server.bat -d`<br /> Compila el servidor en modo debug"
+        "en": ".\\build_server.bat<br />Optional arguments:<br />`.\\build_server.bat dev`<br />&nbsp;&nbsp;Uses the \"dev\" version in `\\local_server.env`<br />`.\\build_server.bat qa` <br />&nbsp;&nbsp;Uses the \"qa\" version in `\\local_server.env`<br />`.\\build_server.bat -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`.\\build_server.bat -d`<br />&nbsp;&nbsp;Builds server in debug mode",
+        "fr": ".\\build_server.bat<br />Arguments optionnels :<br />`.\\build_server.bat dev`<br />&nbsp;&nbsp;Utilise la version « dev » dans `\\local_server.env`<br />`.\\build_server.bat qa`<br />&nbsp;&nbsp;Utilise la version « qa » dans `\\local_server.env`<br />`.\\build_server.bat -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`.\\build_server.bat -d`<br />&nbsp;&nbsp;Compile le serveur en mode debug",
+        "es": ".\\build_server.bat<br />Argumentos opcionales:<br />`.\\build_server.bat dev`<br />&nbsp;&nbsp;Usa la versión \"dev\" en `\\local_server.env`<br />`.\\build_server.bat qa`<br />&nbsp;&nbsp;Usa la versión \"qa\" en `\\local_server.env`<br />`.\\build_server.bat -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`.\\build_server.bat -d`<br />&nbsp;&nbsp;Compila el servidor en modo debug"
       },
       "build_server_macos": {
-        "en": "./build_server.zsh<br />Optional arguments:<br />`./build_server.zsh -s`<br /> Will not ask if server is off <br />`./build_server.zsh -d`<br /> Builds server in debug mode",
-        "fr": "./build_server.zsh<br />Arguments optionnels :<br />`./build_server.zsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`./build_server.zsh -d`<br /> Compile le serveur en mode debug",
-        "es": "./build_server.zsh<br />Argumentos opcionales:<br />`./build_server.zsh -s`<br /> No preguntará si el servidor está apagado<br />`./build_server.zsh -d`<br /> Compila el servidor en modo debug"
+        "en": "./build_server.zsh<br />Optional arguments:<br /><nobr><code>./build_server.zsh dev</code></nobr><br />&nbsp;&nbsp;Uses the \"dev\" version in `/local_server.env`<br />`./build_server.zsh qa` <br />&nbsp;&nbsp;Uses the \"qa\" version in `/local_server.env`<br />`./build_server.zsh -s`<br />&nbsp;&nbsp;Will not ask if server is off <br />`./build_server.zsh -d`<br />&nbsp;&nbsp;Builds server in debug mode",
+        "fr": "./build_server.zsh<br />Arguments optionnels :<br /><nobr><code>./build_server.zsh dev</code></nobr><br />&nbsp;&nbsp;Utilise la version « dev » dans `/local_server.env`<br />`./build_server.zsh qa`<br />&nbsp;&nbsp;Utilise la version « qa » dans `/local_server.env`<br />`./build_server.zsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`./build_server.zsh -d`<br />&nbsp;&nbsp;Compile le serveur en mode debug",
+        "es": "./build_server.zsh<br />Argumentos opcionales:<br /><nobr><code>./build_server.zsh dev</code></nobr><br />&nbsp;&nbsp;Usa la versión \"dev\" en `/local_server.env`<br />`./build_server.zsh qa`<br />&nbsp;&nbsp;Usa la versión \"qa\" en `/local_server.env`<br />`./build_server.zsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`./build_server.zsh -d`<br />&nbsp;&nbsp;Compila el servidor en modo debug"
       },
       "run_desc": {
         "en": "Assembles the build environment (clients) and starts the server <sup>[[2]](#f2)</sup>",
@@ -1018,19 +1018,19 @@
         "es": "Ensambla el entorno de build (clientes) e inicia el servidor <sup>[[2]](#f2)</sup>"
       },
       "run_linux": {
-        "en": "./run.bsh<br />Optional arguments:<br />`./run.bsh -s`<br /> Will not ask if server is off<br />`.\\run.bsh -d`<br /> Runs with server in debug mode",
-        "fr": "./run.bsh<br />Arguments optionnels :<br />`./run.bsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`.\\run.bsh -d`<br /> Exécute le serveur en mode debug",
-        "es": "./run.bsh<br />Argumentos opcionales:<br />`./run.bsh -s`<br /> No preguntará si el servidor está apagado<br />`.\\run.bsh -d`<br /> Ejecuta el servidor en modo debug"
+        "en": "./run.bsh<br />Optional arguments:<br />`./run.bsh -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`.\\run.bsh -d`<br />&nbsp;&nbsp;Runs with server in debug mode",
+        "fr": "./run.bsh<br />Arguments optionnels :<br />`./run.bsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`.\\run.bsh -d`<br />&nbsp;&nbsp;Exécute le serveur en mode debug",
+        "es": "./run.bsh<br />Argumentos opcionales:<br />`./run.bsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`.\\run.bsh -d`<br />&nbsp;&nbsp;Ejecuta el servidor en modo debug"
       },
       "run_windows": {
-        "en": ".\\run.bat<br />Optional arguments:<br />`.\\run.bat -s`<br /> Will not ask if server is off<br />`.\\run.bat -d`<br /> Runs with server in debug mode",
-        "fr": ".\\run.bat<br />Arguments optionnels :<br />`.\\run.bat -s`<br /> Ne demandera pas si le serveur est arrêté<br />`.\\run.bat -d`<br /> Exécute le serveur en mode debug",
-        "es": ".\\run.bat<br />Argumentos opcionales:<br />`.\\run.bat -s`<br /> No preguntará si el servidor está apagado<br />`.\\run.bat -d`<br /> Ejecuta el servidor en modo debug"
+        "en": ".\\run.bat<br />Optional arguments:<br />`.\\run.bat -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`.\\run.bat -d`<br />&nbsp;&nbsp;Runs with server in debug mode",
+        "fr": ".\\run.bat<br />Arguments optionnels :<br />`.\\run.bat -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`.\\run.bat -d`<br />&nbsp;&nbsp;Exécute le serveur en mode debug",
+        "es": ".\\run.bat<br />Argumentos opcionales:<br />`.\\run.bat -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`.\\run.bat -d`<br />&nbsp;&nbsp;Ejecuta el servidor en modo debug"
       },
       "run_macos": {
-        "en": "./run.zsh<br />Optional arguments:<br />`./run.zsh -s`<br /> Will not ask if server is off<br />`.\\run.zsh -d`<br /> Runs with server in debug mode",
-        "fr": "./run.zsh<br />Arguments optionnels :<br />`./run.zsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`.\\run.zsh -d`<br /> Exécute le serveur en mode debug",
-        "es": "./run.zsh<br />Argumentos opcionales:<br />`./run.zsh -s`<br /> No preguntará si el servidor está apagado<br />`.\\run.zsh -d`<br /> Ejecuta el servidor en modo debug"
+        "en": "./run.zsh<br />Optional arguments:<br />`./run.zsh -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`.\\run.zsh -d`<br />&nbsp;&nbsp;Runs with server in debug mode",
+        "fr": "./run.zsh<br />Arguments optionnels :<br />`./run.zsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`.\\run.zsh -d`<br />&nbsp;&nbsp;Exécute le serveur en mode debug",
+        "es": "./run.zsh<br />Argumentos opcionales:<br />`./run.zsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`.\\run.zsh -d`<br />&nbsp;&nbsp;Ejecuta el servidor en modo debug"
       },
       "viewer_desc": {
         "en": "Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the `build_viewer` script.)",
@@ -1063,9 +1063,9 @@
         "es": "./bundle_viewer.bsh<br />(Solo compila y empaqueta el visor. Haga todo lo demás de la descripción manualmente o mediante otros scripts listados aquí.)"
       },
       "bundle_viewer_script_windows": {
-        "en": ".\\bundle_viewer.ps1<br />Optional arguments:<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br /> or: \"y\"; Will not ask if server is off",
-        "fr": ".\\bundle_viewer.ps1<br />Arguments optionnels :<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br /> ou : « y » ; Ne demandera pas si le serveur est arrêté",
-        "es": ".\\bundle_viewer.ps1<br />Argumentos opcionales:<br /><nobr>`.\\bundle_viewer.ps1 -ServerOff \"Y\"`</nobr><br /> o: \"y\"; No preguntará si el servidor está apagado"
+        "en": ".\\bundle_viewer.ps1<br />Optional arguments:<br /><nobr><code>.\\bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off",
+        "fr": ".\\bundle_viewer.ps1<br />Arguments optionnels :<br /><nobr><code>.\\bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté",
+        "es": ".\\bundle_viewer.ps1<br />Argumentos opcionales:<br /><nobr><code>.\\bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado"
       },
       "bundle_viewer_script_macos": {
         "en": "./bundle_viewer.zsh<br />Optional arguments:<br />`./bundle_viewer.zsh -s`<br> Will not ask if server is off",
@@ -1078,19 +1078,19 @@
         "es": "Elimina el último bundle de release .zip si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `npm ci`, ejecuta `app_setup.bat` para asegurar la consistencia de versiones, ejecuta `node build.js`, y luego crea un bundle de release zip <sup>[[2]](#f2)</sup>"
       },
       "bundle_zip_linux": {
-        "en": "./bundle_tgz.bsh<br />Optional arguments:<br />`./bundle_tgz.bsh -s`<br /> Will not ask if server is off<br />`/bundle_tgz.bsh -g`<br /> Run from Github Actions",
-        "fr": "./bundle_tgz.bsh<br />Arguments optionnels :<br />`./bundle_tgz.bsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`/bundle_tgz.bsh -g`<br /> Exécuter depuis Github Actions",
-        "es": "./bundle_tgz.bsh<br />Argumentos opcionales:<br />`./bundle_tgz.bsh -s`<br /> No preguntará si el servidor está apagado<br />`/bundle_tgz.bsh -g`<br /> Ejecutar desde Github Actions"
+        "en": "./bundle_tgz.bsh<br />Optional arguments:<br />`./bundle_tgz.bsh -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`/bundle_tgz.bsh -g`<br />&nbsp;&nbsp;Run from Github Actions",
+        "fr": "./bundle_tgz.bsh<br />Arguments optionnels :<br />`./bundle_tgz.bsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`/bundle_tgz.bsh -g`<br />&nbsp;&nbsp;Exécuter depuis Github Actions",
+        "es": "./bundle_tgz.bsh<br />Argumentos opcionales:<br />`./bundle_tgz.bsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`/bundle_tgz.bsh -g`<br />&nbsp;&nbsp;Ejecutar desde Github Actions"
       },
       "bundle_zip_windows": {
-        "en": ".\\bundle_zip.ps1<br />Optional arguments:<br />-ServerOff \"Y\"<br /> or: \"y\"; Will not ask if server is off<br />-IsGHA \"Y\"<br /> or: \"y\"; Run from Gihtub Actions",
-        "fr": ".\\bundle_zip.ps1<br />Arguments optionnels :<br />-ServerOff \"Y\"<br /> ou : « y » ; Ne demandera pas si le serveur est arrêté<br />-IsGHA \"Y\"<br /> ou : « y » ; Exécuter depuis Github Actions",
-        "es": ".\\bundle_zip.ps1<br />Argumentos opcionales:<br />-ServerOff \"Y\"<br /> o: \"y\"; No preguntará si el servidor está apagado<br />-IsGHA \"Y\"<br /> o: \"y\"; Ejecutar desde Github Actions"
+        "en": ".\\bundle_zip.ps1<br />Optional arguments:<br />-ServerOff \"Y\"<br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off<br />-IsGHA \"Y\"<br />&nbsp;&nbsp;or: \"y\"; Run from Gihtub Actions",
+        "fr": ".\\bundle_zip.ps1<br />Arguments optionnels :<br />-ServerOff \"Y\"<br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté<br />-IsGHA \"Y\"<br />&nbsp;&nbsp;ou : « y » ; Exécuter depuis Github Actions",
+        "es": ".\\bundle_zip.ps1<br />Argumentos opcionales:<br />-ServerOff \"Y\"<br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado<br />-IsGHA \"Y\"<br />&nbsp;&nbsp;o: \"y\"; Ejecutar desde Github Actions"
       },
       "bundle_zip_macos": {
-        "en": "./bundle_zip.zsh<br />Optional arguments:<br />`/bundle_zip.zsh -s`<br /> Will not ask if server is off<br />`/bundle_zip.zsh -g`<br /> Run from Github Actions",
-        "fr": "./bundle_zip.zsh<br />Arguments optionnels :<br />`/bundle_zip.zsh -s`<br /> Ne demandera pas si le serveur est arrêté<br />`/bundle_zip.zsh -g`<br /> Exécuter depuis Github Actions",
-        "es": "./bundle_zip.zsh<br />Argumentos opcionales:<br />`/bundle_zip.zsh -s`<br /> No preguntará si el servidor está apagado<br />`/bundle_zip.zsh -g`<br /> Ejecutar desde Github Actions"
+        "en": "./bundle_zip.zsh<br />Optional arguments:<br />`/bundle_zip.zsh -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`/bundle_zip.zsh -g`<br />&nbsp;&nbsp;Run from Github Actions",
+        "fr": "./bundle_zip.zsh<br />Arguments optionnels :<br />`/bundle_zip.zsh -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`/bundle_zip.zsh -g`<br />&nbsp;&nbsp;Exécuter depuis Github Actions",
+        "es": "./bundle_zip.zsh<br />Argumentos opcionales:<br />`/bundle_zip.zsh -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`/bundle_zip.zsh -g`<br />&nbsp;&nbsp;Ejecutar desde Github Actions"
       },
       "bundle_exe_desc": {
         "en": "Deletes the last .exe release bundle if it it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup.bat` to ensure version consistency, runs `node build.js`, then makes an exe installer <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>",
@@ -1098,9 +1098,9 @@
         "es": "Elimina el último bundle de release .exe si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `npm ci`, ejecuta `app_setup.bat` para asegurar la consistencia de versiones, ejecuta `node build.js`, y luego crea un instalador exe <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>"
       },
       "bundle_exe_windows": {
-        "en": ".\\bundle_exe.ps1<br />Optional arguments:<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br /> or: \"y\"; Will not ask if server is off<br /><sup>[[3]](#f3)</sup>",
-        "fr": ".\\bundle_exe.ps1<br />Arguments optionnels :<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br /> ou : « y » ; Ne demandera pas si le serveur est arrêté<br /><sup>[[3]](#f3)</sup>",
-        "es": ".\\bundle_exe.ps1<br />Argumentos opcionales:<br /><nobr>`bundle_exe.ps1 -ServerOff \"Y\"`</nobr><br /> o: \"y\"; No preguntará si el servidor está apagado<br /><sup>[[3]](#f3)</sup>"
+        "en": ".\\bundle_exe.ps1<br />Optional arguments:<br /><nobr><code>bundle_exe.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off<br /><sup>[[3]](#f3)</sup>",
+        "fr": ".\\bundle_exe.ps1<br />Arguments optionnels :<br /><nobr><code>bundle_exe.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté<br /><sup>[[3]](#f3)</sup>",
+        "es": ".\\bundle_exe.ps1<br />Argumentos opcionales:<br /><nobr><code>bundle_exe.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado<br /><sup>[[3]](#f3)</sup>"
       },
       "heading_maintenance_scripts": {
         "en": "Maintenance scripts:",
@@ -1118,39 +1118,39 @@
         "es": "Facilita la sincronización con el upstream excluyendo los archivos que se espera que difieran:"
       },
       "sync_linux": {
-        "en": "./sync.bsh<br />Optional arguments:<br />`./sync.bsh -p`<br /> Will not ask if latest is already pulled.",
-        "fr": "./sync.bsh<br />Arguments optionnels :<br />`./sync.bsh -p`<br /> Ne demandera pas si la dernière version est déjà récupérée.",
-        "es": "./sync.bsh<br />Argumentos opcionales:<br />`./sync.bsh -p`<br /> No preguntará si la última versión ya fue obtenida."
+        "en": "./sync.bsh<br />Optional arguments:<br />`./sync.bsh -p`<br />&nbsp;&nbsp;Will not ask if latest is already pulled.",
+        "fr": "./sync.bsh<br />Arguments optionnels :<br />`./sync.bsh -p`<br />&nbsp;&nbsp;Ne demandera pas si la dernière version est déjà récupérée.",
+        "es": "./sync.bsh<br />Argumentos opcionales:<br />`./sync.bsh -p`<br />&nbsp;&nbsp;No preguntará si la última versión ya fue obtenida."
       },
       "sync_windows": {
-        "en": ".\\sync.bat<br />Optional arguments:<br />`.\\sync.bat -p`<br /> Will not ask if latest is already pulled",
-        "fr": ".\\sync.bat<br />Arguments optionnels :<br />`.\\sync.bat -p`<br /> Ne demandera pas si la dernière version est déjà récupérée",
-        "es": ".\\sync.bat<br />Argumentos opcionales:<br />`.\\sync.bat -p`<br /> No preguntará si la última versión ya fue obtenida"
+        "en": ".\\sync.bat<br />Optional arguments:<br />`.\\sync.bat -p`<br />&nbsp;&nbsp;Will not ask if latest is already pulled",
+        "fr": ".\\sync.bat<br />Arguments optionnels :<br />`.\\sync.bat -p`<br />&nbsp;&nbsp;Ne demandera pas si la dernière version est déjà récupérée",
+        "es": ".\\sync.bat<br />Argumentos opcionales:<br />`.\\sync.bat -p`<br />&nbsp;&nbsp;No preguntará si la última versión ya fue obtenida"
       },
       "sync_macos": {
-        "en": "./sync.zsh<br />Optional arguments:<br />`./sync.zsh -p`<br /> Will not ask if latest is already pulled.",
-        "fr": "./sync.zsh<br />Arguments optionnels :<br />`./sync.zsh -p`<br /> Ne demandera pas si la dernière version est déjà récupérée.",
-        "es": "./sync.zsh<br />Argumentos opcionales:<br />`./sync.zsh -p`<br /> No preguntará si la última versión ya fue obtenida."
+        "en": "./sync.zsh<br />Optional arguments:<br />`./sync.zsh -p`<br />&nbsp;&nbsp;Will not ask if latest is already pulled.",
+        "fr": "./sync.zsh<br />Arguments optionnels :<br />`./sync.zsh -p`<br />&nbsp;&nbsp;Ne demandera pas si la dernière version est déjà récupérée.",
+        "es": "./sync.zsh<br />Argumentos opcionales:<br />`./sync.zsh -p`<br />&nbsp;&nbsp;No preguntará si la última versión ya fue obtenida."
       },
       "footnote1": {
-        "en": "[<b id=\"f1\">1</b>] ... When running a bat script from a command prompt, the `.\\` included in the examples is optional.",
-        "fr": "[<b id=\"f1\">1</b>] ... Lors de l'exécution d'un script bat depuis une invite de commandes, le `.\\` inclus dans les exemples est facultatif.",
-        "es": "[<b id=\"f1\">1</b>] ... Al ejecutar un script bat desde un símbolo del sistema, el `.\\` incluido en los ejemplos es opcional."
+        "en": "When running a bat script from a command prompt, the `.\\` included in the examples is optional.",
+        "fr": "Lors de l'exécution d'un script bat depuis une invite de commandes, le `.\\` inclus dans les exemples est facultatif.",
+        "es": "Al ejecutar un script bat desde un símbolo del sistema, el `.\\` incluido en los ejemplos es opcional."
       },
       "footnote2": {
-        "en": "[<b id=\"f2\">2</b>] ... Ensure the server (build_server.bat) is current!",
-        "fr": "[<b id=\"f2\">2</b>] ... Assurez-vous que le serveur (build_server.bat) est à jour !",
-        "es": "[<b id=\"f2\">2</b>] ... ¡Asegúrese de que el servidor (build_server.bat) esté actualizado!"
+        "en": "Ensure the local server is current! This is the `build_server` script, or `./build_server.[ext] dev` or `./build_server.[ext] qa` if `/local_server.env` has different versions from the panksomia_web in `/local_server/Cargo.toml`.",
+        "fr": " Assurez-vous que le serveur local est à jour ! Il s'agit du script `build_server`, ou `./build_server.[ext] dev` ou `./build_server.[ext] qa` si `/local_server.env` contient des versions différentes de panksomia_web dans `/local_server/Cargo.toml`.",
+        "es": "¡Asegúrese de que el servidor local esté actualizado! Esto es el script `build_server`, o `./build_server.[ext] dev` o `./build_server.[ext] qa` si `/local_server.env` tiene versiones diferentes de panksomia_web en `/local_server/Cargo.toml`."
       },
       "footnote3": {
-        "en": "[<b id=\"f3\">3</b>] ... Environment prerequisite for running the exe build locally: Install [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3",
-        "fr": "[<b id=\"f3\">3</b>] ... Prérequis d'environnement pour exécuter le build exe localement : Installez [Inno Setup](https://jrsoftware.org/isdl.php) - testé avec la v6.4.3",
-        "es": "[<b id=\"f3\">3</b>] ... Requisito previo del entorno para ejecutar el build exe localmente: Instale [Inno Setup](https://jrsoftware.org/isdl.php) - probado con v6.4.3"
+        "en": "Environment prerequisite for running the exe build locally: Install [Inno Setup](https://jrsoftware.org/isdl.php) -tested with v6.4.3",
+        "fr": "Prérequis d'environnement pour exécuter le build exe localement : Installez [Inno Setup](https://jrsoftware.org/isdl.php) - testé avec la v6.4.3",
+        "es": "Requisito previo del entorno para ejecutar el build exe localmente: Instale [Inno Setup](https://jrsoftware.org/isdl.php) - probado con v6.4.3"
       },
       "footnote4": {
-        "en": "[<b id=\"f4\">4</b>] ... Targeted clean tips:\n- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/debug`\n- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/release`\n- To clean just the build environment, cd to the subdirectory for your OS (i.e., /macos, /linux, or /windows), then recursively remove its build subdirectory.\n- (The clean script does all of the above.)",
-        "fr": "[<b id=\"f4\">4</b>] ... Conseils de nettoyage ciblé :\n- Pour nettoyer uniquement le serveur de développement : allez dans le répertoire /local_server et exécutez `cargo clean --target-dir target/debug`\n- Pour nettoyer uniquement le serveur de développement : allez dans le répertoire /local_server et exécutez `cargo clean --target-dir target/release`\n- Pour nettoyer uniquement l'environnement de build, allez dans le sous-répertoire de votre OS (c'est-à-dire /macos, /linux ou /windows), puis supprimez récursivement son sous-répertoire build.\n- (Le script clean fait tout ce qui précède.)",
-        "es": "[<b id=\"f4\">4</b>] ... Consejos de limpieza específica:\n- Para limpiar solo el servidor de desarrollo: vaya al directorio /local_server y ejecute `cargo clean --target-dir target/debug`\n- Para limpiar solo el servidor de desarrollo: vaya al directorio /local_server y ejecute `cargo clean --target-dir target/release`\n- Para limpiar solo el entorno de build, vaya al subdirectorio de su SO (es decir, /macos, /linux o /windows), luego elimine recursivamente su subdirectorio build.\n- (El script clean hace todo lo anterior.)"
+        "en": "Targeted clean tips:\n- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/debug`\n- To clean just the dev server: cd to the /local_server directory and run `cargo clean --target-dir target/release`\n- To clean just the build environment, cd to the subdirectory for your OS (i.e., /macos, /linux, or /windows), then recursively remove its build subdirectory.\n- (The clean script does all of the above.)",
+        "fr": "Conseils de nettoyage ciblé :\n- Pour nettoyer uniquement le serveur de développement : allez dans le répertoire /local_server et exécutez `cargo clean --target-dir target/debug`\n- Pour nettoyer uniquement le serveur de développement : allez dans le répertoire /local_server et exécutez `cargo clean --target-dir target/release`\n- Pour nettoyer uniquement l'environnement de build, allez dans le sous-répertoire de votre OS (c'est-à-dire /macos, /linux ou /windows), puis supprimez récursivement son sous-répertoire build.\n- (Le script clean fait tout ce qui précède.)",
+        "es": "Consejos de limpieza específica:\n- Para limpiar solo el servidor de desarrollo: vaya al directorio /local_server y ejecute `cargo clean --target-dir target/debug`\n- Para limpiar solo el servidor de desarrollo: vaya al directorio /local_server y ejecute `cargo clean --target-dir target/release`\n- Para limpiar solo el entorno de build, vaya al subdirectorio de su SO (es decir, /macos, /linux o /windows), luego elimine recursivamente su subdirectorio build.\n- (El script clean hace todo lo anterior.)"
       }
     },
     "ux_ui_guidelines": {
