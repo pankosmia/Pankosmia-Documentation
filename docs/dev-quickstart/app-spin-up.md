@@ -65,6 +65,8 @@ npm install
 - CLIENT1=core-client-dashboard
 - CLIENT2=core-client-content
 - CLIENT***[{% include t.html key="any_number" %}]***=core-client-settings
+- CLIENT***[{% include t.html key="any_number" %}]***=core-contenthandler-generic
+- \# {% include t.html key="sequential" %}
 
 ### {% include t.html key="heading_branding" %}
 
