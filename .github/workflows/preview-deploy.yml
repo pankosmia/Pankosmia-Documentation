@@ -122,6 +122,12 @@ jobs:
           git commit -m "ci: add preview for ${{ needs.build-preview.outputs.preview_ref }} [skip ci]"
           git push origin main
 
+      - name: Trigger deployment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run jekyll.yml --ref main
+
       - name: Output preview URL
         run: |
           echo "Preview deployed at: https://pankosmia.dev${{ needs.build-preview.outputs.base_path }}"
