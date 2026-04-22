@@ -119,7 +119,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "ci: add preview for ${{ needs.build-preview.outputs.preview_ref }}"
+          git commit -m "ci: add preview for ${{ needs.build-preview.outputs.preview_ref }} [skip ci]"
           git push origin main
 
       - name: Output preview URL
