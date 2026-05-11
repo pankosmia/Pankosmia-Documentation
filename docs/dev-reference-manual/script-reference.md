@@ -88,7 +88,6 @@ npm run build
 | {% include tmp.html key="viewer_desc" %} | {% include tmp.html key="viewer_script" %} |
 | {% include tmp.html key="bundle_viewer_desc" %} | {% include tmp.html key="bundle_viewer_script" %} |
 | {% include tmp.html key="bundle_zip_desc" %} | {% include tmp.html key="bundle_zip_script" %} |
-| {% include tmp.html key="bundle_exe_desc" %} | {% include tmp.html key="bundle_exe_script" %} |
 
 #### {% include t.html key="heading_maintenance_scripts" %}
 {% include t.html key="maintenance_scripts_run_from" %}

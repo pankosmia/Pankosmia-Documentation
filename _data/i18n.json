@@ -1037,16 +1037,6 @@
         "fr": "**Linux :** `bundle_tgz`<br />**Windows :** `bundle_zip.ps1`<br />**macOS :** `bundle_zip`<br />Arguments optionnels :<br />**Linux/macOS :**<br />`bundle_tgz -s` / `bundle_zip -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`bundle_tgz -g` / `bundle_zip -g`<br />&nbsp;&nbsp;Exécuter depuis GitHub Actions<br />**Windows :**<br /><nobr><code>bundle_zip.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté<br /><nobr><code>bundle_zip.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Exécuter depuis GitHub Actions",
         "es": "**Linux:** `bundle_tgz`<br />**Windows:** `bundle_zip.ps1`<br />**macOS:** `bundle_zip`<br />Argumentos opcionales:<br />**Linux/macOS:**<br />`bundle_tgz -s` / `bundle_zip -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`bundle_tgz -g` / `bundle_zip -g`<br />&nbsp;&nbsp;Ejecutar desde GitHub Actions<br />**Windows:**<br /><nobr><code>bundle_zip.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado<br /><nobr><code>bundle_zip.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; Ejecutar desde GitHub Actions"
       },
-      "bundle_exe_desc": {
-        "en": "Deletes the last .exe release bundle if it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup` to ensure version consistency, runs <nobr><code>node build.js</code></nobr>, then makes an exe installer <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>",
-        "fr": "Supprime le dernier bundle de release .exe s'il existe, puis sur ce dépôt exécute `git checkout main`, `git pull` et `npm ci`, exécute `app_setup` pour assurer la cohérence des versions, exécute <nobr><code>node build.js</code></nobr>, puis crée un installateur exe <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>",
-        "es": "Elimina el último bundle de release .exe si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `npm ci`, ejecuta `app_setup` para asegurar la consistencia de versiones, ejecuta <nobr><code>node build.js</code></nobr>, y luego crea un instalador exe <sup>[[2]](#f2)</sup><sup>[[3]](#f3)</sup>"
-      },
-      "bundle_exe_script": {
-        "en": "`bundle_exe.ps1` **[Windows only]**<br />Optional argument:<br /><nobr><code>bundle_exe.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off <sup>[[3]](#f3)</sup>",
-        "fr": "`bundle_exe.ps1` **[Windows uniquement]**<br />Argument optionnel :<br /><nobr><code>bundle_exe.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté <sup>[[3]](#f3)</sup>",
-        "es": "`bundle_exe.ps1` **[Solo Windows]**<br />Argumento opcional:<br /><nobr><code>bundle_exe.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado <sup>[[3]](#f3)</sup>"
-      },
       "heading_maintenance_scripts": {
         "en": "Maintenance scripts:",
         "fr": "Scripts de maintenance :",
