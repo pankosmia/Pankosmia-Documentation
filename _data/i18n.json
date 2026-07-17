@@ -1376,6 +1376,138 @@
         "fr": "Veuillez consulter la politique de Github ci-dessus.",
         "es": "Consulte la política de Github mencionada anteriormente."
       }
+    },
+    "decluttering": {
+      "title": {
+        "en": "Decluttering Client Repos",
+        "fr": "Désencombrer les dépôts clients",
+        "es": "Depurar los repositorios de clientes"
+      },
+      "heading_npm_audit_fix": {
+        "en": "npm audit fix",
+        "fr": "npm audit fix",
+        "es": "npm audit fix"
+      },
+      "npm_audit_fix": {
+        "en": "Run `npm audit fix` when npm leaves a message in your terminal recommending doing.",
+        "fr": "Exécutez `npm audit fix` lorsque npm laisse un message dans votre terminal le recommandant.",
+        "es": "Ejecute `npm audit fix` cuando npm deje un mensaje en su terminal recomendándolo."
+      },
+      "heading_knip": {
+        "en": "Knip",
+        "fr": "Knip",
+        "es": "Knip"
+      },
+      "knip": {
+        "en": "Knip is useful towards identifying unlisted dependencies, duplicated exports, and potential unused files, dependencies or exports.",
+        "fr": "Knip est utile pour identifier les dépendances non répertoriées, les exports dupliqués et les fichiers, dépendances ou exports potentiellement inutilisés.",
+        "es": "Knip es útil para identificar dependencias no listadas, exportaciones duplicadas y archivos, dependencias o exportaciones potencialmente sin usar."
+      },
+      "knip_important_title": {
+        "en": "Watch out for false positives!",
+        "fr": "Attention aux faux positifs !",
+        "es": "¡Cuidado con los falsos positivos!"
+      },
+      "knip_important": {
+        "en": "Avoid blindly implementing everything reported. Look, verify, and test. Do your own searches and thinking for things like reported unused exports.",
+        "fr": "Évitez d'implémenter aveuglément tout ce qui est signalé. Regardez, vérifiez et testez. Faites vos propres recherches et réflexions pour des éléments comme les exports signalés comme inutilisés.",
+        "es": "Evite implementar a ciegas todo lo que se reporta. Observe, verifique y pruebe. Haga sus propias búsquedas y reflexiones para cosas como las exportaciones reportadas como sin usar."
+      },
+      "knip_warning_title": {
+        "en": "Knip is ***not*** meant for resource-core, webfonts-core, pankosmia-web, or desktop-app-*.",
+        "fr": "Knip n'est ***pas*** destiné à resource-core, webfonts-core, pankosmia-web ou desktop-app-*.",
+        "es": "Knip ***no*** está destinado a resource-core, webfonts-core, pankosmia-web ni desktop-app-*."
+      },
+      "knip_warning": {
+        "en": "It is for projects constructed with a packages.json and an index.js, which it uses to step through and evaluate all includes in the app.",
+        "fr": "Il est destiné aux projets construits avec un packages.json et un index.js, qu'il utilise pour parcourir et évaluer tous les includes de l'application.",
+        "es": "Es para proyectos construidos con un packages.json y un index.js, que utiliza para recorrer y evaluar todos los includes de la aplicación."
+      },
+      "heading_knip_setup": {
+        "en": "Setup",
+        "fr": "Configuration",
+        "es": "Configuración"
+      },
+      "knip_setup": {
+        "en": "`npm install -g knip`  (to install or update)",
+        "fr": "`npm install -g knip`  (pour installer ou mettre à jour)",
+        "es": "`npm install -g knip`  (para instalar o actualizar)"
+      },
+      "heading_knip_analyze": {
+        "en": "Analyzing a repo",
+        "fr": "Analyser un dépôt",
+        "es": "Analizar un repositorio"
+      },
+      "knip_analyze": {
+        "en": "In the root of the client repo in a terminal, enter `knip`. It will provide a list of any of any unused, unlisted, or duplicated things that it suspects it has found.",
+        "fr": "À la racine du dépôt client dans un terminal, saisissez `knip`. Il fournira une liste de tous les éléments inutilisés, non répertoriés ou dupliqués qu'il pense avoir trouvés.",
+        "es": "En la raíz del repositorio del cliente en un terminal, escriba `knip`. Proporcionará una lista de cualquier elemento sin usar, no listado o duplicado que sospeche haber encontrado."
+      },
+      "heading_knip_false_unused_export": {
+        "en": "Example of false positives on unused exports",
+        "fr": "Exemple de faux positifs sur les exports inutilisés",
+        "es": "Ejemplo de falsos positivos en exportaciones sin usar"
+      },
+      "knip_false_unused_export": {
+        "en": "It will report `Selection.styles.jsx` as an unused export (because of the filename) even when it is in use. Be careful to not remove this file where its export is actually in use.",
+        "fr": "Il signalera `Selection.styles.jsx` comme un export inutilisé (à cause du nom de fichier) même lorsqu'il est utilisé. Veillez à ne pas supprimer ce fichier lorsque son export est réellement utilisé.",
+        "es": "Reportará `Selection.styles.jsx` como una exportación sin usar (debido al nombre del archivo) incluso cuando está en uso. Tenga cuidado de no eliminar este archivo cuando su exportación está realmente en uso."
+      },
+      "heading_knip_false_duplicate_export": {
+        "en": "Example of reported duplicated exports not actually causing a problem",
+        "fr": "Exemple d'exports signalés comme dupliqués ne posant en réalité aucun problème",
+        "es": "Ejemplo de exportaciones reportadas como duplicadas que en realidad no causan problemas"
+      },
+      "knip_false_duplicate_export": {
+        "en": "`Selection.styles.jsx` is exporting `sx`, which works fine as used.",
+        "fr": "`Selection.styles.jsx` exporte `sx`, ce qui fonctionne parfaitement tel qu'utilisé.",
+        "es": "`Selection.styles.jsx` exporta `sx`, lo cual funciona bien tal como se usa."
+      },
+      "heading_knip_false_unused_dependency": {
+        "en": "Example of false positive on unused dependencies",
+        "fr": "Exemple de faux positif sur les dépendances inutilisées",
+        "es": "Ejemplo de falso positivo en dependencias sin usar"
+      },
+      "knip_false_unused_dependency": {
+        "en": "Knip is quite good at following the include chain throughout a project. However, sometimes dependencies are in place outside of this chain, which it will miss. For example, if a `package.json` includes use of `react-scripts` in its scripts section, it's dependency chain includes `babel` which includes a devDependency of `@babel/plugin-proposal-private-property-in-object`. Knip will miss that case and report that as an unused dependency, but in that case it is actually used.",
+        "fr": "Knip est plutôt bon pour suivre la chaîne d'includes à travers un projet. Cependant, il arrive que des dépendances soient en place en dehors de cette chaîne, ce qu'il ne détectera pas. Par exemple, si un `package.json` utilise `react-scripts` dans sa section scripts, sa chaîne de dépendances inclut `babel`, qui inclut une devDependency `@babel/plugin-proposal-private-property-in-object`. Knip manquera ce cas et le signalera comme une dépendance inutilisée, alors qu'en réalité elle est bien utilisée.",
+        "es": "Knip es bastante bueno siguiendo la cadena de includes a lo largo de un proyecto. Sin embargo, a veces hay dependencias fuera de esta cadena, que no detectará. Por ejemplo, si un `package.json` incluye el uso de `react-scripts` en su sección de scripts, su cadena de dependencias incluye `babel`, que incluye una devDependency de `@babel/plugin-proposal-private-property-in-object`. Knip pasará por alto ese caso y lo reportará como una dependencia sin usar, pero en ese caso en realidad sí se usa."
+      },
+      "heading_applying_changes": {
+        "en": "Applying package changes while keeping local installs clean and consistent",
+        "fr": "Appliquer les modifications de paquets tout en gardant les installations locales propres et cohérentes",
+        "es": "Aplicar cambios de paquetes manteniendo las instalaciones locales limpias y coherentes"
+      },
+      "applying_changes_1": {
+        "en": "Use `npm ci`. This removes node_modules and matches the lock file.",
+        "fr": "Utilisez `npm ci`. Cela supprime node_modules et correspond au fichier de verrouillage.",
+        "es": "Use `npm ci`. Esto elimina node_modules y coincide con el archivo de bloqueo."
+      },
+      "applying_changes_2": {
+        "en": "To bump a package version follow `npm ci` with `npm install <package_name>@0.1.29 --save-exact`",
+        "fr": "Pour mettre à jour la version d'un paquet, faites suivre `npm ci` de `npm install <package_name>@0.1.29 --save-exact`",
+        "es": "Para actualizar la versión de un paquete, siga `npm ci` con `npm install <package_name>@0.1.29 --save-exact`"
+      },
+      "applying_changes_3": {
+        "en": "To remove a package follow `npm ci` with `npm uninstall <package_name>`",
+        "fr": "Pour supprimer un paquet, faites suivre `npm ci` de `npm uninstall <package_name>`",
+        "es": "Para eliminar un paquete, siga `npm ci` con `npm uninstall <package_name>`"
+      },
+      "applying_changes_4": {
+        "en": "To add a package  follow `npm ci` with `npm install <package_name> --save-dev` or `npm install <package_name> -D` (for devDependencies) or `npm install <package-name> --save-optional`",
+        "fr": "Pour ajouter un paquet, faites suivre `npm ci` de `npm install <package_name> --save-dev` ou `npm install <package_name> -D` (pour les devDependencies) ou `npm install <package-name> --save-optional`",
+        "es": "Para agregar un paquete, siga `npm ci` con `npm install <package_name> --save-dev` o `npm install <package_name> -D` (para devDependencies) o `npm install <package-name> --save-optional`"
+      },
+      "heading_why_not_manual_edit": {
+        "en": "Why avoid manually editing `package.json` (except where not possible)?",
+        "fr": "Pourquoi éviter de modifier manuellement `package.json` (sauf lorsque c'est impossible) ?",
+        "es": "¿Por qué evitar editar manualmente `package.json` (salvo cuando no es posible)?"
+      },
+      "why_not_manual_edit": {
+        "en": "`npm i` tends towards `package-lock.json` OS differences, and does not keep node_modules clean. Note also that following a manual package.json edit with `npm prune` does *not* update package-lock.json to reflect the removal, and does *not* uninstall lifecycle scripts (which let packages perform custom actions automatically).",
+        "fr": "`npm i` tend à créer des différences de `package-lock.json` selon le système d'exploitation et ne garde pas node_modules propre. Notez également qu'après une modification manuelle de package.json, l'exécution de `npm prune` ne met *pas* à jour package-lock.json pour refléter la suppression, et ne désinstalle *pas* les scripts de cycle de vie (qui permettent aux paquets d'effectuer automatiquement des actions personnalisées).",
+        "es": "`npm i` tiende a generar diferencias en `package-lock.json` según el sistema operativo y no mantiene node_modules limpio. Tenga en cuenta también que, tras una edición manual de package.json, ejecutar `npm prune` *no* actualiza package-lock.json para reflejar la eliminación, y *no* desinstala los scripts de ciclo de vida (que permiten a los paquetes realizar acciones personalizadas automáticamente)."
+      }
     }
   }
 }
