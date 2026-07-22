@@ -17,11 +17,6 @@ parent: Dev Reference Manual
 - TOC
 {:toc}
 
-## {% include t.html key="heading_npm_audit_fix" %}
-
-{: .highlight }
-> 💡 {% include tmp.html key="npm_audit_fix" %}
-
 ## {% include t.html key="heading_knip" %}
 
 {% include t.html key="knip" %}

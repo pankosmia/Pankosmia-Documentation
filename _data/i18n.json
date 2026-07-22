@@ -1383,16 +1383,6 @@
         "fr": "Désencombrer les dépôts clients",
         "es": "Depurar los repositorios de clientes"
       },
-      "heading_npm_audit_fix": {
-        "en": "npm audit fix",
-        "fr": "npm audit fix",
-        "es": "npm audit fix"
-      },
-      "npm_audit_fix": {
-        "en": "Run `npm audit fix` when npm leaves a message in your terminal recommending doing.",
-        "fr": "Exécutez `npm audit fix` lorsque npm laisse un message dans votre terminal le recommandant.",
-        "es": "Ejecute `npm audit fix` cuando npm deje un mensaje en su terminal recomendándolo."
-      },
       "heading_knip": {
         "en": "Knip",
         "fr": "Knip",
