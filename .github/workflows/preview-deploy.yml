@@ -106,7 +106,10 @@ jobs:
           rm -rf "${TARGET_DIR}"
           cp -R "preview-temp/." "${TARGET_DIR}"
 
-          if git diff --quiet -- "${TARGET_DIR}"; then
+          git add -A "${TARGET_DIR}"
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit for preview."
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
