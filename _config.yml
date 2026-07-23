@@ -118,3 +118,11 @@ exclude:
 # Ruby version displayed in debugging info.
 # IMPORTANT: Set this in Gemfile, and then replicate it here.
 ruby: 3.3.6
+
+callouts:
+  highlight:
+    color: yellow
+  important:
+    color: blue
+  warning:
+    color: red
