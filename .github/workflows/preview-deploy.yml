@@ -94,7 +94,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: preview-site
-          path: preview-temp
+          path: /tmp/preview-site
 
       - name: Copy preview into previews/<ref>
         id: stage
@@ -104,7 +104,7 @@ jobs:
 
           mkdir -p "$(dirname "${TARGET_DIR}")"
           rm -rf "${TARGET_DIR}"
-          cp -R "preview-temp/." "${TARGET_DIR}"
+          cp -R "/tmp/preview-site/." "${TARGET_DIR}"
 
           git add -A "${TARGET_DIR}"
 
