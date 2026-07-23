@@ -1,4 +1,4 @@
-name: Preview deploy (use main workflow)
+name: Preview deploy PR (use main workflow)
 
 on:
   workflow_dispatch:
@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: "pages-preview"
@@ -22,17 +23,21 @@ jobs:
     outputs:
       preview_ref: ${{ steps.set-ref.outputs.preview_ref }}
       base_path: ${{ steps.set-ref.outputs.base_path }}
+      branch_name: ${{ steps.set-ref.outputs.branch_name }}
+
     steps:
       - name: Determine ref to build
         id: set-ref
         run: |
           REF="${{ github.event.inputs.ref }}"
           REF="${REF#refs/heads/}"
-          # Normalize: collapse duplicate slashes, remove leading/trailing slashes
           REF="$(echo "$REF" | sed -E 's#/{2,}#/#g' | sed -E 's#^/##; s#/$##')"
           BASE_PATH="/previews/${REF}"
-          echo "preview_ref=${REF}" >> $GITHUB_OUTPUT
-          echo "base_path=${BASE_PATH}" >> $GITHUB_OUTPUT
+          BRANCH_NAME="ci/preview-$(echo "$REF" | tr '/[:space:]' '-' | tr -cd '[:alnum:]-._')"
+
+          echo "preview_ref=${REF}" >> "$GITHUB_OUTPUT"
+          echo "base_path=${BASE_PATH}" >> "$GITHUB_OUTPUT"
+          echo "branch_name=${BRANCH_NAME}" >> "$GITHUB_OUTPUT"
 
       - name: Checkout target ref
         uses: actions/checkout@v4
@@ -91,43 +96,38 @@ jobs:
           name: preview-site
           path: preview-temp
 
-      - name: Copy preview into previews/<ref> on main
+      - name: Copy preview into previews/<ref>
+        id: stage
         run: |
           REF="${{ needs.build-preview.outputs.preview_ref }}"
-          # target path in repo
           TARGET_DIR="previews/${REF}"
 
           mkdir -p "$(dirname "${TARGET_DIR}")"
-
-          # Remove any existing preview for this ref
           rm -rf "${TARGET_DIR}"
-
-          # Copy built site
           cp -R "preview-temp/." "${TARGET_DIR}"
 
-      - name: Commit and push preview
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add "previews/${{ needs.build-preview.outputs.preview_ref }}"
-
-          if git diff --cached --quiet; then
-            echo "No changes to commit for preview."
-            exit 0
+          if git diff --quiet -- "${TARGET_DIR}"; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-          git commit -m "ci: add preview for ${{ needs.build-preview.outputs.preview_ref }} [skip ci]"
-          git push origin main
+      - name: Create pull request
+        if: steps.stage.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "ci: add preview for ${{ needs.build-preview.outputs.preview_ref }} [skip ci]"
+          branch: ${{ needs.build-preview.outputs.branch_name }}
+          delete-branch: true
+          base: main
+          title: "ci: add preview for ${{ needs.build-preview.outputs.preview_ref }}"
+          body: |
+            Automated preview publish for `${{ needs.build-preview.outputs.preview_ref }}`.
 
-      - name: Trigger deployment
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh workflow run jekyll.yml --ref main
+            Preview URL after merge:
+            `https://pankosmia.dev${{ needs.build-preview.outputs.base_path }}`
 
       - name: Output preview URL
         run: |
-          echo "Preview deployed at: https://pankosmia.dev${{ needs.build-preview.outputs.base_path }}"
+          echo "Preview will be available after merge at: https://pankosmia.dev${{ needs.build-preview.outputs.base_path }}"
