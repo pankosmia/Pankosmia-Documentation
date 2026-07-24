@@ -317,15 +317,20 @@
         "fr": "Clients requis :",
         "es": "Clientes requeridos:"
       },
-      "any_number": {
-        "en": "any number",
-        "fr": "n'importe quel nombre",
-        "es": "cualquier número"
+      "required_clients": {
+        "en": "The only required client is one that matches the HOMEPAGE entered in `app_config.env`.",
+        "fr": "Le seul client requis est celui qui correspond à la HOMEPAGE saisie dans `app_config.env`.",
+        "es": "El único cliente requerido es el que coincide con la HOMEPAGE introducida en `app_config.env`."
+      },
+      "heading_some_optional_clients": {
+        "en": "Some Optional Clients:",
+        "fr": "Quelques clients optionnels :",
+        "es": "Algunos clientes opcionales:"
       },
       "sequential": {
-        "en": "Keep numbering sequential. Do not skip numbers.",
-        "fr": "Gardez la numérotation séquentielle. Ne sautez pas de numéros.",
-        "es": "Mantenga la numeración secuencial. No omita números."
+        "en": "Start with 1. Keep numbering sequential. Do not skip numbers.",
+        "fr": "Commencez par 1. Gardez une numérotation séquentielle. Ne sautez pas de numéros.",
+        "es": "Comience con 1. Mantenga la numeración secuencial. No omita números."
       },
       "heading_branding": {
         "en": "Branding",
