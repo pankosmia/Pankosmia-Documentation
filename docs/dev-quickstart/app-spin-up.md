@@ -62,11 +62,15 @@ npm install
 - ASSET3_NAME=webfonts
 
 #### {% include t.html key="heading_required_clients" %}
+{% include t.html key="required_clients" %}
+
+#### {% include t.html key="heading_some_optional_clients" %}
+{% include t.html key="sequential" %}
 - CLIENT1=core-client-dashboard
 - CLIENT2=core-client-content
-- CLIENT***[{% include t.html key="any_number" %}]***=core-client-settings
-- CLIENT***[{% include t.html key="any_number" %}]***=core-contenthandler-generic
-- \# {% include t.html key="sequential" %}
+- CLIENT3=core-client-settings
+- CLIENT4=core-contenthandler-generic
+
 
 ### {% include t.html key="heading_branding" %}
 
