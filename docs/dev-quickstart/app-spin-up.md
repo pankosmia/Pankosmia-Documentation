@@ -62,7 +62,7 @@ npm install
 - ASSET3_NAME=webfonts
 
 #### {% include t.html key="heading_required_clients" %}
-{% include t.html key="required_clients" %}
+{% include tm.html key="required_clients" %}
 
 #### {% include t.html key="heading_some_optional_clients" %}
 {% include t.html key="sequential" %}
