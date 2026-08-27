@@ -43,9 +43,15 @@ parent: Dev Quickstart
 {% include t.html key="package_json_instructions" %}
 
 ### {% include t.html key="heading_npm_install" %}
-<ul><pre>
-npm install
-</pre></ul>
+
+{: .highlight-title }
+> {% include tcmp.html key="pnpm_migration_title" %}
+>
+> {% include tcmp.html key="pnpm_migration" %}
+
+| `pnpm-lock.yaml`| `package-lock.json` |
+|---|---|
+| > `pnpm install` | > `npm install` |
 
 ### {% include t.html key="heading_edit_app_config" %}
 {% include t.html key="edit_app_config_intro" %}

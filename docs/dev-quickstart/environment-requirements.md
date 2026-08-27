@@ -23,24 +23,40 @@ parent: Dev Quickstart
 
 ## {% include t.html key="heading_tested_on" %}
 
+{: .highlight-title }
+> {% include tcmp.html key="pnpm_migration_title" %}
+>
+> {% include tcmp.html key="pnpm_migration" %}
+
 ### Ubuntu 24.04 {% include t.html key="with" %}
-- npm 10.7.0
-- node 20.18.1
+
+| `pnpm-lock.yaml`| `package-lock.json` |
+|---|---|
+| pnpm 11.20.0 | npm 10.7.0 |
+| node 24.11.0 | node 20.18.1 |
+
 - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
 
 ### Windows 11 {% include t.html key="with" %}
+
+| `pnpm-lock.yaml`| `package-lock.json` |
+|---|---|
+| pnpm 11.20.0 | npm 10.7.0 |
+| node 24.11.0 | node 20.18.1 |
+
 - git 2.44.0; {% include t.html key="see" %} [https://git-scm.com/install/windows](https://git-scm.com/install/windows)
-- npm 10.7.0
-- node 20.18.1
 - rustc 1.88.0 -- {% include t.html key="see" %} [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
 - cmake 3.31.0 -- {% include tmp.html key="windows_cmake_ver" %} {% include t.html key="see" %} [https://cmake.org/download/](https://cmake.org/download/)
 - {% include t.html key="windows_powershell" %}
 - {% include tmp.html key="windows_inno_setup" %}
 
 ### MacOS {% include t.html key="with" %}
-- npm 10.7.0 ({% include t.html key="tested_on" %} Monterey)
-- npm 10.8.2 ({% include t.html key="tested_on" %} Sequoia)
-- node 20.18.1
+
+| `pnpm-lock.yaml`| `package-lock.json` |
+|---|---|
+| pnpm 11.20.0 | npm 10.7.0 ({% include t.html key="tested_on" %} Monterey)<br />npm 10.8.2 ({% include t.html key="tested_on" %} Sequoia) |
+| node 24.11.0 | node 20.18.1 |
+
 - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
 - OpenSSL 3.5.0 -- `brew install openssl`
 

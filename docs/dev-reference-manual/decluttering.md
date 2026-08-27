@@ -47,13 +47,18 @@ parent: Dev Reference Manual
 {% include tmp.html key="knip_false_unused_dependency" %}
 
 ## {% include t.html key="heading_applying_changes" %}
-- {% include tmp.html key="applying_changes_1" %}
-- {% include tmp.html key="applying_changes_2" %}
-- {% include tmp.html key="applying_changes_3" %}
-- {% include tmp.html key="applying_changes_4" %}
 
-### {% include t.html key="heading_why_not_manual_edit" %}
+{: .highlight-title }
+> {% include tcmp.html key="pnpm_migration_title" %}
+>
+> {% include tcmp.html key="pnpm_migration" %}
 
-{% include tmp.html key="why_not_manual_edit" %}
+| | `pnpm-lock.yaml`| `package-lock.json` |
+|---|---|---|
+| {% include tmp.html key="applying_changes_1" %} | `pnpm install` {% include tmp.html key="or_manual" %} | {% include tmp.html key="applying_changes_1.1" %} |
+| {% include tmp.html key="applying_changes_2" %} | `pnpm i <package_name>@0.1.29 --save-exact` {% include tmp.html key="or_manual" %} | `npm i <package_name>@0.1.29 --save-exact` |
+| {% include tmp.html key="applying_changes_3" %} | `pnpm uninstall <package_name>` {% include tmp.html key="or_manual" %} | `npm uninstall <package_name>` |
+| {% include tmp.html key="applying_changes_4" %} | {% include tmp.html key="applying_changes_4.1" %} {% include tmp.html key="or_manual" %} | {% include tmp.html key="applying_changes_4.2" %} |
+
 
 

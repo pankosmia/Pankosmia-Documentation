@@ -40,14 +40,23 @@ parent: Dev Reference Manual
 </pre>
 
 ## {% include t.html key="heading_installing_clients" %}
+
+{: .highlight-title }
+> {% include tcmp.html key="pnpm_migration_title" %}
+>
+> {% include tcmp.html key="pnpm_migration" %}
+
 {% include tm.html key="installing_clients_intro" %}
 
 {% include tm.html key="installing_clients_script" %}
-```
-# {% include t.html key="run_where" %}
-npm ci
-npm run build
-```
+
+### {% include t.html key="run_where" %}
+
+| `pnpm-lock.yaml`| `package-lock.json` |
+|---|---|
+| > `pnpm install` | > `npm ci` |
+| > `pnpm run build` | > `npm run build` |
+
 {% include tm.html key="installing_clients_run_note" %}
 
 ## {% include t.html key="heading_scripts" %}
