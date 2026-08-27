@@ -393,9 +393,9 @@
         "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_server` para compilar el servidor Pankosmia y ensamblar el entorno de build. Cuando `/local_server.env` tenga versiones diferentes de panksomia_web en `/local_server/Cargo.toml`, use `./build_server.[ext] dev` para compilar un servidor de desarrollo local, y `./build_server.[ext] qa` para compilar un servidor *qa* local. Tenga paciencia, esto tomará un tiempo."
       },
       "setup_scripts_build_viewer": {
-        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local development environment. Be patient, especially in Windows.",
-        "fr": "(Optionnel) Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_viewer` pour créer une visionneuse Electronite à utiliser avec l'environnement de développement local. Soyez patient, surtout sous Windows.",
-        "es": "(Opcional) Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_viewer` para crear un visor Electronite para usar con el entorno de desarrollo local. Tenga paciencia, especialmente en Windows."
+        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local development environment.",
+        "fr": "(Optionnel) Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_viewer` pour créer une visionneuse Electronite à utiliser avec l'environnement de développement local.",
+        "es": "(Opcional) Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_viewer` para crear un visor Electronite para usar con el entorno de desarrollo local."
       },
       "heading_running_your_setup": {
         "en": "Running your Setup",
@@ -646,9 +646,9 @@
         "es": "Visor de desarrollo Electronite"
       },
       "dev_viewer_create": {
-        "en": "To create an Electronite viewer for use with your local dev build environment, run this script once while online:",
-        "fr": "Pour créer une visionneuse Electronite à utiliser avec votre environnement de build de développement local, exécutez ce script une fois en étant en ligne :",
-        "es": "Para crear un visor Electronite para usar con su entorno de build de desarrollo local, ejecute este script una vez estando en línea:"
+        "en": "To create an Electronite viewer for use with your local dev build environment, run this script while online:",
+        "fr": "Pour créer une visionneuse Electronite à utiliser avec votre environnement de build de développement local, exécutez ce script en étant connecté à Internet  :",
+        "es": "Para crear un visor Electronite para usar con su entorno de build de desarrollo local, ejecute este script con conexión a Internet:"
       },
       "then": {
         "en": "then",
@@ -978,9 +978,9 @@
         "es": "Crear un visor Electronite para usar con el entorno de build de desarrollo local."
       },
       "build_viewer_script": {
-        "en": "`build_viewer`<br />**Windows:** uses `.ps1` (use a PowerShell terminal)",
-        "fr": "`build_viewer`<br />**Windows :** utilise `.ps1` (utilisez un terminal PowerShell)",
-        "es": "`build_viewer`<br />**Windows:** usa `.ps1` (use una terminal PowerShell)"
+        "en": "`build_viewer`<br />Optional argument:<br />`build_viewer -f`<br />&nbsp;&nbsp;Full re-install<br />**Windows:** uses `.ps1` (use a PowerShell terminal)",
+        "fr": "`build_viewer`<br />Argument optionnels :<br />`build_viewer -f`<br />&nbsp;&nbsp;Réinstallation complète<br />**Windows :** utilise `.ps1` (utilisez un terminal PowerShell)",
+        "es": "`build_viewer`<br />Argument opcionales:<br />`build_viewer -f`<br />&nbsp;&nbsp;Reinstalación completa<br />**Windows:** usa `.ps1` (use una terminal PowerShell)"
       },
       "heading_usage_scripts": {
         "en": "Usage scripts:",
