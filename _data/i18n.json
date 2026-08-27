@@ -686,54 +686,37 @@
         "es": "Este proyecto funciona tanto en un navegador web como en el visor Electronite. Solo agregue código a Electron/Electronite que sea necesario para manejar cosas que el navegador web ya hace (por ejemplo, Imprimir, Buscar, Zoom, Atrás, Adelante). Evite codificar de una manera que impida el uso del navegador web."
       },
       "dev_changes_tip": {
-        "en": "The way to develop in Electronite is to start by modifying the code that is used by your dev viewer. The file structure to focus on is below, in particular `electronStartup.js` and `preload.js`. Make changes here first to test in local dev:",
-        "fr": "Pour développer dans Electronite, commencez par modifier le code utilisé par votre visionneuse de développement. La structure de fichiers sur laquelle se concentrer est ci-dessous, en particulier `electronStartup.js` et `preload.js`. Effectuez d'abord les modifications ici pour tester en développement local :",
-        "es": "La forma de desarrollar en Electronite es comenzar modificando el código utilizado por su visor de desarrollo. La estructura de archivos en la que centrarse está a continuación, en particular `electronStartup.js` y `preload.js`. Haga los cambios aquí primero para probar en desarrollo local:"
+        "en": "The way to develop in Electronite is to start by modifying sourcecode in the following location. The electron orechestrator is `electronStartup.js`."
       },
       "heading_deploying_dev_changes": {
         "en": "Deploying tested dev changes to Electronite",
         "fr": "Déployer les modifications de développement testées vers Electronite",
         "es": "Desplegar los cambios de desarrollo probados en Electronite"
       },
-      "deploy_electronstartup_intro": {
-        "en": "If changes to `electronStartup.js` are required, reproduce these changes in the following two files:",
-        "fr": "Si des modifications de `electronStartup.js` sont nécessaires, reproduisez ces modifications dans les deux fichiers suivants :",
-        "es": "Si se requieren cambios en `electronStartup.js`, reproduzca estos cambios en los dos archivos siguientes:"
-      },
-      "electron_dev_startup": {
-        "en": "used by the viewer and the Linux app; launches the viewer without starting the server",
-        "fr": "utilisé par la visionneuse et l'application Linux ; lance la visionneuse sans démarrer le serveur",
-        "es": "utilizado por el visor y la aplicación Linux; lanza el visor sin iniciar el servidor"
-      },
-      "electron_startup": {
-        "en": "used by the Windows and MacOS apps; starts the server then launches the viewer",
-        "fr": "utilisé par les applications Windows et MacOS ; démarre le serveur puis lance la visionneuse",
-        "es": "utilizado por las aplicaciones Windows y MacOS; inicia el servidor y luego lanza el visor"
-      },
       "deploy_test_dev_startup": {
-        "en": "Test `electronDevStartup.js` by re-running the `build_viewer` script. See [Electronite Dev Viewer](#electronite-dev-viewer) above. Also used in the Linux app.",
-        "fr": "Testez `electronDevStartup.js` en relançant le script `build_viewer`. Voir [Visionneuse de développement Electronite](#electronite-dev-viewer) ci-dessus. Également utilisé dans l'application Linux.",
-        "es": "Pruebe `electronDevStartup.js` volviendo a ejecutar el script `build_viewer`. Vea [Visor de desarrollo Electronite](#electronite-dev-viewer) arriba. También se usa en la aplicación Linux."
+        "en": "Test by re-running the `build_viewer` script. See [Electronite Dev Viewer](#electronite-dev-viewer) above. This will setup the Electron files above in the following location with app-specific variables configured.",
+        "fr": "Testez en relançant le script `build_viewer`. Voir [Visionneuse de développement Electronite](#electronite-dev-viewer) ci-dessus. Cela configurera les fichiers Electron ci-dessus à l'emplacement suivant avec les variables spécifiques à l'application configurées.",
+        "es": "Pruebe volviendo a ejecutar el script `build_viewer`. Vea [Visor de desarrollo Electronite](#electronite-dev-viewer) arriba. Esto configurará los archivos de Electron mencionados arriba en la siguiente ubicación con las variables específicas de la aplicación configuradas."
       },
       "deploy_test_startup": {
-        "en": "Test `electronStartup.js` by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs for Windows/MacOS.",
-        "fr": "Testez `electronStartup.js` en compilant localement sous Windows ou MacOS, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations autonomes résultantes pour Windows/MacOS.",
-        "es": "Pruebe `electronStartup.js` compilando localmente en Windows o MacOS, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones independientes resultantes para Windows/MacOS."
+        "en": "Test `bundle_viewer.<bsh|ps1|zsh>` by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting installs.",
+        "fr": "Testez `bundle_viewer.<bsh|ps1|zsh>` en compilant localement sous Windows ou MacOS, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations résultantes.",
+        "es": "Pruebe `bundle_viewer.<bsh|ps1|zsh>` compilando localmente en Windows o MacOS, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones resultantes."
+      },
+      "install_important_title": {
+        "en": "Required packages are copied by script!",
+        "fr": "Les paquets requis sont copiés par le script !",
+        "es": "¡Los paquetes requeridos se copian mediante el script!"
+      },
+      "install_important": {
+        "en": "If packages required in Electron are changed or updated, it is not enough to address them in the repo root `package.json` as applicable files from this repo copied into installs rather than being handled by a package manager. See [additional info](https://github.com/pankosmia/de-skill/blob/main/appPackages.md) to make and test changes.",
+        "fr": "Si les paquets requis dans Electron sont modifiés ou mis à jour, il ne suffit pas de les gérer dans le fichier `package.json` à la racine du dépôt, car les fichiers concernés de ce dépôt sont copiés dans les installations au lieu d'être gérés par un gestionnaire de paquets. Consultez les [informations complémentaires](https://github.com/pankosmia/de-skill/blob/main/appPackages.md) pour effectuer et tester les modifications.",
+        "es": "Si los paquetes requeridos en Electron se cambian o actualizan, no basta con gestionarlos en el `package.json` de la raíz del repositorio, ya que los archivos correspondientes de este repositorio se copian en las instalaciones en lugar de ser gestionados por un gestor de paquetes. Consulta la [información adicional](https://github.com/pankosmia/de-skill/blob/main/appPackages.md) para realizar y probar los cambios."
       },
       "deploy_favicon": {
         "en": "If a change needs to be made to favicon*.png, make those changes in the `globalBuildResources` directory. The same test instructions above apply.",
         "fr": "Si une modification doit être apportée à favicon*.png, effectuez ces modifications dans le répertoire `globalBuildResources`. Les mêmes instructions de test ci-dessus s'appliquent.",
         "es": "Si se necesita un cambio en favicon*.png, realice esos cambios en el directorio `globalBuildResources`. Se aplican las mismas instrucciones de prueba anteriores."
-      },
-      "deploy_app_launcher_intro": {
-        "en": "If a change needs to be made to the `appLauncherElectron` script, it will need to be made in 3 different places and tested on three different operating systems. Those file lives at:",
-        "fr": "Si une modification doit être apportée au script `appLauncherElectron`, elle devra être effectuée à 3 endroits différents et testée sur trois systèmes d'exploitation différents. Ces fichiers se trouvent à :",
-        "es": "Si se necesita un cambio en el script `appLauncherElectron`, deberá realizarse en 3 lugares diferentes y probarse en tres sistemas operativos diferentes. Esos archivos se encuentran en:"
-      },
-      "deploy_app_launcher_test": {
-        "en": "Test by either building locally on all three operating systems, or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs.",
-        "fr": "Testez en compilant localement sur les trois systèmes d'exploitation, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations autonomes résultantes.",
-        "es": "Pruebe compilando localmente en los tres sistemas operativos, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones independientes resultantes."
       },
       "heading_local_installer_build": {
         "en": "Local Installer Build",
