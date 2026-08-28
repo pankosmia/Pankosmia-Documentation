@@ -49,44 +49,49 @@ parent: Dev Reference Manual
 
 💡 {% include tmp.html key="dev_changes_tip" %}
 <pre>
-|-- [linux | windows | macos]
-    |-- viewer
-        |-- project
-            |-- payload
-                |-- app
-                    |-- appLauncherElectron.sh | appLauncherElectron.bat
-                    |-- electron
-                        |-- electronStartup.js
-                        |-- favicon.png
-                        |-- favicon@1.5x.png
-                        |-- favicon@1.25x.png
-                        |-- favicon@1.75x.png
-                        |-- favicon@2x.png
-                        |-- preload.js
+└── buildResources
+    └── electron
+        ├── config
+        │   └── paths.js
+        ├── core
+        │   ├── archiveUtil.js
+        │   ├── downloadUtil.js
+        │   ├── ports.js
+        │   ├── server.js
+        │   ├── startupErrors.js
+        │   └── window.js
+        ├── features
+        │   ├── ffmpeg.js
+        │   ├── firefox.js
+        │   └── pdf.js
+        ├── electronStartup.js
+        ├── package.json
+        └── preload.js
 </pre>
 
 ### {% include t.html key="heading_deploying_dev_changes" %}
 
-{% include tm.html key="deploy_electronstartup_intro" %}
-<pre>
-|-- buildResources
-    |-- electron
-        |-- electronDevStartup.js ({% include t.html key="electron_dev_startup" %})
-        |-- electronStartup.js ({% include t.html key="electron_startup" %})
+{% include tm.html key="deploy_test_dev_startup" %}
 
+<pre>
+└── [linux | windows | macos]
+    └── viewer
+        └── project
+            └── payload
+                └── app
+                    └── electron
 </pre>
 
-{% include tm.html key="deploy_test_dev_startup" %}
 {% include tm.html key="deploy_test_startup" %}
+
+{: .important-title }
+> {% include tmp.html key="install_important_title" %}
+>
+> {% include tmp.html key="install_important" %}
 
 {% include tm.html key="deploy_favicon" %}
 
 {% include t.html key="deploy_app_launcher_intro" %}
-  - linux\buildResources\appLauncherElectron.sh
-  - windows\buildResources\appLauncherElectron.bat
-  - macos\buildResources\appLauncherElectron.sh
-
-{% include t.html key="deploy_app_launcher_test" %}
 
 ### {% include t.html key="heading_local_installer_build" %}
 {: .no_toc }
@@ -120,6 +125,6 @@ parent: Dev Reference Manual
     - {% include tm.html key="bundle_viewer_linux_step5" %}
 
 #### {% include t.html key="heading_bundle_viewer_outputs" %}
-- Windows: `releases\\windows\\intel64\\[app-name]-windows-setup-standalone-[version].exe`
-- MacOS: `releases/macos/[intel64|arm64]/[app-name]-macos-installer-standalone-[intel64|arm64]-[version].pkg`
-- Linux: `releases/linux/[app-name]-linux-standalone-intel64-[version].deb`
+- Windows: `releases\\windows\\intel64\\[app-name]-[version]-windows-[x64|arm64].exe`
+- MacOS: `releases/macos/[intel64|arm64]/[app-name]-[version]-macos-[x64|arm64].pkg`
+- Linux: `releases/linux/[app-name]-[version]-linux-[x64|arm64].deb`

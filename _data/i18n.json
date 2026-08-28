@@ -49,6 +49,16 @@
       "en": "use a powershell terminal",
       "fr": "utilisez un terminal powershell",
       "es": "use un terminal powershell"
+    },
+    "pnpm_migration_title": {
+      "en": "Migration from npm to pnpm in process",
+      "fr": "Migration de npm vers pnpm en cours",
+      "es": "Migración de npm a pnpm en proceso"
+    },
+    "pnpm_migration": {
+      "en": "Use the repo root lock file to determine which applies: `pnpm-lock.yaml` → `pnpm`; `package-lock.json` → `npm`. For additional detail see our [Migration Plan](https://github.com/pankosmia/pnpm-migration/blob/main/README.md).",
+      "fr": "Utilisez le fichier de verrouillage à la racine du dépôt pour déterminer lequel s'applique : `pnpm-lock.yaml` → `pnpm` ; `package-lock.json` → `npm`. Pour plus de détails, consultez notre [Plan de migration](https://github.com/pankosmia/pnpm-migration/blob/main/README-fr.md).",
+      "es": "Usa el archivo de bloqueo en la raíz del repositorio para determinar cuál aplica: `pnpm-lock.yaml` → `pnpm`; `package-lock.json` → `npm`. Para más detalles, consulta nuestro [Plan de migración](https://github.com/pankosmia/pnpm-migration/blob/main/README-es.md)."
     }
   },
   "pages": {
@@ -373,9 +383,9 @@
         "es": "Este script usa por defecto todas las ramas main, obtiene la última versión y compila cada cliente cada vez que se ejecuta."
       },
       "setup_scripts_build_clients_note2": {
-        "en": "Specify branches other than main as arguments: `./build_clients.[ext] [my-branch|dev|qa] [dev|qa]`<sup id=\"a1\">[[1]](#f1)</sup>. Where \"my-branch\" does not exist, then fallback will be \"main\" unless the next argument is specified. If \"dev\" is indicated then a \"dev\" → \"qa\" → \"main\" fallback is implied. If \"qa\" is indicated then a \"qa\" → \"main\" fallback is implied. To build repos manually, run `npm run build` on just those repos as needed.",
-        "fr": "Spécifiez des branches autres que main en arguments : `./build_clients.[ext] [my-branch|dev|qa] [dev|qa]`<sup id=\"a1\">[[1]](#f1)</sup>. Lorsque « my-branch » n'existe pas, le repli sera « main » sauf si l'argument suivant est spécifié. Si « dev » est indiqué, un repli « dev » → « qa » → « main » est implicite. Si « qa » est indiqué, un repli « qa » → « main » est implicite. Pour compiler des dépôts manuellement, exécutez `npm run build` uniquement sur ces dépôts selon les besoins.",
-        "es": "Especifique ramas distintas de main como argumentos: `./build_clients.[ext] [my-branch|dev|qa] [dev|qa]`<sup id=\"a1\">[[1]](#f1)</sup>. Donde \"my-branch\" no exista, el respaldo será \"main\" a menos que se especifique el siguiente argumento. Si se indica \"dev\", se implica un respaldo \"dev\" → \"qa\" → \"main\". Si se indica \"qa\", se implica un respaldo \"qa\" → \"main\". Para compilar repositorios manualmente, ejecute `npm run build` solo en esos repositorios según sea necesario."
+        "en": "Specify branches other than main as arguments: `./build_clients.[ext] [my-branch|dev|qa] [dev|qa]`<sup id=\"a1\">[[1]](#f1)</sup>. Where \"my-branch\" does not exist, then fallback will be \"main\" unless the next argument is specified. If \"dev\" is indicated then a \"dev\" → \"qa\" → \"main\" fallback is implied. If \"qa\" is indicated then a \"qa\" → \"main\" fallback is implied. To build repos manually, [identify](#at-the-root-of-your-clone-of-this-repo-run) whether to use pnpm or npm, then run `pnpm run build` or `npm run build` accordingly on just those repos as needed.",
+        "fr": "Spécifiez des branches autres que main en arguments : `./build_clients.[ext] [my-branch|dev|qa] [dev|qa]`<sup id=\"a1\">[[1]](#f1)</sup>. Lorsque « my-branch » n'existe pas, le repli sera « main » sauf si l'argument suivant est spécifié. Si « dev » est indiqué, un repli « dev » → « qa » → « main » est implicite. Si « qa » est indiqué, un repli « qa » → « main » est implicite. Pour construire les dépôts manuellement, [identifiez](#à-la-racine-de-votre-clone-de-ce-dépôt-exécutez-) s'il faut utiliser pnpm ou npm, puis exécutez `pnpm run build` ou `npm run build` en conséquence sur ces seuls dépôts, selon les besoins.",
+        "es": "Especifique ramas distintas de main como argumentos: `./build_clients.[ext] [my-branch|dev|qa] [dev|qa]`<sup id=\"a1\">[[1]](#f1)</sup>. Donde \"my-branch\" no exista, el respaldo será \"main\" a menos que se especifique el siguiente argumento. Si se indica \"dev\", se implica un respaldo \"dev\" → \"qa\" → \"main\". Si se indica \"qa\", se implica un respaldo \"qa\" → \"main\". Para construir los repositorios manualmente, [identifica](#en-la-raíz-de-su-clon-de-este-repositorio-ejecute) si debes usar pnpm o npm, luego ejecuta `pnpm run build` o `npm run build` según corresponda solo en esos repositorios, según sea necesario."
       },
       "setup_scripts_build_server": {
         "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. When `/local_server.env` has different versions from the panksomia_web in `/local_server/Cargo.toml`, then use `./build_server.[ext] dev` to build a local *dev* server, and `./build_server.[ext] qa` to build a local qa server. Be patient. This will take a while.",
@@ -383,9 +393,9 @@
         "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_server` para compilar el servidor Pankosmia y ensamblar el entorno de build. Cuando `/local_server.env` tenga versiones diferentes de panksomia_web en `/local_server/Cargo.toml`, use `./build_server.[ext] dev` para compilar un servidor de desarrollo local, y `./build_server.[ext] qa` para compilar un servidor *qa* local. Tenga paciencia, esto tomará un tiempo."
       },
       "setup_scripts_build_viewer": {
-        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local development environment. Be patient, especially in Windows.",
-        "fr": "(Optionnel) Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_viewer` pour créer une visionneuse Electronite à utiliser avec l'environnement de développement local. Soyez patient, surtout sous Windows.",
-        "es": "(Opcional) Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_viewer` para crear un visor Electronite para usar con el entorno de desarrollo local. Tenga paciencia, especialmente en Windows."
+        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local development environment.",
+        "fr": "(Optionnel) Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_viewer` pour créer une visionneuse Electronite à utiliser avec l'environnement de développement local.",
+        "es": "(Opcional) Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_viewer` para crear un visor Electronite para usar con el entorno de desarrollo local."
       },
       "heading_running_your_setup": {
         "en": "Running your Setup",
@@ -636,9 +646,9 @@
         "es": "Visor de desarrollo Electronite"
       },
       "dev_viewer_create": {
-        "en": "To create an Electronite viewer for use with your local dev build environment, run this script once while online:",
-        "fr": "Pour créer une visionneuse Electronite à utiliser avec votre environnement de build de développement local, exécutez ce script une fois en étant en ligne :",
-        "es": "Para crear un visor Electronite para usar con su entorno de build de desarrollo local, ejecute este script una vez estando en línea:"
+        "en": "To create an Electronite viewer for use with your local dev build environment, run this script while online:",
+        "fr": "Pour créer une visionneuse Electronite à utiliser avec votre environnement de build de développement local, exécutez ce script en étant connecté à Internet  :",
+        "es": "Para crear un visor Electronite para usar con su entorno de build de desarrollo local, ejecute este script con conexión a Internet:"
       },
       "then": {
         "en": "then",
@@ -676,54 +686,37 @@
         "es": "Este proyecto funciona tanto en un navegador web como en el visor Electronite. Solo agregue código a Electron/Electronite que sea necesario para manejar cosas que el navegador web ya hace (por ejemplo, Imprimir, Buscar, Zoom, Atrás, Adelante). Evite codificar de una manera que impida el uso del navegador web."
       },
       "dev_changes_tip": {
-        "en": "The way to develop in Electronite is to start by modifying the code that is used by your dev viewer. The file structure to focus on is below, in particular `electronStartup.js` and `preload.js`. Make changes here first to test in local dev:",
-        "fr": "Pour développer dans Electronite, commencez par modifier le code utilisé par votre visionneuse de développement. La structure de fichiers sur laquelle se concentrer est ci-dessous, en particulier `electronStartup.js` et `preload.js`. Effectuez d'abord les modifications ici pour tester en développement local :",
-        "es": "La forma de desarrollar en Electronite es comenzar modificando el código utilizado por su visor de desarrollo. La estructura de archivos en la que centrarse está a continuación, en particular `electronStartup.js` y `preload.js`. Haga los cambios aquí primero para probar en desarrollo local:"
+        "en": "The way to develop in Electronite is to start by modifying sourcecode in the following location. The electron orechestrator is `electronStartup.js`."
       },
       "heading_deploying_dev_changes": {
         "en": "Deploying tested dev changes to Electronite",
         "fr": "Déployer les modifications de développement testées vers Electronite",
         "es": "Desplegar los cambios de desarrollo probados en Electronite"
       },
-      "deploy_electronstartup_intro": {
-        "en": "If changes to `electronStartup.js` are required, reproduce these changes in the following two files:",
-        "fr": "Si des modifications de `electronStartup.js` sont nécessaires, reproduisez ces modifications dans les deux fichiers suivants :",
-        "es": "Si se requieren cambios en `electronStartup.js`, reproduzca estos cambios en los dos archivos siguientes:"
-      },
-      "electron_dev_startup": {
-        "en": "used by the viewer and the Linux app; launches the viewer without starting the server",
-        "fr": "utilisé par la visionneuse et l'application Linux ; lance la visionneuse sans démarrer le serveur",
-        "es": "utilizado por el visor y la aplicación Linux; lanza el visor sin iniciar el servidor"
-      },
-      "electron_startup": {
-        "en": "used by the Windows and MacOS apps; starts the server then launches the viewer",
-        "fr": "utilisé par les applications Windows et MacOS ; démarre le serveur puis lance la visionneuse",
-        "es": "utilizado por las aplicaciones Windows y MacOS; inicia el servidor y luego lanza el visor"
-      },
       "deploy_test_dev_startup": {
-        "en": "Test `electronDevStartup.js` by re-running the `build_viewer` script. See [Electronite Dev Viewer](#electronite-dev-viewer) above. Also used in the Linux app.",
-        "fr": "Testez `electronDevStartup.js` en relançant le script `build_viewer`. Voir [Visionneuse de développement Electronite](#electronite-dev-viewer) ci-dessus. Également utilisé dans l'application Linux.",
-        "es": "Pruebe `electronDevStartup.js` volviendo a ejecutar el script `build_viewer`. Vea [Visor de desarrollo Electronite](#electronite-dev-viewer) arriba. También se usa en la aplicación Linux."
+        "en": "Test by re-running the `build_viewer` script. See [Electronite Dev Viewer](#electronite-dev-viewer) above. This will setup the Electron files above in the following location with app-specific variables configured.",
+        "fr": "Testez en relançant le script `build_viewer`. Voir [Visionneuse de développement Electronite](#electronite-dev-viewer) ci-dessus. Cela configurera les fichiers Electron ci-dessus à l'emplacement suivant avec les variables spécifiques à l'application configurées.",
+        "es": "Pruebe volviendo a ejecutar el script `build_viewer`. Vea [Visor de desarrollo Electronite](#electronite-dev-viewer) arriba. Esto configurará los archivos de Electron mencionados arriba en la siguiente ubicación con las variables específicas de la aplicación configuradas."
       },
       "deploy_test_startup": {
-        "en": "Test `electronStartup.js` by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs for Windows/MacOS.",
-        "fr": "Testez `electronStartup.js` en compilant localement sous Windows ou MacOS, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations autonomes résultantes pour Windows/MacOS.",
-        "es": "Pruebe `electronStartup.js` compilando localmente en Windows o MacOS, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones independientes resultantes para Windows/MacOS."
+        "en": "Test `bundle_viewer.<bsh|ps1|zsh>` by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting installs.",
+        "fr": "Testez `bundle_viewer.<bsh|ps1|zsh>` en compilant localement sous Windows ou MacOS, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations résultantes.",
+        "es": "Pruebe `bundle_viewer.<bsh|ps1|zsh>` compilando localmente en Windows o MacOS, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones resultantes."
+      },
+      "install_important_title": {
+        "en": "Required packages are copied by script!",
+        "fr": "Les paquets requis sont copiés par le script !",
+        "es": "¡Los paquetes requeridos se copian mediante el script!"
+      },
+      "install_important": {
+        "en": "If packages required in Electron are changed or updated, it is not enough to address them in the repo root `package.json` as applicable files from this repo copied into installs rather than being handled by a package manager. See [additional info](https://github.com/pankosmia/de-skill/blob/main/appPackages.md) to make and test changes.",
+        "fr": "Si les paquets requis dans Electron sont modifiés ou mis à jour, il ne suffit pas de les gérer dans le fichier `package.json` à la racine du dépôt, car les fichiers concernés de ce dépôt sont copiés dans les installations au lieu d'être gérés par un gestionnaire de paquets. Consultez les [informations complémentaires](https://github.com/pankosmia/de-skill/blob/main/appPackages.md) pour effectuer et tester les modifications.",
+        "es": "Si los paquetes requeridos en Electron se cambian o actualizan, no basta con gestionarlos en el `package.json` de la raíz del repositorio, ya que los archivos correspondientes de este repositorio se copian en las instalaciones en lugar de ser gestionados por un gestor de paquetes. Consulta la [información adicional](https://github.com/pankosmia/de-skill/blob/main/appPackages.md) para realizar y probar los cambios."
       },
       "deploy_favicon": {
         "en": "If a change needs to be made to favicon*.png, make those changes in the `globalBuildResources` directory. The same test instructions above apply.",
         "fr": "Si une modification doit être apportée à favicon*.png, effectuez ces modifications dans le répertoire `globalBuildResources`. Les mêmes instructions de test ci-dessus s'appliquent.",
         "es": "Si se necesita un cambio en favicon*.png, realice esos cambios en el directorio `globalBuildResources`. Se aplican las mismas instrucciones de prueba anteriores."
-      },
-      "deploy_app_launcher_intro": {
-        "en": "If a change needs to be made to the `appLauncherElectron` script, it will need to be made in 3 different places and tested on three different operating systems. Those file lives at:",
-        "fr": "Si une modification doit être apportée au script `appLauncherElectron`, elle devra être effectuée à 3 endroits différents et testée sur trois systèmes d'exploitation différents. Ces fichiers se trouvent à :",
-        "es": "Si se necesita un cambio en el script `appLauncherElectron`, deberá realizarse en 3 lugares diferentes y probarse en tres sistemas operativos diferentes. Esos archivos se encuentran en:"
-      },
-      "deploy_app_launcher_test": {
-        "en": "Test by either building locally on all three operating systems, or by pushing a branch, building via git hub actions, then testing the resulting stand-alone installs.",
-        "fr": "Testez en compilant localement sur les trois systèmes d'exploitation, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations autonomes résultantes.",
-        "es": "Pruebe compilando localmente en los tres sistemas operativos, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones independientes resultantes."
       },
       "heading_local_installer_build": {
         "en": "Local Installer Build",
@@ -771,9 +764,9 @@
         "es": "`.\\bundle_viewer.ps1 -ServerOff \"Y\"`  \n   o: \"y\"; No preguntará si el servidor está apagado"
       },
       "bundle_viewer_windows_desc": {
-        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.",
-        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute git checkout main, git pull et npm ci, exécute app_setup.bat pour assurer la cohérence des versions, exécute node build.js, puis crée un bundle de release zip et un installateur exe autonome.",
-        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta git checkout main, git pull y npm ci, ejecuta app_setup.bat para asegurar la consistencia de versiones, ejecuta node build.js, y luego crea un bundle de release zip y un instalador exe independiente."
+        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and pnpm i, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.",
+        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute git checkout main, git pull et pnpm i, exécute app_setup.bat pour assurer la cohérence des versions, exécute node build.js, puis crée un bundle de release zip et un installateur exe autonome.",
+        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta git checkout main, git pull y pnpm i, ejecuta app_setup.bat para asegurar la consistencia de versiones, ejecuta node build.js, y luego crea un bundle de release zip y un instalador exe independiente."
       },
       "bundle_viewer_macos_optional": {
         "en": "Optional arguments:",
@@ -786,9 +779,9 @@
         "es": "`./bundle_viewer.zsh -s`  \n   No preguntará si el servidor está apagado"
       },
       "bundle_viewer_macos_desc": {
-        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and npm ci, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.",
-        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute git checkout main, git pull et npm ci, exécute app_setup.bat pour assurer la cohérence des versions, exécute node build.js, puis crée un bundle de release zip et un installateur exe autonome.",
-        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta git checkout main, git pull y npm ci, ejecuta app_setup.bat para asegurar la consistencia de versiones, ejecuta node build.js, y luego crea un bundle de release zip y un instalador exe independiente."
+        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and pnpm i, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer.",
+        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute git checkout main, git pull et pnpm i, exécute app_setup.bat pour assurer la cohérence des versions, exécute node build.js, puis crée un bundle de release zip et un installateur exe autonome.",
+        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta git checkout main, git pull y pnpm i, ejecuta app_setup.bat para asegurar la consistencia de versiones, ejecuta node build.js, y luego crea un bundle de release zip y un instalador exe independiente."
       },
       "bundle_viewer_linux_before": {
         "en": "Before running:",
@@ -801,9 +794,9 @@
         "es": "elimine manualmente los builds locales anteriores"
       },
       "bundle_viewer_linux_step2": {
-        "en": "npm ci (if not already run)",
-        "fr": "npm ci (si pas déjà exécuté)",
-        "es": "npm ci (si no se ha ejecutado ya)"
+        "en": "pnpm i (if not already run)",
+        "fr": "pnpm i (si pas déjà exécuté)",
+        "es": "pnpm i (si no se ha ejecutado ya)"
       },
       "bundle_viewer_linux_step3": {
         "en": "app_setup.bat to ensure version consistency (unless already current)",
@@ -873,9 +866,9 @@
         "es": "¡En cada repositorio de cliente, NO en este repositorio!"
       },
       "installing_clients_run_note": {
-        "en": "Running `run`, `build_server`, or `bundle_...` all copy the latest build to the build environment.",
-        "fr": "L'exécution de `run`, `build_server` ou `bundle_...` copie la dernière version compilée vers l'environnement de build.",
-        "es": "Ejecutar `run`, `build_server` o `bundle_...` copia la última compilación al entorno de build."
+        "en": "Running `run`, `build_server`, or `bundle_...` all copies the latest build to the build environment.",
+        "fr": "L'exécution de `run`, `build_server` ou `bundle_...` copies la dernière version compilée vers l'environnement de build.",
+        "es": "Ejecutar `run`, `build_server` o `bundle_...` copias la última compilación al entorno de build."
       },
       "heading_scripts": {
         "en": "Scripts",
@@ -953,9 +946,9 @@
         "es": "`clone`<br />&nbsp;&nbsp;Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`clone -s`<br />&nbsp;&nbsp;Clona vía SSH."
       },
       "build_clients_desc": {
-        "en": "For each asset repo in `/app_config.env`: git checkout main, git pull<br />For each client repo in `/app_config.env`: `git checkout main`, `git pull`, `npm ci`, and `npm run build`.<br />***Dev's should build manually when testing branch(es).***",
-        "fr": "Pour chaque dépôt d'assets dans `/app_config.env` : git checkout main, git pull<br />Pour chaque dépôt client dans `/app_config.env` : `git checkout main`, `git pull`, `npm ci` et `npm run build`.<br />***Les développeurs doivent compiler manuellement lorsqu'ils testent des branches.***",
-        "es": "Para cada repositorio de assets en `/app_config.env`: git checkout main, git pull<br />Para cada repositorio de cliente en `/app_config.env`: `git checkout main`, `git pull`, `npm ci` y `npm run build`.<br />***Los desarrolladores deben compilar manualmente al probar ramas.***"
+        "en": "For each asset repo in `/app_config.env`: git checkout main, git pull<br />For each client repo in `/app_config.env`: `git checkout main`, `git pull`, `pnpm i`, and `pnpm run build`.<br />***Dev's should build manually when testing branch(es).***",
+        "fr": "Pour chaque dépôt d'assets dans `/app_config.env` : git checkout main, git pull<br />Pour chaque dépôt client dans `/app_config.env` : `git checkout main`, `git pull`, `pnpm i` et `pnpm run build`.<br />***Les développeurs doivent compiler manuellement lorsqu'ils testent des branches.***",
+        "es": "Para cada repositorio de assets en `/app_config.env`: git checkout main, git pull<br />Para cada repositorio de cliente en `/app_config.env`: `git checkout main`, `git pull`, `pnpm i` y `pnpm run build`.<br />***Los desarrolladores deben compilar manualmente al probar ramas.***"
       },
       "build_clients_script": {
         "en": "`build_clients`<br />Optional arguments:<br /><nobr><code>build_clients [branch&#124;dev&#124;qa] [dev&#124;qa]</code></nobr><br />&nbsp;&nbsp;Where \"my-branch\" does not exist, then fallback will be \"main\" unless the next argument is specified. If \"dev\" is indicated then a \"dev\" → \"qa\" → \"main\" fallback is implied. If \"qa\" is indicated then a \"qa\" → \"main\" fallback is implied.<br />`build_clients -d`<br />&nbsp;&nbsp;Deletes past logs without asking.<br />`build_clients -f`<br />&nbsp;&nbsp;Skip pull because all repos are known to be fresh clones.",
@@ -968,9 +961,9 @@
         "es": "Crear un visor Electronite para usar con el entorno de build de desarrollo local."
       },
       "build_viewer_script": {
-        "en": "`build_viewer`<br />**Windows:** uses `.ps1` (use a PowerShell terminal)",
-        "fr": "`build_viewer`<br />**Windows :** utilise `.ps1` (utilisez un terminal PowerShell)",
-        "es": "`build_viewer`<br />**Windows:** usa `.ps1` (use una terminal PowerShell)"
+        "en": "`build_viewer`<br />Optional argument:<br />`build_viewer -f`<br />&nbsp;&nbsp;Full re-install<br />**Windows:** uses `.ps1` (use a PowerShell terminal)",
+        "fr": "`build_viewer`<br />Argument optionnels :<br />`build_viewer -f`<br />&nbsp;&nbsp;Réinstallation complète<br />**Windows :** utilise `.ps1` (utilisez un terminal PowerShell)",
+        "es": "`build_viewer`<br />Argument opcionales:<br />`build_viewer -f`<br />&nbsp;&nbsp;Reinstalación completa<br />**Windows:** usa `.ps1` (use una terminal PowerShell)"
       },
       "heading_usage_scripts": {
         "en": "Usage scripts:",
@@ -1023,9 +1016,9 @@
         "es": "`viewer`<br />Herramientas de desarrollo: Ctrl + Shift + I (macOS: Cmd + Option + I)<br />Argumento opcional:<br />`viewer [PORT#]`<br />(por defecto 19119)"
       },
       "bundle_viewer_desc": {
-        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup` to ensure version consistency, runs <nobr><code>node build.js</code></nobr>, then makes a zip release bundle and a stand-alone installer. **(*) (•)**",
-        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute `git checkout main`, `git pull` et `npm ci`, exécute `app_setup` pour assurer la cohérence des versions, exécute <nobr><code>node build.js</code></nobr>, puis crée un bundle de release zip et un installateur autonome. **(*) (•)**",
-        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta `git checkout main`, `git pull` y `npm ci`, ejecuta `app_setup` para asegurar la consistencia de versiones, ejecuta <nobr><code>node build.js</code></nobr>, y luego crea un bundle de release zip y un instalador independiente. **(*) (•)**"
+        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs `git checkout main`, `git pull`, and `pnpm i`, runs `app_setup` to ensure version consistency, runs <nobr><code>node build.js</code></nobr>, then makes a zip release bundle and a stand-alone installer. **(*) (•)**",
+        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute `git checkout main`, `git pull` et `pnpm i`, exécute `app_setup` pour assurer la cohérence des versions, exécute <nobr><code>node build.js</code></nobr>, puis crée un bundle de release zip et un installateur autonome. **(*) (•)**",
+        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta `git checkout main`, `git pull` y `pnpm i`, ejecuta `app_setup` para asegurar la consistencia de versiones, ejecuta <nobr><code>node build.js</code></nobr>, y luego crea un bundle de release zip y un instalador independiente. **(*) (•)**"
       },
       "bundle_viewer_script": {
         "en": "`bundle_viewer`<br />**Linux:** No optional arguments. Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.<br />**Windows:** Uses `.ps1`. Optional argument:<br /><nobr><code>bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;Will not ask if server is off<br />**macOS:** Optional argument:<br />`bundle_viewer -s`<br />&nbsp;&nbsp;Will not ask if server is off",
@@ -1033,9 +1026,9 @@
         "es": "`bundle_viewer`<br />**Linux:** Sin argumentos opcionales. Solo compila y empaqueta el visor. Haga todo lo demás manualmente o mediante otros scripts listados aquí.<br />**Windows:** Usa `.ps1`. Argumento opcional:<br /><nobr><code>bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />**macOS:** Argumento opcional:<br />`bundle_viewer -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
       },
       "bundle_zip_desc": {
-        "en": "Deletes the last release bundle if it exists, then on this repo runs `git checkout main`, `git pull`, and `npm ci`, runs `app_setup` to ensure version consistency, runs <nobr><code>node build.js</code></nobr>, then makes a zip/tgz release bundle <sup>[[2]](#f2)</sup>",
-        "fr": "Supprime le dernier bundle de release s'il existe, puis sur ce dépôt exécute `git checkout main`, `git pull` et `npm ci`, exécute `app_setup` pour assurer la cohérence des versions, exécute <nobr><code>node build.js</code></nobr>, puis crée un bundle de release zip/tgz <sup>[[2]](#f2)</sup>",
-        "es": "Elimina el último bundle de release si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `npm ci`, ejecuta `app_setup` para asegurar la consistencia de versiones, ejecuta <nobr><code>node build.js</code></nobr>, y luego crea un bundle de release zip/tgz <sup>[[2]](#f2)</sup>"
+        "en": "Deletes the last release bundle if it exists, then on this repo runs `git checkout main`, `git pull`, and `pnpm i`, runs `app_setup` to ensure version consistency, runs <nobr><code>node build.js</code></nobr>, then makes a zip/tgz release bundle <sup>[[2]](#f2)</sup>",
+        "fr": "Supprime le dernier bundle de release s'il existe, puis sur ce dépôt exécute `git checkout main`, `git pull` et `pnpm i`, exécute `app_setup` pour assurer la cohérence des versions, exécute <nobr><code>node build.js</code></nobr>, puis crée un bundle de release zip/tgz <sup>[[2]](#f2)</sup>",
+        "es": "Elimina el último bundle de release si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `pnpm i`, ejecuta `app_setup` para asegurar la consistencia de versiones, ejecuta <nobr><code>node build.js</code></nobr>, y luego crea un bundle de release zip/tgz <sup>[[2]](#f2)</sup>"
       },
       "bundle_zip_script": {
         "en": "**Linux:** `bundle_tgz`<br />**Windows:** `bundle_zip.ps1`<br />**macOS:** `bundle_zip`<br />Optional arguments:<br />**Linux/macOS:**<br />`bundle_tgz -s` / `bundle_zip -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`bundle_tgz -g` / `bundle_zip -g`<br />&nbsp;&nbsp;Run from GitHub Actions<br />**Windows:**<br /><nobr><code>bundle_zip.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off<br /><nobr><code>bundle_zip.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Run from GitHub Actions",
@@ -1424,9 +1417,9 @@
         "es": "Configuración"
       },
       "knip_setup": {
-        "en": "`npm install -g knip`  (to install or update)",
-        "fr": "`npm install -g knip`  (pour installer ou mettre à jour)",
-        "es": "`npm install -g knip`  (para instalar o actualizar)"
+        "en": "`npm install -g knip` ***or*** `npm install --global knip` (to install or update)",
+        "fr": "`npm install -g knip` ***ou*** `npm install --global knip` (pour installer ou mettre à jour)",
+        "es": "`npm install -g knip` ***o*** `npm install --global knip` (para instalar o actualizar)"
       },
       "heading_knip_analyze": {
         "en": "Analyzing a repo",
@@ -1474,34 +1467,44 @@
         "es": "Aplicar cambios de paquetes manteniendo las instalaciones locales limpias y coherentes"
       },
       "applying_changes_1": {
-        "en": "Use `npm ci`. This removes node_modules and matches the lock file.",
-        "fr": "Utilisez `npm ci`. Cela supprime node_modules et correspond au fichier de verrouillage.",
-        "es": "Use `npm ci`. Esto elimina node_modules y coincide con el archivo de bloqueo."
+        "en": "Use",
+        "fr": "Utilisez",
+        "es": "Use"
+      },
+      "applying_changes_1.1": {
+        "en": "`npm ci`. This removes node_modules and matches the lock file.",
+        "fr": "`npm ci`. Cela supprime node_modules et correspond au fichier de verrouillage.",
+        "es": "`npm ci`. Esto elimina node_modules y coincide con el archivo de bloqueo."
       },
       "applying_changes_2": {
-        "en": "To bump a package version follow `npm ci` with `npm install <package_name>@0.1.29 --save-exact`",
-        "fr": "Pour mettre à jour la version d'un paquet, faites suivre `npm ci` de `npm install <package_name>@0.1.29 --save-exact`",
-        "es": "Para actualizar la versión de un paquete, siga `npm ci` con `npm install <package_name>@0.1.29 --save-exact`"
+        "en": "To bump a package version follow `pnpm i`/`npm ci` with:",
+        "fr": "Pour mettre à jour la version d'un paquet, faites suivre `pnpm i`/`npm ci` de :",
+        "es": "Para actualizar la versión de un paquete, siga `pnpm i`/`npm ci` con:"
       },
       "applying_changes_3": {
-        "en": "To remove a package follow `npm ci` with `npm uninstall <package_name>`",
-        "fr": "Pour supprimer un paquet, faites suivre `npm ci` de `npm uninstall <package_name>`",
-        "es": "Para eliminar un paquete, siga `npm ci` con `npm uninstall <package_name>`"
+        "en": "To remove a package follow `npm ci` with:",
+        "fr": "Pour supprimer un paquet, faites suivre `npm ci` de :",
+        "es": "Para eliminar un paquete, siga `npm ci` con:"
       },
       "applying_changes_4": {
-        "en": "To add a package  follow `npm ci` with `npm install <package_name> --save-dev` or `npm install <package_name> -D` (for devDependencies) or `npm install <package-name> --save-optional`",
-        "fr": "Pour ajouter un paquet, faites suivre `npm ci` de `npm install <package_name> --save-dev` ou `npm install <package_name> -D` (pour les devDependencies) ou `npm install <package-name> --save-optional`",
-        "es": "Para agregar un paquete, siga `npm ci` con `npm install <package_name> --save-dev` o `npm install <package_name> -D` (para devDependencies) o `npm install <package-name> --save-optional`"
+        "en": "To add a package  follow `pnpm i`/`npm ci` with:",
+        "fr": "Pour ajouter un paquet, faites suivre `pnpm i`/`npm ci` de :",
+        "es": "Para agregar un paquete, siga `pnpm i`/`npm ci` con:"
       },
-      "heading_why_not_manual_edit": {
-        "en": "Why avoid manually editing `package.json` (except where not possible)?",
-        "fr": "Pourquoi éviter de modifier manuellement `package.json` (sauf lorsque c'est impossible) ?",
-        "es": "¿Por qué evitar editar manualmente `package.json` (salvo cuando no es posible)?"
+      "applying_changes_4.1": {
+        "en": "`pnpm i <package_name> --save-dev` or `pnpm i <package_name> -D` (for devDependencies) or `pnpm add <package-name> -O`",
+        "fr": "`pnpm i <package_name> --save-dev` ou `pnpm i <package_name> -D` (pour les devDependencies) ou `pnpm add <package-name> -O`",
+        "es": "`pnpm i <package_name> --save-dev` o `pnpm i <package_name> -D` (para devDependencies) o `pnpm add <package-name> -O`"
       },
-      "why_not_manual_edit": {
-        "en": "`npm i` tends towards `package-lock.json` OS differences, and does not keep node_modules clean. Note also that following a manual package.json edit with `npm prune` does *not* update package-lock.json to reflect the removal, and does *not* uninstall lifecycle scripts (which let packages perform custom actions automatically).",
-        "fr": "`npm i` tend à créer des différences de `package-lock.json` selon le système d'exploitation et ne garde pas node_modules propre. Notez également qu'après une modification manuelle de package.json, l'exécution de `npm prune` ne met *pas* à jour package-lock.json pour refléter la suppression, et ne désinstalle *pas* les scripts de cycle de vie (qui permettent aux paquets d'effectuer automatiquement des actions personnalisées).",
-        "es": "`npm i` tiende a generar diferencias en `package-lock.json` según el sistema operativo y no mantiene node_modules limpio. Tenga en cuenta también que, tras una edición manual de package.json, ejecutar `npm prune` *no* actualiza package-lock.json para reflejar la eliminación, y *no* desinstala los scripts de ciclo de vida (que permiten a los paquetes realizar acciones personalizadas automáticamente)."
+      "applying_changes_4.2": {
+        "en": "`npm i <package_name> --save-dev` or `npm i <package_name> -D` (for devDependencies) or `npm i <package-name> --save-optional`",
+        "fr": "`npm i <package_name> --save-dev` ou `npm i <package_name> -D` (pour les devDependencies) ou `npm i <package-name> --save-optional`",
+        "es": "`npm i <package_name> --save-dev` o `npm i <package_name> -D` (para devDependencies) o `npm i <package-name> --save-optional`"
+      },
+      "or_manual": {
+        "en": "or manually edit `package.json` then run `pnpm i`",
+        "fr": "ou modifiez manuellement `package.json` puis exécutez `pnpm i`",
+        "es": "o edita manualmente `package.json` y luego ejecuta `pnpm i`"
       }
     }
   }
