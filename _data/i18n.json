@@ -478,6 +478,22 @@
         "en": "tested on",
         "fr": "testé sur",
         "es": "probado en"
+      },
+      "heading_planning_ahead": {
+        "en": "Planning ahead",
+        "fr": "Anticiper",
+        "es": "Planificar con anticipación"
+      },
+
+      "github_x64_eol": {
+        "en": "GitHub Actions runner support is anticipated until August 2027.",
+        "fr": "La prise en charge des runners par GitHub Actions est prévue jusqu'en août 2027.",
+        "es": "Se prevé que GitHub Actions brinde soporte para los runners hasta agosto de 2027."
+      },
+      "apple_x64_eol": {
+        "en": "Apple security updates are anticipated until around September 2029.",
+        "fr": "Les mises à jour de sécurité d'Apple sont prévues jusqu'à environ septembre 2029.",
+        "es": "Se prevé que las actualizaciones de seguridad de Apple estén disponibles hasta alrededor de septiembre de 2029."
       }
     },
     "scripts": {

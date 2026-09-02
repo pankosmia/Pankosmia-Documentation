@@ -50,13 +50,26 @@ parent: Dev Quickstart
 - {% include t.html key="windows_powershell" %}
 - {% include tmp.html key="windows_inno_setup" %}
 
-### MacOS {% include t.html key="with" %}
+### MacOS Apple silicon (ARM64) {% include t.html key="with" %}
 
 | `pnpm-lock.yaml`| `package-lock.json` |
 |---|---|
-| pnpm 11.20.0 | npm 10.7.0 ({% include t.html key="tested_on" %} Monterey)<br />npm 10.8.2 ({% include t.html key="tested_on" %} Sequoia) |
+| pnpm 11.20.0 | npm 10.8.2 ({% include t.html key="tested_on" %} Sequoia) |
 | node 24.11.0 | node 20.18.1 |
 
 - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
-- OpenSSL 3.5.0 -- `brew install openssl`
+- OpenSSL 3.5.0 -- `brew install openssl` -- {% include t.html key="see" %} [Homebrew](https://brew.sh/)
 
+### MacOS Intel (x86_64) {% include t.html key="with" %}
+
+| `pnpm-lock.yaml`| `package-lock.json` |
+|---|---|
+| pnpm 11.20.0 | npm 10.7.0 ({% include t.html key="tested_on" %} Monterey) |
+| node 24.11.0 | node 20.18.1 |
+
+- rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
+- OpenSSL 3.6.4 -- `sudo port install openssl3` -- {% include t.html key="see" %} [MacPorts](https://www.macports.org/install.php)
+
+#### {% include t.html key="heading_planning_ahead" %}
+- {% include t.html key="github_x64_eol" %}
+- {% include t.html key="apple_x64_eol" %}
