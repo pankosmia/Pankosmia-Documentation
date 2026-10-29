@@ -1,0 +1,933 @@
+{"0": {
+    "doc": "App Spin-up",
+    "title": "App Spin-up",
+    "content": "How to fork and configure a Desktop App repo built on Pankosmia . ",
+    "url": "/previews/ga/rclDoc/app-spin-up/",
+    
+    "relUrl": "/app-spin-up/"
+  },"1": {
+    "doc": "App Spin-up",
+    "title": "Table of Contents",
+    "content": ". | Fork desktop-app-template | Setup . | Recommended directory structure: | package.json | At the root of your clone of this repo, run: | Edit app_config.env . | Required Assets: | Required Clients: | Some Optional Clients: | . | Branding | Setup Scripts | . | Running your Setup | Footnotes | . ",
+    "url": "/previews/ga/rclDoc/app-spin-up/#table-of-contents",
+    
+    "relUrl": "/app-spin-up/#table-of-contents"
+  },"2": {
+    "doc": "App Spin-up",
+    "title": "Fork desktop-app-template",
+    "content": "Desktop-app-template is a repo designed to be forked to spin up and maintain new Desktop App repos built on Pankosmia. | Start at https://github.com/pankosmia/desktop-app-template/fork . | Choose a repository name of 30 characters or less if you want to keep Windows developers from needing to clone to a shorter local repo name. The windows cargo build c compiler requires repos names of 30 characters or less. | Create Fork . | . ",
+    "url": "/previews/ga/rclDoc/app-spin-up/#fork-desktop-app-template",
+    
+    "relUrl": "/app-spin-up/#fork-desktop-app-template"
+  },"3": {
+    "doc": "App Spin-up",
+    "title": "Setup",
+    "content": "Recommended directory structure: . |-- repos |-- pankosmia |-- [your-desktop-app-repo-name] (30 characters or less on windows!) . package.json . Replace all instances of “desktop-app-template” in package.json with “[your-desktop-app-repo-name]” . At the root of your clone of this repo, run: . Migration from npm to pnpm in process . Use the repo root lock file to determine which applies: pnpm-lock.yaml → pnpm; package-lock.json → npm. For additional detail see our Migration Plan. | pnpm-lock.yaml | package-lock.json | . | &gt; pnpm install | &gt; npm install | . Edit app_config.env . Entering the App Name, version number, Apps Short Name for working directory, assets, and clients. Required Assets: . | ASSET1=resource-core | ASSET1_PATH=/runtime_resources | ASSET1_NAME=app_resources | ASSET2=resource-core | ASSET2_PATH=/templates | ASSET2_NAME=templates | ASSET3=webfonts-core | ASSET3_PATH=/ | ASSET3_NAME=webfonts | . Required Clients: . The only required client is one that matches the HOMEPAGE entered in app_config.env. The homepage is typically core-client-dashboard which has an id of dashboard, but the id of any client in the product may be configured as the homepage. Some Optional Clients: . Start with 1. Keep numbering sequential. Do not skip numbers. | CLIENT1=core-client-dashboard | CLIENT2=core-client-content | CLIENT3=core-client-settings | CLIENT4=core-contenthandler-generic | . Branding . Change /globalBuildResources/theme.json directly to customize your app. For helful tips, see the Theme section of UX/UI guidelines. For implementing your logo, see the Branding README for scripts to customize /globalBuildResources/.ico, /globalBuildResources/.png, and /globalBuildResources/icon.icns, along with info on how each is used. Setup Scripts . cd [os]/scripts . Run[1] the clone script to clone all repos listed in app_config.env (assets and clients) . Run[1] the app_setup script to generate the config files to match app_config.env. Re-run[1] the app_setup script anytime app_config.env is modified. Run[1] the build_clients script to build all clients. Be patient. This will take a while. | This script defaults to all main branches, pulls the latest, and builds every client each time it is run. | Specify branches other than main as arguments: ./build_clients.[ext] [my-branch|dev|qa] [dev|qa][1]. Where “my-branch” does not exist, then fallback will be “main” unless the next argument is specified. If “dev” is indicated then a “dev” → “qa” → “main” fallback is implied. If “qa” is indicated then a “qa” → “main” fallback is implied. To build repos manually, identify whether to use pnpm or npm, then run pnpm run build or npm run build accordingly on just those repos as needed. | . Run[1] the build_server script to build the Pankosmia server and assemble the build environment. When /local_server.env has different versions from the panksomia_web in /local_server/Cargo.toml, then use ./build_server.[ext] dev to build a local dev server, and ./build_server.[ext] qa to build a local qa server. Be patient. This will take a while. (Optional) Run[1] the build_viewer script to create an Electronite viewer for use with the local development environment. ",
+    "url": "/previews/ga/rclDoc/app-spin-up/#setup",
+    
+    "relUrl": "/app-spin-up/#setup"
+  },"4": {
+    "doc": "App Spin-up",
+    "title": "Running your Setup",
+    "content": "Run[1] the run script to start the server without a browser launch. | Only one instance of the same server can be running at a time. | . Run the viewer script to use the Electronite viewer with the local dev build environment, or launch a browser at the location indicated. | The Electronite viewer is Chromium compiled with Graphite | Some browsers that support graphite include Firefox, Zen Browser, and LibreWolf. | See Electronite Local Dev for additional detail. | . ",
+    "url": "/previews/ga/rclDoc/app-spin-up/#running-your-setup",
+    
+    "relUrl": "/app-spin-up/#running-your-setup"
+  },"5": {
+    "doc": "App Spin-up",
+    "title": "Footnotes",
+    "content": "[1] … Windows developers, run .bat scripts from a Powershell or Command prompt:…repos\\pankosmia[your-desktop-app-repo-name]\\windows\\scripts&gt; .[scriptname].batThe .\\ is optional from a command prompt.Use a powershell terminal for the .ps1 build scripts.MacOS developers, run .bsh scripts from a MacOS terminal:…repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts&gt; ./[scriptname].bshLinux developers, run .zsh scripts from a linux terminal:…repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts&gt; ./[scriptname].zsh . ",
+    "url": "/previews/ga/rclDoc/app-spin-up/#footnotes",
+    
+    "relUrl": "/app-spin-up/#footnotes"
+  },"6": {
+    "doc": "Clients",
+    "title": "Clients",
+    "content": "Structure of a client and the options of pankosmia_metadata.json . ",
+    "url": "/previews/ga/rclDoc/general/clients/",
+    
+    "relUrl": "/general/clients/"
+  },"7": {
+    "doc": "Clients",
+    "title": "Table of Contents",
+    "content": ". | What is a client | Structure of a client | pankosmia_metadata.json . | Examples | . | endpoints | . ",
+    "url": "/previews/ga/rclDoc/general/clients/#table-of-contents",
+    
+    "relUrl": "/general/clients/#table-of-contents"
+  },"8": {
+    "doc": "Clients",
+    "title": "What is a client",
+    "content": "A client is a web app (React, built with Vite) served by the Pankosmia server at /clients/&lt;name&gt;. The dashboard, the settings and every content handler (core-contenthandler_*) are clients. A product includes a client by listing it in CLIENTn in app_config.env (and so in libClients of buildSpec.json). The build then copies its build/ output, package.json, pankosmia_metadata.json and storage_id.json (when it exists) into lib/clients/&lt;repository name&gt;. ",
+    "url": "/previews/ga/rclDoc/general/clients/#what-is-a-client",
+    
+    "relUrl": "/general/clients/#what-is-a-client"
+  },"9": {
+    "doc": "Clients",
+    "title": "Structure of a client",
+    "content": "| Item | What it does | . | pankosmia_metadata.json | Declares the client to the server and the other clients (see below). | . | package.json | Dependencies and scripts. homepage is /clients/&lt;name&gt;. | . | vite.config.js | Vite setup: base is /clients/&lt;name&gt;/, the dev server has its own port, and /api is proxied to the Pankosmia server (port 19119). | . | index.html, public/ | Page shell and static files. | . | src/index.jsx | Entry point. It wraps the app in the RCL SpSpa component with requireNet, titleKey (pages:&lt;id&gt;:title) and currentId (the metadata id). | . | src/App.jsx, src/components/ | The pages and components of the client. | . | build/ | Output of vite build, the folder the server actually serves. | . | storage_id.json | A generated UUID of the client (written by scripts/write-storage-id.js before start, dev and build), when the client uses it. | . ",
+    "url": "/previews/ga/rclDoc/general/clients/#structure-of-a-client",
+    
+    "relUrl": "/general/clients/#structure-of-a-client"
+  },"10": {
+    "doc": "Clients",
+    "title": "pankosmia_metadata.json",
+    "content": "This file is the identity card of a client. The server reads it to list the client (/api/list-clients) and to publish what it can do (/api/client-interfaces), and the translations it contains feed the i18n tree. Fields: . | Field | Type | What it does | . | id | string | Unique identifier of the client. It is the section name in the i18n tree (pages:&lt;id&gt;:...), the currentId given to SpSpa, and it identifies the client in the menu. | . | require.net | boolean | When true, the client needs internet. Its menu entry is disabled while the app is offline, and a page using requireNet shows a “no entry if offline” message. | . | require.debug | boolean | When true, the client is a developer tool: it is listed in the Debug section of the menu, which only appears when debug mode is on. When false or absent, the client is in the normal menu. | . | minServerVersion | string | Minimum server version (for example 0.20.3). The app does not run if the server is older than the minimum required by a client. | . | exclude_from_menu | boolean | When true, the client is not listed in the menu of the header. It is still reachable by its URL and from links of other clients. | . | exclude_from_dashboard | boolean | When true, the client is removed from the dashboard, for example its entry in the Create button. | . | i18n | object | Translations of the client. Each key is a name with one text per language code. title and summary are conventional. See the i18n page. | . | endpoints | object | The actions the client offers to other clients, per document type (see below). | . Examples . The settings client is hidden from both the menu and the dashboard: . { \"id\": \"core-settings\", \"require\": { \"net\": false }, \"minServerVersion\": \"0.20.3\", \"exclude_from_menu\": true, \"exclude_from_dashboard\": true, \"i18n\": { \"title\": { \"en\": \"Settings\", \"fr\": \"Paramètres\" } } } . A content handler for developers only (require.debug), shown in the Debug section of the menu: . { \"id\": \"contenthandler-template\", \"require\": { \"net\": false, \"debug\": true }, \"i18n\": { \"title\": { \"en\": \"contenthandler-template\" } } } . ",
+    "url": "/previews/ga/rclDoc/general/clients/#pankosmia_metadatajson",
+    
+    "relUrl": "/general/clients/#pankosmia_metadatajson"
+  },"11": {
+    "doc": "Clients",
+    "title": "endpoints",
+    "content": "Content handlers use endpoints to tell the other clients what they can do with a type of document (a flavor such as textTranslation). Other clients read it from /api/client-interfaces and build their menus from it, so a handler does not need to be known by name. Each action is a list of entries (edit is a single entry) with these fields: . | doc: a developer description of the entry. | label: an i18n key (for example pages:core-contenthandler_obs:create_content_obs) shown to the user. | url: the page of the client to open, relative to /clients/&lt;id&gt;/. | placeHolders: documents the variables used in url, such as %%REPO_PATH%%, replaced by the path of the repository in &lt;X&gt;/&lt;Y&gt;/&lt;Z&gt; format. | subMenu: only for export, groups the entries by format (usfm, pdf…). | . Actions in use: . | Action | Used for | . | create_document | Entries of the Create button of the dashboard. | . | edit | The client that opens a repository of this document type. | . | new_book, import_book, delete_book | Actions on a repository, offered in the Content client. | . | export | Export formats of a repository, per format in subMenu. | . | about_repo, manager, initDocument, importContent | Other entries read by the dashboard. | . | download_resources | Page used to download resources (remote repos client). | . { \"id\": \"core-contenthandler_obs\", \"endpoints\": { \"textStories\": { \"create_document\": [ { \"doc\": \"Create a document for OBS\", \"label\": \"pages:core-contenthandler_obs:create_content_obs\", \"url\": \"/createDocument/obsContent\" } ], \"edit\": { \"doc\": \"main page for workspace\", \"label\": \"pages:core-client-workspace:main\", \"url\": \"core-local-workspace#\" } } } } . ",
+    "url": "/previews/ga/rclDoc/general/clients/#endpoints",
+    
+    "relUrl": "/general/clients/#endpoints"
+  },"12": {
+    "doc": "Decluttering Client Repos",
+    "title": "Decluttering Client Repos",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/decluttering/",
+    
+    "relUrl": "/decluttering/"
+  },"13": {
+    "doc": "Decluttering Client Repos",
+    "title": "Table of Contents",
+    "content": ". | Knip . | Setup | Analyzing a repo | Example of false positives on unused exports | Example of reported duplicated exports not actually causing a problem | Example of false positive on unused dependencies | . | Applying package changes while keeping local installs clean and consistent | . ",
+    "url": "/previews/ga/rclDoc/decluttering/#table-of-contents",
+    
+    "relUrl": "/decluttering/#table-of-contents"
+  },"14": {
+    "doc": "Decluttering Client Repos",
+    "title": "Knip",
+    "content": "Knip is useful towards identifying unlisted dependencies, duplicated exports, and potential unused files, dependencies or exports. Watch out for false positives! . Avoid blindly implementing everything reported. Look, verify, and test. Do your own searches and thinking for things like reported unused exports. Knip is not meant for resource-core, webfonts-core, pankosmia-web, or desktop-app-*. It is for projects constructed with a packages.json and an index.js, which it uses to step through and evaluate all includes in the app. Setup . npm install -g knip or npm install --global knip (to install or update) . Analyzing a repo . In the root of the client repo in a terminal, enter knip. It will provide a list of any of any unused, unlisted, or duplicated things that it suspects it has found. Example of false positives on unused exports . It will report Selection.styles.jsx as an unused export (because of the filename) even when it is in use. Be careful to not remove this file where its export is actually in use. Example of reported duplicated exports not actually causing a problem . Selection.styles.jsx is exporting sx, which works fine as used. Example of false positive on unused dependencies . Knip is quite good at following the include chain throughout a project. However, sometimes dependencies are in place outside of this chain, which it will miss. For example, if a package.json includes use of react-scripts in its scripts section, it’s dependency chain includes babel which includes a devDependency of @babel/plugin-proposal-private-property-in-object. Knip will miss that case and report that as an unused dependency, but in that case it is actually used. ",
+    "url": "/previews/ga/rclDoc/decluttering/#knip",
+    
+    "relUrl": "/decluttering/#knip"
+  },"15": {
+    "doc": "Decluttering Client Repos",
+    "title": "Applying package changes while keeping local installs clean and consistent",
+    "content": "Migration from npm to pnpm in process . Use the repo root lock file to determine which applies: pnpm-lock.yaml → pnpm; package-lock.json → npm. For additional detail see our Migration Plan. |   | pnpm-lock.yaml | package-lock.json | . | Use | pnpm install or manually edit package.json then run pnpm i | npm ci. This removes node_modules and matches the lock file. | . | To bump a package version follow pnpm i/npm ci with: | pnpm i &lt;package_name&gt;@0.1.29 --save-exact or manually edit package.json then run pnpm i | npm i &lt;package_name&gt;@0.1.29 --save-exact | . | To remove a package follow npm ci with: | pnpm uninstall &lt;package_name&gt; or manually edit package.json then run pnpm i | npm uninstall &lt;package_name&gt; | . | To add a package follow pnpm i/npm ci with: | pnpm i &lt;package_name&gt; --save-dev or pnpm i &lt;package_name&gt; -D (for devDependencies) or pnpm add &lt;package-name&gt; -O or manually edit package.json then run pnpm i | npm i &lt;package_name&gt; --save-dev or npm i &lt;package_name&gt; -D (for devDependencies) or npm i &lt;package-name&gt; --save-optional | . ",
+    "url": "/previews/ga/rclDoc/decluttering/#applying-package-changes-while-keeping-local-installs-clean-and-consistent",
+    
+    "relUrl": "/decluttering/#applying-package-changes-while-keeping-local-installs-clean-and-consistent"
+  },"16": {
+    "doc": "Dialog",
+    "title": "Dialog",
+    "content": "Dialog components of the RCL . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/dialog/",
+    
+    "relUrl": "/rcl-doc/dialog/"
+  },"17": {
+    "doc": "Dialog",
+    "title": "Table of Contents",
+    "content": ". | PanBasicDialog | PanAdvancedDialog . | Behavior on small screens | . | PanDialogActionsArray | Examples | . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/dialog/#table-of-contents",
+    
+    "relUrl": "/rcl-doc/dialog/#table-of-contents"
+  },"18": {
+    "doc": "Dialog",
+    "title": "PanBasicDialog",
+    "content": "A modal dialog sized to its content (minimum width 280px, maximum width sm). It shows a title, your content, and a row of action buttons at the bottom. It is the right choice for confirmations and short forms. Clicking the backdrop or pressing Escape calls closeFn. The dialog surface is rendered as an HTML form element. | Prop | Type | Default | What it does | . | titleLabel | string | required | Text shown as the dialog title. Translate it before passing it in. | . | isOpen | boolean | required | Whether the dialog is visible. The parent component owns this state. | . | closeFn | () =&gt; void | required | Function called to close the dialog. It is called when the user clicks the backdrop or presses Escape. Your code should use it to set isOpen to false. | . | children | ReactNode | none | The content of the dialog: any React nodes (text, form fields, lists…). | . | actionsButtonArray | ReactElement[] | none | Array of buttons rendered in the footer, in order. Normally the result of PanDialogActionsArray(...), but any array of React elements works. | . | requiredFieldsLabel | boolean | false | When true, a note is shown above the content explaining that required fields are marked (translation key library:pankosmia-rcl:required_field). Use it when the dialog contains a form with required fields. | . | dividers | boolean | false | When true, a horizontal divider is drawn between the title and the content, and between the content and the buttons. | . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/dialog/#panbasicdialog",
+    
+    "relUrl": "/rcl-doc/dialog/#panbasicdialog"
+  },"19": {
+    "doc": "Dialog",
+    "title": "PanAdvancedDialog",
+    "content": "A modal dialog with a colored title bar (primary theme color), full width up to the sm breakpoint, and a divider above the buttons. It is meant for longer content and forms. Behavior on small screens . Below the sm breakpoint the dialog goes full screen. A close icon appears at the start of the title bar and calls closeFn. The footer is hidden, and the second button of actionsButtonArray (the action button created by PanDialogActionsArray) is moved to the end of the title bar. Keep the main action in second position so that it stays reachable on mobile. Unlike PanBasicDialog, clicking the backdrop or pressing Escape does not close this dialog. | Prop | Type | Default | What it does | . | titleLabel | string | required | Text shown as the dialog title. Translate it before passing it in. | . | isOpen | boolean | required | Whether the dialog is visible. The parent component owns this state. | . | closeFn | () =&gt; void | required | Function called when the user clicks the close icon shown in the title bar on small screens. Your code should use it to set isOpen to false. It is not called from the backdrop or Escape. | . | children | ReactNode | none | The content of the dialog: any React nodes (text, form fields, lists…). | . | actionsButtonArray | ReactElement[] | none | Array of buttons rendered in the footer, in order. Normally the result of PanDialogActionsArray(...), but any array of React elements works. | . | requiredFieldsLabel | boolean | false | When true, a note is shown above the content explaining that required fields are marked (translation key library:pankosmia-rcl:required_field). Use it when the dialog contains a form with required fields. | . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/dialog/#panadvanceddialog",
+    
+    "relUrl": "/rcl-doc/dialog/#panadvanceddialog"
+  },"20": {
+    "doc": "Dialog",
+    "title": "PanDialogActionsArray",
+    "content": "Despite its name it is a plain function, not a component: call it like PanDialogActionsArray({ ... }). It returns an array of two elements, [closeButton, actionButton], to pass to the actionsButtonArray prop of PanBasicDialog or PanAdvancedDialog. The close button is always first. The action button is second; when onlyCloseButton is true that slot is null. | Prop | Type | Default | What it does | . | actionFn | () =&gt; void | required | Function run when the action button is clicked. Not used when onlyCloseButton is true. | . | actionLabel | string | required | Label of the action button. Translate it before passing it in. | . | closeFn | () =&gt; void | required | Function run when the close button is clicked. It is also called after actionFn when closeOnAction is true. | . | closeLabel | string | required | Label of the close button (for example Cancel or Close). Translate it before passing it in. | . | isDisabled | boolean | none | When true, the action button is disabled. Typically used while a form is invalid. The close button is never disabled by this prop. | . | closeOnAction | boolean | true | When true, closeFn is called right after actionFn. Set it to false when the action is asynchronous or can fail and your code must close the dialog itself. | . | onlyCloseButton | boolean | false | When true, only the close button is created (for information-only dialogs). The second array slot is null. | . | actionVariant | string | none | MUI Button variant of the action button: text, outlined or contained. When omitted, MUI’s default (text) is used. | . | closeVariant | string | none | MUI Button variant of the close button: text, outlined or contained. When omitted, MUI’s default (text) is used. | . | isLoading | boolean | none | When true, the close button is disabled and shows a small spinner. Note that this is applied to the close button only, not to the action button. | . | loadingLabel | string | none | Label that replaces the close button label while isLoading is true. If omitted, the normal label stays. | . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/dialog/#pandialogactionsarray",
+    
+    "relUrl": "/rcl-doc/dialog/#pandialogactionsarray"
+  },"21": {
+    "doc": "Dialog",
+    "title": "Examples",
+    "content": "A dialog with a confirm action. The same pattern works for PanAdvancedDialog: . const [open, setOpen] = useState(false); &lt;PanBasicDialog titleLabel=\"Delete this item?\" isOpen={open} closeFn={() =&gt; setOpen(false)} actionsButtonArray={PanDialogActionsArray({ actionLabel: \"Delete\", actionFn: () =&gt; deleteItem(), closeLabel: \"Cancel\", closeFn: () =&gt; setOpen(false), actionVariant: \"contained\", })} &gt; &lt;Typography&gt;This cannot be undone.&lt;/Typography&gt; &lt;/PanBasicDialog&gt; . Working demos are in src/componentDemos/V1.0 of the core-client-rcl repository. ",
+    "url": "/previews/ga/rclDoc/rcl-doc/dialog/#examples",
+    
+    "relUrl": "/rcl-doc/dialog/#examples"
+  },"22": {
+    "doc": "Electronite Local Development",
+    "title": "Electronite Local Development",
+    "content": "How to make changes to Electronite while using a local development server. ",
+    "url": "/previews/ga/rclDoc/electronite-local-development/",
+    
+    "relUrl": "/electronite-local-development/"
+  },"23": {
+    "doc": "Electronite Local Development",
+    "title": "Table of Contents",
+    "content": ". | Windows, MacOS, or Linux . | Electronite Dev Viewer | Making dev changes to Electronite | Deploying tested dev changes to Electronite . | Prerequisites: | bundle_viewer script | bundle_viewer script Outputs: | . | . | . ",
+    "url": "/previews/ga/rclDoc/electronite-local-development/#table-of-contents",
+    
+    "relUrl": "/electronite-local-development/#table-of-contents"
+  },"24": {
+    "doc": "Electronite Local Development",
+    "title": "Windows, MacOS, or Linux",
+    "content": "Prerequisites . | See Environment Requirements. | Consider App Spin-up and Scripts. | . Electronite Dev Viewer . | 💡 To create an Electronite viewer for use with your local dev build environment, run this script while online: . | Linux: cd linux/scripts then ./build_viewer.bsh | Windows: cd windows\\\\scripts then .\\build_viewer.ps1 (use a powershell terminal) | MacOS: cd macos/scripts then ./build_viewer.zsh | . | Read the ‘Use’ and ‘Client Development’ sections at the top of Scripts. | . | 💡 When the server is running (the run script), start the Electronite viewer created by the build_viewer script: . | Linux: cd linux/scripts then ./viewer.bsh – Dev Tools: Ctrl + Shift + I” | Windows: cd windows\\scripts then .\\viewer.bat – Dev Tools: Ctrl + Shift + I” | MacOS: cd macos/scripts then ./viewer.zsh – Dev Tools: Cmd + Option + I” | . | . Making dev changes to Electronite . Electronite is a drop-in replacement for electron that provides an enhanced font rendering system. Make your dev changes the same way as for an Electron viewer. This project works in either a web browser or the Electronite viewer. Only add code to Electron/Electronite that are necessary for it to handle things that web browser already do (e.g., Print, Find, Zoom, Back, Forward). Avoid coding in such a way that prevents web browser use. 💡 The way to develop in Electronite is to start by modifying sourcecode in the following location. The electron orechestrator is electronStartup.js. └── buildResources └── electron ├── config │ └── paths.js ├── core │ ├── archiveUtil.js │ ├── downloadUtil.js │ ├── ports.js │ ├── server.js │ ├── startupErrors.js │ └── window.js ├── features │ ├── ffmpeg.js │ ├── firefox.js │ └── pdf.js ├── electronStartup.js ├── package.json └── preload.js . Deploying tested dev changes to Electronite . Test by re-running the build_viewer script. See Electronite Dev Viewer above. This will setup the Electron files above in the following location with app-specific variables configured. └── [linux | windows | macos] └── viewer └── project └── payload └── app └── electron . Test bundle_viewer.&lt;bsh|ps1|zsh&gt; by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting installs. Required packages are copied by script! . If packages required in Electron are changed or updated, it is not enough to address them in the repo root package.json as applicable files from this repo copied into installs rather than being handled by a package manager. See additional info to make and test changes. If a change needs to be made to favicon*.png, make those changes in the globalBuildResources directory. The same test instructions above apply. Local Installer Build . Before doing this, also consider To Generate Artifacts . Prerequisites: . | Ensure the local server is current! This is the build_server script, or ./build_server.[ext] dev or ./build_server.[ext] qa if /local_server.env has different versions from the panksomia_web in /local_server/Cargo.toml. | Windows has an additional requirement for running this bundle_viewer build locally: . | Install Inno Setup -tested with v6.4.3 . | . | . bundle_viewer script . | Windows - cd windows\\scripts then .\\bundle_viewer.ps1 . | Optional arguments: . | .\\bundle_viewer.ps1 -ServerOff \"Y\" or: “y”; Will not ask if server is off . | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and pnpm i, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer. | . | MacOS - cd /macos/scripts then ./bundle_viewer.zsh . | Optional arguments: . | ./bundle_viewer.zsh -s Will not ask if server is off . | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and pnpm i, runs app_setup.bat to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone exe installer. | . | Linux - cd /linux/scripts then ./bundle_viewer.bsh . | Before running: . | manually delete prior local builds | pnpm i (if not already run) | app_setup.bat to ensure version consistency (unless already current) | run run ./bundle_tgz.bsh . | then run ./bundle_viewer.bsh . | . | . | . bundle_viewer script Outputs: . | Windows: releases\\\\windows\\\\intel64\\\\[app-name]-[version]-windows-[x64|arm64].exe | MacOS: releases/macos/[intel64|arm64]/[app-name]-[version]-macos-[x64|arm64].pkg | Linux: releases/linux/[app-name]-[version]-linux-[x64|arm64].deb | . ",
+    "url": "/previews/ga/rclDoc/electronite-local-development/#windows-macos-or-linux",
+    
+    "relUrl": "/electronite-local-development/#windows-macos-or-linux"
+  },"25": {
+    "doc": "Environment Requirements",
+    "title": "Environment Requirements",
+    "content": "Local dev environment requirements for AppDev of a Desktop App repo built on Pankosmia . ",
+    "url": "/previews/ga/rclDoc/environment-requirements/",
+    
+    "relUrl": "/environment-requirements/"
+  },"26": {
+    "doc": "Environment Requirements",
+    "title": "Table of Contents",
+    "content": ". | Tested on: . | Ubuntu 24.04 with: | Windows 11 with: | MacOS Apple silicon (ARM64) with: | MacOS Intel (x86_64) with: . | Planning ahead | . | . | . ",
+    "url": "/previews/ga/rclDoc/environment-requirements/#table-of-contents",
+    
+    "relUrl": "/environment-requirements/#table-of-contents"
+  },"27": {
+    "doc": "Environment Requirements",
+    "title": "Tested on:",
+    "content": "Migration from npm to pnpm in process . Use the repo root lock file to determine which applies: pnpm-lock.yaml → pnpm; package-lock.json → npm. For additional detail see our Migration Plan. Ubuntu 24.04 with: . | pnpm-lock.yaml | package-lock.json | . | pnpm 11.20.0 | npm 10.7.0 | . | node 24.11.0 | node 20.18.1 | . | rustc 1.88.0 – curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh | . Windows 11 with: . | pnpm-lock.yaml | package-lock.json | . | pnpm 11.20.0 | npm 10.7.0 | . | node 24.11.0 | node 20.18.1 | . | git 2.44.0; See https://git-scm.com/install/windows | rustc 1.88.0 – See https://www.rust-lang.org/tools/install | cmake 3.31.0 – Version 3 is required. See https://cmake.org/download/ | Depending on your system, powershell might need permission to run scripts. | Running exe builds locally (optional) needs installation of Inno Setup -tested with v6.4.3 | . MacOS Apple silicon (ARM64) with: . | pnpm-lock.yaml | package-lock.json | . | pnpm 11.20.0 | npm 10.8.2 (tested on Sequoia) | . | node 24.11.0 | node 20.18.1 | . | rustc 1.88.0 – curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh | OpenSSL 3.5.0 – brew install openssl – See Homebrew | . MacOS Intel (x86_64) with: . | pnpm-lock.yaml | package-lock.json | . | pnpm 11.20.0 | npm 10.7.0 (tested on Monterey) | . | node 24.11.0 | node 20.18.1 | . | rustc 1.88.0 – curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh | OpenSSL 3.6.4 – sudo port install openssl3 – See MacPorts | . Planning ahead . | GitHub Actions runner support is anticipated until August 2027. | Apple security updates are anticipated until around September 2029. | . ",
+    "url": "/previews/ga/rclDoc/environment-requirements/#tested-on",
+    
+    "relUrl": "/environment-requirements/#tested-on"
+  },"28": {
+    "doc": "i18n",
+    "title": "i18n",
+    "content": "How translation of the user interface works across all clients . ",
+    "url": "/previews/ga/rclDoc/general/i18n/",
+    
+    "relUrl": "/general/i18n/"
+  },"29": {
+    "doc": "i18n",
+    "title": "Table of Contents",
+    "content": ". | Overview | Structure of the translation tree | Where the strings come from | How a client loads the translations | Using translations in code | Adding a string to a client | Localization Editor | Product-level customization | . ",
+    "url": "/previews/ga/rclDoc/general/i18n/#table-of-contents",
+    
+    "relUrl": "/general/i18n/#table-of-contents"
+  },"30": {
+    "doc": "i18n",
+    "title": "Overview",
+    "content": "Every piece of user-interface text in Pankosmia is looked up by a key in one shared translation tree, so all clients (dashboard, settings, content handlers…) follow the same language. A key has three parts joined by colons: &lt;category&gt;:&lt;section&gt;:&lt;name&gt;, for example pages:core-settings:title. The value behind a key holds one translation per language code (en, fr, es, id…). When a key is not found, the key itself is displayed. ",
+    "url": "/previews/ga/rclDoc/general/i18n/#overview",
+    
+    "relUrl": "/general/i18n/#overview"
+  },"31": {
+    "doc": "i18n",
+    "title": "Structure of the translation tree",
+    "content": "| Category | Content | . | pages | One section per client, named after the client id, filled from the i18n object of its pankosmia_metadata.json. Example: pages:core-settings:title. | . | library | Strings of shared libraries such as the RCL. Example: library:pankosmia-rcl:required_field. | . | components | Strings of shared interface parts (header, framework messages…). Example: components:framework:no_entry_if_offline. | . | branding | Identity of the product. Example: branding:software:name. | . | scripture | Names of books and versifications. | . | munchers, crunchers, flavors, server, fonts | Other categories of the template, used by specific content handlers and server features. | . ",
+    "url": "/previews/ga/rclDoc/general/i18n/#structure-of-the-translation-tree",
+    
+    "relUrl": "/general/i18n/#structure-of-the-translation-tree"
+  },"32": {
+    "doc": "i18n",
+    "title": "Where the strings come from",
+    "content": ". | The template: the base file i18n.json of resource-core/templates. The desktop app build copies it to lib/templates/i18n.json. It holds library, components, branding, scripture… | Each client: the i18n object of its pankosmia_metadata.json. A key title in the client core-settings becomes pages:core-settings:title. | The product: i18nPatch.json and i18n-overrides.json in the globalBuildResources of the desktop app (see below). | . ",
+    "url": "/previews/ga/rclDoc/general/i18n/#where-the-strings-come-from",
+    
+    "relUrl": "/general/i18n/#where-the-strings-come-from"
+  },"33": {
+    "doc": "i18n",
+    "title": "How a client loads the translations",
+    "content": "When a client starts, the SpSpa component of the RCL requests /api/i18n/flat from the server and keeps the result in the i18n context. The response is a flat map of key to text, for the language chosen by the user in the Settings client (stored through /api/settings/languages). Components read it with i18nRef.current and look up a key with doI18n. ",
+    "url": "/previews/ga/rclDoc/general/i18n/#how-a-client-loads-the-translations",
+    
+    "relUrl": "/general/i18n/#how-a-client-loads-the-translations"
+  },"34": {
+    "doc": "i18n",
+    "title": "Using translations in code",
+    "content": "Both functions come from pankosmia-lib/i18n. doI18n(key, source) returns the text, or the key itself when it is missing. doInterpolatedI18n(key, values, source) fills the placeholders %1%, %2%… of a text with an array of strings. import { useContext } from \"react\"; import { i18nContext } from \"pankosmia-rcl\"; import { doI18n, doInterpolatedI18n } from \"pankosmia-lib/i18n\"; const { i18nRef } = useContext(i18nContext); doI18n(\"pages:core-settings:title\", i18nRef.current); // \"greeting\": { \"en\": \"Hello %1%, you have %2% books\" } doInterpolatedI18n( \"pages:my-client:greeting\", [\"Ada\", \"3\"], i18nRef.current, ); . doInterpolatedI18n is stricter than doI18n: it throws when the key is missing, when a value is not a string, when the number of values differs from the number of placeholders, or when a placeholder is malformed. ",
+    "url": "/previews/ga/rclDoc/general/i18n/#using-translations-in-code",
+    
+    "relUrl": "/general/i18n/#using-translations-in-code"
+  },"35": {
+    "doc": "i18n",
+    "title": "Adding a string to a client",
+    "content": ". | Add the key to the i18n object of the client’s pankosmia_metadata.json, with at least the en translation. | Use it in the code as pages:&lt;client id&gt;:&lt;key&gt;. | Rebuild the client. Other languages can be added in the file or with the Localization Editor. | . { \"id\": \"my-client\", \"i18n\": { \"title\": { \"en\": \"My client\", \"fr\": \"Mon client\" } } } . ",
+    "url": "/previews/ga/rclDoc/general/i18n/#adding-a-string-to-a-client",
+    
+    "relUrl": "/general/i18n/#adding-a-string-to-a-client"
+  },"36": {
+    "doc": "i18n",
+    "title": "Localization Editor",
+    "content": "The client core-client-i18n-editor (id i18n-editor) edits the whole translation tree. It reads it from /api/i18n/raw and saves it with a POST to /api/i18n. It only lets you edit text values and add or remove language codes. It requires debug mode (require.debug is true), so it is listed in the Debug section of the menu. ",
+    "url": "/previews/ga/rclDoc/general/i18n/#localization-editor",
+    
+    "relUrl": "/general/i18n/#localization-editor"
+  },"37": {
+    "doc": "i18n",
+    "title": "Product-level customization",
+    "content": "A desktop app can adjust texts without touching the clients, with two files in its globalBuildResources: . | i18nPatch.json: applied at build time by buildCommon.js on top of templates/i18n.json. Every entry must already exist in the template, otherwise the build fails. In practice it only holds the product name (branding.software.name.en), which the app_setup script keeps equal to APP_NAME. | i18n-overrides.json: copied to app_resources/product/i18n-overrides.json. It has the same purpose, with the shape { \"pages\": { } } (empty by default). | . ",
+    "url": "/previews/ga/rclDoc/general/i18n/#product-level-customization",
+    
+    "relUrl": "/general/i18n/#product-level-customization"
+  },"38": {
+    "doc": "Build Versions",
+    "title": "Build Versions",
+    "content": "Build info Jekyll version: 3.10.0 Environment: production Safe mode: false Ruby info (from config; keep in sync manually with Gemfile) Ruby: 3.3.6 ",
+    "url": "/previews/ga/rclDoc/versions/",
+    
+    "relUrl": "/versions/"
+  },"39": {
+    "doc": "The Pankosmia Project",
+    "title": "The Pankosmia Project",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/pankosmia-project/",
+    
+    "relUrl": "/pankosmia-project/"
+  },"40": {
+    "doc": "The Pankosmia Project",
+    "title": "Table of Contents",
+    "content": ". | Philosophy | Project Distinctives | Architecture | . ",
+    "url": "/previews/ga/rclDoc/pankosmia-project/#table-of-contents",
+    
+    "relUrl": "/pankosmia-project/#table-of-contents"
+  },"41": {
+    "doc": "The Pankosmia Project",
+    "title": "Philosophy",
+    "content": "Pankosmia began with a conversation about the First the monkey principle. TLDR, if your project is to have a monkey recite Shakespeare on a pedestal, don’t focus on the pedestal. In other words, tackle the hard bit first. For us, two of the hard bits were graphite support and guaranteeing an offline-first experience where failing to do so may put people in danger. Some corollaries of “First the Monkey” for us are: . | focus on the hard and unsolved problems | the working but clunky solution we can build and ship is better than both the lovely solution we can’t build and ship and the lovely UI we can ship that doesn’t do the right thing under the hood | polishing things that we know how to polish is rarely urgent | users need happy devs because devs build the systems the users need | . ",
+    "url": "/previews/ga/rclDoc/pankosmia-project/#philosophy",
+    
+    "relUrl": "/pankosmia-project/#philosophy"
+  },"42": {
+    "doc": "The Pankosmia Project",
+    "title": "Project Distinctives",
+    "content": ". | open source (but third-party products may include closed-source clients) | radically offline-first | support for graphite-enabled fonts | built around Scripture Burrito for all content | multiple “white app” products that can be branded and maintained by different organizations and developed to meet different user needs | multiple clients per product, including standard clients for core functionality | . ",
+    "url": "/previews/ga/rclDoc/pankosmia-project/#project-distinctives",
+    
+    "relUrl": "/pankosmia-project/#project-distinctives"
+  },"43": {
+    "doc": "The Pankosmia Project",
+    "title": "Architecture",
+    "content": "Products ship as an Electronite app, ie Electron with added support for graphite-enabled fonts. A product typically includes: . | a localhost HTTP server, written in Rust, that handles . | access to local burritos | language and font options | access to burrito servers (when Internet is enabled) | shared application state between clients | . | multiple clients, served as built HTML/CSS/Javascript: . | core clients use React and MUI, use of other frameworks is possible | . | core Node libraries to simplify the creation of new clients | an extensive online build toolchain for multiple operating systems | . ",
+    "url": "/previews/ga/rclDoc/pankosmia-project/#architecture",
+    
+    "relUrl": "/pankosmia-project/#architecture"
+  },"44": {
+    "doc": "General",
+    "title": "General",
+    "content": "Concepts shared by every Pankosmia client and product . This section gathers the concepts that apply across Pankosmia. It has three pages: . | i18n: how the translation of the user interface works in all clients. | Product: the desktop apps and what a product contains (globalBuildResources, product_resources). | Clients: the structure of a client and the options of pankosmia_metadata.json. | . ",
+    "url": "/previews/ga/rclDoc/general/",
+    
+    "relUrl": "/general/"
+  },"45": {
+    "doc": "RCL Documentation",
+    "title": "RCL Documentation",
+    "content": "Documentation for the RCL . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/",
+    
+    "relUrl": "/rcl-doc/"
+  },"46": {
+    "doc": "RCL Documentation",
+    "title": "Table of Contents",
+    "content": ". | Overview | Component sections | Debug | . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/#table-of-contents",
+    
+    "relUrl": "/rcl-doc/#table-of-contents"
+  },"47": {
+    "doc": "RCL Documentation",
+    "title": "Overview",
+    "content": "pankosmia-rcl is the React Component Library shared by the Pankosmia clients. The components documented here are the ones in the v1.0 folder of the library (src/rcl/v1.0). They are exported from the package entry point and are built on top of MUI. The library currently exports four v1.0 components: . | PanBasicDialog: a compact dialog for short confirmations and small forms. | PanAdvancedDialog: a larger dialog that becomes full screen on small displays. | PanDialogActionsArray: a helper that builds the close and action buttons given to the dialogs. | PanMenuWrapper: a menu that is a popup on large screens and a bottom drawer on small screens. | . Import them by name from the package: . import { PanBasicDialog, PanAdvancedDialog, PanDialogActionsArray, PanMenuWrapper, } from \"pankosmia-rcl\"; . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/#overview",
+    
+    "relUrl": "/rcl-doc/#overview"
+  },"48": {
+    "doc": "RCL Documentation",
+    "title": "Component sections",
+    "content": "The components are documented by family. Each page explains every component of the family and each of its props: . | Dialog: PanBasicDialog, PanAdvancedDialog and PanDialogActionsArray. | Menu: PanMenuWrapper. | . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/#component-sections",
+    
+    "relUrl": "/rcl-doc/#component-sections"
+  },"49": {
+    "doc": "RCL Documentation",
+    "title": "Debug",
+    "content": "The debug option lets the user see developer options. When it is turned on, every client that requires debug and is not excluded from the menu appears in the menu. ",
+    "url": "/previews/ga/rclDoc/rcl-doc/#debug",
+    
+    "relUrl": "/rcl-doc/#debug"
+  },"50": {
+    "doc": "Dev Reference Manual",
+    "title": "Dev Reference Manual",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/dev-reference-manual/",
+    
+    "relUrl": "/dev-reference-manual/"
+  },"51": {
+    "doc": "Dev Quickstart",
+    "title": "Dev Quickstart",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/dev-quickstart/",
+    
+    "relUrl": "/dev-quickstart/"
+  },"52": {
+    "doc": "Home",
+    "title": "Pankosmia",
+    "content": "An ecosystem to build custom-made translation tools . Pankosmia is a scripture translation software Ecosystem. It is used to build multiple translation tools, using shared components. ",
+    "url": "/previews/ga/rclDoc/#pankosmia",
+    
+    "relUrl": "/#pankosmia"
+  },"53": {
+    "doc": "Home",
+    "title": "Contents",
+    "content": ". | The Pankosmia Project . | Dev Quickstart . | Dev Reference Manual . | . Legal Notices . ",
+    "url": "/previews/ga/rclDoc/#contents",
+    
+    "relUrl": "/#contents"
+  },"54": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/",
+    
+    "relUrl": "/"
+  },"55": {
+    "doc": "Legal Notices",
+    "title": "Legal Notices",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/legal-notices/",
+    
+    "relUrl": "/legal-notices/"
+  },"56": {
+    "doc": "Legal Notices",
+    "title": "Table of Contents",
+    "content": ". | Contact | Hosting | Terms of use | Property | Hypertext links | GDPR | Site content | Cookies | . ",
+    "url": "/previews/ga/rclDoc/legal-notices/#table-of-contents",
+    
+    "relUrl": "/legal-notices/#table-of-contents"
+  },"57": {
+    "doc": "Legal Notices",
+    "title": "Contact",
+    "content": "CEO: Mark Howe email: webmaster@mvhsolutions.com . ",
+    "url": "/previews/ga/rclDoc/legal-notices/#contact",
+    
+    "relUrl": "/legal-notices/#contact"
+  },"58": {
+    "doc": "Legal Notices",
+    "title": "Hosting",
+    "content": "The https://pankosmia.dev website is hosted by MVH SOLUTIONS via https://github.com. Address: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon. ",
+    "url": "/previews/ga/rclDoc/legal-notices/#hosting",
+    
+    "relUrl": "/legal-notices/#hosting"
+  },"59": {
+    "doc": "Legal Notices",
+    "title": "Terms of use",
+    "content": "Use of the https://pankosmia.dev website is subject to compliance with the following general terms and conditions. By opening the https://pankosmia.dev website, you declare that you are aware of these general terms and conditions of use and accept them unreservedly. ",
+    "url": "/previews/ga/rclDoc/legal-notices/#terms-of-use",
+    
+    "relUrl": "/legal-notices/#terms-of-use"
+  },"60": {
+    "doc": "Legal Notices",
+    "title": "Property",
+    "content": "All components of the https://pankosmia.dev website (text, logos, images, audio, software, icons, layout, databases, etc.) are protected by national and international intellectual property laws. These components remain the sole property of their respective owners. Users may not reproduce, represent, adapt, translate or transform any component of the https://pankosmia.dev website in part or in whole, or transfer it to any other website, except by the prior written permission of MVH solutions. (🚧) . ",
+    "url": "/previews/ga/rclDoc/legal-notices/#property",
+    
+    "relUrl": "/legal-notices/#property"
+  },"61": {
+    "doc": "Legal Notices",
+    "title": "Hypertext links",
+    "content": "MVH Solutions may not be held liable for the destination anchors of any hypertext links installed as part of the https://pankosmia.dev website pointing to other resources on the Internet. Similarly, it may not be held liable in respect of the content and relevance of the information provided by sites published by third parties that can be accessed from the https://pankosmia.dev website via hypertext links. ",
+    "url": "/previews/ga/rclDoc/legal-notices/#hypertext-links",
+    
+    "relUrl": "/legal-notices/#hypertext-links"
+  },"62": {
+    "doc": "Legal Notices",
+    "title": "GDPR",
+    "content": "MVH Solutions does not collect any personal data unless the user initiates contact by email of via the Github interface. For details of how Github itself manages data, please see https://docs.github.com/fr/site-policy/github-terms/github-terms-of-service . The French Data Protection Act 78-17 of January 6, 1978 as amended in 2004 grants you the right to access and/or rectify personal data. You can exercise this right by contacting the webmaster. You may also refuse processing of your personal data if you have legitimate grounds. Pursuant to the General Data Protection Regulation in force as of 25 May 2018, the data gathered will be used for internal purposes only. To request rectification or erasure of your personal data, please contact us at the following address: webmaster@mvhsolutions.com. ",
+    "url": "/previews/ga/rclDoc/legal-notices/#gdpr",
+    
+    "relUrl": "/legal-notices/#gdpr"
+  },"63": {
+    "doc": "Legal Notices",
+    "title": "Site content",
+    "content": "MVH Solutions provides users of the https://pankosmia.dev website with available, verified information, but may not be held liable should any information be unavailable. No guarantee is made that information made available on the https://pankosmia.dev website is correct, accurate or exhaustive. Authors retain liability for the content they provide. MVH Solutions (🚧) reserves the right to amend and/or delete all or part of the https://pankosmia.dev website without notice. ",
+    "url": "/previews/ga/rclDoc/legal-notices/#site-content",
+    
+    "relUrl": "/legal-notices/#site-content"
+  },"64": {
+    "doc": "Legal Notices",
+    "title": "Cookies",
+    "content": "Please see Github’s policy above. ",
+    "url": "/previews/ga/rclDoc/legal-notices/#cookies",
+    
+    "relUrl": "/legal-notices/#cookies"
+  },"65": {
+    "doc": "Menu",
+    "title": "Menu",
+    "content": "Menu components of the RCL . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/menu/",
+    
+    "relUrl": "/rcl-doc/menu/"
+  },"66": {
+    "doc": "Menu",
+    "title": "Table of Contents",
+    "content": ". | PanMenuWrapper | Examples | . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/menu/#table-of-contents",
+    
+    "relUrl": "/rcl-doc/menu/#table-of-contents"
+  },"67": {
+    "doc": "Menu",
+    "title": "PanMenuWrapper",
+    "content": "A responsive wrapper around a list of menu items. It chooses the presentation from the screen size and renders your children inside it: . | From the sm breakpoint up: a standard MUI Menu popup anchored to anchorEl (internal component PanMenu). | Below sm: a swipeable drawer sliding up from the bottom of the screen with a drag handle, where the children are placed in a MenuList (internal component PanMenuDrawer). anchorEl is ignored. | . PanMenu and PanMenuDrawer are implementation details and are not exported; use PanMenuWrapper. | Prop | Type | Default | What it does | . | isOpen | boolean | required | Whether the menu (or drawer) is visible. The parent component owns this state. | . | setIsOpen | (open: boolean) =&gt; void | required | State setter called with false when the user dismisses the menu (clicking outside, pressing Escape, or swiping the drawer down). Your code is responsible for opening it again. | . | anchorEl | HTMLElement | none | The DOM element the popup is positioned next to, usually the button that opened it (event.currentTarget). Only used on larger screens. | . | children | ReactNode | none | The menu entries, typically MUI MenuItem elements (with ListItemIcon and ListItemText) and Dividers. | . ",
+    "url": "/previews/ga/rclDoc/rcl-doc/menu/#panmenuwrapper",
+    
+    "relUrl": "/rcl-doc/menu/#panmenuwrapper"
+  },"68": {
+    "doc": "Menu",
+    "title": "Examples",
+    "content": "A menu opened from a button: . const [isOpen, setIsOpen] = useState(false); const [anchorEl, setAnchorEl] = useState(null); &lt;Button onClick={(event) =&gt; { setAnchorEl(event.currentTarget); setIsOpen(true); }} &gt; Open Menu &lt;/Button&gt; &lt;PanMenuWrapper isOpen={isOpen} setIsOpen={setIsOpen} anchorEl={anchorEl}&gt; &lt;MenuItem onClick={() =&gt; setIsOpen(false)}&gt; &lt;ListItemText&gt;Rename&lt;/ListItemText&gt; &lt;/MenuItem&gt; &lt;Divider /&gt; &lt;MenuItem onClick={() =&gt; setIsOpen(false)}&gt; &lt;ListItemText&gt;Delete&lt;/ListItemText&gt; &lt;/MenuItem&gt; &lt;/PanMenuWrapper&gt; . Working demos are in src/componentDemos/V1.0 of the core-client-rcl repository. ",
+    "url": "/previews/ga/rclDoc/rcl-doc/menu/#examples",
+    
+    "relUrl": "/rcl-doc/menu/#examples"
+  },"69": {
+    "doc": "Product",
+    "title": "Product",
+    "content": "Desktop apps built on Pankosmia and what a product contains . ",
+    "url": "/previews/ga/rclDoc/general/product/",
+    
+    "relUrl": "/general/product/"
+  },"70": {
+    "doc": "Product",
+    "title": "Table of Contents",
+    "content": ". | Desktop apps | Structure of a desktop app | globalBuildResources | product_resources | . ",
+    "url": "/previews/ga/rclDoc/general/product/#table-of-contents",
+    
+    "relUrl": "/general/product/#table-of-contents"
+  },"71": {
+    "doc": "Product",
+    "title": "Desktop apps",
+    "content": "A product is a desktop app repository (desktop-app-*). It assembles the server, a chosen list of clients, the branding and the product resources. The existing repositories are: . | desktop-app-template: the template to fork when creating a new desktop app. It is the reference for the rest of this page. | desktop-app-pithekos: the Pithekos desktop app, with the same structure as the template and its own name, version and branding. | desktop-app-renaissance: the Renaissance desktop app built on Pankosmia. | desktop-app-tc4: the tC4 desktop app built on Pankosmia. | desktop-app-test-rcl: a desktop app used to test the RCL. | . ",
+    "url": "/previews/ga/rclDoc/general/product/#desktop-apps",
+    
+    "relUrl": "/general/product/#desktop-apps"
+  },"72": {
+    "doc": "Product",
+    "title": "Structure of a desktop app",
+    "content": "| Item | What it does | . | app_config.env | Main configuration: APP_NAME, APP_SHORT_NAME, APP_VERSION, START_OFFLINE, the assets (ASSETn, ASSETn_PATH, ASSETn_NAME), the HOMEPAGE client and the ordered list of clients (CLIENT1, CLIENT2…). Keep core-client-dashboard as CLIENT1. | . | buildSpec.json | The build recipe generated by the app_setup script: app name and version, server binary (bin), folders to bundle (lib), client repositories to include (libClients) and the paths of the favicon, theme, product and client config files. | . | buildCommon.js | Shared build logic: copies the libs and clients, patches the i18n template and copies the product files. | . | globalBuildResources/ | Everything specific to the product that is common to all operating systems (see below). | . | branding/ | Icon sources and scripts that generate the favicons and the Windows and macOS icons. | . | linux/, macos/, windows/ | Per-OS scripts (app_setup, run, sync, build_server…), setup files and build output. | . | local_server/, local_server.env, Rocket.toml | The server and its versions: dev and qa give a version number, and main uses the one in local_server/Cargo.toml. | . | releases/, CHANGES.md | Release folders per OS and the change log. | . ",
+    "url": "/previews/ga/rclDoc/general/product/#structure-of-a-desktop-app",
+    
+    "relUrl": "/general/product/#structure-of-a-desktop-app"
+  },"73": {
+    "doc": "Product",
+    "title": "globalBuildResources",
+    "content": "This folder holds everything that makes the product different from another one. The build copies it into the app under lib/app_resources/product/. | File | What it does | . | product.json | Identity of the product: name, short_name, version, datetime (build date), homepage (the client opened first) and start_offline. It is regenerated by the build scripts from app_config.env. | . | client_config.json | Default settings of the clients. Keys are client ids, or _global for settings shared by all clients. Each value is a list of groups with an id, an i18n label and fields (each with an id, an i18n label and a value). Example: internetConnectionAccess in _global, read by the dashboard. | . | theme.json | The MUI theme of the product (palette with primary, secondary…). | . | favicon*.png, favicon.ico, icon.ico, icon.icns, linux_icon.png | Icons of the app for the browser, Windows, macOS and Linux. | . | i18nPatch.json, i18n-overrides.json | Product-level text changes, see the i18n page. | . | product_resources/ | Product-specific data, see below. | . ",
+    "url": "/previews/ga/rclDoc/general/product/#globalbuildresources",
+    
+    "relUrl": "/general/product/#globalbuildresources"
+  },"74": {
+    "doc": "Product",
+    "title": "product_resources",
+    "content": "globalBuildResources/product_resources houses the app-specific data. Its content is copied to lib/app_resources/product/product_resources in the built app (when you run in development, to &lt;os&gt;/build/lib/app_resources/product/product_resources). The convention is one sub-folder per client id, holding the data that this client needs. In the template, core-client-remote-repos/organizations/organization.json lists the Git organizations offered to the remote repos client, so two products can offer different organizations without changing the client: . { \"organizations\": [ { \"name\": \"BurritoTruck\", \"url\": \"git.door43.org/burritotruck\" }, { \"name\": \"unfoldingWord\", \"url\": \"git.door43.org/unfoldingword\" } ] } . ",
+    "url": "/previews/ga/rclDoc/general/product/#product_resources",
+    
+    "relUrl": "/general/product/#product_resources"
+  },"75": {
+    "doc": "Script Reference",
+    "title": "Script Reference",
+    "content": "Additional Info TL;DR - For reference when needed on developer scripts for an app repos built on Pankosmia . ",
+    "url": "/previews/ga/rclDoc/script-reference/",
+    
+    "relUrl": "/script-reference/"
+  },"76": {
+    "doc": "Script Reference",
+    "title": "Table of Contents",
+    "content": ". | Ecosystem setup and configuration | Installing the clients . | In each client repo, NOT this repo! | . | Scripts . | Configuration . | Config scripts: | Setup scripts: | Usage scripts: | Maintenance scripts: | . | . | Footnotes | . ",
+    "url": "/previews/ga/rclDoc/script-reference/#table-of-contents",
+    
+    "relUrl": "/script-reference/#table-of-contents"
+  },"77": {
+    "doc": "Script Reference",
+    "title": "Ecosystem setup and configuration",
+    "content": "This repo pulls together several libraries and projects into a single app. The projects are spread across several repos to allow modular reuse. Scripts follow for assisting in setup, though it can also all be setup manually. The following assume the repos are installed with the following directory structure. This is an example. Clients in use may vary. Configuration is handled via app_config.envand the app_setup script. |-- repos |-- pankosmia |-- core-client-content repository |-- core-client-dashboard repository |-- core-client-i18n-editor repository |-- core-client-remote-repos repository |-- core-client-settings repository |-- core-client-workspace repository |-- [your-desktop-app-repo-name] (30 characters or less on windows!) |-- resource-core |-- webfonts-core . ",
+    "url": "/previews/ga/rclDoc/script-reference/#ecosystem-setup-and-configuration",
+    
+    "relUrl": "/script-reference/#ecosystem-setup-and-configuration"
+  },"78": {
+    "doc": "Script Reference",
+    "title": "Installing the clients",
+    "content": "Migration from npm to pnpm in process . Use the repo root lock file to determine which applies: pnpm-lock.yaml → pnpm; package-lock.json → npm. For additional detail see our Migration Plan. The local_server (pankosmia_web) serves compiled files from the build directory of each client, so each client must be built. This is handled by the clone and build_clients scripts, though can also all be run manually which is helpful during development. In each client repo, NOT this repo! . | pnpm-lock.yaml | package-lock.json | . | &gt; pnpm install | &gt; npm ci | . | &gt; pnpm run build | &gt; npm run build | . Running run, build_server, or bundle_... all copies the latest build to the build environment. ",
+    "url": "/previews/ga/rclDoc/script-reference/#installing-the-clients",
+    
+    "relUrl": "/script-reference/#installing-the-clients"
+  },"79": {
+    "doc": "Script Reference",
+    "title": "Scripts",
+    "content": "Scripts are located in &lt;os&gt;/scripts/ and must be run from that directory (e.g., cd linux/scripts/, cd windows\\scripts\\, cd macos/scripts/). Scripts will fail if run from a different location. File extensions by OS: Linux → .bsh, macOS → .zsh, Windows → .bat (unless otherwise noted). Paths use / on Linux/macOS and \\ on Windows. [1] . Configuration . Config files must match clients and assets utilized. Scripts that write them are provided, as per app_config.env. Files created by the app_setup script are: . | buildSpec.json | /globalBuildResources/i18nPatch.json | /globalBuildResources/product.json | /&lt;os&gt;/buildResources/setup/app_setup.json | . Review app_config.env and adjust as needed, then run one of the setup scripts that follow. Re-run the app_setup script anytime app_config.env is changed. Config scripts: . Run from the provided location: . | Description | Script &amp; Argumentscd &lt;os&gt;/scripts/Linux: `.bsh` &#124; macOS: `.zsh` &#124; Win: `.bat` | . | Uses app_config.env to generate/rebuild/replace app_setup.json, buildSpec.json, product.json, and i18nPatch.json | app_setup | . Setup scripts: . Run from the provided location: . | Description | Script &amp; Argumentscd &lt;os&gt;/scripts/Linux: `.bsh` &#124; macOS: `.zsh` &#124; Win: `.bat` | . | Clones all repos in /app_config.env if a directory by that name does not already exist | clone  Default clones via HTTPS.Optional argument:clone -s  Clones via SSH. | . | For each asset repo in /app_config.env: git checkout main, git pullFor each client repo in /app_config.env: git checkout main, git pull, pnpm i, and pnpm run build.Dev’s should build manually when testing branch(es). | build_clientsOptional arguments:build_clients [branch&#124;dev&#124;qa] [dev&#124;qa]  Where “my-branch” does not exist, then fallback will be “main” unless the next argument is specified. If “dev” is indicated then a “dev” → “qa” → “main” fallback is implied. If “qa” is indicated then a “qa” → “main” fallback is implied.build_clients -d  Deletes past logs without asking.build_clients -f  Skip pull because all repos are known to be fresh clones. | . | Create an Electronite viewer for use with the local dev build environment. | build_viewerOptional argument:build_viewer -f  Full re-installWindows: uses .ps1 (use a PowerShell terminal) | . Usage scripts: . Note: Multiple arguments can be applied in any order, e.g., build_server -s dev debug is the same as build_server debug dev -s . | Description | Script &amp; Argumentscd &lt;os&gt;/scripts/Linux: `.bsh` &#124; macOS: `.zsh` &#124; Win: `.bat` | . | Removes the build directory and runs cargo clean [4] | cleanOptional argument:clean -s  Will not ask if server is off | . | Runs cargo build and node build.js | build_serverOptional arguments:build_server dev  Uses the “dev” version in /local_server.envbuild_server qa  Uses the “qa” version in /local_server.envbuild_server -s  Will not ask if server is offbuild_server [ critical | normal (default) | debug | off ]  Re-writes log level in Rocket.toml | . | Assembles the build environment (clients) and starts the server [2] | runOptional argument:run -s  Will not ask if server is off | . | Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the build_viewer script.) | viewerDev Tools: Ctrl + Shift + I (macOS: Cmd + Option + I)Optional argument:viewer [PORT#](default is 19119) | . | Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs git checkout main, git pull, and pnpm i, runs app_setup to ensure version consistency, runs node build.js, then makes a zip release bundle and a stand-alone installer. (*) (•) | bundle_viewerLinux: No optional arguments. Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here.Windows: Uses .ps1. Optional argument:bundle_viewer.ps1 -ServerOff \"Y\"  Will not ask if server is offmacOS: Optional argument:bundle_viewer -s  Will not ask if server is off | . | Deletes the last release bundle if it exists, then on this repo runs git checkout main, git pull, and pnpm i, runs app_setup to ensure version consistency, runs node build.js, then makes a zip/tgz release bundle [2] | Linux: bundle_tgzWindows: bundle_zip.ps1macOS: bundle_zipOptional arguments:Linux/macOS:bundle_tgz -s / bundle_zip -s  Will not ask if server is offbundle_tgz -g / bundle_zip -g  Run from GitHub ActionsWindows:bundle_zip.ps1 -ServerOff \"Y\"  or: “y”; Will not ask if server is offbundle_zip.ps1 -IsGHA \"Y\"  or: “y”; Run from GitHub Actions | . Maintenance scripts: . Run from the provided location: . | Description | Script &amp; Argumentscd &lt;os&gt;/scripts/Linux: `.bsh` &#124; macOS: `.zsh` &#124; Win: `.bat` | . | Facilitates syncing with upstream with exclusion of files expected to differ: | syncOptional argument:sync -p  Will not ask if latest is already pulled. | . ",
+    "url": "/previews/ga/rclDoc/script-reference/#scripts",
+    
+    "relUrl": "/script-reference/#scripts"
+  },"80": {
+    "doc": "Script Reference",
+    "title": "Footnotes",
+    "content": "[1] … When running a bat script from a command prompt, the .\\ included in the examples is optional. [2] … Ensure the local server is current! This is the build_server script, or build_server dev or build_server qa if /local_server.env has different versions from the panksomia_web in /local_server/Cargo.toml. [3] … Environment prerequisite for running the exe build locally: Install Inno Setup - tested with v6.4.3 . [4] … Targeted clean tips: . | To clean just the local server: cd to the /local_server directory and run cargo clean | To clean just the build environment, cd to the subdirectory for your OS (i.e., /macos, /linux, or /windows), then recursively remove its build subdirectory. | (The clean script does all of the above.) | . ",
+    "url": "/previews/ga/rclDoc/script-reference/#footnotes",
+    
+    "relUrl": "/script-reference/#footnotes"
+  },"81": {
+    "doc": "Scripts",
+    "title": "Scripts",
+    "content": "Developer scripts for an app repos built on Pankosmia . ",
+    "url": "/previews/ga/rclDoc/scripts/",
+    
+    "relUrl": "/scripts/"
+  },"82": {
+    "doc": "Scripts",
+    "title": "Table of Contents",
+    "content": ". | Use . | Client development: | To generate artifacts: | . | Maintenance | Footnotes | . ",
+    "url": "/previews/ga/rclDoc/scripts/#table-of-contents",
+    
+    "relUrl": "/scripts/#table-of-contents"
+  },"83": {
+    "doc": "Scripts",
+    "title": "Use",
+    "content": "Run[1] the run script to start the server without a browser launch. | Consider also if you need to delete ~/pankosmia/[App Short Name]/ first. | You’ll want to restart the server if deleting ~/pankosmia_working after starting the server. To restart, exit the terminal window where the server is running the run the run script[1] again. | Only one instance of the same server can be running at a time. | . Client development: . Manually build the client(s) changed, stop the server if is is running, then start the server (run). The run script will re-assemble the environment to include your build. See also Running your setup. To generate a release package for the OS you are using, edit the version number for the release in app_config.env then see the next section below, or Local installer build or the bundle scripts in Dev script reference . To generate artifacts: . Manually run the desired workflow (Actions &gt; [select workflow] &gt; Run workflow). | The current main branch of client repo and resource at the time of running the workflow will be used. | . Download resulting artifacts (Actions &gt; click the name of a run to see the workflow run summary &gt; scroll down to the bottom to the Artifacts section &gt; to download, click either the name of each artifact or the down arrow on each row . Any double-compressed artifacts should have one layer uncompressed before release, e.g.: . | Strip *.tgz.zip down to *.tgz . | Strip *.zip.zip down to *.zip . | If working from windows, avoid releasing a re-zipping a macos or linux zip package if a .pkg, .sh, .bsh, .zsh was in the layer re-zipped in windows. Doing so would otherwise remove file permission settings of chmod +x where they are needed. | Release the *.pkg.zip layer as .zip as it includes a README file in the same layer as the pkg, which contains installation and upgrade instructions / info. | . Upload releases manually by going to the Release section of your repo and selecting “Draft a new release”. ",
+    "url": "/previews/ga/rclDoc/scripts/#use",
+    
+    "relUrl": "/scripts/#use"
+  },"84": {
+    "doc": "Scripts",
+    "title": "Maintenance",
+    "content": "To update the “main” panksomia-web server version, change it in /local_server/Cargo.toml and run the build_server script to use it in local dev. To update the “dev” or “qa” server versions, change it in /local_server.env and run build_server dev or build_server qa to use it in local dev. For all available pankosmia-web version numbers see crates.io. To sync this repo with its upstream, run the sync script. ",
+    "url": "/previews/ga/rclDoc/scripts/#maintenance",
+    
+    "relUrl": "/scripts/#maintenance"
+  },"85": {
+    "doc": "Scripts",
+    "title": "Footnotes",
+    "content": "[1] … Windows developers, run .bat scripts from a Powershell or Command prompt:…repos\\pankosmia[your-desktop-app-repo-name]\\windows\\scripts&gt; .[scriptname].batThe .\\ is optional from a command prompt.Use a powershell terminal for the .ps1 build scripts.MacOS developers, run .bsh scripts from a MacOS terminal:…repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts&gt; ./[scriptname].bshLinux developers, run .zsh scripts from a linux terminal:…repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts&gt; ./[scriptname].zsh . ",
+    "url": "/previews/ga/rclDoc/scripts/#footnotes",
+    
+    "relUrl": "/scripts/#footnotes"
+  },"86": {
+    "doc": "UX/UI guidelines",
+    "title": "UX/UI guidelines",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/uxui-guidelines/",
+    
+    "relUrl": "/uxui-guidelines/"
+  },"87": {
+    "doc": "UX/UI guidelines",
+    "title": "Table of Contents",
+    "content": ". | General page template | Data grid | Dialog | Icons | Required fields | Theme | Tooltip | . ",
+    "url": "/previews/ga/rclDoc/uxui-guidelines/#table-of-contents",
+    
+    "relUrl": "/uxui-guidelines/#table-of-contents"
+  },"88": {
+    "doc": "UX/UI guidelines",
+    "title": "General page template",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/uxui-guidelines/#general-page-template",
+    
+    "relUrl": "/uxui-guidelines/#general-page-template"
+  },"89": {
+    "doc": "UX/UI guidelines",
+    "title": "Data grid",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/uxui-guidelines/#data-grid",
+    
+    "relUrl": "/uxui-guidelines/#data-grid"
+  },"90": {
+    "doc": "UX/UI guidelines",
+    "title": "Dialog",
+    "content": "💡 Use the Dialog component instead of a modal. The modal is the low-level element meant to block the interaction. The Dialog is based on a modal, but specializes in providing information and further actions. A Dialog is composed of three main parts: . | Title. Contain a brief, clear statement or question. It should communicate the Dialog’s purpose. Background color is secondary. | Content. Anything needed for the context, from supporting text to full-size form. With long content, use the scroll=paper. | Actions. There’s always a way to go back (Cancel). And the main action is on the right. The label should reflect the action performed when clicked. If any required field is in the content, the action button is disabled until they are completed. Cancel. Text button, primary color. Action. Contained button, primary color. | . Responsiveness is configured as follow: . &gt; 🚧 TBD (full-width + variable maxWidth depending on breakpoints?). ",
+    "url": "/previews/ga/rclDoc/uxui-guidelines/#dialog",
+    
+    "relUrl": "/uxui-guidelines/#dialog"
+  },"91": {
+    "doc": "UX/UI guidelines",
+    "title": "Icons",
+    "content": "Material Icons should be in the Outlined style by default. ",
+    "url": "/previews/ga/rclDoc/uxui-guidelines/#icons",
+    
+    "relUrl": "/uxui-guidelines/#icons"
+  },"92": {
+    "doc": "UX/UI guidelines",
+    "title": "Required fields",
+    "content": "When information is required to proceed: . | Required field(s) should show an asterisk * after the label. | Above required field(s), explain what the asterisk does. This message is displayed once, after any title and before required field(s). Add * Required fields., with the typography style subtitle2. | The action button below the field(s) is enabled only when all required fields are completed. | . ",
+    "url": "/previews/ga/rclDoc/uxui-guidelines/#required-fields",
+    
+    "relUrl": "/uxui-guidelines/#required-fields"
+  },"93": {
+    "doc": "UX/UI guidelines",
+    "title": "Theme",
+    "content": "Main colors . | You can find matching primary and secondary colors using a palette generator like Coolors. If you already have a primary color in mind, you can also generate a matching secondary color with a Color Wheel. | . Generate MUI color variants for theme.json . | Use the MUI Theme Creator. On the bottom-right you can edit a main color to automatically generate its light and dark variants, and the corresponding contrastText color. Note those are different from a light/dark app theme. They are a lighter and darker shade of the main color. You can use them to play with contrast in the interface. | . Check contrast . | It’s a good practice to check contrast. Online palette and color tools tend to rely on varying contrast standards. Better to double check and choose which contrast standard you want to aim for. | MUI uses colors in different contexts. To prevent any issue, try your colors’ contrasts accordingly. Check primary and secondary as text for both white and black background. Note that you don’t necessarily need your colors to have a good contrast with white and black out-of-the-box. This is to make sure light and dark mode will work. But colors can also be further adjusted to better work in a specific mode. | It’s good to have some contrast between primary and secondary. You don’t need a standard-level contrast. But a secondary component on a primary background can be a thing (like a badge with number of notifications). If primary and secondary are too close, the interface will become less clear. | . Generate appbar-chip-inactive colors . | If your primary color is darker than your secondary. Use secondary dark as appbar-chip-inactive main and Generate MUI color variants from it. | If your primary color is lighter than your secondary. Use secondary light as appbar-chip-inactive main and Generate MUI color variants from it. | . ",
+    "url": "/previews/ga/rclDoc/uxui-guidelines/#theme",
+    
+    "relUrl": "/uxui-guidelines/#theme"
+  },"94": {
+    "doc": "UX/UI guidelines",
+    "title": "Tooltip",
+    "content": " ",
+    "url": "/previews/ga/rclDoc/uxui-guidelines/#tooltip",
+    
+    "relUrl": "/uxui-guidelines/#tooltip"
+  },"95": {
+    "doc": "App Spin-up",
+    "title": "App Spin-up",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_fork_template\" %} {% include tm.html key=\"fork_template_intro\" %} 1. {% include t.html key=\"fork_step1\" %} [https://github.com/pankosmia/desktop-app-template/fork](https://github.com/pankosmia/desktop-app-template/fork) 2. {% include t.html key=\"fork_step2\" %} 3. {% include t.html key=\"fork_step3\" %} ## {% include t.html key=\"heading_setup\" %} ### {% include t.html key=\"heading_directory_structure\" %} . |-- repos |-- pankosmia |-- [your-desktop-app-repo-name] ({% include t.html key=\"30_chars\" %}) . ### package.json {% include t.html key=\"package_json_instructions\" %} ### {% include t.html key=\"heading_npm_install\" %} {: .highlight-title } > {% include tcmp.html key=\"pnpm_migration_title\" %} > > {% include tcmp.html key=\"pnpm_migration\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| > `pnpm install` | > `npm install` | ### {% include t.html key=\"heading_edit_app_config\" %} {% include t.html key=\"edit_app_config_intro\" %} #### {% include t.html key=\"heading_required_assets\" %} - ASSET1=resource-core - ASSET1_PATH=/runtime_resources - ASSET1_NAME=app_resources - ASSET2=resource-core - ASSET2_PATH=/templates - ASSET2_NAME=templates - ASSET3=webfonts-core - ASSET3_PATH=/ - ASSET3_NAME=webfonts #### {% include t.html key=\"heading_required_clients\" %} {% include tm.html key=\"required_clients\" %} #### {% include t.html key=\"heading_some_optional_clients\" %} {% include t.html key=\"sequential\" %} - CLIENT1=core-client-dashboard - CLIENT2=core-client-content - CLIENT3=core-client-settings - CLIENT4=core-contenthandler-generic ### {% include t.html key=\"heading_branding\" %} {% include tm.html key=\"branding_theme\" %} {% include tm.html key=\"branding_logo\" %} ### {% include t.html key=\"heading_setup_scripts\" %} `cd [os]/scripts` {% include tm.html key=\"setup_scripts_clone\" %} {% include tm.html key=\"setup_scripts_app_setup\" %} {% include tm.html key=\"setup_scripts_build_clients\" %} - {% include tmp.html key=\"setup_scripts_build_clients_note1\" %} - {% include tmp.html key=\"setup_scripts_build_clients_note2\" %} {% include tm.html key=\"setup_scripts_build_server\" %} {% include tm.html key=\"setup_scripts_build_viewer\" %} ## {% include t.html key=\"heading_running_your_setup\" %} {% include tm.html key=\"running_run_script\" %} - {% include t.html key=\"running_one_instance\" %} {% include tm.html key=\"running_viewer_script\" %} - {% include tmp.html key=\"running_viewer_graphite\" %} - {% include tmp.html key=\"running_viewer_browsers\" %} - {% include tmp.html key=\"running_viewer_see_also\" %} ## {% include tc.html key=\"heading_footnotes\" %} [1] ... {% include tcmp.html key=\"footnote1\" %} ",
+    "url": "/previews/ga/rclDoc/fr/app-spin-up/",
+    
+    "relUrl": "/fr/app-spin-up/"
+  },"96": {
+    "doc": "Clients",
+    "title": "Clients",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_what\" %} {% include tm.html key=\"what\" %} ## {% include t.html key=\"heading_structure\" %} {% include tm.html key=\"structure\" %} ## {% include t.html key=\"heading_metadata\" %} {% include tm.html key=\"metadata_intro\" %} {% include tm.html key=\"metadata\" %} ### {% include t.html key=\"heading_examples\" %} {% include tm.html key=\"examples_intro\" %} ```json { \"id\": \"core-settings\", \"require\": { \"net\": false }, \"minServerVersion\": \"0.20.3\", \"exclude_from_menu\": true, \"exclude_from_dashboard\": true, \"i18n\": { \"title\": { \"en\": \"Settings\", \"fr\": \"Paramètres\" } } } ``` {% include tm.html key=\"examples_handler\" %} ```json { \"id\": \"contenthandler-template\", \"require\": { \"net\": false, \"debug\": true }, \"i18n\": { \"title\": { \"en\": \"contenthandler-template\" } } } ``` ## {% include t.html key=\"heading_endpoints\" %} {% include tm.html key=\"endpoints_intro\" %} {% include tm.html key=\"endpoints_fields\" %} {% include tm.html key=\"endpoints_actions_intro\" %} {% include tm.html key=\"endpoints_actions\" %} ```json { \"id\": \"core-contenthandler_obs\", \"endpoints\": { \"textStories\": { \"create_document\": [ { \"doc\": \"Create a document for OBS\", \"label\": \"pages:core-contenthandler_obs:create_content_obs\", \"url\": \"/createDocument/obsContent\" } ], \"edit\": { \"doc\": \"main page for workspace\", \"label\": \"pages:core-client-workspace:main\", \"url\": \"core-local-workspace#\" } } } } ``` ",
+    "url": "/previews/ga/rclDoc/fr/general/clients/",
+    
+    "relUrl": "/fr/general/clients/"
+  },"97": {
+    "doc": "Decluttering Client Repos",
+    "title": "Decluttering Client Repos",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_knip\" %} {% include t.html key=\"knip\" %} {: .important-title } > {% include tmp.html key=\"knip_important_title\" %} > > {% include tmp.html key=\"knip_important\" %} {: .warning-title } > {% include tmp.html key=\"knip_warning_title\" %} > > {% include tmp.html key=\"knip_warning\" %} ### {% include t.html key=\"heading_knip_setup\" %} {% include tmp.html key=\"knip_setup\" %} ### {% include t.html key=\"heading_knip_analyze\" %} {% include t.html key=\"knip_analyze\" %} ### {% include t.html key=\"heading_knip_false_unused_export\" %} {% include tmp.html key=\"knip_false_unused_export\" %} ### {% include t.html key=\"heading_knip_false_duplicate_export\" %} {% include tmp.html key=\"knip_false_duplicate_export\" %} ### {% include t.html key=\"heading_knip_false_unused_dependency\" %} {% include tmp.html key=\"knip_false_unused_dependency\" %} ## {% include t.html key=\"heading_applying_changes\" %} {: .highlight-title } > {% include tcmp.html key=\"pnpm_migration_title\" %} > > {% include tcmp.html key=\"pnpm_migration\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---|---| {% include tmp.html key=\"applying_changes_1\" %} | `pnpm install` {% include tmp.html key=\"or_manual\" %} | {% include tmp.html key=\"applying_changes_1.1\" %} | {% include tmp.html key=\"applying_changes_2\" %} | `pnpm i @0.1.29 --save-exact` {% include tmp.html key=\"or_manual\" %} | `npm i @0.1.29 --save-exact` | {% include tmp.html key=\"applying_changes_3\" %} | `pnpm uninstall ` {% include tmp.html key=\"or_manual\" %} | `npm uninstall ` | {% include tmp.html key=\"applying_changes_4\" %} | {% include tmp.html key=\"applying_changes_4.1\" %} {% include tmp.html key=\"or_manual\" %} | {% include tmp.html key=\"applying_changes_4.2\" %} | ",
+    "url": "/previews/ga/rclDoc/fr/decluttering/",
+    
+    "relUrl": "/fr/decluttering/"
+  },"98": {
+    "doc": "Dialog",
+    "title": "Dialog",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_basic\" %} {% include tm.html key=\"basic_intro\" %} {% include tm.html key=\"basic_behavior\" %} | {% include t.html key=\"th_prop\" %} | {% include t.html key=\"th_type\" %} | {% include t.html key=\"th_default\" %} | {% include t.html key=\"th_description\" %} |---|---|---|---| `titleLabel` | `string` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"prop_titleLabel\" %} | `isOpen` | `boolean` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"prop_isOpen\" %} | `closeFn` | `() => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"basic_closeFn\" %} | `children` | `ReactNode` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"prop_children\" %} | `actionsButtonArray` | `ReactElement[]` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"prop_actionsButtonArray\" %} | `requiredFieldsLabel` | `boolean` | `false` | {% include tmp.html key=\"prop_requiredFieldsLabel\" %} | `dividers` | `boolean` | `false` | {% include tmp.html key=\"basic_dividers\" %} | ## {% include t.html key=\"heading_advanced\" %} {% include tm.html key=\"advanced_intro\" %} ### {% include t.html key=\"advanced_behavior_heading\" %} {% include tm.html key=\"advanced_behavior\" %} | {% include t.html key=\"th_prop\" %} | {% include t.html key=\"th_type\" %} | {% include t.html key=\"th_default\" %} | {% include t.html key=\"th_description\" %} |---|---|---|---| `titleLabel` | `string` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"prop_titleLabel\" %} | `isOpen` | `boolean` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"prop_isOpen\" %} | `closeFn` | `() => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"advanced_closeFn\" %} | `children` | `ReactNode` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"prop_children\" %} | `actionsButtonArray` | `ReactElement[]` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"prop_actionsButtonArray\" %} | `requiredFieldsLabel` | `boolean` | `false` | {% include tmp.html key=\"prop_requiredFieldsLabel\" %} | ## {% include t.html key=\"heading_actions\" %} {% include tm.html key=\"actions_intro\" %} | {% include t.html key=\"th_prop\" %} | {% include t.html key=\"th_type\" %} | {% include t.html key=\"th_default\" %} | {% include t.html key=\"th_description\" %} |---|---|---|---| `actionFn` | `() => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"actions_actionFn\" %} | `actionLabel` | `string` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"actions_actionLabel\" %} | `closeFn` | `() => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"actions_closeFn\" %} | `closeLabel` | `string` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"actions_closeLabel\" %} | `isDisabled` | `boolean` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_isDisabled\" %} | `closeOnAction` | `boolean` | `true` | {% include tmp.html key=\"actions_closeOnAction\" %} | `onlyCloseButton` | `boolean` | `false` | {% include tmp.html key=\"actions_onlyCloseButton\" %} | `actionVariant` | `string` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_actionVariant\" %} | `closeVariant` | `string` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_closeVariant\" %} | `isLoading` | `boolean` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_isLoading\" %} | `loadingLabel` | `string` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_loadingLabel\" %} | ## {% include t.html key=\"heading_examples\" %} {% include tm.html key=\"example_dialog\" %} ```jsx const [open, setOpen] = useState(false); setOpen(false)} actionsButtonArray={PanDialogActionsArray({ actionLabel: \"Delete\", actionFn: () => deleteItem(), closeLabel: \"Cancel\", closeFn: () => setOpen(false), actionVariant: \"contained\", })} > This cannot be undone. ``` {% include tm.html key=\"example_demos\" %} ",
+    "url": "/previews/ga/rclDoc/fr/rcl-doc/dialog/",
+    
+    "relUrl": "/fr/rcl-doc/dialog/"
+  },"99": {
+    "doc": "Electronite Local Development",
+    "title": "Electronite Local Development",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_platforms\" %} ### {% include t.html key=\"heading_prerequisites\" %} {: .no_toc } 1. {% include tm.html key=\"prereq_environment\" %} 2. {% include tm.html key=\"prereq_consider\" %} ### {% include t.html key=\"heading_electronite_dev_viewer\" %} 1. 💡 {% include t.html key=\"dev_viewer_create\" %} - Linux: `cd linux/scripts` {% include t.html key=\"then\" %} `./build_viewer.bsh` - Windows: `cd windows\\\\scripts` {% include t.html key=\"then\" %} `.\\build_viewer.ps1` ({% include tc.html key=\"use_powershell\" %}) - MacOS: `cd macos/scripts` {% include t.html key=\"then\" %} `./build_viewer.zsh` 2. {% include tm.html key=\"dev_viewer_read\" %} - 💡 {% include tmp.html key=\"dev_viewer_run_tip\" %} - Linux: `cd linux/scripts` {% include t.html key=\"then\" %} `./viewer.bsh` -- {% include t.html key=\"dev_tools\" %} Ctrl + Shift + I\" - Windows: `cd windows\\scripts` {% include t.html key=\"then\" %} `.\\viewer.bat` -- {% include t.html key=\"dev_tools\" %} Ctrl + Shift + I\" - MacOS: `cd macos/scripts` {% include t.html key=\"then\" %} `./viewer.zsh` -- {% include t.html key=\"dev_tools\" %} Cmd + Option + I\" ### {% include t.html key=\"heading_making_dev_changes\" %} {% include t.html key=\"dev_changes_intro\" %} {% include t.html key=\"dev_changes_browser_note\" %} 💡 {% include tmp.html key=\"dev_changes_tip\" %} └── buildResources └── electron ├── config │ └── paths.js ├── core │ ├── archiveUtil.js │ ├── downloadUtil.js │ ├── ports.js │ ├── server.js │ ├── startupErrors.js │ └── window.js ├── features │ ├── ffmpeg.js │ ├── firefox.js │ └── pdf.js ├── electronStartup.js ├── package.json └── preload.js . ### {% include t.html key=\"heading_deploying_dev_changes\" %} {% include tm.html key=\"deploy_test_dev_startup\" %} └── [linux | windows | macos] └── viewer └── project └── payload └── app └── electron . {% include tm.html key=\"deploy_test_startup\" %} {: .important-title } > {% include tmp.html key=\"install_important_title\" %} > > {% include tmp.html key=\"install_important\" %} {% include tm.html key=\"deploy_favicon\" %} {% include t.html key=\"deploy_app_launcher_intro\" %} ### {% include t.html key=\"heading_local_installer_build\" %} {: .no_toc } {% include tm.html key=\"local_installer_consider\" %} #### {% include t.html key=\"heading_installer_prerequisites\" %} - {% include tm.html key=\"installer_prereq_server\" %} - {% include t.html key=\"installer_prereq_windows\" %} - {% include tm.html key=\"installer_prereq_inno\" %} #### {% include t.html key=\"heading_bundle_viewer_script\" %} - Windows - `cd windows\\scripts` {% include t.html key=\"then\" %} `.\\bundle_viewer.ps1` - {% include t.html key=\"bundle_viewer_windows_optional\" %} - {% include tm.html key=\"bundle_viewer_windows_arg1\" %} - {% include t.html key=\"bundle_viewer_windows_desc\" %} - MacOS - `cd /macos/scripts` {% include t.html key=\"then\" %} `./bundle_viewer.zsh` - {% include t.html key=\"bundle_viewer_macos_optional\" %} - {% include tm.html key=\"bundle_viewer_macos_arg1\" %} - {% include t.html key=\"bundle_viewer_macos_desc\" %} - Linux - `cd /linux/scripts` {% include t.html key=\"then\" %} `./bundle_viewer.bsh` - {% include t.html key=\"bundle_viewer_linux_before\" %} - {% include t.html key=\"bundle_viewer_linux_step1\" %} - {% include t.html key=\"bundle_viewer_linux_step2\" %} - {% include t.html key=\"bundle_viewer_linux_step3\" %} - {% include tm.html key=\"bundle_viewer_linux_step4\" %} - {% include tm.html key=\"bundle_viewer_linux_step5\" %} #### {% include t.html key=\"heading_bundle_viewer_outputs\" %} - Windows: `releases\\\\windows\\\\intel64\\\\[app-name]-[version]-windows-[x64|arm64].exe` - MacOS: `releases/macos/[intel64|arm64]/[app-name]-[version]-macos-[x64|arm64].pkg` - Linux: `releases/linux/[app-name]-[version]-linux-[x64|arm64].deb` ",
+    "url": "/previews/ga/rclDoc/fr/electronite-local-development/",
+    
+    "relUrl": "/fr/electronite-local-development/"
+  },"100": {
+    "doc": "Environment Requirements",
+    "title": "Environment Requirements",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_tested_on\" %} {: .highlight-title } > {% include tcmp.html key=\"pnpm_migration_title\" %} > > {% include tcmp.html key=\"pnpm_migration\" %} ### Ubuntu 24.04 {% include t.html key=\"with\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| pnpm 11.20.0 | npm 10.7.0 | node 24.11.0 | node 20.18.1 | - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh` ### Windows 11 {% include t.html key=\"with\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| pnpm 11.20.0 | npm 10.7.0 | node 24.11.0 | node 20.18.1 | - git 2.44.0; {% include t.html key=\"see\" %} [https://git-scm.com/install/windows](https://git-scm.com/install/windows) - rustc 1.88.0 -- {% include t.html key=\"see\" %} [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) - cmake 3.31.0 -- {% include tmp.html key=\"windows_cmake_ver\" %} {% include t.html key=\"see\" %} [https://cmake.org/download/](https://cmake.org/download/) - {% include t.html key=\"windows_powershell\" %} - {% include tmp.html key=\"windows_inno_setup\" %} ### MacOS Apple silicon (ARM64) {% include t.html key=\"with\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| pnpm 11.20.0 | npm 10.8.2 ({% include t.html key=\"tested_on\" %} Sequoia) | node 24.11.0 | node 20.18.1 | - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh` - OpenSSL 3.5.0 -- `brew install openssl` -- {% include t.html key=\"see\" %} [Homebrew](https://brew.sh/) ### MacOS Intel (x86_64) {% include t.html key=\"with\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| pnpm 11.20.0 | npm 10.7.0 ({% include t.html key=\"tested_on\" %} Monterey) | node 24.11.0 | node 20.18.1 | - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh` - OpenSSL 3.6.4 -- `sudo port install openssl3` -- {% include t.html key=\"see\" %} [MacPorts](https://www.macports.org/install.php) #### {% include t.html key=\"heading_planning_ahead\" %} - {% include t.html key=\"github_x64_eol\" %} - {% include t.html key=\"apple_x64_eol\" %} ",
+    "url": "/previews/ga/rclDoc/fr/environment-requirements/",
+    
+    "relUrl": "/fr/environment-requirements/"
+  },"101": {
+    "doc": "i18n",
+    "title": "i18n",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_overview\" %} {% include tm.html key=\"overview\" %} ## {% include t.html key=\"heading_structure\" %} {% include tm.html key=\"structure\" %} ## {% include t.html key=\"heading_sources\" %} {% include tm.html key=\"sources\" %} ## {% include t.html key=\"heading_loading\" %} {% include tm.html key=\"loading\" %} ## {% include t.html key=\"heading_functions\" %} {% include tm.html key=\"functions_intro\" %} ```jsx import { useContext } from \"react\"; import { i18nContext } from \"pankosmia-rcl\"; import { doI18n, doInterpolatedI18n } from \"pankosmia-lib/i18n\"; const { i18nRef } = useContext(i18nContext); doI18n(\"pages:core-settings:title\", i18nRef.current); // \"greeting\": { \"en\": \"Hello %1%, you have %2% books\" } doInterpolatedI18n( \"pages:my-client:greeting\", [\"Ada\", \"3\"], i18nRef.current, ); ``` {% include tm.html key=\"functions_rules\" %} ## {% include t.html key=\"heading_add\" %} {% include tm.html key=\"add\" %} ```json { \"id\": \"my-client\", \"i18n\": { \"title\": { \"en\": \"My client\", \"fr\": \"Mon client\" } } } ``` ## {% include t.html key=\"heading_editor\" %} {% include tm.html key=\"editor\" %} ## {% include t.html key=\"heading_product\" %} {% include tm.html key=\"product\" %} ",
+    "url": "/previews/ga/rclDoc/fr/general/i18n/",
+    
+    "relUrl": "/fr/general/i18n/"
+  },"102": {
+    "doc": "The Pankosmia Project",
+    "title": "The Pankosmia Project",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_philosophy\" %} {% include tm.html key=\"philosophy_intro_paragraph\" %} {% include t.html key=\"philosophy_corollaries\" %} - {% include t.html key=\"philosophy_corollary1\" %} - {% include t.html key=\"philosophy_corollary2\" %} - {% include t.html key=\"philosophy_corollary3\" %} - {% include t.html key=\"philosophy_corollary4\" %} ## {% include t.html key=\"heading_distinctives\" %} - {% include t.html key=\"distinctive1\" %} - {% include t.html key=\"distinctive2\" %} - {% include t.html key=\"distinctive3\" %} - {% include t.html key=\"distinctive4\" %} - {% include t.html key=\"distinctive5\" %} - {% include t.html key=\"distinctive6\" %} ## {% include t.html key=\"heading_architecture\" %} {% include t.html key=\"architecture_paragraph\" %} - {% include t.html key=\"architecture1\" %} - {% include t.html key=\"architecture1a\" %} - {% include t.html key=\"architecture1b\" %} - {% include t.html key=\"architecture1c\" %} - {% include t.html key=\"architecture1d\" %} - {% include t.html key=\"architecture2\" %} - {% include t.html key=\"architecture2a\" %} - {% include t.html key=\"architecture3\" %} - {% include t.html key=\"architecture4\" %} ",
+    "url": "/previews/ga/rclDoc/fr/pankosmia-project/",
+    
+    "relUrl": "/fr/pankosmia-project/"
+  },"103": {
+    "doc": "General",
+    "title": "General",
+    "content": "{%- include init_i18n.html -%} {%- assign url_prefix = \"\" -%} {%- if page.lang != site.lang -%}{%- assign url_prefix = \"/\" | append: page.lang -%}{%- endif -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } {% include tm.html key=\"intro\" %} - [{{ site.data.i18n.pages.general_i18n.title[current_lang] }}]({{ url_prefix }}/general/i18n/): {% include tmp.html key=\"section_i18n\" %} - [{{ site.data.i18n.pages.general_product.title[current_lang] }}]({{ url_prefix }}/general/product/): {% include tmp.html key=\"section_product\" %} - [{{ site.data.i18n.pages.general_clients.title[current_lang] }}]({{ url_prefix }}/general/clients/): {% include tmp.html key=\"section_clients\" %} ",
+    "url": "/previews/ga/rclDoc/fr/general/",
+    
+    "relUrl": "/fr/general/"
+  },"104": {
+    "doc": "RCL Documentation",
+    "title": "RCL Documentation",
+    "content": "{%- include init_i18n.html -%} {%- assign url_prefix = \"\" -%} {%- if page.lang != site.lang -%}{%- assign url_prefix = \"/\" | append: page.lang -%}{%- endif -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_overview\" %} {% include tm.html key=\"overview_intro\" %} {% include tm.html key=\"overview_components\" %} - {% include tmp.html key=\"overview_basic\" %} - {% include tmp.html key=\"overview_advanced\" %} - {% include tmp.html key=\"overview_actions\" %} - {% include tmp.html key=\"overview_menu\" %} {% include tm.html key=\"overview_import\" %} ```js import { PanBasicDialog, PanAdvancedDialog, PanDialogActionsArray, PanMenuWrapper, } from \"pankosmia-rcl\"; ``` ## {% include t.html key=\"heading_sections\" %} {% include tm.html key=\"sections_intro\" %} - [{{ site.data.i18n.pages.rcl_dialog.title[current_lang] }}]({{ url_prefix }}/rcl-doc/dialog/): {% include tmp.html key=\"sections_dialog\" %} - [{{ site.data.i18n.pages.rcl_menu.title[current_lang] }}]({{ url_prefix }}/rcl-doc/menu/): {% include tmp.html key=\"sections_menu\" %} ## {% include t.html key=\"heading_debug\" %} {% include tm.html key=\"debug_description\" %} ",
+    "url": "/previews/ga/rclDoc/fr/rcl-doc/",
+    
+    "relUrl": "/fr/rcl-doc/"
+  },"105": {
+    "doc": "Dev Reference Manual",
+    "title": "Dev Reference Manual",
+    "content": "{%- include init_i18n.html -%} ",
+    "url": "/previews/ga/rclDoc/fr/dev-reference-manual/",
+    
+    "relUrl": "/fr/dev-reference-manual/"
+  },"106": {
+    "doc": "Dev Quickstart",
+    "title": "Dev Quickstart",
+    "content": "{%- include init_i18n.html -%} ",
+    "url": "/previews/ga/rclDoc/fr/dev-quickstart/",
+    
+    "relUrl": "/fr/dev-quickstart/"
+  },"107": {
+    "doc": "Home",
+    "title": "Home",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
+    "url": "/previews/ga/rclDoc/fr/",
+    
+    "relUrl": "/fr/"
+  },"108": {
+    "doc": "Legal Notices",
+    "title": "Legal Notices",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_contact\" %} {% include t.html key=\"ceo\" %}: Mark Howe {% include t.html key=\"email\" %}: webmaster@mvhsolutions.com ## {% include t.html key=\"heading_hosting\" %} {% include t.html key=\"hosting_paragraph\" %} {% include t.html key=\"address\" %}: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon. ## {% include t.html key=\"heading_terms\" %} {% include t.html key=\"terms_paragraphs\" %} ## {% include t.html key=\"heading_property\" %} {% include t.html key=\"property_paragraphs\" %} (🚧) ## {% include t.html key=\"heading_links\" %} {% include t.html key=\"links_paragraphs\" %} ## {% include t.html key=\"heading_gdpr\" %} {% include t.html key=\"gdpr_paragraphs\" %} ## {% include t.html key=\"heading_content\" %} {% include t.html key=\"content_paragraphs\" %} ## {% include t.html key=\"heading_cookies\" %} {% include t.html key=\"cookies_paragraphs\" %} ",
+    "url": "/previews/ga/rclDoc/fr/legal-notices/",
+    
+    "relUrl": "/fr/legal-notices/"
+  },"109": {
+    "doc": "Menu",
+    "title": "Menu",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_menu\" %} {% include tm.html key=\"menu_intro\" %} - {% include tmp.html key=\"menu_large\" %} - {% include tmp.html key=\"menu_small\" %} {% include tm.html key=\"menu_internal_note\" %} | {% include t.html key=\"th_prop\" %} | {% include t.html key=\"th_type\" %} | {% include t.html key=\"th_default\" %} | {% include t.html key=\"th_description\" %} |---|---|---|---| `isOpen` | `boolean` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"menu_isOpen\" %} | `setIsOpen` | `(open: boolean) => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"menu_setIsOpen\" %} | `anchorEl` | `HTMLElement` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"menu_anchorEl\" %} | `children` | `ReactNode` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"menu_children\" %} | ## {% include t.html key=\"heading_examples\" %} {% include tm.html key=\"example_menu\" %} ```jsx const [isOpen, setIsOpen] = useState(false); const [anchorEl, setAnchorEl] = useState(null); { setAnchorEl(event.currentTarget); setIsOpen(true); }} > Open Menu setIsOpen(false)}> Rename setIsOpen(false)}> Delete ``` {% include tm.html key=\"example_demos\" %} ",
+    "url": "/previews/ga/rclDoc/fr/rcl-doc/menu/",
+    
+    "relUrl": "/fr/rcl-doc/menu/"
+  },"110": {
+    "doc": "Product",
+    "title": "Product",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_apps\" %} {% include tm.html key=\"apps_intro\" %} {% include tm.html key=\"apps_list\" %} ## {% include t.html key=\"heading_layout\" %} {% include tm.html key=\"layout\" %} ## {% include t.html key=\"heading_global\" %} {% include tm.html key=\"global_intro\" %} {% include tm.html key=\"global\" %} ## {% include t.html key=\"heading_resources\" %} {% include tm.html key=\"resources\" %} ```json { \"organizations\": [ { \"name\": \"BurritoTruck\", \"url\": \"git.door43.org/burritotruck\" }, { \"name\": \"unfoldingWord\", \"url\": \"git.door43.org/unfoldingword\" } ] } ``` ",
+    "url": "/previews/ga/rclDoc/fr/general/product/",
+    
+    "relUrl": "/fr/general/product/"
+  },"111": {
+    "doc": "Script Reference",
+    "title": "Script Reference",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"additional_info\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_ecosystem_setup\" %} {% include tm.html key=\"ecosystem_setup_intro\" %} {% include tm.html key=\"ecosystem_setup_example\" %} |-- repos |-- pankosmia |-- core-client-content repository |-- core-client-dashboard repository |-- core-client-i18n-editor repository |-- core-client-remote-repos repository |-- core-client-settings repository |-- core-client-workspace repository |-- [your-desktop-app-repo-name] (30 characters or less on windows!) |-- resource-core |-- webfonts-core . ## {% include t.html key=\"heading_installing_clients\" %} {: .highlight-title } > {% include tcmp.html key=\"pnpm_migration_title\" %} > > {% include tcmp.html key=\"pnpm_migration\" %} {% include tm.html key=\"installing_clients_intro\" %} {% include tm.html key=\"installing_clients_script\" %} ### {% include t.html key=\"run_where\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| > `pnpm install` | > `npm ci` | > `pnpm run build` | > `npm run build` | {% include tm.html key=\"installing_clients_run_note\" %} ## {% include t.html key=\"heading_scripts\" %} {% include tm.html key=\"scripts_legend\" %} ### {% include t.html key=\"heading_configuration\" %} {% include tm.html key=\"configuration_intro\" %} {% include tm.html key=\"configuration_files_list\" %} {% include tm.html key=\"configuration_review\" %} #### {% include t.html key=\"heading_config_scripts\" %} {% include t.html key=\"config_scripts_run_from\" %} | {% include t.html key=\"table_header_description\" %} | {% include tmp.html key=\"table_header_script_arg\" %} |---|---| {% include t.html key=\"config_script_desc\" %} | `app_setup` | #### {% include t.html key=\"heading_setup_scripts\" %} {% include t.html key=\"setup_scripts_run_from\" %} | {% include t.html key=\"table_header_description\" %} | {% include tmp.html key=\"table_header_script_arg\" %} |---|---| {% include t.html key=\"clone_desc\" %} | {% include tmp.html key=\"clone_script\" %} | {% include tmp.html key=\"build_clients_desc\" %} | {% include tmp.html key=\"build_clients_script\" %} | {% include t.html key=\"build_viewer_desc\" %} | {% include tmp.html key=\"build_viewer_script\" %} | #### {% include t.html key=\"heading_usage_scripts\" %} {% include tm.html key=\"usage_scripts_note\" %} | {% include t.html key=\"table_header_description\" %} | {% include tmp.html key=\"table_header_script_arg\" %} |---|---| {% include tmp.html key=\"clean_desc\" %} | {% include tmp.html key=\"clean_script\" %} | {% include tmp.html key=\"build_server_desc\" %} | {% include tmp.html key=\"build_server_script\" %} | {% include tmp.html key=\"run_desc\" %} | {% include tmp.html key=\"run_script\" %} | {% include tmp.html key=\"viewer_desc\" %} | {% include tmp.html key=\"viewer_script\" %} | {% include tmp.html key=\"bundle_viewer_desc\" %} | {% include tmp.html key=\"bundle_viewer_script\" %} | {% include tmp.html key=\"bundle_zip_desc\" %} | {% include tmp.html key=\"bundle_zip_script\" %} | #### {% include t.html key=\"heading_maintenance_scripts\" %} {% include t.html key=\"maintenance_scripts_run_from\" %} | {% include t.html key=\"table_header_description\" %} | {% include tmp.html key=\"table_header_script_arg\" %} |---|---| {% include t.html key=\"sync_desc\" %} | {% include tmp.html key=\"sync_script\" %} | ## {% include tc.html key=\"heading_footnotes\" %} [1] ... {% include tmp.html key=\"footnote1\" %} [2] ... {% include tmp.html key=\"footnote2\" %} [3] ... {% include tmp.html key=\"footnote3\" %} [4] ... {% include tmp.html key=\"footnote4\" %} ",
+    "url": "/previews/ga/rclDoc/fr/script-reference/",
+    
+    "relUrl": "/fr/script-reference/"
+  },"112": {
+    "doc": "Scripts",
+    "title": "Scripts",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_use\" %} {% include tm.html key=\"use_intro\" %} - {% include tmp.html key=\"use_delete_working\" %} - {% include tmp.html key=\"use_restart_server\" %} - {% include t.html key=\"use_one_instance\" %} ### {% include t.html key=\"heading_client_development\" %} {% include tm.html key=\"client_dev_intro\" %} {% include tm.html key=\"client_dev_see_also\" %} {% include tm.html key=\"client_dev_release\" %} ### {% include t.html key=\"heading_generate_artifacts\" %} {% include tm.html key=\"artifacts_intro\" %} - {% include t.html key=\"artifacts_main_branch\" %} {% include t.html key=\"artifacts_download\" %} {% include t.html key=\"artifacts_double_compressed\" %} - {% include tm.html key=\"artifacts_strip_tgz\" %} - {% include tm.html key=\"artifacts_strip_zip\" %} - {% include t.html key=\"artifacts_windows_warning\" %} - {% include tm.html key=\"artifacts_pkg_zip\" %} {% include t.html key=\"artifacts_upload_releases\" %} ## {% include t.html key=\"heading_maintenance\" %} {% include tm.html key=\"maintenance_update_server\" %} {% include tm.html key=\"maintenance_sync\" %} ## {% include tc.html key=\"heading_footnotes\" %} [1] ... {% include tcmp.html key=\"footnote1\" %} ",
+    "url": "/previews/ga/rclDoc/fr/scripts/",
+    
+    "relUrl": "/fr/scripts/"
+  },"113": {
+    "doc": "UX/UI guidelines",
+    "title": "UX/UI guidelines",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_general_page_template\" %} ## {% include t.html key=\"heading_data_grid\" %} ## {% include t.html key=\"heading_dialog\" %} > 💡 {% include tmp.html key=\"dialog_tip\" %} {% include t.html key=\"dialog_composed\" %} * {% include t.html key=\"dialog_title\" %} > {% include tm.html key=\"dialog_title_note\" %} * {% include t.html key=\"dialog_content\" %} > {% include tm.html key=\"dialog_content_note\" %} * {% include t.html key=\"dialog_actions\" %} {% include tm.html key=\"dialog_actions_required\" %} > {% include t.html key=\"dialog_actions_cancel\" %} > > {% include t.html key=\"dialog_actions_action\" %} ![Example text field with guidance above](../../assets/images/dev-reference-manual/dialog-1.png) {% include t.html key=\"dialog_responsiveness\" %} > 🚧 {% include t.html key=\"dialog_responsiveness_tbd\" %} ## {% include t.html key=\"heading_icons\" %} {% include tm.html key=\"icons_intro\" %} ## {% include t.html key=\"heading_required_fields\" %} {% include t.html key=\"required_fields_intro\" %} * {% include tm.html key=\"required_fields_asterisk\" %} * {% include t.html key=\"required_fields_explain\" %} > {% include tm.html key=\"required_fields_explain_note\" %} * {% include t.html key=\"required_fields_action_button\" %} ![Example text field with guidance above](../../assets/images/dev-reference-manual/required-fields-1.png) ## {% include t.html key=\"heading_theme\" %} ### {% include t.html key=\"heading_main_colors\" %} {: .no_toc } - {% include tm.html key=\"main_colors_intro\" %} ### {% include tmp.html key=\"heading_generate_mui_variants\" %} {: .no_toc } - {% include tm.html key=\"generate_mui_variants_intro\" %} > {% include t.html key=\"generate_mui_variants_note\" %} ### {% include t.html key=\"heading_check_contrast\" %} {: .no_toc } - {% include tm.html key=\"check_contrast_intro\" %} - {% include t.html key=\"check_contrast_contexts\" %} > {% include t.html key=\"check_contrast_contexts_note\" %} - {% include t.html key=\"check_contrast_primary_secondary\" %} ### {% include tmp.html key=\"heading_generate_appbar_chip\" %} {: .no_toc } - {% include tm.html key=\"appbar_chip_darker\" %} - {% include tm.html key=\"appbar_chip_lighter\" %} ## {% include t.html key=\"heading_tooltip\" %} ",
+    "url": "/previews/ga/rclDoc/fr/uxui-guidelines/",
+    
+    "relUrl": "/fr/uxui-guidelines/"
+  },"114": {
+    "doc": "App Spin-up",
+    "title": "App Spin-up",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_fork_template\" %} {% include tm.html key=\"fork_template_intro\" %} 1. {% include t.html key=\"fork_step1\" %} [https://github.com/pankosmia/desktop-app-template/fork](https://github.com/pankosmia/desktop-app-template/fork) 2. {% include t.html key=\"fork_step2\" %} 3. {% include t.html key=\"fork_step3\" %} ## {% include t.html key=\"heading_setup\" %} ### {% include t.html key=\"heading_directory_structure\" %} . |-- repos |-- pankosmia |-- [your-desktop-app-repo-name] ({% include t.html key=\"30_chars\" %}) . ### package.json {% include t.html key=\"package_json_instructions\" %} ### {% include t.html key=\"heading_npm_install\" %} {: .highlight-title } > {% include tcmp.html key=\"pnpm_migration_title\" %} > > {% include tcmp.html key=\"pnpm_migration\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| > `pnpm install` | > `npm install` | ### {% include t.html key=\"heading_edit_app_config\" %} {% include t.html key=\"edit_app_config_intro\" %} #### {% include t.html key=\"heading_required_assets\" %} - ASSET1=resource-core - ASSET1_PATH=/runtime_resources - ASSET1_NAME=app_resources - ASSET2=resource-core - ASSET2_PATH=/templates - ASSET2_NAME=templates - ASSET3=webfonts-core - ASSET3_PATH=/ - ASSET3_NAME=webfonts #### {% include t.html key=\"heading_required_clients\" %} {% include tm.html key=\"required_clients\" %} #### {% include t.html key=\"heading_some_optional_clients\" %} {% include t.html key=\"sequential\" %} - CLIENT1=core-client-dashboard - CLIENT2=core-client-content - CLIENT3=core-client-settings - CLIENT4=core-contenthandler-generic ### {% include t.html key=\"heading_branding\" %} {% include tm.html key=\"branding_theme\" %} {% include tm.html key=\"branding_logo\" %} ### {% include t.html key=\"heading_setup_scripts\" %} `cd [os]/scripts` {% include tm.html key=\"setup_scripts_clone\" %} {% include tm.html key=\"setup_scripts_app_setup\" %} {% include tm.html key=\"setup_scripts_build_clients\" %} - {% include tmp.html key=\"setup_scripts_build_clients_note1\" %} - {% include tmp.html key=\"setup_scripts_build_clients_note2\" %} {% include tm.html key=\"setup_scripts_build_server\" %} {% include tm.html key=\"setup_scripts_build_viewer\" %} ## {% include t.html key=\"heading_running_your_setup\" %} {% include tm.html key=\"running_run_script\" %} - {% include t.html key=\"running_one_instance\" %} {% include tm.html key=\"running_viewer_script\" %} - {% include tmp.html key=\"running_viewer_graphite\" %} - {% include tmp.html key=\"running_viewer_browsers\" %} - {% include tmp.html key=\"running_viewer_see_also\" %} ## {% include tc.html key=\"heading_footnotes\" %} [1] ... {% include tcmp.html key=\"footnote1\" %} ",
+    "url": "/previews/ga/rclDoc/es/app-spin-up/",
+    
+    "relUrl": "/es/app-spin-up/"
+  },"115": {
+    "doc": "Clients",
+    "title": "Clients",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_what\" %} {% include tm.html key=\"what\" %} ## {% include t.html key=\"heading_structure\" %} {% include tm.html key=\"structure\" %} ## {% include t.html key=\"heading_metadata\" %} {% include tm.html key=\"metadata_intro\" %} {% include tm.html key=\"metadata\" %} ### {% include t.html key=\"heading_examples\" %} {% include tm.html key=\"examples_intro\" %} ```json { \"id\": \"core-settings\", \"require\": { \"net\": false }, \"minServerVersion\": \"0.20.3\", \"exclude_from_menu\": true, \"exclude_from_dashboard\": true, \"i18n\": { \"title\": { \"en\": \"Settings\", \"fr\": \"Paramètres\" } } } ``` {% include tm.html key=\"examples_handler\" %} ```json { \"id\": \"contenthandler-template\", \"require\": { \"net\": false, \"debug\": true }, \"i18n\": { \"title\": { \"en\": \"contenthandler-template\" } } } ``` ## {% include t.html key=\"heading_endpoints\" %} {% include tm.html key=\"endpoints_intro\" %} {% include tm.html key=\"endpoints_fields\" %} {% include tm.html key=\"endpoints_actions_intro\" %} {% include tm.html key=\"endpoints_actions\" %} ```json { \"id\": \"core-contenthandler_obs\", \"endpoints\": { \"textStories\": { \"create_document\": [ { \"doc\": \"Create a document for OBS\", \"label\": \"pages:core-contenthandler_obs:create_content_obs\", \"url\": \"/createDocument/obsContent\" } ], \"edit\": { \"doc\": \"main page for workspace\", \"label\": \"pages:core-client-workspace:main\", \"url\": \"core-local-workspace#\" } } } } ``` ",
+    "url": "/previews/ga/rclDoc/es/general/clients/",
+    
+    "relUrl": "/es/general/clients/"
+  },"116": {
+    "doc": "Decluttering Client Repos",
+    "title": "Decluttering Client Repos",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_knip\" %} {% include t.html key=\"knip\" %} {: .important-title } > {% include tmp.html key=\"knip_important_title\" %} > > {% include tmp.html key=\"knip_important\" %} {: .warning-title } > {% include tmp.html key=\"knip_warning_title\" %} > > {% include tmp.html key=\"knip_warning\" %} ### {% include t.html key=\"heading_knip_setup\" %} {% include tmp.html key=\"knip_setup\" %} ### {% include t.html key=\"heading_knip_analyze\" %} {% include t.html key=\"knip_analyze\" %} ### {% include t.html key=\"heading_knip_false_unused_export\" %} {% include tmp.html key=\"knip_false_unused_export\" %} ### {% include t.html key=\"heading_knip_false_duplicate_export\" %} {% include tmp.html key=\"knip_false_duplicate_export\" %} ### {% include t.html key=\"heading_knip_false_unused_dependency\" %} {% include tmp.html key=\"knip_false_unused_dependency\" %} ## {% include t.html key=\"heading_applying_changes\" %} {: .highlight-title } > {% include tcmp.html key=\"pnpm_migration_title\" %} > > {% include tcmp.html key=\"pnpm_migration\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---|---| {% include tmp.html key=\"applying_changes_1\" %} | `pnpm install` {% include tmp.html key=\"or_manual\" %} | {% include tmp.html key=\"applying_changes_1.1\" %} | {% include tmp.html key=\"applying_changes_2\" %} | `pnpm i @0.1.29 --save-exact` {% include tmp.html key=\"or_manual\" %} | `npm i @0.1.29 --save-exact` | {% include tmp.html key=\"applying_changes_3\" %} | `pnpm uninstall ` {% include tmp.html key=\"or_manual\" %} | `npm uninstall ` | {% include tmp.html key=\"applying_changes_4\" %} | {% include tmp.html key=\"applying_changes_4.1\" %} {% include tmp.html key=\"or_manual\" %} | {% include tmp.html key=\"applying_changes_4.2\" %} | ",
+    "url": "/previews/ga/rclDoc/es/decluttering/",
+    
+    "relUrl": "/es/decluttering/"
+  },"117": {
+    "doc": "Dialog",
+    "title": "Dialog",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_basic\" %} {% include tm.html key=\"basic_intro\" %} {% include tm.html key=\"basic_behavior\" %} | {% include t.html key=\"th_prop\" %} | {% include t.html key=\"th_type\" %} | {% include t.html key=\"th_default\" %} | {% include t.html key=\"th_description\" %} |---|---|---|---| `titleLabel` | `string` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"prop_titleLabel\" %} | `isOpen` | `boolean` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"prop_isOpen\" %} | `closeFn` | `() => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"basic_closeFn\" %} | `children` | `ReactNode` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"prop_children\" %} | `actionsButtonArray` | `ReactElement[]` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"prop_actionsButtonArray\" %} | `requiredFieldsLabel` | `boolean` | `false` | {% include tmp.html key=\"prop_requiredFieldsLabel\" %} | `dividers` | `boolean` | `false` | {% include tmp.html key=\"basic_dividers\" %} | ## {% include t.html key=\"heading_advanced\" %} {% include tm.html key=\"advanced_intro\" %} ### {% include t.html key=\"advanced_behavior_heading\" %} {% include tm.html key=\"advanced_behavior\" %} | {% include t.html key=\"th_prop\" %} | {% include t.html key=\"th_type\" %} | {% include t.html key=\"th_default\" %} | {% include t.html key=\"th_description\" %} |---|---|---|---| `titleLabel` | `string` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"prop_titleLabel\" %} | `isOpen` | `boolean` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"prop_isOpen\" %} | `closeFn` | `() => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"advanced_closeFn\" %} | `children` | `ReactNode` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"prop_children\" %} | `actionsButtonArray` | `ReactElement[]` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"prop_actionsButtonArray\" %} | `requiredFieldsLabel` | `boolean` | `false` | {% include tmp.html key=\"prop_requiredFieldsLabel\" %} | ## {% include t.html key=\"heading_actions\" %} {% include tm.html key=\"actions_intro\" %} | {% include t.html key=\"th_prop\" %} | {% include t.html key=\"th_type\" %} | {% include t.html key=\"th_default\" %} | {% include t.html key=\"th_description\" %} |---|---|---|---| `actionFn` | `() => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"actions_actionFn\" %} | `actionLabel` | `string` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"actions_actionLabel\" %} | `closeFn` | `() => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"actions_closeFn\" %} | `closeLabel` | `string` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"actions_closeLabel\" %} | `isDisabled` | `boolean` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_isDisabled\" %} | `closeOnAction` | `boolean` | `true` | {% include tmp.html key=\"actions_closeOnAction\" %} | `onlyCloseButton` | `boolean` | `false` | {% include tmp.html key=\"actions_onlyCloseButton\" %} | `actionVariant` | `string` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_actionVariant\" %} | `closeVariant` | `string` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_closeVariant\" %} | `isLoading` | `boolean` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_isLoading\" %} | `loadingLabel` | `string` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"actions_loadingLabel\" %} | ## {% include t.html key=\"heading_examples\" %} {% include tm.html key=\"example_dialog\" %} ```jsx const [open, setOpen] = useState(false); setOpen(false)} actionsButtonArray={PanDialogActionsArray({ actionLabel: \"Delete\", actionFn: () => deleteItem(), closeLabel: \"Cancel\", closeFn: () => setOpen(false), actionVariant: \"contained\", })} > This cannot be undone. ``` {% include tm.html key=\"example_demos\" %} ",
+    "url": "/previews/ga/rclDoc/es/rcl-doc/dialog/",
+    
+    "relUrl": "/es/rcl-doc/dialog/"
+  },"118": {
+    "doc": "Electronite Local Development",
+    "title": "Electronite Local Development",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_platforms\" %} ### {% include t.html key=\"heading_prerequisites\" %} {: .no_toc } 1. {% include tm.html key=\"prereq_environment\" %} 2. {% include tm.html key=\"prereq_consider\" %} ### {% include t.html key=\"heading_electronite_dev_viewer\" %} 1. 💡 {% include t.html key=\"dev_viewer_create\" %} - Linux: `cd linux/scripts` {% include t.html key=\"then\" %} `./build_viewer.bsh` - Windows: `cd windows\\\\scripts` {% include t.html key=\"then\" %} `.\\build_viewer.ps1` ({% include tc.html key=\"use_powershell\" %}) - MacOS: `cd macos/scripts` {% include t.html key=\"then\" %} `./build_viewer.zsh` 2. {% include tm.html key=\"dev_viewer_read\" %} - 💡 {% include tmp.html key=\"dev_viewer_run_tip\" %} - Linux: `cd linux/scripts` {% include t.html key=\"then\" %} `./viewer.bsh` -- {% include t.html key=\"dev_tools\" %} Ctrl + Shift + I\" - Windows: `cd windows\\scripts` {% include t.html key=\"then\" %} `.\\viewer.bat` -- {% include t.html key=\"dev_tools\" %} Ctrl + Shift + I\" - MacOS: `cd macos/scripts` {% include t.html key=\"then\" %} `./viewer.zsh` -- {% include t.html key=\"dev_tools\" %} Cmd + Option + I\" ### {% include t.html key=\"heading_making_dev_changes\" %} {% include t.html key=\"dev_changes_intro\" %} {% include t.html key=\"dev_changes_browser_note\" %} 💡 {% include tmp.html key=\"dev_changes_tip\" %} └── buildResources └── electron ├── config │ └── paths.js ├── core │ ├── archiveUtil.js │ ├── downloadUtil.js │ ├── ports.js │ ├── server.js │ ├── startupErrors.js │ └── window.js ├── features │ ├── ffmpeg.js │ ├── firefox.js │ └── pdf.js ├── electronStartup.js ├── package.json └── preload.js . ### {% include t.html key=\"heading_deploying_dev_changes\" %} {% include tm.html key=\"deploy_test_dev_startup\" %} └── [linux | windows | macos] └── viewer └── project └── payload └── app └── electron . {% include tm.html key=\"deploy_test_startup\" %} {: .important-title } > {% include tmp.html key=\"install_important_title\" %} > > {% include tmp.html key=\"install_important\" %} {% include tm.html key=\"deploy_favicon\" %} {% include t.html key=\"deploy_app_launcher_intro\" %} ### {% include t.html key=\"heading_local_installer_build\" %} {: .no_toc } {% include tm.html key=\"local_installer_consider\" %} #### {% include t.html key=\"heading_installer_prerequisites\" %} - {% include tm.html key=\"installer_prereq_server\" %} - {% include t.html key=\"installer_prereq_windows\" %} - {% include tm.html key=\"installer_prereq_inno\" %} #### {% include t.html key=\"heading_bundle_viewer_script\" %} - Windows - `cd windows\\scripts` {% include t.html key=\"then\" %} `.\\bundle_viewer.ps1` - {% include t.html key=\"bundle_viewer_windows_optional\" %} - {% include tm.html key=\"bundle_viewer_windows_arg1\" %} - {% include t.html key=\"bundle_viewer_windows_desc\" %} - MacOS - `cd /macos/scripts` {% include t.html key=\"then\" %} `./bundle_viewer.zsh` - {% include t.html key=\"bundle_viewer_macos_optional\" %} - {% include tm.html key=\"bundle_viewer_macos_arg1\" %} - {% include t.html key=\"bundle_viewer_macos_desc\" %} - Linux - `cd /linux/scripts` {% include t.html key=\"then\" %} `./bundle_viewer.bsh` - {% include t.html key=\"bundle_viewer_linux_before\" %} - {% include t.html key=\"bundle_viewer_linux_step1\" %} - {% include t.html key=\"bundle_viewer_linux_step2\" %} - {% include t.html key=\"bundle_viewer_linux_step3\" %} - {% include tm.html key=\"bundle_viewer_linux_step4\" %} - {% include tm.html key=\"bundle_viewer_linux_step5\" %} #### {% include t.html key=\"heading_bundle_viewer_outputs\" %} - Windows: `releases\\\\windows\\\\intel64\\\\[app-name]-[version]-windows-[x64|arm64].exe` - MacOS: `releases/macos/[intel64|arm64]/[app-name]-[version]-macos-[x64|arm64].pkg` - Linux: `releases/linux/[app-name]-[version]-linux-[x64|arm64].deb` ",
+    "url": "/previews/ga/rclDoc/es/electronite-local-development/",
+    
+    "relUrl": "/es/electronite-local-development/"
+  },"119": {
+    "doc": "Environment Requirements",
+    "title": "Environment Requirements",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_tested_on\" %} {: .highlight-title } > {% include tcmp.html key=\"pnpm_migration_title\" %} > > {% include tcmp.html key=\"pnpm_migration\" %} ### Ubuntu 24.04 {% include t.html key=\"with\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| pnpm 11.20.0 | npm 10.7.0 | node 24.11.0 | node 20.18.1 | - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh` ### Windows 11 {% include t.html key=\"with\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| pnpm 11.20.0 | npm 10.7.0 | node 24.11.0 | node 20.18.1 | - git 2.44.0; {% include t.html key=\"see\" %} [https://git-scm.com/install/windows](https://git-scm.com/install/windows) - rustc 1.88.0 -- {% include t.html key=\"see\" %} [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) - cmake 3.31.0 -- {% include tmp.html key=\"windows_cmake_ver\" %} {% include t.html key=\"see\" %} [https://cmake.org/download/](https://cmake.org/download/) - {% include t.html key=\"windows_powershell\" %} - {% include tmp.html key=\"windows_inno_setup\" %} ### MacOS Apple silicon (ARM64) {% include t.html key=\"with\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| pnpm 11.20.0 | npm 10.8.2 ({% include t.html key=\"tested_on\" %} Sequoia) | node 24.11.0 | node 20.18.1 | - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh` - OpenSSL 3.5.0 -- `brew install openssl` -- {% include t.html key=\"see\" %} [Homebrew](https://brew.sh/) ### MacOS Intel (x86_64) {% include t.html key=\"with\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| pnpm 11.20.0 | npm 10.7.0 ({% include t.html key=\"tested_on\" %} Monterey) | node 24.11.0 | node 20.18.1 | - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh` - OpenSSL 3.6.4 -- `sudo port install openssl3` -- {% include t.html key=\"see\" %} [MacPorts](https://www.macports.org/install.php) #### {% include t.html key=\"heading_planning_ahead\" %} - {% include t.html key=\"github_x64_eol\" %} - {% include t.html key=\"apple_x64_eol\" %} ",
+    "url": "/previews/ga/rclDoc/es/environment-requirements/",
+    
+    "relUrl": "/es/environment-requirements/"
+  },"120": {
+    "doc": "i18n",
+    "title": "i18n",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_overview\" %} {% include tm.html key=\"overview\" %} ## {% include t.html key=\"heading_structure\" %} {% include tm.html key=\"structure\" %} ## {% include t.html key=\"heading_sources\" %} {% include tm.html key=\"sources\" %} ## {% include t.html key=\"heading_loading\" %} {% include tm.html key=\"loading\" %} ## {% include t.html key=\"heading_functions\" %} {% include tm.html key=\"functions_intro\" %} ```jsx import { useContext } from \"react\"; import { i18nContext } from \"pankosmia-rcl\"; import { doI18n, doInterpolatedI18n } from \"pankosmia-lib/i18n\"; const { i18nRef } = useContext(i18nContext); doI18n(\"pages:core-settings:title\", i18nRef.current); // \"greeting\": { \"en\": \"Hello %1%, you have %2% books\" } doInterpolatedI18n( \"pages:my-client:greeting\", [\"Ada\", \"3\"], i18nRef.current, ); ``` {% include tm.html key=\"functions_rules\" %} ## {% include t.html key=\"heading_add\" %} {% include tm.html key=\"add\" %} ```json { \"id\": \"my-client\", \"i18n\": { \"title\": { \"en\": \"My client\", \"fr\": \"Mon client\" } } } ``` ## {% include t.html key=\"heading_editor\" %} {% include tm.html key=\"editor\" %} ## {% include t.html key=\"heading_product\" %} {% include tm.html key=\"product\" %} ",
+    "url": "/previews/ga/rclDoc/es/general/i18n/",
+    
+    "relUrl": "/es/general/i18n/"
+  },"121": {
+    "doc": "The Pankosmia Project",
+    "title": "The Pankosmia Project",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_philosophy\" %} {% include tm.html key=\"philosophy_intro_paragraph\" %} {% include t.html key=\"philosophy_corollaries\" %} - {% include t.html key=\"philosophy_corollary1\" %} - {% include t.html key=\"philosophy_corollary2\" %} - {% include t.html key=\"philosophy_corollary3\" %} - {% include t.html key=\"philosophy_corollary4\" %} ## {% include t.html key=\"heading_distinctives\" %} - {% include t.html key=\"distinctive1\" %} - {% include t.html key=\"distinctive2\" %} - {% include t.html key=\"distinctive3\" %} - {% include t.html key=\"distinctive4\" %} - {% include t.html key=\"distinctive5\" %} - {% include t.html key=\"distinctive6\" %} ## {% include t.html key=\"heading_architecture\" %} {% include t.html key=\"architecture_paragraph\" %} - {% include t.html key=\"architecture1\" %} - {% include t.html key=\"architecture1a\" %} - {% include t.html key=\"architecture1b\" %} - {% include t.html key=\"architecture1c\" %} - {% include t.html key=\"architecture1d\" %} - {% include t.html key=\"architecture2\" %} - {% include t.html key=\"architecture2a\" %} - {% include t.html key=\"architecture3\" %} - {% include t.html key=\"architecture4\" %} ",
+    "url": "/previews/ga/rclDoc/es/pankosmia-project/",
+    
+    "relUrl": "/es/pankosmia-project/"
+  },"122": {
+    "doc": "General",
+    "title": "General",
+    "content": "{%- include init_i18n.html -%} {%- assign url_prefix = \"\" -%} {%- if page.lang != site.lang -%}{%- assign url_prefix = \"/\" | append: page.lang -%}{%- endif -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } {% include tm.html key=\"intro\" %} - [{{ site.data.i18n.pages.general_i18n.title[current_lang] }}]({{ url_prefix }}/general/i18n/): {% include tmp.html key=\"section_i18n\" %} - [{{ site.data.i18n.pages.general_product.title[current_lang] }}]({{ url_prefix }}/general/product/): {% include tmp.html key=\"section_product\" %} - [{{ site.data.i18n.pages.general_clients.title[current_lang] }}]({{ url_prefix }}/general/clients/): {% include tmp.html key=\"section_clients\" %} ",
+    "url": "/previews/ga/rclDoc/es/general/",
+    
+    "relUrl": "/es/general/"
+  },"123": {
+    "doc": "RCL Documentation",
+    "title": "RCL Documentation",
+    "content": "{%- include init_i18n.html -%} {%- assign url_prefix = \"\" -%} {%- if page.lang != site.lang -%}{%- assign url_prefix = \"/\" | append: page.lang -%}{%- endif -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_overview\" %} {% include tm.html key=\"overview_intro\" %} {% include tm.html key=\"overview_components\" %} - {% include tmp.html key=\"overview_basic\" %} - {% include tmp.html key=\"overview_advanced\" %} - {% include tmp.html key=\"overview_actions\" %} - {% include tmp.html key=\"overview_menu\" %} {% include tm.html key=\"overview_import\" %} ```js import { PanBasicDialog, PanAdvancedDialog, PanDialogActionsArray, PanMenuWrapper, } from \"pankosmia-rcl\"; ``` ## {% include t.html key=\"heading_sections\" %} {% include tm.html key=\"sections_intro\" %} - [{{ site.data.i18n.pages.rcl_dialog.title[current_lang] }}]({{ url_prefix }}/rcl-doc/dialog/): {% include tmp.html key=\"sections_dialog\" %} - [{{ site.data.i18n.pages.rcl_menu.title[current_lang] }}]({{ url_prefix }}/rcl-doc/menu/): {% include tmp.html key=\"sections_menu\" %} ## {% include t.html key=\"heading_debug\" %} {% include tm.html key=\"debug_description\" %} ",
+    "url": "/previews/ga/rclDoc/es/rcl-doc/",
+    
+    "relUrl": "/es/rcl-doc/"
+  },"124": {
+    "doc": "Dev Reference Manual",
+    "title": "Dev Reference Manual",
+    "content": "{%- include init_i18n.html -%} ",
+    "url": "/previews/ga/rclDoc/es/dev-reference-manual/",
+    
+    "relUrl": "/es/dev-reference-manual/"
+  },"125": {
+    "doc": "Dev Quickstart",
+    "title": "Dev Quickstart",
+    "content": "{%- include init_i18n.html -%} ",
+    "url": "/previews/ga/rclDoc/es/dev-quickstart/",
+    
+    "relUrl": "/es/dev-quickstart/"
+  },"126": {
+    "doc": "Home",
+    "title": "Home",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"heading_main\" %} *{% include t.html key=\"subheading_main\" %}* {: .fs-6 .fw-300 } {% include t.html key=\"intro\" %} ## Contents * ### [{% include t.html key=\"the_pankosmia_project\" %}](pankosmia-project/) * ### [{% include t.html key=\"dev_quickstart\" %}](dev-quickstart/) * ### [{% include t.html key=\"dev_reference_manual\" %}](dev-reference-manual/) --- [{% include t.html key=\"legal_notices\" %}](legal-notices/) ",
+    "url": "/previews/ga/rclDoc/es/",
+    
+    "relUrl": "/es/"
+  },"127": {
+    "doc": "Legal Notices",
+    "title": "Legal Notices",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_contact\" %} {% include t.html key=\"ceo\" %}: Mark Howe {% include t.html key=\"email\" %}: webmaster@mvhsolutions.com ## {% include t.html key=\"heading_hosting\" %} {% include t.html key=\"hosting_paragraph\" %} {% include t.html key=\"address\" %}: MVH Solutions, 117 rue Lamartine – 84300 Cavaillon. ## {% include t.html key=\"heading_terms\" %} {% include t.html key=\"terms_paragraphs\" %} ## {% include t.html key=\"heading_property\" %} {% include t.html key=\"property_paragraphs\" %} (🚧) ## {% include t.html key=\"heading_links\" %} {% include t.html key=\"links_paragraphs\" %} ## {% include t.html key=\"heading_gdpr\" %} {% include t.html key=\"gdpr_paragraphs\" %} ## {% include t.html key=\"heading_content\" %} {% include t.html key=\"content_paragraphs\" %} ## {% include t.html key=\"heading_cookies\" %} {% include t.html key=\"cookies_paragraphs\" %} ",
+    "url": "/previews/ga/rclDoc/es/legal-notices/",
+    
+    "relUrl": "/es/legal-notices/"
+  },"128": {
+    "doc": "Menu",
+    "title": "Menu",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_menu\" %} {% include tm.html key=\"menu_intro\" %} - {% include tmp.html key=\"menu_large\" %} - {% include tmp.html key=\"menu_small\" %} {% include tm.html key=\"menu_internal_note\" %} | {% include t.html key=\"th_prop\" %} | {% include t.html key=\"th_type\" %} | {% include t.html key=\"th_default\" %} | {% include t.html key=\"th_description\" %} |---|---|---|---| `isOpen` | `boolean` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"menu_isOpen\" %} | `setIsOpen` | `(open: boolean) => void` | {% include t.html key=\"required\" %} | {% include tmp.html key=\"menu_setIsOpen\" %} | `anchorEl` | `HTMLElement` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"menu_anchorEl\" %} | `children` | `ReactNode` | {% include t.html key=\"none\" %} | {% include tmp.html key=\"menu_children\" %} | ## {% include t.html key=\"heading_examples\" %} {% include tm.html key=\"example_menu\" %} ```jsx const [isOpen, setIsOpen] = useState(false); const [anchorEl, setAnchorEl] = useState(null); { setAnchorEl(event.currentTarget); setIsOpen(true); }} > Open Menu setIsOpen(false)}> Rename setIsOpen(false)}> Delete ``` {% include tm.html key=\"example_demos\" %} ",
+    "url": "/previews/ga/rclDoc/es/rcl-doc/menu/",
+    
+    "relUrl": "/es/rcl-doc/menu/"
+  },"129": {
+    "doc": "Product",
+    "title": "Product",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_apps\" %} {% include tm.html key=\"apps_intro\" %} {% include tm.html key=\"apps_list\" %} ## {% include t.html key=\"heading_layout\" %} {% include tm.html key=\"layout\" %} ## {% include t.html key=\"heading_global\" %} {% include tm.html key=\"global_intro\" %} {% include tm.html key=\"global\" %} ## {% include t.html key=\"heading_resources\" %} {% include tm.html key=\"resources\" %} ```json { \"organizations\": [ { \"name\": \"BurritoTruck\", \"url\": \"git.door43.org/burritotruck\" }, { \"name\": \"unfoldingWord\", \"url\": \"git.door43.org/unfoldingword\" } ] } ``` ",
+    "url": "/previews/ga/rclDoc/es/general/product/",
+    
+    "relUrl": "/es/general/product/"
+  },"130": {
+    "doc": "Script Reference",
+    "title": "Script Reference",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"additional_info\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_ecosystem_setup\" %} {% include tm.html key=\"ecosystem_setup_intro\" %} {% include tm.html key=\"ecosystem_setup_example\" %} |-- repos |-- pankosmia |-- core-client-content repository |-- core-client-dashboard repository |-- core-client-i18n-editor repository |-- core-client-remote-repos repository |-- core-client-settings repository |-- core-client-workspace repository |-- [your-desktop-app-repo-name] (30 characters or less on windows!) |-- resource-core |-- webfonts-core . ## {% include t.html key=\"heading_installing_clients\" %} {: .highlight-title } > {% include tcmp.html key=\"pnpm_migration_title\" %} > > {% include tcmp.html key=\"pnpm_migration\" %} {% include tm.html key=\"installing_clients_intro\" %} {% include tm.html key=\"installing_clients_script\" %} ### {% include t.html key=\"run_where\" %} | `pnpm-lock.yaml`| `package-lock.json` |---|---| > `pnpm install` | > `npm ci` | > `pnpm run build` | > `npm run build` | {% include tm.html key=\"installing_clients_run_note\" %} ## {% include t.html key=\"heading_scripts\" %} {% include tm.html key=\"scripts_legend\" %} ### {% include t.html key=\"heading_configuration\" %} {% include tm.html key=\"configuration_intro\" %} {% include tm.html key=\"configuration_files_list\" %} {% include tm.html key=\"configuration_review\" %} #### {% include t.html key=\"heading_config_scripts\" %} {% include t.html key=\"config_scripts_run_from\" %} | {% include t.html key=\"table_header_description\" %} | {% include tmp.html key=\"table_header_script_arg\" %} |---|---| {% include t.html key=\"config_script_desc\" %} | `app_setup` | #### {% include t.html key=\"heading_setup_scripts\" %} {% include t.html key=\"setup_scripts_run_from\" %} | {% include t.html key=\"table_header_description\" %} | {% include tmp.html key=\"table_header_script_arg\" %} |---|---| {% include t.html key=\"clone_desc\" %} | {% include tmp.html key=\"clone_script\" %} | {% include tmp.html key=\"build_clients_desc\" %} | {% include tmp.html key=\"build_clients_script\" %} | {% include t.html key=\"build_viewer_desc\" %} | {% include tmp.html key=\"build_viewer_script\" %} | #### {% include t.html key=\"heading_usage_scripts\" %} {% include tm.html key=\"usage_scripts_note\" %} | {% include t.html key=\"table_header_description\" %} | {% include tmp.html key=\"table_header_script_arg\" %} |---|---| {% include tmp.html key=\"clean_desc\" %} | {% include tmp.html key=\"clean_script\" %} | {% include tmp.html key=\"build_server_desc\" %} | {% include tmp.html key=\"build_server_script\" %} | {% include tmp.html key=\"run_desc\" %} | {% include tmp.html key=\"run_script\" %} | {% include tmp.html key=\"viewer_desc\" %} | {% include tmp.html key=\"viewer_script\" %} | {% include tmp.html key=\"bundle_viewer_desc\" %} | {% include tmp.html key=\"bundle_viewer_script\" %} | {% include tmp.html key=\"bundle_zip_desc\" %} | {% include tmp.html key=\"bundle_zip_script\" %} | #### {% include t.html key=\"heading_maintenance_scripts\" %} {% include t.html key=\"maintenance_scripts_run_from\" %} | {% include t.html key=\"table_header_description\" %} | {% include tmp.html key=\"table_header_script_arg\" %} |---|---| {% include t.html key=\"sync_desc\" %} | {% include tmp.html key=\"sync_script\" %} | ## {% include tc.html key=\"heading_footnotes\" %} [1] ... {% include tmp.html key=\"footnote1\" %} [2] ... {% include tmp.html key=\"footnote2\" %} [3] ... {% include tmp.html key=\"footnote3\" %} [4] ... {% include tmp.html key=\"footnote4\" %} ",
+    "url": "/previews/ga/rclDoc/es/script-reference/",
+    
+    "relUrl": "/es/script-reference/"
+  },"131": {
+    "doc": "Scripts",
+    "title": "Scripts",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } {% include t.html key=\"subtitle\" %} {: .fs-6 .fw-300 } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_use\" %} {% include tm.html key=\"use_intro\" %} - {% include tmp.html key=\"use_delete_working\" %} - {% include tmp.html key=\"use_restart_server\" %} - {% include t.html key=\"use_one_instance\" %} ### {% include t.html key=\"heading_client_development\" %} {% include tm.html key=\"client_dev_intro\" %} {% include tm.html key=\"client_dev_see_also\" %} {% include tm.html key=\"client_dev_release\" %} ### {% include t.html key=\"heading_generate_artifacts\" %} {% include tm.html key=\"artifacts_intro\" %} - {% include t.html key=\"artifacts_main_branch\" %} {% include t.html key=\"artifacts_download\" %} {% include t.html key=\"artifacts_double_compressed\" %} - {% include tm.html key=\"artifacts_strip_tgz\" %} - {% include tm.html key=\"artifacts_strip_zip\" %} - {% include t.html key=\"artifacts_windows_warning\" %} - {% include tm.html key=\"artifacts_pkg_zip\" %} {% include t.html key=\"artifacts_upload_releases\" %} ## {% include t.html key=\"heading_maintenance\" %} {% include tm.html key=\"maintenance_update_server\" %} {% include tm.html key=\"maintenance_sync\" %} ## {% include tc.html key=\"heading_footnotes\" %} [1] ... {% include tcmp.html key=\"footnote1\" %} ",
+    "url": "/previews/ga/rclDoc/es/scripts/",
+    
+    "relUrl": "/es/scripts/"
+  },"132": {
+    "doc": "UX/UI guidelines",
+    "title": "UX/UI guidelines",
+    "content": "{%- include init_i18n.html -%} # {% include t.html key=\"title\" %} {: .no_toc } ## {% include tc.html key=\"heading_toc\" %} {: .no_toc .text-delta } - TOC {:toc} ## {% include t.html key=\"heading_general_page_template\" %} ## {% include t.html key=\"heading_data_grid\" %} ## {% include t.html key=\"heading_dialog\" %} > 💡 {% include tmp.html key=\"dialog_tip\" %} {% include t.html key=\"dialog_composed\" %} * {% include t.html key=\"dialog_title\" %} > {% include tm.html key=\"dialog_title_note\" %} * {% include t.html key=\"dialog_content\" %} > {% include tm.html key=\"dialog_content_note\" %} * {% include t.html key=\"dialog_actions\" %} {% include tm.html key=\"dialog_actions_required\" %} > {% include t.html key=\"dialog_actions_cancel\" %} > > {% include t.html key=\"dialog_actions_action\" %} ![Example text field with guidance above](../../assets/images/dev-reference-manual/dialog-1.png) {% include t.html key=\"dialog_responsiveness\" %} > 🚧 {% include t.html key=\"dialog_responsiveness_tbd\" %} ## {% include t.html key=\"heading_icons\" %} {% include tm.html key=\"icons_intro\" %} ## {% include t.html key=\"heading_required_fields\" %} {% include t.html key=\"required_fields_intro\" %} * {% include tm.html key=\"required_fields_asterisk\" %} * {% include t.html key=\"required_fields_explain\" %} > {% include tm.html key=\"required_fields_explain_note\" %} * {% include t.html key=\"required_fields_action_button\" %} ![Example text field with guidance above](../../assets/images/dev-reference-manual/required-fields-1.png) ## {% include t.html key=\"heading_theme\" %} ### {% include t.html key=\"heading_main_colors\" %} {: .no_toc } - {% include tm.html key=\"main_colors_intro\" %} ### {% include tmp.html key=\"heading_generate_mui_variants\" %} {: .no_toc } - {% include tm.html key=\"generate_mui_variants_intro\" %} > {% include t.html key=\"generate_mui_variants_note\" %} ### {% include t.html key=\"heading_check_contrast\" %} {: .no_toc } - {% include tm.html key=\"check_contrast_intro\" %} - {% include t.html key=\"check_contrast_contexts\" %} > {% include t.html key=\"check_contrast_contexts_note\" %} - {% include t.html key=\"check_contrast_primary_secondary\" %} ### {% include tmp.html key=\"heading_generate_appbar_chip\" %} {: .no_toc } - {% include tm.html key=\"appbar_chip_darker\" %} - {% include tm.html key=\"appbar_chip_lighter\" %} ## {% include t.html key=\"heading_tooltip\" %} ",
+    "url": "/previews/ga/rclDoc/es/uxui-guidelines/",
+    
+    "relUrl": "/es/uxui-guidelines/"
+  }
+}
