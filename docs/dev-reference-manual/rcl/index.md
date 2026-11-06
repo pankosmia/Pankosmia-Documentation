@@ -8,8 +8,8 @@ parent: Dev Reference Manual
 has_children: true
 ---
 {%- include init_i18n.html -%}
-{%- assign url_prefix = "" -%}
-{%- if page.lang != site.lang -%}{%- assign url_prefix = "/" | append: page.lang -%}{%- endif -%}
+{%- assign url_prefix = site.baseurl -%}
+{%- if page.lang != site.lang -%}{%- assign url_prefix = url_prefix | append: "/" | append: page.lang -%}{%- endif -%}
 
 # {% include t.html key="title" %}
 {: .no_toc }
