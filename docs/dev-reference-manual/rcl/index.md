@@ -45,8 +45,8 @@ import {
 ## {% include t.html key="heading_sections" %}
 
 {% include tm.html key="sections_intro" %}
-- [{{ site.data.i18n.pages.rcl_dialog.title[current_lang] }}]({% include localized_relative_url.html path="/rcl-doc/dialog/" %}): {% include tmp.html key="sections_dialog" %}
-- [{{ site.data.i18n.pages.rcl_menu.title[current_lang] }}]({% include localized_relative_url.html path="/rcl-doc/menu/" %}): {% include tmp.html key="sections_menu" %}
+- [{ site.data.i18n.pages.rcl_dialog.title[current_lang] }]({% include localized_relative_url.html path="/rcl-doc/dialog/" %}): {% include tmp.html key="sections_dialog" %}
+- [{ site.data.i18n.pages.rcl_menu.title[current_lang] }]({% include localized_relative_url.html path="/rcl-doc/menu/" %}): {% include tmp.html key="sections_menu" %}
 
 ## {% include t.html key="heading_debug" %}
 
