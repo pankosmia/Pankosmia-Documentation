@@ -8,8 +8,6 @@ parent: Dev Reference Manual
 has_children: true
 ---
 {%- include init_i18n.html -%}
-{%- assign url_prefix = site.baseurl -%}
-{%- if page.lang != site.lang -%}{%- assign url_prefix = url_prefix | append: "/" | append: page.lang -%}{%- endif -%}
 
 # {% include t.html key="title" %}
 {: .no_toc }
@@ -47,8 +45,8 @@ import {
 ## {% include t.html key="heading_sections" %}
 
 {% include tm.html key="sections_intro" %}
-- [{{ site.data.i18n.pages.rcl_dialog.title[current_lang] }}]({{ url_prefix }}/rcl-doc/dialog/): {% include tmp.html key="sections_dialog" %}
-- [{{ site.data.i18n.pages.rcl_menu.title[current_lang] }}]({{ url_prefix }}/rcl-doc/menu/): {% include tmp.html key="sections_menu" %}
+- [{{ site.data.i18n.pages.rcl_dialog.title[current_lang] }}]({% include localized_relative_url.html path="/rcl-doc/dialog/"}): {% include tmp.html key="sections_dialog" %}
+- [{{ site.data.i18n.pages.rcl_menu.title[current_lang] }}]({% include localized_relative_url.html path="/rcl-doc/menu/"}): {% include tmp.html key="sections_menu" %}
 
 ## {% include t.html key="heading_debug" %}
 
