@@ -1,0 +1,8 @@
+{%- assign path = include.path -%}
+{%- assign lang = include.lang | default: page.lang | default: site.lang -%}
+
+{%- if lang != site.lang -%}
+  {%- assign path = "/" | append: lang | append: path -%}
+{%- endif -%}
+
+{{- path | relative_url -}}
