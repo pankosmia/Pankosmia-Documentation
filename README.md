@@ -3,7 +3,20 @@
 - Main is automatically built and deployed at https://pankosmia.dev/ .
 - Previews of branches, pr's or other ref's are deployable at `https://pankosmia.dev/previews/[branch, tag, PR ref, or commit]` via github actions.
 
-## To build and run locally:
+## Table of Contents
+- [To build and run locally](#to-build-and-run-locally)
+- [i18n Front Matter](#i18n-front-matter)
+- [Terms common to multiple pages](#terms-common-to-multiple-pages)
+- [Pulling in markdown from i18n inside Jekyll markdown](#pulling-in-markdown-from-i18n-inside-jekyll-markdown)
+- [Summary](#summary)
+= [Inline links to other pages](#inline-links-to-other-pages)
+- [Adding a new language](#adding-a-new-language)
+  - [Default language / i18n Fallback language](#default-language--i18n-fallback-language)
+  - [Customizations to just-the-docs](#customizations-to-just-the-docs)
+    - [New files added](#new-files-added)
+    - [Files copied over from just-the-docs repo, then edited for i18n](#files-copied-over-from-just-the-docs-repo-then-edited-for-i18n)
+
+## To build and run locally
 1. Install Ruby+Devkit 3.3.6-1 from: https://rubyinstaller.org/downloads/ to match the current github workflow version. This includes Bundler version 2.5.22.
 2. After installing, restart your terminal.
 3. `bundle install`
@@ -79,7 +92,11 @@ When i18n return markdown, it gets converted to html by `tm.html` or `tcm.html`.
 | pages | `t.html` | `tm.html` | `tmp.html` |
 | common | `tc.html` | `tcm.html` | `tcmp.html` |
 
-## Adding a new language:
+## Inline links to other pages
+
+Use this to create inline links to other pages: `{% include localized_relative_url.html path="/path-to/page/" %}` where that is the url in [link](url)
+
+## Adding a new language
 
 1. Add to the languages list in `_config.yml`:
 ```
@@ -136,6 +153,7 @@ The following is for reference on future ruby / jekyll / just-the-docs upgrades,
 - _includes\init_i18n.html: for shorter md file i18n config with `{%- include init_i18n.html -%}`
 - _includes\t.html: for shorter i18n key reference in md with `{% include t.html key="sample_i18n_key" %}`
 - _includes\debug-info.html: Unrelated to i18n, rather used to show  current version info at https://pankosmia.dev/versions/
+- _includes\localized_relative_url.html: For use with inline links to other pages -- `{% include localized_relative_url.html path="/path-to/page/" %}`
 
 ### Files copied over from just-the-docs repo, then edited for i18n
 Differences cited below vs. [just-the-docs repo](https://github.com/just-the-docs/just-the-docs/) are current as of [just-the-docs commits on Mar 31, 2026](https://github.com/just-the-docs/just-the-docs/tree/9e56fa5d7ba8fa6a6d8aea7c38cb2174869d97d1).
