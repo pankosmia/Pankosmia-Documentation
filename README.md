@@ -9,7 +9,7 @@
 - [Terms common to multiple pages](#terms-common-to-multiple-pages)
 - [Pulling in markdown from i18n inside Jekyll markdown](#pulling-in-markdown-from-i18n-inside-jekyll-markdown)
 - [Summary](#summary)
-= [Inline links to other pages](#inline-links-to-other-pages)
+- [Inline links to other pages](#inline-links-to-other-pages)
 - [Adding a new language](#adding-a-new-language)
   - [Default language / i18n Fallback language](#default-language--i18n-fallback-language)
   - [Customizations to just-the-docs](#customizations-to-just-the-docs)
