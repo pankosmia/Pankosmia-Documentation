@@ -20,4 +20,3 @@ has_children: true
 - [{{ site.data.i18n.pages.general_i18n.title[current_lang] }}]({% include localized_relative_url.html path="/general/i18n/" %}): {% include tmp.html key="section_i18n" %}
 - [{{ site.data.i18n.pages.general_product.title[current_lang] }}]({% include localized_relative_url.html path="/general/product/" %}): {% include tmp.html key="section_product" %}
 - [{{ site.data.i18n.pages.general_clients.title[current_lang] }}]({% include localized_relative_url.html path="/general/clients/" %}): {% include tmp.html key="section_clients" %}
-
