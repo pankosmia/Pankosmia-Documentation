@@ -496,6 +496,665 @@
         "es": "Se prevé que las actualizaciones de seguridad de Apple estén disponibles hasta alrededor de septiembre de 2029."
       }
     },
+    "rcl_doc": {
+      "title": {
+        "en": "RCL Documentation",
+        "fr": "Documentation RCL",
+        "es": "Documentación de RCL"
+      },
+      "subtitle": {
+        "en": "Documentation for the RCL",
+        "fr": "Documentation de la RCL",
+        "es": "Documentación de la RCL"
+      },
+      "heading_debug": {
+        "en": "Debug",
+        "fr": "Débogage",
+        "es": "Depuración"
+      },
+      "debug_description": {
+        "en": "The debug option lets the user see developer options. When it is turned on, every client that requires debug and is not excluded from the menu appears in the menu.",
+        "fr": "L'option de débogage permet à l'utilisateur de voir les options pour développeurs. Lorsqu'elle est activée, tous les clients qui exigent le débogage et qui ne sont pas exclus du menu apparaissent dans le menu.",
+        "es": "La opción de depuración permite al usuario ver las opciones para desarrolladores. Cuando está activada, todos los clientes que requieren depuración y no están excluidos del menú aparecen en el menú."
+      },
+      "heading_overview": {
+        "en": "Overview",
+        "fr": "Aperçu",
+        "es": "Descripción general"
+      },
+      "overview_intro": {
+        "en": "`pankosmia-rcl` is the React Component Library shared by the Pankosmia clients. The components documented here are the ones in the `v1.0` folder of the library (`src/rcl/v1.0`). They are exported from the package entry point and are built on top of [MUI](https://mui.com/).",
+        "fr": "`pankosmia-rcl` est la bibliothèque de composants React partagée par les clients Pankosmia. Les composants documentés ici sont ceux du dossier `v1.0` de la bibliothèque (`src/rcl/v1.0`). Ils sont exportés depuis le point d'entrée du paquet et sont construits sur [MUI](https://mui.com/).",
+        "es": "`pankosmia-rcl` es la biblioteca de componentes React compartida por los clientes de Pankosmia. Los componentes documentados aquí son los de la carpeta `v1.0` de la biblioteca (`src/rcl/v1.0`). Se exportan desde el punto de entrada del paquete y están construidos sobre [MUI](https://mui.com/)."
+      },
+      "overview_components": {
+        "en": "The library currently exports four `v1.0` components:",
+        "fr": "La bibliothèque exporte actuellement quatre composants `v1.0` :",
+        "es": "Actualmente la biblioteca exporta cuatro componentes `v1.0`:"
+      },
+      "overview_basic": {
+        "en": "`PanBasicDialog`: a compact dialog for short confirmations and small forms.",
+        "fr": "`PanBasicDialog` : une boîte de dialogue compacte pour les confirmations courtes et les petits formulaires.",
+        "es": "`PanBasicDialog`: un cuadro de diálogo compacto para confirmaciones breves y formularios pequeños."
+      },
+      "overview_advanced": {
+        "en": "`PanAdvancedDialog`: a larger dialog that becomes full screen on small displays.",
+        "fr": "`PanAdvancedDialog` : une boîte de dialogue plus grande qui passe en plein écran sur les petits écrans.",
+        "es": "`PanAdvancedDialog`: un cuadro de diálogo más grande que pasa a pantalla completa en pantallas pequeñas."
+      },
+      "overview_actions": {
+        "en": "`PanDialogActionsArray`: a helper that builds the close and action buttons given to the dialogs.",
+        "fr": "`PanDialogActionsArray` : une fonction utilitaire qui construit les boutons de fermeture et d'action fournis aux boîtes de dialogue.",
+        "es": "`PanDialogActionsArray`: una función auxiliar que construye los botones de cierre y de acción que se pasan a los diálogos."
+      },
+      "overview_menu": {
+        "en": "`PanMenuWrapper`: a menu that is a popup on large screens and a bottom drawer on small screens.",
+        "fr": "`PanMenuWrapper` : un menu qui s'affiche en fenêtre contextuelle sur les grands écrans et en tiroir inférieur sur les petits écrans.",
+        "es": "`PanMenuWrapper`: un menú que es una ventana emergente en pantallas grandes y un cajón inferior en pantallas pequeñas."
+      },
+      "overview_import": {
+        "en": "Import them by name from the package:",
+        "fr": "Importez-les par leur nom depuis le paquet :",
+        "es": "Impórtelos por su nombre desde el paquete:"
+      },
+      "heading_sections": {
+        "en": "Component sections",
+        "fr": "Sections de composants",
+        "es": "Secciones de componentes"
+      },
+      "sections_intro": {
+        "en": "The components are documented by family. Each page explains every component of the family and each of its props:",
+        "fr": "Les composants sont documentés par famille. Chaque page explique chaque composant de la famille et chacune de ses propriétés :",
+        "es": "Los componentes se documentan por familia. Cada página explica cada componente de la familia y cada una de sus propiedades:"
+      },
+      "sections_dialog": {
+        "en": "`PanBasicDialog`, `PanAdvancedDialog` and `PanDialogActionsArray`.",
+        "fr": "`PanBasicDialog`, `PanAdvancedDialog` et `PanDialogActionsArray`.",
+        "es": "`PanBasicDialog`, `PanAdvancedDialog` y `PanDialogActionsArray`."
+      },
+      "sections_menu": {
+        "en": "`PanMenuWrapper`.",
+        "fr": "`PanMenuWrapper`.",
+        "es": "`PanMenuWrapper`."
+      }
+    },
+    "rcl_dialog": {
+      "title": {
+        "en": "Dialog",
+        "fr": "Boîte de dialogue",
+        "es": "Diálogo"
+      },
+      "subtitle": {
+        "en": "Dialog components of the RCL",
+        "fr": "Composants de boîte de dialogue de la RCL",
+        "es": "Componentes de diálogo de la RCL"
+      },
+      "th_prop": {
+        "en": "Prop",
+        "fr": "Propriété",
+        "es": "Propiedad"
+      },
+      "th_type": {
+        "en": "Type",
+        "fr": "Type",
+        "es": "Tipo"
+      },
+      "th_default": {
+        "en": "Default",
+        "fr": "Défaut",
+        "es": "Valor por defecto"
+      },
+      "th_description": {
+        "en": "What it does",
+        "fr": "Rôle",
+        "es": "Qué hace"
+      },
+      "required": {
+        "en": "required",
+        "fr": "obligatoire",
+        "es": "obligatorio"
+      },
+      "none": {
+        "en": "none",
+        "fr": "aucun",
+        "es": "ninguno"
+      },
+      "heading_basic": {
+        "en": "PanBasicDialog",
+        "fr": "PanBasicDialog",
+        "es": "PanBasicDialog"
+      },
+      "basic_intro": {
+        "en": "A modal dialog sized to its content (minimum width 280px, maximum width `sm`). It shows a title, your content, and a row of action buttons at the bottom. It is the right choice for confirmations and short forms.",
+        "fr": "Une boîte de dialogue modale dimensionnée selon son contenu (largeur minimale de 280 px, largeur maximale `sm`). Elle affiche un titre, votre contenu et une rangée de boutons d'action en bas. C'est le bon choix pour les confirmations et les formulaires courts.",
+        "es": "Un cuadro de diálogo modal con el tamaño de su contenido (ancho mínimo de 280 px, ancho máximo `sm`). Muestra un título, su contenido y una fila de botones de acción en la parte inferior. Es la opción adecuada para confirmaciones y formularios cortos."
+      },
+      "basic_behavior": {
+        "en": "Clicking the backdrop or pressing Escape calls `closeFn`. The dialog surface is rendered as an HTML `form` element.",
+        "fr": "Cliquer sur l'arrière-plan ou appuyer sur Échap appelle `closeFn`. La surface de la boîte de dialogue est rendue comme un élément HTML `form`.",
+        "es": "Hacer clic en el fondo o pulsar Escape llama a `closeFn`. La superficie del diálogo se renderiza como un elemento HTML `form`."
+      },
+      "basic_closeFn": {
+        "en": "Function called to close the dialog. It is called when the user clicks the backdrop or presses Escape. Your code should use it to set `isOpen` to false.",
+        "fr": "Fonction appelée pour fermer la boîte de dialogue. Elle est appelée lorsque l'utilisateur clique sur l'arrière-plan ou appuie sur Échap. Votre code doit s'en servir pour mettre `isOpen` à false.",
+        "es": "Función llamada para cerrar el diálogo. Se llama cuando el usuario hace clic en el fondo o pulsa Escape. Su código debe usarla para poner `isOpen` en false."
+      },
+      "basic_dividers": {
+        "en": "When true, a horizontal divider is drawn between the title and the content, and between the content and the buttons.",
+        "fr": "Si true, un séparateur horizontal est tracé entre le titre et le contenu, et entre le contenu et les boutons.",
+        "es": "Si es true, se dibuja un separador horizontal entre el título y el contenido, y entre el contenido y los botones."
+      },
+      "heading_advanced": {
+        "en": "PanAdvancedDialog",
+        "fr": "PanAdvancedDialog",
+        "es": "PanAdvancedDialog"
+      },
+      "advanced_intro": {
+        "en": "A modal dialog with a colored title bar (primary theme color), full width up to the `sm` breakpoint, and a divider above the buttons. It is meant for longer content and forms.",
+        "fr": "Une boîte de dialogue modale avec une barre de titre colorée (couleur primaire du thème), pleine largeur jusqu'au point de rupture `sm`, et un séparateur au-dessus des boutons. Elle est destinée aux contenus et formulaires plus longs.",
+        "es": "Un cuadro de diálogo modal con una barra de título coloreada (color primario del tema), de ancho completo hasta el punto de corte `sm`, y un separador sobre los botones. Está pensado para contenidos y formularios más largos."
+      },
+      "advanced_behavior_heading": {
+        "en": "Behavior on small screens",
+        "fr": "Comportement sur les petits écrans",
+        "es": "Comportamiento en pantallas pequeñas"
+      },
+      "advanced_behavior": {
+        "en": "Below the `sm` breakpoint the dialog goes full screen. A close icon appears at the start of the title bar and calls `closeFn`. The footer is hidden, and the second button of `actionsButtonArray` (the action button created by `PanDialogActionsArray`) is moved to the end of the title bar. Keep the main action in second position so that it stays reachable on mobile. Unlike `PanBasicDialog`, clicking the backdrop or pressing Escape does not close this dialog.",
+        "fr": "Sous le point de rupture `sm`, la boîte de dialogue passe en plein écran. Une icône de fermeture apparaît au début de la barre de titre et appelle `closeFn`. Le pied de page est masqué, et le deuxième bouton de `actionsButtonArray` (le bouton d'action créé par `PanDialogActionsArray`) est déplacé à la fin de la barre de titre. Gardez l'action principale en deuxième position pour qu'elle reste accessible sur mobile. Contrairement à `PanBasicDialog`, cliquer sur l'arrière-plan ou appuyer sur Échap ne ferme pas cette boîte de dialogue.",
+        "es": "Por debajo del punto de corte `sm` el diálogo pasa a pantalla completa. Aparece un icono de cierre al inicio de la barra de título que llama a `closeFn`. El pie se oculta y el segundo botón de `actionsButtonArray` (el botón de acción creado por `PanDialogActionsArray`) se mueve al final de la barra de título. Mantenga la acción principal en segunda posición para que siga accesible en móvil. A diferencia de `PanBasicDialog`, hacer clic en el fondo o pulsar Escape no cierra este diálogo."
+      },
+      "advanced_closeFn": {
+        "en": "Function called when the user clicks the close icon shown in the title bar on small screens. Your code should use it to set `isOpen` to false. It is not called from the backdrop or Escape.",
+        "fr": "Fonction appelée lorsque l'utilisateur clique sur l'icône de fermeture affichée dans la barre de titre sur les petits écrans. Votre code doit s'en servir pour mettre `isOpen` à false. Elle n'est pas appelée par l'arrière-plan ni par Échap.",
+        "es": "Función llamada cuando el usuario hace clic en el icono de cierre mostrado en la barra de título en pantallas pequeñas. Su código debe usarla para poner `isOpen` en false. No se llama desde el fondo ni con Escape."
+      },
+      "prop_titleLabel": {
+        "en": "Text shown as the dialog title. Translate it before passing it in.",
+        "fr": "Texte affiché comme titre de la boîte de dialogue. Traduisez-le avant de le transmettre.",
+        "es": "Texto mostrado como título del diálogo. Tradúzcalo antes de pasarlo."
+      },
+      "prop_isOpen": {
+        "en": "Whether the dialog is visible. The parent component owns this state.",
+        "fr": "Indique si la boîte de dialogue est visible. Le composant parent gère cet état.",
+        "es": "Indica si el diálogo es visible. El componente padre gestiona este estado."
+      },
+      "prop_children": {
+        "en": "The content of the dialog: any React nodes (text, form fields, lists...).",
+        "fr": "Le contenu de la boîte de dialogue : n'importe quels nœuds React (texte, champs de formulaire, listes...).",
+        "es": "El contenido del diálogo: cualquier nodo de React (texto, campos de formulario, listas...)."
+      },
+      "prop_actionsButtonArray": {
+        "en": "Array of buttons rendered in the footer, in order. Normally the result of `PanDialogActionsArray(...)`, but any array of React elements works.",
+        "fr": "Tableau de boutons affichés dans le pied de page, dans l'ordre. Normalement le résultat de `PanDialogActionsArray(...)`, mais tout tableau d'éléments React convient.",
+        "es": "Matriz de botones mostrados en el pie, en orden. Normalmente el resultado de `PanDialogActionsArray(...)`, pero sirve cualquier matriz de elementos de React."
+      },
+      "prop_requiredFieldsLabel": {
+        "en": "When true, a note is shown above the content explaining that required fields are marked (translation key `library:pankosmia-rcl:required_field`). Use it when the dialog contains a form with required fields.",
+        "fr": "Si true, une note est affichée au-dessus du contenu pour expliquer que les champs obligatoires sont signalés (clé de traduction `library:pankosmia-rcl:required_field`). Utilisez-le lorsque la boîte de dialogue contient un formulaire avec des champs obligatoires.",
+        "es": "Si es true, se muestra una nota sobre el contenido que explica que los campos obligatorios están marcados (clave de traducción `library:pankosmia-rcl:required_field`). Úselo cuando el diálogo contenga un formulario con campos obligatorios."
+      },
+      "heading_actions": {
+        "en": "PanDialogActionsArray",
+        "fr": "PanDialogActionsArray",
+        "es": "PanDialogActionsArray"
+      },
+      "actions_intro": {
+        "en": "Despite its name it is a plain function, not a component: call it like `PanDialogActionsArray({ ... })`. It returns an array of two elements, `[closeButton, actionButton]`, to pass to the `actionsButtonArray` prop of `PanBasicDialog` or `PanAdvancedDialog`. The close button is always first. The action button is second; when `onlyCloseButton` is true that slot is `null`.",
+        "fr": "Malgré son nom, c'est une simple fonction et non un composant : appelez-la comme `PanDialogActionsArray({ ... })`. Elle renvoie un tableau de deux éléments, `[boutonFermer, boutonAction]`, à transmettre à la propriété `actionsButtonArray` de `PanBasicDialog` ou `PanAdvancedDialog`. Le bouton de fermeture est toujours en premier. Le bouton d'action est en second ; lorsque `onlyCloseButton` vaut true, cet emplacement est `null`.",
+        "es": "A pesar de su nombre, es una función simple y no un componente: llámela como `PanDialogActionsArray({ ... })`. Devuelve una matriz de dos elementos, `[botónCerrar, botónAcción]`, para pasar a la propiedad `actionsButtonArray` de `PanBasicDialog` o `PanAdvancedDialog`. El botón de cierre siempre va primero. El botón de acción va segundo; cuando `onlyCloseButton` es true, esa posición es `null`."
+      },
+      "actions_actionFn": {
+        "en": "Function run when the action button is clicked. Not used when `onlyCloseButton` is true.",
+        "fr": "Fonction exécutée au clic sur le bouton d'action. Non utilisée lorsque `onlyCloseButton` vaut true.",
+        "es": "Función ejecutada al hacer clic en el botón de acción. No se usa cuando `onlyCloseButton` es true."
+      },
+      "actions_actionLabel": {
+        "en": "Label of the action button. Translate it before passing it in.",
+        "fr": "Libellé du bouton d'action. Traduisez-le avant de le transmettre.",
+        "es": "Etiqueta del botón de acción. Tradúzcala antes de pasarla."
+      },
+      "actions_closeFn": {
+        "en": "Function run when the close button is clicked. It is also called after `actionFn` when `closeOnAction` is true.",
+        "fr": "Fonction exécutée au clic sur le bouton de fermeture. Elle est aussi appelée après `actionFn` lorsque `closeOnAction` vaut true.",
+        "es": "Función ejecutada al hacer clic en el botón de cierre. También se llama después de `actionFn` cuando `closeOnAction` es true."
+      },
+      "actions_closeLabel": {
+        "en": "Label of the close button (for example Cancel or Close). Translate it before passing it in.",
+        "fr": "Libellé du bouton de fermeture (par exemple Annuler ou Fermer). Traduisez-le avant de le transmettre.",
+        "es": "Etiqueta del botón de cierre (por ejemplo Cancelar o Cerrar). Tradúzcala antes de pasarla."
+      },
+      "actions_isDisabled": {
+        "en": "When true, the action button is disabled. Typically used while a form is invalid. The close button is never disabled by this prop.",
+        "fr": "Si true, le bouton d'action est désactivé. Utilisé typiquement tant qu'un formulaire est invalide. Le bouton de fermeture n'est jamais désactivé par cette propriété.",
+        "es": "Si es true, el botón de acción está desactivado. Se usa normalmente mientras un formulario no es válido. Esta propiedad nunca desactiva el botón de cierre."
+      },
+      "actions_closeOnAction": {
+        "en": "When true, `closeFn` is called right after `actionFn`. Set it to false when the action is asynchronous or can fail and your code must close the dialog itself.",
+        "fr": "Si true, `closeFn` est appelée juste après `actionFn`. Mettez-le à false lorsque l'action est asynchrone ou peut échouer et que votre code doit fermer la boîte de dialogue lui-même.",
+        "es": "Si es true, `closeFn` se llama justo después de `actionFn`. Póngalo en false cuando la acción sea asíncrona o pueda fallar y su código deba cerrar el diálogo por sí mismo."
+      },
+      "actions_onlyCloseButton": {
+        "en": "When true, only the close button is created (for information-only dialogs). The second array slot is `null`.",
+        "fr": "Si true, seul le bouton de fermeture est créé (pour les boîtes de dialogue purement informatives). Le deuxième emplacement du tableau est `null`.",
+        "es": "Si es true, solo se crea el botón de cierre (para diálogos meramente informativos). La segunda posición de la matriz es `null`."
+      },
+      "actions_actionVariant": {
+        "en": "MUI Button variant of the action button: `text`, `outlined` or `contained`. When omitted, MUI's default (`text`) is used.",
+        "fr": "Variante MUI Button du bouton d'action : `text`, `outlined` ou `contained`. À défaut, la valeur par défaut de MUI (`text`) est utilisée.",
+        "es": "Variante de MUI Button del botón de acción: `text`, `outlined` o `contained`. Si se omite, se usa el valor por defecto de MUI (`text`)."
+      },
+      "actions_closeVariant": {
+        "en": "MUI Button variant of the close button: `text`, `outlined` or `contained`. When omitted, MUI's default (`text`) is used.",
+        "fr": "Variante MUI Button du bouton de fermeture : `text`, `outlined` ou `contained`. À défaut, la valeur par défaut de MUI (`text`) est utilisée.",
+        "es": "Variante de MUI Button del botón de cierre: `text`, `outlined` o `contained`. Si se omite, se usa el valor por defecto de MUI (`text`)."
+      },
+      "actions_isLoading": {
+        "en": "When true, the close button is disabled and shows a small spinner. Note that this is applied to the close button only, not to the action button.",
+        "fr": "Si true, le bouton de fermeture est désactivé et affiche un petit indicateur de chargement. Notez que cela s'applique uniquement au bouton de fermeture, pas au bouton d'action.",
+        "es": "Si es true, el botón de cierre se desactiva y muestra un pequeño indicador de carga. Tenga en cuenta que esto se aplica solo al botón de cierre, no al botón de acción."
+      },
+      "actions_loadingLabel": {
+        "en": "Label that replaces the close button label while `isLoading` is true. If omitted, the normal label stays.",
+        "fr": "Libellé qui remplace celui du bouton de fermeture pendant que `isLoading` vaut true. À défaut, le libellé normal est conservé.",
+        "es": "Etiqueta que sustituye a la del botón de cierre mientras `isLoading` es true. Si se omite, se mantiene la etiqueta normal."
+      },
+      "heading_examples": {
+        "en": "Examples",
+        "fr": "Exemples",
+        "es": "Ejemplos"
+      },
+      "example_dialog": {
+        "en": "A dialog with a confirm action. The same pattern works for `PanAdvancedDialog`:",
+        "fr": "Une boîte de dialogue avec une action de confirmation. Le même schéma fonctionne pour `PanAdvancedDialog` :",
+        "es": "Un diálogo con una acción de confirmación. El mismo patrón sirve para `PanAdvancedDialog`:"
+      },
+      "example_demos": {
+        "en": "Working demos are in `src/componentDemos/V1.0` of the `core-client-rcl` repository.",
+        "fr": "Des démonstrations fonctionnelles se trouvent dans `src/componentDemos/V1.0` du dépôt `core-client-rcl`.",
+        "es": "Hay demostraciones funcionales en `src/componentDemos/V1.0` del repositorio `core-client-rcl`."
+      }
+    },
+    "rcl_menu": {
+      "title": {
+        "en": "Menu",
+        "fr": "Menu",
+        "es": "Menú"
+      },
+      "subtitle": {
+        "en": "Menu components of the RCL",
+        "fr": "Composants de menu de la RCL",
+        "es": "Componentes de menú de la RCL"
+      },
+      "th_prop": {
+        "en": "Prop",
+        "fr": "Propriété",
+        "es": "Propiedad"
+      },
+      "th_type": {
+        "en": "Type",
+        "fr": "Type",
+        "es": "Tipo"
+      },
+      "th_default": {
+        "en": "Default",
+        "fr": "Défaut",
+        "es": "Valor por defecto"
+      },
+      "th_description": {
+        "en": "What it does",
+        "fr": "Rôle",
+        "es": "Qué hace"
+      },
+      "required": {
+        "en": "required",
+        "fr": "obligatoire",
+        "es": "obligatorio"
+      },
+      "none": {
+        "en": "none",
+        "fr": "aucun",
+        "es": "ninguno"
+      },
+      "heading_menu": {
+        "en": "PanMenuWrapper",
+        "fr": "PanMenuWrapper",
+        "es": "PanMenuWrapper"
+      },
+      "menu_intro": {
+        "en": "A responsive wrapper around a list of menu items. It chooses the presentation from the screen size and renders your `children` inside it:",
+        "fr": "Un conteneur adaptatif autour d'une liste d'éléments de menu. Il choisit la présentation selon la taille de l'écran et affiche vos `children` à l'intérieur :",
+        "es": "Un contenedor adaptable alrededor de una lista de elementos de menú. Elige la presentación según el tamaño de pantalla y renderiza sus `children` dentro:"
+      },
+      "menu_large": {
+        "en": "From the `sm` breakpoint up: a standard MUI `Menu` popup anchored to `anchorEl` (internal component `PanMenu`).",
+        "fr": "À partir du point de rupture `sm` : une fenêtre contextuelle MUI `Menu` standard ancrée à `anchorEl` (composant interne `PanMenu`).",
+        "es": "Desde el punto de corte `sm`: una ventana emergente MUI `Menu` estándar anclada a `anchorEl` (componente interno `PanMenu`)."
+      },
+      "menu_small": {
+        "en": "Below `sm`: a swipeable drawer sliding up from the bottom of the screen with a drag handle, where the children are placed in a `MenuList` (internal component `PanMenuDrawer`). `anchorEl` is ignored.",
+        "fr": "Sous `sm` : un tiroir glissant depuis le bas de l'écran avec une poignée, où les enfants sont placés dans un `MenuList` (composant interne `PanMenuDrawer`). `anchorEl` est ignoré.",
+        "es": "Por debajo de `sm`: un cajón deslizable desde la parte inferior de la pantalla con un tirador, donde los hijos se colocan en un `MenuList` (componente interno `PanMenuDrawer`). `anchorEl` se ignora."
+      },
+      "menu_internal_note": {
+        "en": "`PanMenu` and `PanMenuDrawer` are implementation details and are not exported; use `PanMenuWrapper`.",
+        "fr": "`PanMenu` et `PanMenuDrawer` sont des détails d'implémentation et ne sont pas exportés ; utilisez `PanMenuWrapper`.",
+        "es": "`PanMenu` y `PanMenuDrawer` son detalles de implementación y no se exportan; use `PanMenuWrapper`."
+      },
+      "menu_isOpen": {
+        "en": "Whether the menu (or drawer) is visible. The parent component owns this state.",
+        "fr": "Indique si le menu (ou le tiroir) est visible. Le composant parent gère cet état.",
+        "es": "Indica si el menú (o el cajón) es visible. El componente padre gestiona este estado."
+      },
+      "menu_setIsOpen": {
+        "en": "State setter called with `false` when the user dismisses the menu (clicking outside, pressing Escape, or swiping the drawer down). Your code is responsible for opening it again.",
+        "fr": "Fonction de mise à jour d'état appelée avec `false` lorsque l'utilisateur ferme le menu (clic à l'extérieur, Échap, ou balayage du tiroir vers le bas). Votre code est responsable de le rouvrir.",
+        "es": "Función de actualización de estado llamada con `false` cuando el usuario descarta el menú (clic fuera, Escape o deslizar el cajón hacia abajo). Su código se encarga de volver a abrirlo."
+      },
+      "menu_anchorEl": {
+        "en": "The DOM element the popup is positioned next to, usually the button that opened it (`event.currentTarget`). Only used on larger screens.",
+        "fr": "L'élément DOM près duquel la fenêtre contextuelle est positionnée, généralement le bouton qui l'a ouverte (`event.currentTarget`). Utilisé uniquement sur les grands écrans.",
+        "es": "El elemento DOM junto al cual se posiciona la ventana emergente, normalmente el botón que la abrió (`event.currentTarget`). Solo se usa en pantallas grandes."
+      },
+      "menu_children": {
+        "en": "The menu entries, typically MUI `MenuItem` elements (with `ListItemIcon` and `ListItemText`) and `Divider`s.",
+        "fr": "Les entrées du menu, typiquement des éléments MUI `MenuItem` (avec `ListItemIcon` et `ListItemText`) et des `Divider`.",
+        "es": "Las entradas del menú, normalmente elementos MUI `MenuItem` (con `ListItemIcon` y `ListItemText`) y `Divider`."
+      },
+      "heading_examples": {
+        "en": "Examples",
+        "fr": "Exemples",
+        "es": "Ejemplos"
+      },
+      "example_menu": {
+        "en": "A menu opened from a button:",
+        "fr": "Un menu ouvert depuis un bouton :",
+        "es": "Un menú abierto desde un botón:"
+      },
+      "example_demos": {
+        "en": "Working demos are in `src/componentDemos/V1.0` of the `core-client-rcl` repository.",
+        "fr": "Des démonstrations fonctionnelles se trouvent dans `src/componentDemos/V1.0` du dépôt `core-client-rcl`.",
+        "es": "Hay demostraciones funcionales en `src/componentDemos/V1.0` del repositorio `core-client-rcl`."
+      }
+    },
+    "general": {
+      "title": {
+        "en": "General",
+        "fr": "Général",
+        "es": "General"
+      },
+      "subtitle": {
+        "en": "Concepts shared by every Pankosmia client and product",
+        "fr": "Concepts communs à tous les clients et produits Pankosmia",
+        "es": "Conceptos comunes a todos los clientes y productos de Pankosmia"
+      },
+      "intro": {
+        "en": "This section gathers the concepts that apply across Pankosmia. It has three pages:",
+        "fr": "Cette section rassemble les concepts qui s'appliquent à l'ensemble de Pankosmia. Elle comprend trois pages :",
+        "es": "Esta sección reúne los conceptos que se aplican en todo Pankosmia. Tiene tres páginas:"
+      },
+      "section_i18n": {
+        "en": "how the translation of the user interface works in all clients.",
+        "fr": "le fonctionnement de la traduction de l'interface dans tous les clients.",
+        "es": "cómo funciona la traducción de la interfaz en todos los clientes."
+      },
+      "section_product": {
+        "en": "the desktop apps and what a product contains (`globalBuildResources`, `product_resources`).",
+        "fr": "les applications de bureau et le contenu d'un produit (`globalBuildResources`, `product_resources`).",
+        "es": "las aplicaciones de escritorio y qué contiene un producto (`globalBuildResources`, `product_resources`)."
+      },
+      "section_clients": {
+        "en": "the structure of a client and the options of `pankosmia_metadata.json`.",
+        "fr": "la structure d'un client et les options de `pankosmia_metadata.json`.",
+        "es": "la estructura de un cliente y las opciones de `pankosmia_metadata.json`."
+      }
+    },
+    "general_i18n": {
+      "title": {
+        "en": "i18n",
+        "fr": "i18n",
+        "es": "i18n"
+      },
+      "subtitle": {
+        "en": "How translation of the user interface works across all clients",
+        "fr": "Comment fonctionne la traduction de l'interface dans tous les clients",
+        "es": "Cómo funciona la traducción de la interfaz en todos los clientes"
+      },
+      "heading_overview": {
+        "en": "Overview",
+        "fr": "Aperçu",
+        "es": "Descripción general"
+      },
+      "overview": {
+        "en": "Every piece of user-interface text in Pankosmia is looked up by a **key** in one shared translation tree, so all clients (dashboard, settings, content handlers...) follow the same language. A key has three parts joined by colons: `<category>:<section>:<name>`, for example `pages:core-settings:title`. The value behind a key holds one translation per language code (`en`, `fr`, `es`, `id`...). When a key is not found, the key itself is displayed.",
+        "fr": "Chaque texte de l'interface Pankosmia est recherché par une **clé** dans un arbre de traduction partagé, de sorte que tous les clients (tableau de bord, paramètres, gestionnaires de contenu...) suivent la même langue. Une clé comporte trois parties reliées par des deux-points : `<catégorie>:<section>:<nom>`, par exemple `pages:core-settings:title`. La valeur associée à une clé contient une traduction par code de langue (`en`, `fr`, `es`, `id`...). Lorsqu'une clé est introuvable, c'est la clé elle-même qui est affichée.",
+        "es": "Cada texto de la interfaz de Pankosmia se busca mediante una **clave** en un árbol de traducción compartido, de modo que todos los clientes (panel, ajustes, gestores de contenido...) siguen el mismo idioma. Una clave tiene tres partes unidas por dos puntos: `<categoría>:<sección>:<nombre>`, por ejemplo `pages:core-settings:title`. El valor de una clave contiene una traducción por código de idioma (`en`, `fr`, `es`, `id`...). Cuando no se encuentra una clave, se muestra la propia clave."
+      },
+      "heading_structure": {
+        "en": "Structure of the translation tree",
+        "fr": "Structure de l'arbre de traduction",
+        "es": "Estructura del árbol de traducción"
+      },
+      "structure": {
+        "en": "| Category | Content |\n|---|---|\n| `pages` | One section per client, named after the client `id`, filled from the `i18n` object of its `pankosmia_metadata.json`. Example: `pages:core-settings:title`. |\n| `library` | Strings of shared libraries such as the RCL. Example: `library:pankosmia-rcl:required_field`. |\n| `components` | Strings of shared interface parts (header, framework messages...). Example: `components:framework:no_entry_if_offline`. |\n| `branding` | Identity of the product. Example: `branding:software:name`. |\n| `scripture` | Names of books and versifications. |\n| `munchers`, `crunchers`, `flavors`, `server`, `fonts` | Other categories of the template, used by specific content handlers and server features. |",
+        "fr": "| Catégorie | Contenu |\n|---|---|\n| `pages` | Une section par client, nommée d'après l'`id` du client, alimentée par l'objet `i18n` de son `pankosmia_metadata.json`. Exemple : `pages:core-settings:title`. |\n| `library` | Textes des bibliothèques partagées comme la RCL. Exemple : `library:pankosmia-rcl:required_field`. |\n| `components` | Textes des éléments d'interface partagés (en-tête, messages du framework...). Exemple : `components:framework:no_entry_if_offline`. |\n| `branding` | Identité du produit. Exemple : `branding:software:name`. |\n| `scripture` | Noms des livres et des versifications. |\n| `munchers`, `crunchers`, `flavors`, `server`, `fonts` | Autres catégories du modèle, utilisées par certains gestionnaires de contenu et fonctions du serveur. |",
+        "es": "| Categoría | Contenido |\n|---|---|\n| `pages` | Una sección por cliente, con el nombre del `id` del cliente, rellenada desde el objeto `i18n` de su `pankosmia_metadata.json`. Ejemplo: `pages:core-settings:title`. |\n| `library` | Textos de bibliotecas compartidas como la RCL. Ejemplo: `library:pankosmia-rcl:required_field`. |\n| `components` | Textos de partes compartidas de la interfaz (cabecera, mensajes del framework...). Ejemplo: `components:framework:no_entry_if_offline`. |\n| `branding` | Identidad del producto. Ejemplo: `branding:software:name`. |\n| `scripture` | Nombres de libros y de versificaciones. |\n| `munchers`, `crunchers`, `flavors`, `server`, `fonts` | Otras categorías de la plantilla, usadas por ciertos gestores de contenido y funciones del servidor. |"
+      },
+      "heading_sources": {
+        "en": "Where the strings come from",
+        "fr": "D'où viennent les textes",
+        "es": "De dónde vienen los textos"
+      },
+      "sources": {
+        "en": "- **The template**: the base file `i18n.json` of `resource-core/templates`. The desktop app build copies it to `lib/templates/i18n.json`. It holds `library`, `components`, `branding`, `scripture`...\n- **Each client**: the `i18n` object of its `pankosmia_metadata.json`. A key `title` in the client `core-settings` becomes `pages:core-settings:title`.\n- **The product**: `i18nPatch.json` and `i18n-overrides.json` in the `globalBuildResources` of the desktop app (see below).",
+        "fr": "- **Le modèle** : le fichier de base `i18n.json` de `resource-core/templates`. Le build de l'application de bureau le copie dans `lib/templates/i18n.json`. Il contient `library`, `components`, `branding`, `scripture`...\n- **Chaque client** : l'objet `i18n` de son `pankosmia_metadata.json`. Une clé `title` du client `core-settings` devient `pages:core-settings:title`.\n- **Le produit** : `i18nPatch.json` et `i18n-overrides.json` dans les `globalBuildResources` de l'application de bureau (voir plus bas).",
+        "es": "- **La plantilla**: el archivo base `i18n.json` de `resource-core/templates`. La compilación de la aplicación de escritorio lo copia a `lib/templates/i18n.json`. Contiene `library`, `components`, `branding`, `scripture`...\n- **Cada cliente**: el objeto `i18n` de su `pankosmia_metadata.json`. Una clave `title` del cliente `core-settings` se convierte en `pages:core-settings:title`.\n- **El producto**: `i18nPatch.json` y `i18n-overrides.json` en los `globalBuildResources` de la aplicación de escritorio (véase más abajo)."
+      },
+      "heading_loading": {
+        "en": "How a client loads the translations",
+        "fr": "Comment un client charge les traductions",
+        "es": "Cómo carga un cliente las traducciones"
+      },
+      "loading": {
+        "en": "When a client starts, the `SpSpa` component of the RCL requests `/api/i18n/flat` from the server and keeps the result in the i18n context. The response is a flat map of `key` to text, for the language chosen by the user in the Settings client (stored through `/api/settings/languages`). Components read it with `i18nRef.current` and look up a key with `doI18n`.",
+        "fr": "Au démarrage d'un client, le composant `SpSpa` de la RCL demande `/api/i18n/flat` au serveur et conserve le résultat dans le contexte i18n. La réponse est une table plate `clé` vers texte, pour la langue choisie par l'utilisateur dans le client Paramètres (enregistrée via `/api/settings/languages`). Les composants la lisent avec `i18nRef.current` et recherchent une clé avec `doI18n`.",
+        "es": "Cuando arranca un cliente, el componente `SpSpa` de la RCL solicita `/api/i18n/flat` al servidor y guarda el resultado en el contexto i18n. La respuesta es un mapa plano de `clave` a texto, para el idioma elegido por el usuario en el cliente Ajustes (guardado mediante `/api/settings/languages`). Los componentes lo leen con `i18nRef.current` y buscan una clave con `doI18n`."
+      },
+      "heading_functions": {
+        "en": "Using translations in code",
+        "fr": "Utiliser les traductions dans le code",
+        "es": "Usar las traducciones en el código"
+      },
+      "functions_intro": {
+        "en": "Both functions come from `pankosmia-lib/i18n`. `doI18n(key, source)` returns the text, or the key itself when it is missing. `doInterpolatedI18n(key, values, source)` fills the placeholders `%1%`, `%2%`... of a text with an array of strings.",
+        "fr": "Les deux fonctions viennent de `pankosmia-lib/i18n`. `doI18n(clé, source)` renvoie le texte, ou la clé elle-même si elle est absente. `doInterpolatedI18n(clé, valeurs, source)` remplace les marqueurs `%1%`, `%2%`... d'un texte par un tableau de chaînes.",
+        "es": "Ambas funciones vienen de `pankosmia-lib/i18n`. `doI18n(clave, source)` devuelve el texto, o la propia clave si falta. `doInterpolatedI18n(clave, valores, source)` rellena los marcadores `%1%`, `%2%`... de un texto con una matriz de cadenas."
+      },
+      "functions_rules": {
+        "en": "`doInterpolatedI18n` is stricter than `doI18n`: it throws when the key is missing, when a value is not a string, when the number of values differs from the number of placeholders, or when a placeholder is malformed.",
+        "fr": "`doInterpolatedI18n` est plus strict que `doI18n` : il lève une erreur si la clé est absente, si une valeur n'est pas une chaîne, si le nombre de valeurs diffère du nombre de marqueurs, ou si un marqueur est mal formé.",
+        "es": "`doInterpolatedI18n` es más estricta que `doI18n`: lanza un error si falta la clave, si un valor no es una cadena, si el número de valores difiere del de marcadores, o si un marcador está mal formado."
+      },
+      "heading_add": {
+        "en": "Adding a string to a client",
+        "fr": "Ajouter un texte à un client",
+        "es": "Añadir un texto a un cliente"
+      },
+      "add": {
+        "en": "1. Add the key to the `i18n` object of the client's `pankosmia_metadata.json`, with at least the `en` translation.\n2. Use it in the code as `pages:<client id>:<key>`.\n3. Rebuild the client. Other languages can be added in the file or with the Localization Editor.",
+        "fr": "1. Ajoutez la clé dans l'objet `i18n` du `pankosmia_metadata.json` du client, avec au moins la traduction `en`.\n2. Utilisez-la dans le code sous la forme `pages:<id du client>:<clé>`.\n3. Reconstruisez le client. Les autres langues peuvent être ajoutées dans le fichier ou avec l'éditeur de localisation.",
+        "es": "1. Añada la clave al objeto `i18n` del `pankosmia_metadata.json` del cliente, con al menos la traducción `en`.\n2. Úsela en el código como `pages:<id del cliente>:<clave>`.\n3. Recompile el cliente. Se pueden añadir otros idiomas en el archivo o con el editor de localización."
+      },
+      "heading_editor": {
+        "en": "Localization Editor",
+        "fr": "Éditeur de localisation",
+        "es": "Editor de localización"
+      },
+      "editor": {
+        "en": "The client `core-client-i18n-editor` (id `i18n-editor`) edits the whole translation tree. It reads it from `/api/i18n/raw` and saves it with a POST to `/api/i18n`. It only lets you edit text values and add or remove language codes. It requires debug mode (`require.debug` is true), so it is listed in the Debug section of the menu.",
+        "fr": "Le client `core-client-i18n-editor` (id `i18n-editor`) modifie tout l'arbre de traduction. Il le lit depuis `/api/i18n/raw` et l'enregistre par un POST vers `/api/i18n`. Il permet seulement de modifier les textes et d'ajouter ou supprimer des codes de langue. Il exige le mode débogage (`require.debug` vaut true) ; il est donc listé dans la section Débogage du menu.",
+        "es": "El cliente `core-client-i18n-editor` (id `i18n-editor`) edita todo el árbol de traducción. Lo lee desde `/api/i18n/raw` y lo guarda con un POST a `/api/i18n`. Solo permite editar los textos y añadir o quitar códigos de idioma. Requiere el modo de depuración (`require.debug` es true), por lo que aparece en la sección Depuración del menú."
+      },
+      "heading_product": {
+        "en": "Product-level customization",
+        "fr": "Personnalisation au niveau du produit",
+        "es": "Personalización a nivel de producto"
+      },
+      "product": {
+        "en": "A desktop app can adjust texts without touching the clients, with two files in its `globalBuildResources`:\n\n- `i18nPatch.json`: applied at build time by `buildCommon.js` on top of `templates/i18n.json`. Every entry must already exist in the template, otherwise the build fails. In practice it only holds the product name (`branding.software.name.en`), which the `app_setup` script keeps equal to `APP_NAME`.\n- `i18n-overrides.json`: copied to `app_resources/product/i18n-overrides.json`. It has the same purpose, with the shape `{ \"pages\": { } }` (empty by default).",
+        "fr": "Une application de bureau peut ajuster des textes sans toucher aux clients, avec deux fichiers de ses `globalBuildResources` :\n\n- `i18nPatch.json` : appliqué au build par `buildCommon.js` par-dessus `templates/i18n.json`. Chaque entrée doit déjà exister dans le modèle, sinon le build échoue. En pratique il ne contient que le nom du produit (`branding.software.name.en`), que le script `app_setup` maintient égal à `APP_NAME`.\n- `i18n-overrides.json` : copié vers `app_resources/product/i18n-overrides.json`. Il a le même rôle, avec la forme `{ \"pages\": { } }` (vide par défaut).",
+        "es": "Una aplicación de escritorio puede ajustar textos sin tocar los clientes, con dos archivos de sus `globalBuildResources`:\n\n- `i18nPatch.json`: se aplica en la compilación mediante `buildCommon.js` sobre `templates/i18n.json`. Cada entrada debe existir ya en la plantilla, de lo contrario la compilación falla. En la práctica solo contiene el nombre del producto (`branding.software.name.en`), que el script `app_setup` mantiene igual a `APP_NAME`.\n- `i18n-overrides.json`: se copia a `app_resources/product/i18n-overrides.json`. Tiene el mismo propósito, con la forma `{ \"pages\": { } }` (vacío por defecto)."
+      }
+    },
+    "general_product": {
+      "title": {
+        "en": "Product",
+        "fr": "Produit",
+        "es": "Producto"
+      },
+      "subtitle": {
+        "en": "Desktop apps built on Pankosmia and what a product contains",
+        "fr": "Les applications de bureau basées sur Pankosmia et le contenu d'un produit",
+        "es": "Las aplicaciones de escritorio basadas en Pankosmia y qué contiene un producto"
+      },
+      "heading_apps": {
+        "en": "Desktop apps",
+        "fr": "Applications de bureau",
+        "es": "Aplicaciones de escritorio"
+      },
+      "apps_intro": {
+        "en": "A product is a desktop app repository (`desktop-app-*`). It assembles the server, a chosen list of clients, the branding and the product resources. The existing repositories are:",
+        "fr": "Un produit est un dépôt d'application de bureau (`desktop-app-*`). Il assemble le serveur, une liste choisie de clients, l'image de marque et les ressources du produit. Les dépôts existants sont :",
+        "es": "Un producto es un repositorio de aplicación de escritorio (`desktop-app-*`). Reúne el servidor, una lista elegida de clientes, la marca y los recursos del producto. Los repositorios existentes son:"
+      },
+      "apps_list": {
+        "en": "- `desktop-app-template`: the template to fork when creating a new desktop app. It is the reference for the rest of this page.\n- `desktop-app-pithekos`: the Pithekos desktop app, with the same structure as the template and its own name, version and branding.\n- `desktop-app-renaissance`: the Renaissance desktop app built on Pankosmia.\n- `desktop-app-tc4`: the tC4 desktop app built on Pankosmia.\n- `desktop-app-test-rcl`: a desktop app used to test the RCL.",
+        "fr": "- `desktop-app-template` : le modèle à dupliquer pour créer une nouvelle application de bureau. Il sert de référence pour le reste de cette page.\n- `desktop-app-pithekos` : l'application de bureau Pithekos, avec la même structure que le modèle et ses propres nom, version et image de marque.\n- `desktop-app-renaissance` : l'application de bureau Renaissance basée sur Pankosmia.\n- `desktop-app-tc4` : l'application de bureau tC4 basée sur Pankosmia.\n- `desktop-app-test-rcl` : une application de bureau servant à tester la RCL.",
+        "es": "- `desktop-app-template`: la plantilla que se duplica para crear una nueva aplicación de escritorio. Es la referencia para el resto de esta página.\n- `desktop-app-pithekos`: la aplicación de escritorio Pithekos, con la misma estructura que la plantilla y su propio nombre, versión y marca.\n- `desktop-app-renaissance`: la aplicación de escritorio Renaissance basada en Pankosmia.\n- `desktop-app-tc4`: la aplicación de escritorio tC4 basada en Pankosmia.\n- `desktop-app-test-rcl`: una aplicación de escritorio para probar la RCL."
+      },
+      "heading_layout": {
+        "en": "Structure of a desktop app",
+        "fr": "Structure d'une application de bureau",
+        "es": "Estructura de una aplicación de escritorio"
+      },
+      "layout": {
+        "en": "| Item | What it does |\n|---|---|\n| `app_config.env` | Main configuration: `APP_NAME`, `APP_SHORT_NAME`, `APP_VERSION`, `START_OFFLINE`, the assets (`ASSETn`, `ASSETn_PATH`, `ASSETn_NAME`), the `HOMEPAGE` client and the ordered list of clients (`CLIENT1`, `CLIENT2`...). Keep `core-client-dashboard` as `CLIENT1`. |\n| `buildSpec.json` | The build recipe generated by the `app_setup` script: app name and version, server binary (`bin`), folders to bundle (`lib`), client repositories to include (`libClients`) and the paths of the favicon, theme, product and client config files. |\n| `buildCommon.js` | Shared build logic: copies the libs and clients, patches the i18n template and copies the product files. |\n| `globalBuildResources/` | Everything specific to the product that is common to all operating systems (see below). |\n| `branding/` | Icon sources and scripts that generate the favicons and the Windows and macOS icons. |\n| `linux/`, `macos/`, `windows/` | Per-OS scripts (`app_setup`, `run`, `sync`, `build_server`...), setup files and build output. |\n| `local_server/`, `local_server.env`, `Rocket.toml` | The server and its versions: `dev` and `qa` give a version number, and `main` uses the one in `local_server/Cargo.toml`. |\n| `releases/`, `CHANGES.md` | Release folders per OS and the change log. |",
+        "fr": "| Élément | Rôle |\n|---|---|\n| `app_config.env` | Configuration principale : `APP_NAME`, `APP_SHORT_NAME`, `APP_VERSION`, `START_OFFLINE`, les assets (`ASSETn`, `ASSETn_PATH`, `ASSETn_NAME`), le client `HOMEPAGE` et la liste ordonnée des clients (`CLIENT1`, `CLIENT2`...). Gardez `core-client-dashboard` comme `CLIENT1`. |\n| `buildSpec.json` | La recette de build générée par le script `app_setup` : nom et version de l'application, binaire du serveur (`bin`), dossiers à embarquer (`lib`), dépôts de clients à inclure (`libClients`) et chemins des fichiers favicon, thème, produit et configuration des clients. |\n| `buildCommon.js` | Logique de build partagée : copie les libs et les clients, applique le patch du modèle i18n et copie les fichiers du produit. |\n| `globalBuildResources/` | Tout ce qui est propre au produit et commun à tous les systèmes d'exploitation (voir plus bas). |\n| `branding/` | Sources des icônes et scripts qui génèrent les favicons et les icônes Windows et macOS. |\n| `linux/`, `macos/`, `windows/` | Scripts par système (`app_setup`, `run`, `sync`, `build_server`...), fichiers d'installation et résultat du build. |\n| `local_server/`, `local_server.env`, `Rocket.toml` | Le serveur et ses versions : `dev` et `qa` donnent un numéro de version, et `main` utilise celui de `local_server/Cargo.toml`. |\n| `releases/`, `CHANGES.md` | Dossiers de publication par système et journal des modifications. |",
+        "es": "| Elemento | Qué hace |\n|---|---|\n| `app_config.env` | Configuración principal: `APP_NAME`, `APP_SHORT_NAME`, `APP_VERSION`, `START_OFFLINE`, los recursos (`ASSETn`, `ASSETn_PATH`, `ASSETn_NAME`), el cliente `HOMEPAGE` y la lista ordenada de clientes (`CLIENT1`, `CLIENT2`...). Mantenga `core-client-dashboard` como `CLIENT1`. |\n| `buildSpec.json` | La receta de compilación generada por el script `app_setup`: nombre y versión de la app, binario del servidor (`bin`), carpetas a empaquetar (`lib`), repositorios de clientes a incluir (`libClients`) y rutas de los archivos de favicon, tema, producto y configuración de clientes. |\n| `buildCommon.js` | Lógica de compilación compartida: copia las bibliotecas y los clientes, parchea la plantilla i18n y copia los archivos del producto. |\n| `globalBuildResources/` | Todo lo específico del producto y común a todos los sistemas operativos (véase más abajo). |\n| `branding/` | Fuentes de los iconos y scripts que generan los favicons y los iconos de Windows y macOS. |\n| `linux/`, `macos/`, `windows/` | Scripts por sistema (`app_setup`, `run`, `sync`, `build_server`...), archivos de instalación y resultado de la compilación. |\n| `local_server/`, `local_server.env`, `Rocket.toml` | El servidor y sus versiones: `dev` y `qa` indican un número de versión, y `main` usa el de `local_server/Cargo.toml`. |\n| `releases/`, `CHANGES.md` | Carpetas de publicación por sistema y registro de cambios. |"
+      },
+      "heading_global": {
+        "en": "globalBuildResources",
+        "fr": "globalBuildResources",
+        "es": "globalBuildResources"
+      },
+      "global_intro": {
+        "en": "This folder holds everything that makes the product different from another one. The build copies it into the app under `lib/app_resources/product/`.",
+        "fr": "Ce dossier contient tout ce qui distingue le produit d'un autre. Le build le copie dans l'application sous `lib/app_resources/product/`.",
+        "es": "Esta carpeta contiene todo lo que distingue al producto de otro. La compilación la copia en la aplicación bajo `lib/app_resources/product/`."
+      },
+      "global": {
+        "en": "| File | What it does |\n|---|---|\n| `product.json` | Identity of the product: `name`, `short_name`, `version`, `datetime` (build date), `homepage` (the client opened first) and `start_offline`. It is regenerated by the build scripts from `app_config.env`. |\n| `client_config.json` | Default settings of the clients. Keys are client ids, or `_global` for settings shared by all clients. Each value is a list of groups with an `id`, an `i18n` label and `fields` (each with an `id`, an `i18n` label and a `value`). Example: `internetConnectionAccess` in `_global`, read by the dashboard. |\n| `theme.json` | The MUI theme of the product (`palette` with `primary`, `secondary`...). |\n| `favicon*.png`, `favicon.ico`, `icon.ico`, `icon.icns`, `linux_icon.png` | Icons of the app for the browser, Windows, macOS and Linux. |\n| `i18nPatch.json`, `i18n-overrides.json` | Product-level text changes, see the i18n page. |\n| `product_resources/` | Product-specific data, see below. |",
+        "fr": "| Fichier | Rôle |\n|---|---|\n| `product.json` | Identité du produit : `name`, `short_name`, `version`, `datetime` (date du build), `homepage` (le client ouvert en premier) et `start_offline`. Il est régénéré par les scripts de build à partir de `app_config.env`. |\n| `client_config.json` | Réglages par défaut des clients. Les clés sont des ids de client, ou `_global` pour les réglages communs à tous. Chaque valeur est une liste de groupes avec un `id`, un libellé `i18n` et des `fields` (chacun avec un `id`, un libellé `i18n` et une `value`). Exemple : `internetConnectionAccess` dans `_global`, lu par le tableau de bord. |\n| `theme.json` | Le thème MUI du produit (`palette` avec `primary`, `secondary`...). |\n| `favicon*.png`, `favicon.ico`, `icon.ico`, `icon.icns`, `linux_icon.png` | Icônes de l'application pour le navigateur, Windows, macOS et Linux. |\n| `i18nPatch.json`, `i18n-overrides.json` | Modifications de textes au niveau du produit, voir la page i18n. |\n| `product_resources/` | Données propres au produit, voir ci-dessous. |",
+        "es": "| Archivo | Qué hace |\n|---|---|\n| `product.json` | Identidad del producto: `name`, `short_name`, `version`, `datetime` (fecha de compilación), `homepage` (el cliente que se abre primero) y `start_offline`. Los scripts de compilación lo regeneran a partir de `app_config.env`. |\n| `client_config.json` | Ajustes por defecto de los clientes. Las claves son ids de cliente, o `_global` para ajustes comunes a todos. Cada valor es una lista de grupos con un `id`, una etiqueta `i18n` y `fields` (cada uno con un `id`, una etiqueta `i18n` y un `value`). Ejemplo: `internetConnectionAccess` en `_global`, leído por el panel. |\n| `theme.json` | El tema MUI del producto (`palette` con `primary`, `secondary`...). |\n| `favicon*.png`, `favicon.ico`, `icon.ico`, `icon.icns`, `linux_icon.png` | Iconos de la app para el navegador, Windows, macOS y Linux. |\n| `i18nPatch.json`, `i18n-overrides.json` | Cambios de textos a nivel de producto, véase la página i18n. |\n| `product_resources/` | Datos propios del producto, véase abajo. |"
+      },
+      "heading_resources": {
+        "en": "product_resources",
+        "fr": "product_resources",
+        "es": "product_resources"
+      },
+      "resources": {
+        "en": "`globalBuildResources/product_resources` houses the app-specific data. Its content is copied to `lib/app_resources/product/product_resources` in the built app (when you `run` in development, to `<os>/build/lib/app_resources/product/product_resources`).\n\nThe convention is one sub-folder per client id, holding the data that this client needs. In the template, `core-client-remote-repos/organizations/organization.json` lists the Git organizations offered to the remote repos client, so two products can offer different organizations without changing the client:",
+        "fr": "`globalBuildResources/product_resources` contient les données propres à l'application. Son contenu est copié vers `lib/app_resources/product/product_resources` dans l'application construite (lors d'un `run` en développement, vers `<os>/build/lib/app_resources/product/product_resources`).\n\nLa convention est un sous-dossier par id de client, contenant les données dont ce client a besoin. Dans le modèle, `core-client-remote-repos/organizations/organization.json` liste les organisations Git proposées au client des dépôts distants ; deux produits peuvent ainsi proposer des organisations différentes sans modifier le client :",
+        "es": "`globalBuildResources/product_resources` contiene los datos propios de la aplicación. Su contenido se copia a `lib/app_resources/product/product_resources` en la aplicación compilada (al ejecutar `run` en desarrollo, a `<os>/build/lib/app_resources/product/product_resources`).\n\nLa convención es una subcarpeta por id de cliente, con los datos que ese cliente necesita. En la plantilla, `core-client-remote-repos/organizations/organization.json` lista las organizaciones Git ofrecidas al cliente de repositorios remotos, de modo que dos productos pueden ofrecer organizaciones distintas sin cambiar el cliente:"
+      }
+    },
+    "general_clients": {
+      "title": {
+        "en": "Clients",
+        "fr": "Clients",
+        "es": "Clientes"
+      },
+      "subtitle": {
+        "en": "Structure of a client and the options of pankosmia_metadata.json",
+        "fr": "Structure d'un client et options de pankosmia_metadata.json",
+        "es": "Estructura de un cliente y opciones de pankosmia_metadata.json"
+      },
+      "heading_what": {
+        "en": "What is a client",
+        "fr": "Qu'est-ce qu'un client",
+        "es": "Qué es un cliente"
+      },
+      "what": {
+        "en": "A client is a web app (React, built with Vite) served by the Pankosmia server at `/clients/<name>`. The dashboard, the settings and every content handler (`core-contenthandler_*`) are clients. A product includes a client by listing it in `CLIENTn` in `app_config.env` (and so in `libClients` of `buildSpec.json`). The build then copies its `build/` output, `package.json`, `pankosmia_metadata.json` and `storage_id.json` (when it exists) into `lib/clients/<repository name>`.",
+        "fr": "Un client est une application web (React, construite avec Vite) servie par le serveur Pankosmia à l'adresse `/clients/<nom>`. Le tableau de bord, les paramètres et chaque gestionnaire de contenu (`core-contenthandler_*`) sont des clients. Un produit inclut un client en le listant dans `CLIENTn` de `app_config.env` (donc dans `libClients` de `buildSpec.json`). Le build copie alors son dossier `build/`, `package.json`, `pankosmia_metadata.json` et `storage_id.json` (s'il existe) dans `lib/clients/<nom du dépôt>`.",
+        "es": "Un cliente es una aplicación web (React, compilada con Vite) servida por el servidor Pankosmia en `/clients/<nombre>`. El panel, los ajustes y cada gestor de contenido (`core-contenthandler_*`) son clientes. Un producto incluye un cliente listándolo en `CLIENTn` de `app_config.env` (y por tanto en `libClients` de `buildSpec.json`). La compilación copia entonces su salida `build/`, `package.json`, `pankosmia_metadata.json` y `storage_id.json` (si existe) en `lib/clients/<nombre del repositorio>`."
+      },
+      "heading_structure": {
+        "en": "Structure of a client",
+        "fr": "Structure d'un client",
+        "es": "Estructura de un cliente"
+      },
+      "structure": {
+        "en": "| Item | What it does |\n|---|---|\n| `pankosmia_metadata.json` | Declares the client to the server and the other clients (see below). |\n| `package.json` | Dependencies and scripts. `homepage` is `/clients/<name>`. |\n| `vite.config.js` | Vite setup: `base` is `/clients/<name>/`, the dev server has its own port, and `/api` is proxied to the Pankosmia server (port 19119). |\n| `index.html`, `public/` | Page shell and static files. |\n| `src/index.jsx` | Entry point. It wraps the app in the RCL `SpSpa` component with `requireNet`, `titleKey` (`pages:<id>:title`) and `currentId` (the metadata `id`). |\n| `src/App.jsx`, `src/components/` | The pages and components of the client. |\n| `build/` | Output of `vite build`, the folder the server actually serves. |\n| `storage_id.json` | A generated UUID of the client (written by `scripts/write-storage-id.js` before start, dev and build), when the client uses it. |",
+        "fr": "| Élément | Rôle |\n|---|---|\n| `pankosmia_metadata.json` | Déclare le client au serveur et aux autres clients (voir plus bas). |\n| `package.json` | Dépendances et scripts. `homepage` vaut `/clients/<nom>`. |\n| `vite.config.js` | Configuration de Vite : `base` vaut `/clients/<nom>/`, le serveur de développement a son propre port, et `/api` est redirigé vers le serveur Pankosmia (port 19119). |\n| `index.html`, `public/` | Squelette de la page et fichiers statiques. |\n| `src/index.jsx` | Point d'entrée. Il enveloppe l'application dans le composant `SpSpa` de la RCL avec `requireNet`, `titleKey` (`pages:<id>:title`) et `currentId` (l'`id` des métadonnées). |\n| `src/App.jsx`, `src/components/` | Les pages et composants du client. |\n| `build/` | Résultat de `vite build`, le dossier réellement servi par le serveur. |\n| `storage_id.json` | Un UUID généré pour le client (écrit par `scripts/write-storage-id.js` avant start, dev et build), lorsque le client l'utilise. |",
+        "es": "| Elemento | Qué hace |\n|---|---|\n| `pankosmia_metadata.json` | Declara el cliente al servidor y a los demás clientes (véase abajo). |\n| `package.json` | Dependencias y scripts. `homepage` es `/clients/<nombre>`. |\n| `vite.config.js` | Configuración de Vite: `base` es `/clients/<nombre>/`, el servidor de desarrollo tiene su propio puerto y `/api` se redirige al servidor Pankosmia (puerto 19119). |\n| `index.html`, `public/` | Estructura de la página y archivos estáticos. |\n| `src/index.jsx` | Punto de entrada. Envuelve la app en el componente `SpSpa` de la RCL con `requireNet`, `titleKey` (`pages:<id>:title`) y `currentId` (el `id` de los metadatos). |\n| `src/App.jsx`, `src/components/` | Las páginas y componentes del cliente. |\n| `build/` | Salida de `vite build`, la carpeta que el servidor sirve realmente. |\n| `storage_id.json` | Un UUID generado para el cliente (escrito por `scripts/write-storage-id.js` antes de start, dev y build), cuando el cliente lo usa. |"
+      },
+      "heading_metadata": {
+        "en": "pankosmia_metadata.json",
+        "fr": "pankosmia_metadata.json",
+        "es": "pankosmia_metadata.json"
+      },
+      "metadata_intro": {
+        "en": "This file is the identity card of a client. The server reads it to list the client (`/api/list-clients`) and to publish what it can do (`/api/client-interfaces`), and the translations it contains feed the i18n tree. Fields:",
+        "fr": "Ce fichier est la carte d'identité d'un client. Le serveur le lit pour lister le client (`/api/list-clients`) et pour publier ce qu'il sait faire (`/api/client-interfaces`), et les traductions qu'il contient alimentent l'arbre i18n. Champs :",
+        "es": "Este archivo es el documento de identidad de un cliente. El servidor lo lee para listar el cliente (`/api/list-clients`) y publicar lo que puede hacer (`/api/client-interfaces`), y las traducciones que contiene alimentan el árbol i18n. Campos:"
+      },
+      "metadata": {
+        "en": "| Field | Type | What it does |\n|---|---|---|\n| `id` | string | Unique identifier of the client. It is the section name in the i18n tree (`pages:<id>:...`), the `currentId` given to `SpSpa`, and it identifies the client in the menu. |\n| `require.net` | boolean | When true, the client needs internet. Its menu entry is disabled while the app is offline, and a page using `requireNet` shows a \"no entry if offline\" message. |\n| `require.debug` | boolean | When true, the client is a developer tool: it is listed in the Debug section of the menu, which only appears when debug mode is on. When false or absent, the client is in the normal menu. |\n| `minServerVersion` | string | Minimum server version (for example `0.20.3`). The app does not run if the server is older than the minimum required by a client. |\n| `exclude_from_menu` | boolean | When true, the client is not listed in the menu of the header. It is still reachable by its URL and from links of other clients. |\n| `exclude_from_dashboard` | boolean | When true, the client is removed from the dashboard, for example its entry in the Create button. |\n| `i18n` | object | Translations of the client. Each key is a name with one text per language code. `title` and `summary` are conventional. See the i18n page. |\n| `endpoints` | object | The actions the client offers to other clients, per document type (see below). |",
+        "fr": "| Champ | Type | Rôle |\n|---|---|---|\n| `id` | chaîne | Identifiant unique du client. C'est le nom de la section dans l'arbre i18n (`pages:<id>:...`), le `currentId` donné à `SpSpa`, et il identifie le client dans le menu. |\n| `require.net` | booléen | Si true, le client a besoin d'internet. Son entrée de menu est désactivée hors ligne, et une page utilisant `requireNet` affiche un message d'accès refusé hors ligne. |\n| `require.debug` | booléen | Si true, le client est un outil de développement : il est listé dans la section Débogage du menu, qui n'apparaît que si le mode débogage est activé. Si false ou absent, le client est dans le menu normal. |\n| `minServerVersion` | chaîne | Version minimale du serveur (par exemple `0.20.3`). L'application ne démarre pas si le serveur est plus ancien que le minimum requis par un client. |\n| `exclude_from_menu` | booléen | Si true, le client n'est pas listé dans le menu de l'en-tête. Il reste accessible par son URL et par des liens d'autres clients. |\n| `exclude_from_dashboard` | booléen | Si true, le client est retiré du tableau de bord, par exemple son entrée dans le bouton Créer. |\n| `i18n` | objet | Traductions du client. Chaque clé est un nom avec un texte par code de langue. `title` et `summary` sont conventionnels. Voir la page i18n. |\n| `endpoints` | objet | Les actions que le client offre aux autres clients, par type de document (voir plus bas). |",
+        "es": "| Campo | Tipo | Qué hace |\n|---|---|---|\n| `id` | cadena | Identificador único del cliente. Es el nombre de la sección en el árbol i18n (`pages:<id>:...`), el `currentId` que se pasa a `SpSpa`, e identifica al cliente en el menú. |\n| `require.net` | booleano | Si es true, el cliente necesita internet. Su entrada de menú se desactiva sin conexión, y una página que usa `requireNet` muestra un mensaje de acceso denegado sin conexión. |\n| `require.debug` | booleano | Si es true, el cliente es una herramienta de desarrollo: aparece en la sección Depuración del menú, que solo se muestra con el modo de depuración activado. Si es false o no existe, el cliente está en el menú normal. |\n| `minServerVersion` | cadena | Versión mínima del servidor (por ejemplo `0.20.3`). La aplicación no se ejecuta si el servidor es más antiguo que el mínimo requerido por un cliente. |\n| `exclude_from_menu` | booleano | Si es true, el cliente no aparece en el menú de la cabecera. Sigue accesible por su URL y desde enlaces de otros clientes. |\n| `exclude_from_dashboard` | booleano | Si es true, el cliente se quita del panel, por ejemplo su entrada en el botón Crear. |\n| `i18n` | objeto | Traducciones del cliente. Cada clave es un nombre con un texto por código de idioma. `title` y `summary` son convencionales. Véase la página i18n. |\n| `endpoints` | objeto | Las acciones que el cliente ofrece a otros clientes, por tipo de documento (véase abajo). |"
+      },
+      "heading_examples": {
+        "en": "Examples",
+        "fr": "Exemples",
+        "es": "Ejemplos"
+      },
+      "examples_intro": {
+        "en": "The settings client is hidden from both the menu and the dashboard:",
+        "fr": "Le client des paramètres est masqué à la fois du menu et du tableau de bord :",
+        "es": "El cliente de ajustes está oculto tanto del menú como del panel:"
+      },
+      "examples_handler": {
+        "en": "A content handler for developers only (`require.debug`), shown in the Debug section of the menu:",
+        "fr": "Un gestionnaire de contenu réservé aux développeurs (`require.debug`), affiché dans la section Débogage du menu :",
+        "es": "Un gestor de contenido solo para desarrolladores (`require.debug`), mostrado en la sección Depuración del menú:"
+      },
+      "heading_endpoints": {
+        "en": "endpoints",
+        "fr": "endpoints",
+        "es": "endpoints"
+      },
+      "endpoints_intro": {
+        "en": "Content handlers use `endpoints` to tell the other clients what they can do with a type of document (a flavor such as `textTranslation`). Other clients read it from `/api/client-interfaces` and build their menus from it, so a handler does not need to be known by name. Each action is a list of entries (`edit` is a single entry) with these fields:",
+        "fr": "Les gestionnaires de contenu utilisent `endpoints` pour dire aux autres clients ce qu'ils savent faire avec un type de document (une saveur comme `textTranslation`). Les autres clients le lisent via `/api/client-interfaces` et construisent leurs menus à partir de celui-ci : un gestionnaire n'a donc pas besoin d'être connu par son nom. Chaque action est une liste d'entrées (`edit` est une entrée unique) avec ces champs :",
+        "es": "Los gestores de contenido usan `endpoints` para decir a los demás clientes qué pueden hacer con un tipo de documento (un sabor como `textTranslation`). Los otros clientes lo leen desde `/api/client-interfaces` y construyen sus menús a partir de él, así que un gestor no necesita ser conocido por su nombre. Cada acción es una lista de entradas (`edit` es una única entrada) con estos campos:"
+      },
+      "endpoints_fields": {
+        "en": "- `doc`: a developer description of the entry.\n- `label`: an i18n key (for example `pages:core-contenthandler_obs:create_content_obs`) shown to the user.\n- `url`: the page of the client to open, relative to `/clients/<id>/`.\n- `placeHolders`: documents the variables used in `url`, such as `%%REPO_PATH%%`, replaced by the path of the repository in `<X>/<Y>/<Z>` format.\n- `subMenu`: only for `export`, groups the entries by format (`usfm`, `pdf`...).",
+        "fr": "- `doc` : une description pour les développeurs.\n- `label` : une clé i18n (par exemple `pages:core-contenthandler_obs:create_content_obs`) affichée à l'utilisateur.\n- `url` : la page du client à ouvrir, relative à `/clients/<id>/`.\n- `placeHolders` : documente les variables utilisées dans `url`, comme `%%REPO_PATH%%`, remplacée par le chemin du dépôt au format `<X>/<Y>/<Z>`.\n- `subMenu` : uniquement pour `export`, regroupe les entrées par format (`usfm`, `pdf`...).",
+        "es": "- `doc`: una descripción para desarrolladores.\n- `label`: una clave i18n (por ejemplo `pages:core-contenthandler_obs:create_content_obs`) que se muestra al usuario.\n- `url`: la página del cliente que se abre, relativa a `/clients/<id>/`.\n- `placeHolders`: documenta las variables usadas en `url`, como `%%REPO_PATH%%`, sustituida por la ruta del repositorio en formato `<X>/<Y>/<Z>`.\n- `subMenu`: solo para `export`, agrupa las entradas por formato (`usfm`, `pdf`...)."
+      },
+      "endpoints_actions_intro": {
+        "en": "Actions in use:",
+        "fr": "Actions utilisées :",
+        "es": "Acciones en uso:"
+      },
+      "endpoints_actions": {
+        "en": "| Action | Used for |\n|---|---|\n| `create_document` | Entries of the Create button of the dashboard. |\n| `edit` | The client that opens a repository of this document type. |\n| `new_book`, `import_book`, `delete_book` | Actions on a repository, offered in the Content client. |\n| `export` | Export formats of a repository, per format in `subMenu`. |\n| `about_repo`, `manager`, `initDocument`, `importContent` | Other entries read by the dashboard. |\n| `download_resources` | Page used to download resources (remote repos client). |",
+        "fr": "| Action | Utilisation |\n|---|---|\n| `create_document` | Entrées du bouton Créer du tableau de bord. |\n| `edit` | Le client qui ouvre un dépôt de ce type de document. |\n| `new_book`, `import_book`, `delete_book` | Actions sur un dépôt, proposées dans le client Contenu. |\n| `export` | Formats d'export d'un dépôt, par format dans `subMenu`. |\n| `about_repo`, `manager`, `initDocument`, `importContent` | Autres entrées lues par le tableau de bord. |\n| `download_resources` | Page de téléchargement de ressources (client des dépôts distants). |",
+        "es": "| Acción | Uso |\n|---|---|\n| `create_document` | Entradas del botón Crear del panel. |\n| `edit` | El cliente que abre un repositorio de este tipo de documento. |\n| `new_book`, `import_book`, `delete_book` | Acciones sobre un repositorio, ofrecidas en el cliente Contenido. |\n| `export` | Formatos de exportación de un repositorio, por formato en `subMenu`. |\n| `about_repo`, `manager`, `initDocument`, `importContent` | Otras entradas leídas por el panel. |\n| `download_resources` | Página para descargar recursos (cliente de repositorios remotos). |"
+      }
+    },
     "scripts": {
       "title": {
         "en": "Scripts",
