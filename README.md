@@ -17,7 +17,7 @@
     - [Files copied over from just-the-docs repo, then edited for i18n](#files-copied-over-from-just-the-docs-repo-then-edited-for-i18n)
 
 ## To build and run locally
-1. Install Ruby+Devkit 3.3.6-1 from: https://rubyinstaller.org/downloads/ to match the current github workflow version. This includes Bundler version 2.5.22.
+1. Install Ruby+Devkit 3.3.13-1 from: https://rubyinstaller.org/downloads/ to match the current github workflow version. This includes Bundler version 2.5.22.
 2. After installing, restart your terminal.
 3. `bundle install`
 4. Run `bundle exec jekyll serve`.  This builds files in the `_site/` directory and serves them at `http://localhost:4000`.
