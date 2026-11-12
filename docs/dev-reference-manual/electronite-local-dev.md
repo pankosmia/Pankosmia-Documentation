@@ -96,35 +96,4 @@ parent: Dev Reference Manual
 ### {% include t.html key="heading_local_installer_build" %}
 {: .no_toc }
 
-{% include tm.html key="local_installer_consider" %}
-
-#### {% include t.html key="heading_installer_prerequisites" %}
-  - {% include tm.html key="installer_prereq_server" %}
-  - {% include t.html key="installer_prereq_windows" %}
-    - {% include tm.html key="installer_prereq_inno" %}
-
-#### {% include t.html key="heading_bundle_viewer_script" %}
-
-- Windows - `cd windows\scripts` {% include t.html key="then" %} `.\bundle_viewer.ps1`
-  - {% include t.html key="bundle_viewer_windows_optional" %}
-    - {% include tm.html key="bundle_viewer_windows_arg1" %}
-  - {% include t.html key="bundle_viewer_windows_desc" %}
-
-
-- MacOS - `cd /macos/scripts` {% include t.html key="then" %} `./bundle_viewer.zsh`
-  - {% include t.html key="bundle_viewer_macos_optional" %}
-    - {% include tm.html key="bundle_viewer_macos_arg1" %}
-  - {% include t.html key="bundle_viewer_macos_desc" %}
-
-- Linux - `cd /linux/scripts` {% include t.html key="then" %} `./bundle_viewer.bsh`
-  - {% include t.html key="bundle_viewer_linux_before" %}
-    - {% include t.html key="bundle_viewer_linux_step1" %}
-    - {% include t.html key="bundle_viewer_linux_step2" %}
-    - {% include t.html key="bundle_viewer_linux_step3" %}
-    - {% include tm.html key="bundle_viewer_linux_step4" %}
-    - {% include tm.html key="bundle_viewer_linux_step5" %}
-
-#### {% include t.html key="heading_bundle_viewer_outputs" %}
-- Windows: `releases\\windows\\intel64\\[app-name]-[version]-windows-[x64|arm64].exe`
-- MacOS: `releases/macos/[intel64|arm64]/[app-name]-[version]-macos-[x64|arm64].pkg`
-- Linux: `releases/linux/[app-name]-[version]-linux-[x64|arm64].deb`
+{% include tc.html key="see" %} [bundle_viewer]({% include localized_relative_url.html path="/script-reference/#usage-scripts" %}). {% include tmp.html key="local_installer_consider" %}

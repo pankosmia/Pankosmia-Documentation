@@ -44,7 +44,7 @@ parent: Dev Quickstart
 | pnpm 11.20.0 | npm 10.7.0 |
 | node 24.11.0 | node 20.18.1 |
 
-- git 2.44.0; {% include t.html key="see" %} [https://git-scm.com/install/windows](https://git-scm.com/install/windows)
+- git 2.44.0; {% include tc.html key="see" %} [https://git-scm.com/install/windows](https://git-scm.com/install/windows)
 - rustc 1.88.0 -- {% include t.html key="see" %} [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
 - cmake 3.31.0 -- {% include tmp.html key="windows_cmake_ver" %} {% include t.html key="see" %} [https://cmake.org/download/](https://cmake.org/download/)
 - {% include t.html key="windows_powershell" %}
