@@ -11,6 +11,10 @@ parent: Dev Reference Manual
 # {% include t.html key="title" %}
 {: .no_toc }
 
+{{ site.data.i18n.pages.general_clients.title[current_lang] }}
+
+{ site.data.i18n.pages.general_clients.title[current_lang] }
+
 {% include t.html key="additional_info" %}
 {: .fs-6 .fw-300 }
 

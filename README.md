@@ -92,6 +92,8 @@ When i18n return markdown, it gets converted to html by `tm.html` or `tcm.html`.
 | pages | `t.html` | `tm.html` | `tmp.html` |
 | common | `tc.html` | `tcm.html` | `tcmp.html` |
 
+An alternate method of displaying plain text i18n is `{{ site.data.i18n.<path.to.key>[current_lang] }}`.
+
 ## Inline links to other pages
 
 Use this to create inline links to other pages: `{% include localized_relative_url.html path="/path-to/page/" %}` where that is the url in `[link](url)`
