@@ -96,4 +96,4 @@ parent: Dev Reference Manual
 ### {% include t.html key="heading_local_installer_build" %}
 {: .no_toc }
 
-{% include tc.html key="see" %} [bundle_viewer]({% include localized_relative_url.html path="/script-reference/#usage-scripts" %}). {% include tmp.html key="local_installer_consider" %}
+{% include tc.html key="see" %} [bundle_app]({% include localized_relative_url.html path="/script-reference/#usage-scripts" %}). {% include tmp.html key="local_installer_consider" %}
