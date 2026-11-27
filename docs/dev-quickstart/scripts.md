@@ -31,6 +31,8 @@ parent: Dev Quickstart
 ### {% include t.html key="heading_client_development" %}
 {% include tm.html key="client_dev_intro" %}
 
+{% include tm.html key="client_dev_intro_2" %}
+
 {% include tm.html key="client_dev_see_also" %}
 
 {% include tm.html key="client_dev_release" %}
@@ -40,12 +42,6 @@ parent: Dev Quickstart
 - {% include t.html key="artifacts_main_branch" %}
 
 {% include t.html key="artifacts_download" %}
-
-{% include t.html key="artifacts_double_compressed" %}
-- {% include tm.html key="artifacts_strip_tgz" %}
-- {% include tm.html key="artifacts_strip_zip" %}
-- {% include t.html key="artifacts_windows_warning" %}
-- {% include tm.html key="artifacts_pkg_zip" %}
 
 {% include t.html key="artifacts_upload_releases" %}
 

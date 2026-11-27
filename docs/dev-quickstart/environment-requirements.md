@@ -36,6 +36,7 @@ parent: Dev Quickstart
 | node 24.11.0 | node 20.18.1 |
 
 - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
+- jq 1.6 -- `sudo apt update && sudo apt install jq`
 
 ### Windows 11 {% include t.html key="with" %}
 
@@ -49,6 +50,7 @@ parent: Dev Quickstart
 - cmake 3.31.0 -- {% include tmp.html key="windows_cmake_ver" %} {% include t.html key="see" %} [https://cmake.org/download/](https://cmake.org/download/)
 - {% include t.html key="windows_powershell" %}
 - {% include tmp.html key="windows_inno_setup" %}
+- jq 1.88 -- `winget install jqlang.jq` or `choco install jq`
 
 ### MacOS Apple silicon (ARM64) {% include t.html key="with" %}
 
@@ -59,6 +61,7 @@ parent: Dev Quickstart
 
 - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
 - OpenSSL 3.5.0 -- `brew install openssl` -- {% include t.html key="see" %} [Homebrew](https://brew.sh/)
+- jq 1.8.2 -- `brew install jq`
 
 ### MacOS Intel (x86_64) {% include t.html key="with" %}
 
@@ -69,6 +72,7 @@ parent: Dev Quickstart
 
 - rustc 1.88.0 -- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs {% raw %}|{% endraw %} sh`
 - OpenSSL 3.6.4 -- `sudo port install openssl3` -- {% include t.html key="see" %} [MacPorts](https://www.macports.org/install.php)
+- jq 1.8.2 -- `sudo port install jq`
 
 #### {% include t.html key="heading_planning_ahead" %}
 - {% include t.html key="github_x64_eol" %}

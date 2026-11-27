@@ -41,9 +41,9 @@
       "es": "Notas al pie"
     },
     "footnote1": {
-      "en": "Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command prompt</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>The `.\\` is optional from a command prompt.<br /><span style=\"margin-left:3.25em\"></span>Use a **powershell** terminal for the **.ps1** build scripts.<br />MacOS developers, run .bsh scripts from a **MacOS terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Linux developers, run .zsh scripts from a **linux terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
-      "fr": "Développeurs Windows, exécutez les scripts <b>.bat</b> depuis un <b>Powershell ou une invite de commandes</b> :<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>Le `.\\` est facultatif depuis une invite de commandes.<br /><span style=\"margin-left:3.25em\"></span>Utilisez un terminal **powershell** pour les scripts de build **.ps1**.<br />Développeurs MacOS, exécutez les scripts .bsh depuis un **terminal MacOS** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Développeurs Linux, exécutez les scripts .zsh depuis un **terminal linux** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
-      "es": "Desarrolladores Windows, ejecuten los scripts <b>.bat</b> desde un <b>Powershell o símbolo del sistema</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>El `.\\` es opcional desde un símbolo del sistema.<br /><span style=\"margin-left:3.25em\"></span>Use un terminal **powershell** para los scripts de build **.ps1**.<br />Desarrolladores MacOS, ejecuten los scripts .bsh desde un **terminal MacOS**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].bsh`<br />Desarrolladores Linux, ejecuten los scripts .zsh desde un **terminal linux**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`"
+      "en": "Windows developers, run <b>.bat</b> scripts from a <b>Powershell or Command prompt</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.\\[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>The `.\\` is optional from a command prompt.<br /><span style=\"margin-left:3.25em\"></span>Use a **powershell** terminal for the **.ps1** build scripts.<br />MacOS developers, run .sh scripts from a **MacOS terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].sh`<br />Linux developers, run .zsh scripts from a **linux terminal**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
+      "fr": "Développeurs Windows, exécutez les scripts <b>.bat</b> depuis un <b>Powershell ou une invite de commandes</b> :<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>Le `.\\` est facultatif depuis une invite de commandes.<br /><span style=\"margin-left:3.25em\"></span>Utilisez un terminal **powershell** pour les scripts de build **.ps1**.<br />Développeurs MacOS, exécutez les scripts .sh depuis un **terminal MacOS** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].sh`<br />Développeurs Linux, exécutez les scripts .zsh depuis un **terminal linux** :<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`",
+      "es": "Desarrolladores Windows, ejecuten los scripts <b>.bat</b> desde un <b>Powershell o símbolo del sistema</b>:<br /><span style=\"margin-left:3.25em\"></span>_...repos\\pankosmia\\[your-desktop-app-repo-name]\\windows\\scripts>_ `.[scriptname].bat`<br /><span style=\"margin-left:3.25em\"></span>El `.\\` es opcional desde un símbolo del sistema.<br /><span style=\"margin-left:3.25em\"></span>Use un terminal **powershell** para los scripts de build **.ps1**.<br />Desarrolladores MacOS, ejecuten los scripts .sh desde un **terminal MacOS**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/macos/scripts>_ `./[scriptname].sh`<br />Desarrolladores Linux, ejecuten los scripts .zsh desde un **terminal linux**:<br /><span style=\"margin-left:3.25em\"></span>_...repos/pankosmia/[your-desktop-app-repo-name]/linux/scripts>_ `./[scriptname].zsh`"
     },
     "use_powershell": {
       "en": "use a powershell terminal",
@@ -313,14 +313,14 @@
         "es": "En la raíz de su clon de este repositorio, ejecute:"
       },
       "heading_edit_app_config": {
-        "en": "Edit app_config.env",
-        "fr": "Modifier app_config.env",
-        "es": "Editar app_config.env"
+        "en": "Edit app_config.json",
+        "fr": "Modifier app_config.json",
+        "es": "Editar app_config.json"
       },
       "edit_app_config_intro": {
-        "en": "Entering the App Name, version number, Apps Short Name for working directory, assets, and clients.",
-        "fr": "Saisir le nom de l'application, le numéro de version, le nom court de l'application pour le répertoire de travail, les assets et les clients.",
-        "es": "Ingrese el nombre de la aplicación, el número de versión, el nombre corto de la aplicación para el directorio de trabajo, los assets y los clientes."
+        "en": "Enter the App `name`, `version` number, and `short_name` for the working directory, `assets`, and `clients`.",
+        "fr": "Saisir le nom de l'application (`name`), le numéro de version (`version`), le nom court de l'application pour le répertoire de travail (`short_name`), les `assets` et les `clients`.",
+        "es": "Ingrese el nombre de la aplicación (`name`), el número de versión (`version`), el nombre corto de la aplicación para el directorio de trabajo (`short_name`), los `assets` y los clientes (`clients`)."
       },
       "heading_required_assets": {
         "en": "Required Assets:",
@@ -333,9 +333,9 @@
         "es": "Clientes requeridos:"
       },
       "required_clients": {
-        "en": "The only required client is one that matches the HOMEPAGE entered in `app_config.env`. The homepage is typically `core-client-dashboard` which has an id of `dashboard`, but the id of any client in the product may be configured as the homepage.",
-        "fr": "Le seul client requis est celui qui correspond à la HOMEPAGE saisie dans `app_config.env`. La page d'accueil est généralement `core-client-dashboard` qui a un id de `dashboard`, mais l'id de n'importe quel client dans le produit peut être configuré comme page d'accueil.",
-        "es": "El único cliente requerido es el que coincide con la HOMEPAGE introducida en `app_config.env`. La página de inicio es normalmente `core-client-dashboard` que tiene un id de `dashboard`, pero el id de cualquier cliente en el producto puede configurarse como página de inicio."
+        "en": "The only required client is one that matches the `homepage` entered in `app_config.json`. The homepage is typically `core-client-dashboard` which has an id of `dashboard`, but the id of any client in the product may be configured as the homepage.",
+        "fr": "Le seul client requis est celui qui correspond à la `homepage` saisie dans `app_config.json`. La page d'accueil est généralement `core-client-dashboard` qui a un id de `dashboard`, mais l'id de n'importe quel client dans le produit peut être configuré comme page d'accueil.",
+        "es": "El único cliente requerido es el que coincide con la `homepage` introducida en `app_config.json`. La página de inicio es normalmente `core-client-dashboard` que tiene un id de `dashboard`, pero el id de cualquier cliente en el producto puede configurarse como página de inicio."
       },
       "heading_some_optional_clients": {
         "en": "Some Optional Clients:",
@@ -343,9 +343,9 @@
         "es": "Algunos clientes opcionales:"
       },
       "sequential": {
-        "en": "Start with 1. Keep numbering sequential. Do not skip numbers.",
-        "fr": "Commencez par 1. Gardez une numérotation séquentielle. Ne sautez pas de numéros.",
-        "es": "Comience con 1. Mantenga la numeración secuencial. No omita números."
+        "en": "Start with `core-client-dashboard`. Keep numbering sequential. Do not skip numbers.",
+        "fr": "Commencez par `core-client-dashboard`. Gardez une numérotation séquentielle. Ne sautez pas de numéros.",
+        "es": "Comience con `core-client-dashboard`. Mantenga la numeración secuencial. No omita números."
       },
       "heading_branding": {
         "en": "Branding",
@@ -368,39 +368,34 @@
         "es": "Scripts de configuración"
       },
       "setup_scripts_clone": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `clone` script to clone all repos listed in `app_config.env` (assets and clients)",
-        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `clone` pour cloner tous les dépôts listés dans `app_config.env` (assets et clients)",
-        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `clone` para clonar todos los repositorios listados en `app_config.env` (assets y clientes)"
-      },
-      "setup_scripts_app_setup": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `app_setup` script to generate the config files to match `app_config.env`. Re-run<sup id=\"a1\">[[1]](#f1)</sup> the `app_setup` script anytime `app_config.env` is modified.",
-        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `app_setup` pour générer les fichiers de configuration correspondant à `app_config.env`. Ré-exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `app_setup` chaque fois que `app_config.env` est modifié.",
-        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `app_setup` para generar los archivos de configuración que correspondan a `app_config.env`. Vuelva a ejecutar<sup id=\"a1\">[[1]](#f1)</sup> el script `app_setup` cada vez que se modifique `app_config.env`."
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `clone [tier]` script to clone all repos listed in `app_config.json` (assets and clients)",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `clone [tier]` pour cloner tous les dépôts listés dans `app_config.json` (assets et clients)",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `clone [tier]` para clonar todos los repositorios listados en `app_config.json` (assets y clientes)"
       },
       "setup_scripts_build_clients": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_clients` script to build all clients. Be patient. This will take a while.",
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_clients [tier]` script to build all clients. Be patient. This will take a while.",
         "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_clients` pour compiler tous les clients. Soyez patient. Cela prendra du temps.",
         "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_clients` para compilar todos los clientes. Tenga paciencia. Esto tomará un tiempo."
       },
       "setup_scripts_build_clients_note1": {
-        "en": "This script defaults to all main branches, pulls the latest, and builds every client each time it is run.",
-        "fr": "Ce script utilise par défaut toutes les branches main, récupère la dernière version et compile chaque client à chaque exécution.",
-        "es": "Este script usa por defecto todas las ramas main, obtiene la última versión y compila cada cliente cada vez que se ejecuta."
+        "en": "This script defaults to all `tiers.default` branches, pulls the latest, and builds every client each time it is run.",
+        "fr": "Ce script utilise par défaut toutes les branches `tiers.default`, récupère la dernière version et compile chaque client à chaque exécution.",
+        "es": "Este script usa por defecto todas las ramas `tiers.default`, obtiene la última versión y compila cada cliente cada vez que se ejecuta."
       },
       "setup_scripts_build_clients_note2": {
-        "en": "Specify branches other than main as arguments: `./build_clients.[ext] [my-branch|dev|qa] [dev|qa]`<sup id=\"a1\">[[1]](#f1)</sup>. Where \"my-branch\" does not exist, then fallback will be \"main\" unless the next argument is specified. If \"dev\" is indicated then a \"dev\" → \"qa\" → \"main\" fallback is implied. If \"qa\" is indicated then a \"qa\" → \"main\" fallback is implied. To build repos manually, [identify](#at-the-root-of-your-clone-of-this-repo-run) whether to use pnpm or npm, then run `pnpm run build` or `npm run build` accordingly on just those repos as needed.",
-        "fr": "Spécifiez des branches autres que main en arguments : `./build_clients.[ext] [my-branch|dev|qa] [dev|qa]`<sup id=\"a1\">[[1]](#f1)</sup>. Lorsque « my-branch » n'existe pas, le repli sera « main » sauf si l'argument suivant est spécifié. Si « dev » est indiqué, un repli « dev » → « qa » → « main » est implicite. Si « qa » est indiqué, un repli « qa » → « main » est implicite. Pour construire les dépôts manuellement, [identifiez](#à-la-racine-de-votre-clone-de-ce-dépôt-exécutez-) s'il faut utiliser pnpm ou npm, puis exécutez `pnpm run build` ou `npm run build` en conséquence sur ces seuls dépôts, selon les besoins.",
-        "es": "Especifique ramas distintas de main como argumentos: `./build_clients.[ext] [my-branch|dev|qa] [dev|qa]`<sup id=\"a1\">[[1]](#f1)</sup>. Donde \"my-branch\" no exista, el respaldo será \"main\" a menos que se especifique el siguiente argumento. Si se indica \"dev\", se implica un respaldo \"dev\" → \"qa\" → \"main\". Si se indica \"qa\", se implica un respaldo \"qa\" → \"main\". Para construir los repositorios manualmente, [identifica](#en-la-raíz-de-su-clon-de-este-repositorio-ejecute) si debes usar pnpm o npm, luego ejecuta `pnpm run build` o `npm run build` según corresponda solo en esos repositorios, según sea necesario."
+        "en": "Specify branches other than main as arguments: `./build_clients.[ext] [my-branch|tier] [tier]`<sup id=\"a1\">[[1]](#f1)</sup>. Where \"my-branch\" does not exist, then fallback will be tiers.default unless the next argument is specified. Fallback will continue in tiers.default order. With `\"order\": [\"dev\", \"qa\", \"main\"]`, if \"dev\" is indicated then a \"dev\" → \"qa\" → \"main\" fallback is implied. If \"qa\" is indicated then a \"qa\" → \"main\" fallback is implied. To build repos manually, [identify](#at-the-root-of-your-clone-of-this-repo-run) whether to use pnpm or npm, then run `pnpm run build` or `npm run build` accordingly on just those repos as needed.",
+        "fr": "Spécifiez des branches autres que main en arguments : `./build_clients.[ext] [tier] [tier]`<sup id=\"a1\">[[1]](#f1)</sup>. Lorsque « my-branch » n'existe pas, le repli sera tiers.default sauf si l'argument suivant est spécifié. Le repli suivra l'ordre de tiers.default. Avec `\"order\": [\"dev\", \"qa\", \"main\"]`, si « dev » est indiqué, un repli « dev » → « qa » → « main » est implicite. Si « qa » est indiqué, un repli « qa » → « main » est implicite. Pour construire les dépôts manuellement, [identifiez](#à-la-racine-de-votre-clone-de-ce-dépôt-exécutez-) s'il faut utiliser pnpm ou npm, puis exécutez `pnpm run build` ou `npm run build` en conséquence sur ces seuls dépôts, selon les besoins.",
+        "es": "Especifique ramas distintas de main como argumentos: `./build_clients.[ext] [my-branch|tier] [tier]`<sup id=\"a1\">[[1]](#f1)</sup>. Donde \"my-branch\" no exista, el respaldo será tiers.default a menos que se especifique el siguiente argumento. El respaldo seguirá el orden de tiers.default. Con `\"order\": [\"dev\", \"qa\", \"main\"]`, si se indica \"dev\", se implica un respaldo \"dev\" → \"qa\" → \"main\". Si se indica \"qa\", se implica un respaldo \"qa\" → \"main\". Para construir los repositorios manualmente, [identifica](#en-la-raíz-de-su-clon-de-este-repositorio-ejecute) si debes usar pnpm o npm, luego ejecuta `pnpm run build` o `npm run build` según corresponda solo en esos repositorios, según sea necesario."
       },
       "setup_scripts_build_server": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_server` script to build the Pankosmia server and assemble the build environment. When `/local_server.env` has different versions from the panksomia_web in `/local_server/Cargo.toml`, then use `./build_server.[ext] dev` to build a local *dev* server, and `./build_server.[ext] qa` to build a local qa server. Be patient. This will take a while.",
-        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_server` pour compiler le serveur Pankosmia et assembler l'environnement de build. Lorsque `/local_server.env` contient des versions différentes de panksomia_web dans `/local_server/Cargo.toml`, utilisez `./build_server.[ext] *dev*` pour compiler un serveur de développement local, et `./build_server.[ext] qa` pour compiler un serveur qa local. Soyez patient, cela prendra du temps.",
-        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_server` para compilar el servidor Pankosmia y ensamblar el entorno de build. Cuando `/local_server.env` tenga versiones diferentes de panksomia_web en `/local_server/Cargo.toml`, use `./build_server.[ext] dev` para compilar un servidor de desarrollo local, y `./build_server.[ext] qa` para compilar un servidor *qa* local. Tenga paciencia, esto tomará un tiempo."
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_server [tier]` script to build the Pankosmia server and assemble the build environment, then use `./build_clients.<sh|zsh|bat> [tier]`. Be patient. This will take a while.",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_server [tier]` pour compiler le serveur Pankosmia et assembler l'environnement de build, puis utilisez `./build_clients.<sh|zsh|bat> [tier]. Soyez patient, cela prendra du temps.",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_server [tier]` para compilar el servidor Pankosmia y ensamblar el entorno de build, luego utiliza `./build_clients.<sh|zsh|bat> [tier]`. Tenga paciencia, esto tomará un tiempo."
       },
       "setup_scripts_build_viewer": {
-        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer` script to create an Electronite viewer for use with the local development environment.",
-        "fr": "(Optionnel) Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_viewer` pour créer une visionneuse Electronite à utiliser avec l'environnement de développement local.",
-        "es": "(Opcional) Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_viewer` para crear un visor Electronite para usar con el entorno de desarrollo local."
+        "en": "(Optional) Run<sup id=\"a1\">[[1]](#f1)</sup> the `build_viewer [tier]` script to create an Electronite viewer for use with the local development environment.",
+        "fr": "(Optionnel) Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `build_viewer [tier]` pour créer une visionneuse Electronite à utiliser avec l'environnement de développement local.",
+        "es": "(Opcional) Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `build_viewer [tier]` para crear un visor Electronite para usar con el entorno de desarrollo local."
       },
       "heading_running_your_setup": {
         "en": "Running your Setup",
@@ -408,9 +403,9 @@
         "es": "Ejecutar su configuración"
       },
       "running_run_script": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.",
-        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `run` pour démarrer le serveur sans lancer de navigateur.",
-        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `run` para iniciar el servidor sin abrir un navegador."
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `run [tier]` script to start the server without a browser launch.",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `run [tier]` pour démarrer le serveur sans lancer de navigateur.",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `run [tier]` para iniciar el servidor sin abrir un navegador."
       },
       "running_one_instance": {
         "en": "Only one instance of the same server can be running at a time.",
@@ -1001,9 +996,9 @@
         "es": "Personalización a nivel de producto"
       },
       "product": {
-        "en": "A desktop app can adjust texts without touching the clients, with two files in its `globalBuildResources`:\n\n- `i18nPatch.json`: applied at build time by `buildCommon.js` on top of `templates/i18n.json`. Every entry must already exist in the template, otherwise the build fails. In practice it only holds the product name (`branding.software.name.en`), which the `app_setup` script keeps equal to `APP_NAME`.\n- `i18n-overrides.json`: copied to `app_resources/product/i18n-overrides.json`. It has the same purpose, with the shape `{ \"pages\": { } }` (empty by default).",
-        "fr": "Une application de bureau peut ajuster des textes sans toucher aux clients, avec deux fichiers de ses `globalBuildResources` :\n\n- `i18nPatch.json` : appliqué au build par `buildCommon.js` par-dessus `templates/i18n.json`. Chaque entrée doit déjà exister dans le modèle, sinon le build échoue. En pratique il ne contient que le nom du produit (`branding.software.name.en`), que le script `app_setup` maintient égal à `APP_NAME`.\n- `i18n-overrides.json` : copié vers `app_resources/product/i18n-overrides.json`. Il a le même rôle, avec la forme `{ \"pages\": { } }` (vide par défaut).",
-        "es": "Una aplicación de escritorio puede ajustar textos sin tocar los clientes, con dos archivos de sus `globalBuildResources`:\n\n- `i18nPatch.json`: se aplica en la compilación mediante `buildCommon.js` sobre `templates/i18n.json`. Cada entrada debe existir ya en la plantilla, de lo contrario la compilación falla. En la práctica solo contiene el nombre del producto (`branding.software.name.en`), que el script `app_setup` mantiene igual a `APP_NAME`.\n- `i18n-overrides.json`: se copia a `app_resources/product/i18n-overrides.json`. Tiene el mismo propósito, con la forma `{ \"pages\": { } }` (vacío por defecto)."
+        "en": "A desktop app can adjust texts without touching the clients, with two files in its `globalBuildResources`:\n\n- `i18nPatch.json`: applied at build time by `buildCommon.js` on top of `templates/i18n.json`. Every entry must already exist in the template, otherwise the build fails. In practice it only holds the product name (`branding.software.name.en`), which `buildCommon.js` keeps equal to `APP_NAME`.\n- `i18n-overrides.json`: copied to `app_resources/product/i18n-overrides.json`. It has the same purpose, with the shape `{ \"pages\": { } }` (empty by default).",
+        "fr": "Une application de bureau peut ajuster des textes sans toucher aux clients, avec deux fichiers de ses `globalBuildResources` :\n\n- `i18nPatch.json` : appliqué au build par `buildCommon.js` par-dessus `templates/i18n.json`. Chaque entrée doit déjà exister dans le modèle, sinon le build échoue. En pratique il ne contient que le nom du produit (`branding.software.name.en`), que `buildCommon.js` maintient égal à `APP_NAME`.\n- `i18n-overrides.json` : copié vers `app_resources/product/i18n-overrides.json`. Il a le même rôle, avec la forme `{ \"pages\": { } }` (vide par défaut).",
+        "es": "Una aplicación de escritorio puede ajustar textos sin tocar los clientes, con dos archivos de sus `globalBuildResources`:\n\n- `i18nPatch.json`: se aplica en la compilación mediante `buildCommon.js` sobre `templates/i18n.json`. Cada entrada debe existir ya en la plantilla, de lo contrario la compilación falla. En la práctica solo contiene el nombre del producto (`branding.software.name.en`), que `buildCommon.js` mantiene igual a `APP_NAME`.\n- `i18n-overrides.json`: se copia a `app_resources/product/i18n-overrides.json`. Tiene el mismo propósito, con la forma `{ \"pages\": { } }` (vacío por defecto)."
       }
     },
     "general_product": {
@@ -1038,9 +1033,9 @@
         "es": "Estructura de una aplicación de escritorio"
       },
       "layout": {
-        "en": "| Item | What it does |\n|---|---|\n| `app_config.env` | Main configuration: `APP_NAME`, `APP_SHORT_NAME`, `APP_VERSION`, `START_OFFLINE`, the assets (`ASSETn`, `ASSETn_PATH`, `ASSETn_NAME`), the `HOMEPAGE` client and the ordered list of clients (`CLIENT1`, `CLIENT2`...). Keep `core-client-dashboard` as `CLIENT1`. |\n| `buildSpec.json` | The build recipe generated by the `app_setup` script: app name and version, server binary (`bin`), folders to bundle (`lib`), client repositories to include (`libClients`) and the paths of the favicon, theme, product and client config files. |\n| `buildCommon.js` | Shared build logic: copies the libs and clients, patches the i18n template and copies the product files. |\n| `globalBuildResources/` | Everything specific to the product that is common to all operating systems (see below). |\n| `branding/` | Icon sources and scripts that generate the favicons and the Windows and macOS icons. |\n| `linux/`, `macos/`, `windows/` | Per-OS scripts (`app_setup`, `run`, `sync`, `build_server`...), setup files and build output. |\n| `local_server/`, `local_server.env`, `Rocket.toml` | The server and its versions: `dev` and `qa` give a version number, and `main` uses the one in `local_server/Cargo.toml`. |\n| `releases/`, `CHANGES.md` | Release folders per OS and the change log. |",
-        "fr": "| Élément | Rôle |\n|---|---|\n| `app_config.env` | Configuration principale : `APP_NAME`, `APP_SHORT_NAME`, `APP_VERSION`, `START_OFFLINE`, les assets (`ASSETn`, `ASSETn_PATH`, `ASSETn_NAME`), le client `HOMEPAGE` et la liste ordonnée des clients (`CLIENT1`, `CLIENT2`...). Gardez `core-client-dashboard` comme `CLIENT1`. |\n| `buildSpec.json` | La recette de build générée par le script `app_setup` : nom et version de l'application, binaire du serveur (`bin`), dossiers à embarquer (`lib`), dépôts de clients à inclure (`libClients`) et chemins des fichiers favicon, thème, produit et configuration des clients. |\n| `buildCommon.js` | Logique de build partagée : copie les libs et les clients, applique le patch du modèle i18n et copie les fichiers du produit. |\n| `globalBuildResources/` | Tout ce qui est propre au produit et commun à tous les systèmes d'exploitation (voir plus bas). |\n| `branding/` | Sources des icônes et scripts qui génèrent les favicons et les icônes Windows et macOS. |\n| `linux/`, `macos/`, `windows/` | Scripts par système (`app_setup`, `run`, `sync`, `build_server`...), fichiers d'installation et résultat du build. |\n| `local_server/`, `local_server.env`, `Rocket.toml` | Le serveur et ses versions : `dev` et `qa` donnent un numéro de version, et `main` utilise celui de `local_server/Cargo.toml`. |\n| `releases/`, `CHANGES.md` | Dossiers de publication par système et journal des modifications. |",
-        "es": "| Elemento | Qué hace |\n|---|---|\n| `app_config.env` | Configuración principal: `APP_NAME`, `APP_SHORT_NAME`, `APP_VERSION`, `START_OFFLINE`, los recursos (`ASSETn`, `ASSETn_PATH`, `ASSETn_NAME`), el cliente `HOMEPAGE` y la lista ordenada de clientes (`CLIENT1`, `CLIENT2`...). Mantenga `core-client-dashboard` como `CLIENT1`. |\n| `buildSpec.json` | La receta de compilación generada por el script `app_setup`: nombre y versión de la app, binario del servidor (`bin`), carpetas a empaquetar (`lib`), repositorios de clientes a incluir (`libClients`) y rutas de los archivos de favicon, tema, producto y configuración de clientes. |\n| `buildCommon.js` | Lógica de compilación compartida: copia las bibliotecas y los clientes, parchea la plantilla i18n y copia los archivos del producto. |\n| `globalBuildResources/` | Todo lo específico del producto y común a todos los sistemas operativos (véase más abajo). |\n| `branding/` | Fuentes de los iconos y scripts que generan los favicons y los iconos de Windows y macOS. |\n| `linux/`, `macos/`, `windows/` | Scripts por sistema (`app_setup`, `run`, `sync`, `build_server`...), archivos de instalación y resultado de la compilación. |\n| `local_server/`, `local_server.env`, `Rocket.toml` | El servidor y sus versiones: `dev` y `qa` indican un número de versión, y `main` usa el de `local_server/Cargo.toml`. |\n| `releases/`, `CHANGES.md` | Carpetas de publicación por sistema y registro de cambios. |"
+        "en": "| Item | What it does |\n|---|---|\n| `app_config.json` | Main configuration is the ingredients for the build recipe generated by the `buildCommon.js` script:<br />&middot; the **tiers** (.e.g., `dev`, `qa`, `main`) - `branches` must be represented in tiers<br />&middot; the **app** by `branches` (tiers): (`name`, `short_name`, `version`, `homepage`, `start_offline`)<br />&middot; the **assets** by `branches` (tiers): (`repo`, `path`, `name`) which get bundled in `lib/app_resources`<br />&middot; the **clients** by `branches` (tiers): (`repo` -- (Keep `core-client-dashboard` as the first client.)) which get bundled in `lib/clients`<br />&middot; the **resources** by `branches` (tiers): (paths and filenames of icons, theme, product and client config files)<br />&middot; the **server** by `branches` (tiers): (`crate`, `crate_version`), binary (`bin`) |\n| `buildCommon.js` | Shared build logic: copies the libs and clients, patches the i18n template and copies the product files. |\n| `globalBuildResources/` | Everything specific to the product that is common to all operating systems (see below). |\n| `branding/` | Icon sources and scripts that generate the favicons and the Windows and macOS icons. |\n| `linux/`, `macos/`, `windows/` | Per-OS scripts (`run`, `sync`, `build_server`...), setup files and build output. |\n| `local_server/`, `Rocket.toml` | The server and its versions: `dev`, `qa`, and `main` version numbers are in `app_config.json`. The server version in `local_server/Cargo.toml` is temporarily adjusted accordingly when the server is build via `build_server.<sh|zsh|bat> <dev|qa|main>`, and then is restored to the state in which it was found. As to `Rocket.toml`, it's location is specified in `app_config.json` in `rocket_config`, and is included in the build by `buildCommon.js`. |\n| `releases/`, `CHANGES.md` | Release folders per OS and the change log. |",
+        "fr": "| Élément | Rôle |\n|---|---|\n| `app_config.json` | La configuration principale regroupe les ingrédients de la recette de build générée par le script `buildCommon.js` :<br />&middot; les **niveaux** (tiers) (p. ex. `dev`, `qa`, `main`) – chaque entrée de `branches` doit correspondre à un niveau<br />&middot; l'**application** par `branches` (niveaux) : (`name`, `short_name`, `version`, `homepage`, `start_offline`)<br />&middot; les **assets** par `branches` (niveaux) : (`repo`, `path`, `name`), embarqués dans `lib/app_resources`<br />&middot; les **clients** par `branches` (niveaux) : (`repo` - gardez `core-client-dashboard` comme premier client), embarqués dans `lib/clients`<br />&middot; les **ressources** par `branches` (niveaux) : (chemins et noms des fichiers d'icônes, de thème, de produit et de configuration des clients)<br />&middot; le **serveur** par `branches` (niveaux) : (`crate`, `crate_version`, binaire (`bin`)) |\n| `buildCommon.js` | Logique de build partagée : copie les libs et les clients, applique le patch du modèle i18n et copie les fichiers du produit. |\n| `globalBuildResources/` | Tout ce qui est propre au produit et commun à tous les systèmes d'exploitation (voir plus bas). |\n| `branding/` | Sources des icônes et scripts qui génèrent les favicons et les icônes Windows et macOS. |\n| `linux/`, `macos/`, `windows/` | Scripts par système (`run`, `sync`, `build_server`...), fichiers d'installation et résultat du build. |\n| `local_server/`, `Rocket.toml` | Le serveur et ses versions : les numéros de version de `dev`, `qa` et `main` se trouvent dans `app_config.json`. La version du serveur dans `local_server/Cargo.toml` est ajustée temporairement en conséquence lors du build du serveur via `build_server.<sh|zsh|bat> <dev|qa|main>`, puis restaurée dans son état initial. Quant à `Rocket.toml`, son emplacement est précisé dans `app_config.json`, au sein de `rocket_config`, et il est inclus dans la compilation par `buildCommon.js`. |\n| `releases/`, `CHANGES.md` | Dossiers de publication par système et journal des modifications. |",
+        "es": "| Elemento | Qué hace |\n|---|---|\n| `app_config.json` | La configuración principal reúne los ingredientes de la receta de build generada por el script `buildCommon.js`:<br />&middot; los **niveles** (tiers) (p. ej., `dev`, `qa`, `main`): cada entrada de `branches` debe corresponder a un nivel<br />&middot; la **aplicación** por `branches` (niveles): (`name`, `short_name`, `version`, `homepage`, `start_offline`)<br />&middot; los **assets** por `branches` (niveles): (`repo`, `path`, `name`), que se empaquetan en `lib/app_resources`<br />&middot; los **clientes** por `branches` (niveles): (`repo`; mantenga `core-client-dashboard` como primer cliente), que se empaquetan en `lib/clients`<br />&middot; los **recursos** por `branches` (niveles): (rutas y nombres de los archivos de iconos, tema, producto y configuración de los clientes)<br />&middot; el **servidor** por `branches` (niveles): (`crate`, `crate_version`, binario (`bin`)) |\n| `buildCommon.js` | Lógica de compilación compartida: copia las bibliotecas y los clientes, parchea la plantilla i18n y copia los archivos del producto. |\n| `globalBuildResources/` | Todo lo específico del producto y común a todos los sistemas operativos (véase más abajo). |\n| `branding/` | Fuentes de los iconos y scripts que generan los favicons y los iconos de Windows y macOS. |\n| `linux/`, `macos/`, `windows/` | Scripts por sistema (`run`, `sync`, `build_server`...), archivos de instalación y resultado de la compilación. |\n| `local_server/`, `Rocket.toml` | El servidor y sus versiones: los números de versión de `dev`, `qa` y `main` se encuentran en `app_config.json`. La versión del servidor en `local_server/Cargo.toml` se ajusta temporalmente en consecuencia al compilar el servidor mediante `build_server.<sh|zsh|bat> <dev|qa|main>`, y después se restaura al estado en que se encontraba. En cuanto a `Rocket.toml`, Su ubicación se especifica en `app_config.json`, dentro de `rocket_config`, y se incluye en la compilación mediante `buildCommon.js`. |\n| `releases/`, `CHANGES.md` | Carpetas de publicación por sistema y registro de cambios. |"
       },
       "heading_global": {
         "en": "globalBuildResources",
@@ -1053,9 +1048,9 @@
         "es": "Esta carpeta contiene todo lo que distingue al producto de otro. La compilación la copia en la aplicación bajo `lib/app_resources/product/`."
       },
       "global": {
-        "en": "| File | What it does |\n|---|---|\n| `product.json` | Identity of the product: `name`, `short_name`, `version`, `datetime` (build date), `homepage` (the client opened first) and `start_offline`. It is regenerated by the build scripts from `app_config.env`. |\n| `client_config.json` | Default settings of the clients. Keys are client ids, or `_global` for settings shared by all clients. Each value is a list of groups with an `id`, an `i18n` label and `fields` (each with an `id`, an `i18n` label and a `value`). Example: `internetConnectionAccess` in `_global`, read by the dashboard. |\n| `theme.json` | The MUI theme of the product (`palette` with `primary`, `secondary`...). |\n| `favicon*.png`, `favicon.ico`, `icon.ico`, `icon.icns`, `linux_icon.png` | Icons of the app for the browser, Windows, macOS and Linux. |\n| `i18nPatch.json`, `i18n-overrides.json` | Product-level text changes, see the i18n page. |\n| `product_resources/` | Product-specific data, see below. |",
-        "fr": "| Fichier | Rôle |\n|---|---|\n| `product.json` | Identité du produit : `name`, `short_name`, `version`, `datetime` (date du build), `homepage` (le client ouvert en premier) et `start_offline`. Il est régénéré par les scripts de build à partir de `app_config.env`. |\n| `client_config.json` | Réglages par défaut des clients. Les clés sont des ids de client, ou `_global` pour les réglages communs à tous. Chaque valeur est une liste de groupes avec un `id`, un libellé `i18n` et des `fields` (chacun avec un `id`, un libellé `i18n` et une `value`). Exemple : `internetConnectionAccess` dans `_global`, lu par le tableau de bord. |\n| `theme.json` | Le thème MUI du produit (`palette` avec `primary`, `secondary`...). |\n| `favicon*.png`, `favicon.ico`, `icon.ico`, `icon.icns`, `linux_icon.png` | Icônes de l'application pour le navigateur, Windows, macOS et Linux. |\n| `i18nPatch.json`, `i18n-overrides.json` | Modifications de textes au niveau du produit, voir la page i18n. |\n| `product_resources/` | Données propres au produit, voir ci-dessous. |",
-        "es": "| Archivo | Qué hace |\n|---|---|\n| `product.json` | Identidad del producto: `name`, `short_name`, `version`, `datetime` (fecha de compilación), `homepage` (el cliente que se abre primero) y `start_offline`. Los scripts de compilación lo regeneran a partir de `app_config.env`. |\n| `client_config.json` | Ajustes por defecto de los clientes. Las claves son ids de cliente, o `_global` para ajustes comunes a todos. Cada valor es una lista de grupos con un `id`, una etiqueta `i18n` y `fields` (cada uno con un `id`, una etiqueta `i18n` y un `value`). Ejemplo: `internetConnectionAccess` en `_global`, leído por el panel. |\n| `theme.json` | El tema MUI del producto (`palette` con `primary`, `secondary`...). |\n| `favicon*.png`, `favicon.ico`, `icon.ico`, `icon.icns`, `linux_icon.png` | Iconos de la app para el navegador, Windows, macOS y Linux. |\n| `i18nPatch.json`, `i18n-overrides.json` | Cambios de textos a nivel de producto, véase la página i18n. |\n| `product_resources/` | Datos propios del producto, véase abajo. |"
+        "en": "| File | What it does |\n|---|---|\n| `product.json` | Identity of the product: `name`, `short_name`, `version`, `datetime` (build date), `homepage` (the client opened first) and `start_offline`. It is generated from the \"app\" key of `app_config.json` with reserved \"datetime\" added at build time. |\n| `client_config.json` | Default settings of the clients. Keys are client ids, or `_global` for settings shared by all clients. Each value is a list of groups with an `id`, an `i18n` label and `fields` (each with an `id`, an `i18n` label and a `value`). Example: `internetConnectionAccess` in `_global`, read by the dashboard. |\n| `theme.json` | The MUI theme of the product (`palette` with `primary`, `secondary`...). |\n| `favicon*.png`, `favicon.ico`, `icon.ico`, `icon.icns`, `linux_icon.png` | Icons of the app for the browser, Windows, macOS and Linux. |\n| `i18nPatch.json`, `i18n-overrides.json` | Product-level text changes, see the i18n page. |\n| `product_resources/` | Product-specific data, see below. |",
+        "fr": "| Fichier | Rôle |\n|---|---|\n| `product.json` | Identité du produit : `name`, `short_name`, `version`, `datetime` (date du build), `homepage` (le client ouvert en premier) et `start_offline`. Il est généré à partir de la clé « app » de `app_config.json`, avec la clé réservée « datetime » ajoutée au moment de la compilation.. |\n| `client_config.json` | Réglages par défaut des clients. Les clés sont des ids de client, ou `_global` pour les réglages communs à tous. Chaque valeur est une liste de groupes avec un `id`, un libellé `i18n` et des `fields` (chacun avec un `id`, un libellé `i18n` et une `value`). Exemple : `internetConnectionAccess` dans `_global`, lu par le tableau de bord. |\n| `theme.json` | Le thème MUI du produit (`palette` avec `primary`, `secondary`...). |\n| `favicon*.png`, `favicon.ico`, `icon.ico`, `icon.icns`, `linux_icon.png` | Icônes de l'application pour le navigateur, Windows, macOS et Linux. |\n| `i18nPatch.json`, `i18n-overrides.json` | Modifications de textes au niveau du produit, voir la page i18n. |\n| `product_resources/` | Données propres au produit, voir ci-dessous. |",
+        "es": "| Archivo | Qué hace |\n|---|---|\n| `product.json` | Identidad del producto: `name`, `short_name`, `version`, `datetime` (fecha de compilación), `homepage` (el cliente que se abre primero) y `start_offline`. Se genera a partir de la clave \"app\" de `app_config.json`, con la clave reservada \"datetime\" añadida en el momento de la compilación. |\n| `client_config.json` | Ajustes por defecto de los clientes. Las claves son ids de cliente, o `_global` para ajustes comunes a todos. Cada valor es una lista de grupos con un `id`, una etiqueta `i18n` y `fields` (cada uno con un `id`, una etiqueta `i18n` y un `value`). Ejemplo: `internetConnectionAccess` en `_global`, leído por el panel. |\n| `theme.json` | El tema MUI del producto (`palette` con `primary`, `secondary`...). |\n| `favicon*.png`, `favicon.ico`, `icon.ico`, `icon.icns`, `linux_icon.png` | Iconos de la app para el navegador, Windows, macOS y Linux. |\n| `i18nPatch.json`, `i18n-overrides.json` | Cambios de textos a nivel de producto, véase la página i18n. |\n| `product_resources/` | Datos propios del producto, véase abajo. |"
       },
       "heading_resources": {
         "en": "product_resources",
@@ -1085,9 +1080,9 @@
         "es": "Qué es un cliente"
       },
       "what": {
-        "en": "A client is a web app (React, built with Vite) served by the Pankosmia server at `/clients/<name>`. The dashboard, the settings and every content handler (`core-contenthandler_*`) are clients. A product includes a client by listing it in `CLIENTn` in `app_config.env` (and so in `libClients` of `buildSpec.json`). The build then copies its `build/` output, `package.json`, `pankosmia_metadata.json` and `storage_id.json` (when it exists) into `lib/clients/<repository name>`.",
-        "fr": "Un client est une application web (React, construite avec Vite) servie par le serveur Pankosmia à l'adresse `/clients/<nom>`. Le tableau de bord, les paramètres et chaque gestionnaire de contenu (`core-contenthandler_*`) sont des clients. Un produit inclut un client en le listant dans `CLIENTn` de `app_config.env` (donc dans `libClients` de `buildSpec.json`). Le build copie alors son dossier `build/`, `package.json`, `pankosmia_metadata.json` et `storage_id.json` (s'il existe) dans `lib/clients/<nom du dépôt>`.",
-        "es": "Un cliente es una aplicación web (React, compilada con Vite) servida por el servidor Pankosmia en `/clients/<nombre>`. El panel, los ajustes y cada gestor de contenido (`core-contenthandler_*`) son clientes. Un producto incluye un cliente listándolo en `CLIENTn` de `app_config.env` (y por tanto en `libClients` de `buildSpec.json`). La compilación copia entonces su salida `build/`, `package.json`, `pankosmia_metadata.json` y `storage_id.json` (si existe) en `lib/clients/<nombre del repositorio>`."
+        "en": "A client is a web app (React, built with Vite) served by the Pankosmia server at `/clients/<name>`. The dashboard, the settings and every content handler (`core-contenthandler_*`) are clients. A product includes a client by listing it in `clients` in `app_config.json`. The build then copies its `build/` output, `package.json`, `pankosmia_metadata.json` and `storage_id.json` (when it exists) into `lib/clients/<repository name>`.",
+        "fr": "Un client est une application web (React, construite avec Vite) servie par le serveur Pankosmia à l'adresse `/clients/<nom>`. Le tableau de bord, les paramètres et chaque gestionnaire de contenu (`core-contenthandler_*`) sont des clients. Un produit inclut un client en le listant dans `clients` de `app_config.json`. Le build copie alors son dossier `build/`, `package.json`, `pankosmia_metadata.json` et `storage_id.json` (s'il existe) dans `lib/clients/<nom du dépôt>`.",
+        "es": "Un cliente es una aplicación web (React, compilada con Vite) servida por el servidor Pankosmia en `/clients/<nombre>`. El panel, los ajustes y cada gestor de contenido (`core-contenthandler_*`) son clientes. Un producto incluye un cliente listándolo en `clients` de `app_config.json`. La compilación copia entonces su salida `build/`, `package.json`, `pankosmia_metadata.json` y `storage_id.json` (si existe) en `lib/clients/<nombre del repositorio>`."
       },
       "heading_structure": {
         "en": "Structure of a client",
@@ -1172,9 +1167,9 @@
         "es": "Uso"
       },
       "use_intro": {
-        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `run` script to start the server without a browser launch.",
-        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `run` pour démarrer le serveur sans lancer de navigateur.",
-        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `run` para iniciar el servidor sin abrir un navegador."
+        "en": "Run<sup id=\"a1\">[[1]](#f1)</sup> the `run [tier]` script to start the server without a browser launch.",
+        "fr": "Exécutez<sup id=\"a1\">[[1]](#f1)</sup> le script `run [tier]` pour démarrer le serveur sans lancer de navigateur.",
+        "es": "Ejecute<sup id=\"a1\">[[1]](#f1)</sup> el script `run [tier]` para iniciar el servidor sin abrir un navegador."
       },
       "use_delete_working": {
         "en": "Consider also if you need to delete `~/pankosmia/[App Short Name]/` first.",
@@ -1197,9 +1192,14 @@
         "es": "Desarrollo de clientes:"
       },
       "client_dev_intro": {
-        "en": "Manually build the client(s) changed, stop the server if is is running, then start the server (`run`).  The `run` script will re-assemble the environment to include your build.",
-        "fr": "Compilez manuellement le(s) client(s) modifié(s), arrêtez le serveur s'il est en cours d'exécution, puis démarrez le serveur (`run`). Le script `run` réassemblera l'environnement pour inclure votre build.",
-        "es": "Compile manualmente el/los cliente(s) modificado(s), detenga el servidor si está en ejecución, luego inicie el servidor (`run`). El script `run` reensamblará el entorno para incluir su build."
+        "en": "Manually build the client(s) changed (`pnpm run build`), stop the server if is is running, then start the server (`run`).  The `run` script will re-assemble the environment to include your build.",
+        "fr": "Compilez manuellement le(s) client(s) modifié(s) (`pnpm run build`), arrêtez le serveur s'il est en cours d'exécution, puis démarrez le serveur (`run`). Le script `run` réassemblera l'environnement pour inclure votre build.",
+        "es": "Compile manualmente el/los cliente(s) modificado(s)  (`pnpm run build`), detenga el servidor si está en ejecución, luego inicie el servidor (`run`). El script `run` reensamblará el entorno para incluir su build."
+      },
+      "client_dev_intro_2": {
+        "en": "To see client changes without stopping the server, in that client run `pnpm run dev` then follow instructions.",
+        "fr": "Pour voir les modifications du client sans arrêter le serveur, exécutez `pnpm run dev` dans ce client, puis suivez les instructions.",
+        "es": "Para ver los cambios del cliente sin detener el servidor, ejecuta `pnpm run dev` en ese cliente y sigue las instrucciones."
       },
       "client_dev_see_also": {
         "en": "See also [Running your setup](../app-spin-up/#running-your-setup).",
@@ -1207,9 +1207,9 @@
         "es": "Vea también [Ejecutar su configuración](../app-spin-up/#running-your-setup)."
       },
       "client_dev_release": {
-        "en": "To generate a release package for the OS you are using, edit the version number for the release in `app_config.env` then see the next section below, or [Local installer build](../electronite-local-development/#local-installer-build) or the bundle scripts in [Dev script reference](../script-reference/)",
-        "fr": "Pour générer un package de release pour le système d'exploitation que vous utilisez, modifiez le numéro de version de la release dans `app_config.env` puis consultez la section suivante ci-dessous, ou [Build d'installateur local](../electronite-local-development/#local-installer-build) ou les scripts de bundle dans [Référence des scripts de développement](../script-reference/)",
-        "es": "Para generar un paquete de release para el sistema operativo que está usando, edite el número de versión del release en `app_config.env` y luego consulte la siguiente sección a continuación, o [Build de instalador local](../electronite-local-development/#local-installer-build) o los scripts de bundle en [Referencia de scripts de desarrollo](../script-reference/)"
+        "en": "To generate a release package for the OS you are using, edit the version number for the release in `app_config.json` then see the next section below, or [Local installer build](../electronite-local-development/#local-installer-build) or the bundle scripts in [Dev script reference](../script-reference/)",
+        "fr": "Pour générer un package de release pour le système d'exploitation que vous utilisez, modifiez le numéro de version de la release dans `app_config.json` puis consultez la section suivante ci-dessous, ou [Build d'installateur local](../electronite-local-development/#local-installer-build) ou les scripts de bundle dans [Référence des scripts de développement](../script-reference/)",
+        "es": "Para generar un paquete de release para el sistema operativo que está usando, edite el número de versión del release en `app_config.json` y luego consulte la siguiente sección a continuación, o [Build de instalador local](../electronite-local-development/#local-installer-build) o los scripts de bundle en [Referencia de scripts de desarrollo](../script-reference/)"
       },
       "heading_generate_artifacts": {
         "en": "To generate artifacts:",
@@ -1231,31 +1231,6 @@
         "fr": "Téléchargez les artefacts résultants (Actions > cliquez sur le nom d'une exécution pour voir le résumé du workflow > faites défiler vers le bas jusqu'à la section Artifacts > pour télécharger, cliquez sur le nom de chaque artefact ou sur la flèche vers le bas de chaque ligne",
         "es": "Descargue los artefactos resultantes (Actions > haga clic en el nombre de una ejecución para ver el resumen del workflow > desplácese hacia abajo hasta la sección Artifacts > para descargar, haga clic en el nombre de cada artefacto o en la flecha hacia abajo de cada fila"
       },
-      "artifacts_double_compressed": {
-        "en": "Any double-compressed artifacts should have one layer uncompressed before release, e.g.:",
-        "fr": "Tout artefact doublement compressé doit être décompressé d'une couche avant la publication, par exemple :",
-        "es": "Cualquier artefacto doblemente comprimido debe descomprimirse una capa antes de la publicación, por ejemplo:"
-      },
-      "artifacts_strip_tgz": {
-        "en": "Strip *.tgz.zip down to *.tgz",
-        "fr": "Réduire *.tgz.zip à *.tgz",
-        "es": "Reducir *.tgz.zip a *.tgz"
-      },
-      "artifacts_strip_zip": {
-        "en": "Strip *.zip.zip down to *.zip",
-        "fr": "Réduire *.zip.zip à *.zip",
-        "es": "Reducir *.zip.zip a *.zip"
-      },
-      "artifacts_windows_warning": {
-        "en": "If working from windows, avoid releasing a re-zipping a macos or linux zip package if a .pkg, .sh, .bsh, .zsh was in the layer re-zipped in windows. Doing so would otherwise remove file permission settings of `chmod +x` where they are needed.",
-        "fr": "Si vous travaillez sous Windows, évitez de publier en re-zippant un package zip macOS ou Linux si un .pkg, .sh, .bsh, .zsh se trouvait dans la couche re-zippée sous Windows. Cela supprimerait les permissions de fichier `chmod +x` là où elles sont nécessaires.",
-        "es": "Si trabaja desde Windows, evite publicar re-comprimiendo un paquete zip de macOS o Linux si un .pkg, .sh, .bsh, .zsh estaba en la capa re-comprimida en Windows. Hacerlo eliminaría los permisos de archivo `chmod +x` donde son necesarios."
-      },
-      "artifacts_pkg_zip": {
-        "en": "Release the *.pkg.zip layer as .zip as it includes a README file in the same layer as the pkg, which contains installation and upgrade instructions / info.",
-        "fr": "Publiez la couche *.pkg.zip en tant que .zip car elle inclut un fichier README dans la même couche que le pkg, contenant les instructions et informations d'installation et de mise à jour.",
-        "es": "Publique la capa *.pkg.zip como .zip ya que incluye un archivo README en la misma capa que el pkg, que contiene instrucciones e información de instalación y actualización."
-      },
       "artifacts_upload_releases": {
         "en": "Upload releases manually by going to the Release section of your repo and selecting \"Draft a new release\".",
         "fr": "Téléversez les releases manuellement en allant dans la section Release de votre dépôt et en sélectionnant « Draft a new release ».",
@@ -1267,9 +1242,9 @@
         "es": "Mantenimiento"
       },
       "maintenance_update_server": {
-        "en": "To update the \"main\" [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) server version, change it in `/local_server/Cargo.toml` and run the `build_server` script to use it in local dev.\n\nTo update the \"dev\" or \"qa\" server versions, change it in `/local_server.env` and run `build_server dev` or `build_server qa` to use it in local dev.\n\nFor all available pankosmia-web version numbers see [crates.io](https://crates.io/crates/pankosmia_web/versions).",
-        "fr": "Pour mettre à jour la version « main » du serveur [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/), modifiez-la dans `/local_server/Cargo.toml` et exécutez le script `build_server` pour l'utiliser en développement local.\n\nPour mettre à jour les versions « dev » ou « qa » du serveur, modifiez-les dans `/local_server.env` et exécutez `build_server dev` ou `build_server qa` pour les utiliser en développement local.\n\nPour tous les numéros de version disponibles de pankosmia-web, voir [crates.io](https://crates.io/crates/pankosmia_web/versions).",
-        "es": "Para actualizar la versión \"main\" del servidor [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/), cámbiela en `/local_server/Cargo.toml` y ejecute el script `build_server` para usarla en desarrollo local.\n\nPara actualizar las versiones \"dev\" o \"qa\" del servidor, cámbielas en `/local_server.env` y ejecute `build_server dev` o `build_server qa` para usarlas en desarrollo local.\n\nPara todos los números de versión disponibles de pankosmia-web, vea [crates.io](https://crates.io/crates/pankosmia_web/versions)."
+        "en": "To update the [panksomia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/) server version, change it in `app_config.json` and run the `build_server,<sh|bat|zsh> [tier]` script to use it in local dev.\n\nFor all available pankosmia-web version numbers see [crates.io](https://crates.io/crates/pankosmia_web/versions).",
+        "fr": "Pour mettre à jour la version du serveur [pankosmia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/), modifiez-la dans `app_config.json`, puis exécutez le script `build_server,<sh|bat|zsh> [tier]` pour l'utiliser en développement local.\n\nPour tous les numéros de version disponibles de pankosmia-web, voir [crates.io](https://crates.io/crates/pankosmia_web/versions).",
+        "es": "Para actualizar la versión del servidor [pankosmia-web](https://docs.rs/pankosmia_web/latest/pankosmia_web/), cámbiela en `app_config.json` y ejecute el script `build_server,<sh|bat|zsh> [tier]` para usarla en el desarrollo local.\n\nPara todos los números de versión disponibles de pankosmia-web, vea [crates.io](https://crates.io/crates/pankosmia_web/versions)."
       },
       "maintenance_sync": {
         "en": "To sync this repo with its upstream, run the `sync` script.",
@@ -1369,9 +1344,9 @@
         "es": "Pruebe volviendo a ejecutar el script `build_viewer`. Vea [Visor de desarrollo Electronite](#electronite-dev-viewer) arriba. Esto configurará los archivos de Electron mencionados arriba en la siguiente ubicación con las variables específicas de la aplicación configuradas."
       },
       "deploy_test_startup": {
-        "en": "Test `bundle_viewer.<bsh|ps1|zsh>` by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting installs.",
-        "fr": "Testez `bundle_viewer.<bsh|ps1|zsh>` en compilant localement sous Windows ou MacOS, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations résultantes.",
-        "es": "Pruebe `bundle_viewer.<bsh|ps1|zsh>` compilando localmente en Windows o MacOS, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones resultantes."
+        "en": "Test `bundle_app.<sh|ps1|zsh>` by either building locally on Windows or MacOS or by pushing a branch, building via git hub actions, then testing the resulting installs.",
+        "fr": "Testez `bundle_app.<sh|ps1|zsh>` en compilant localement sous Windows ou MacOS, ou en poussant une branche, en compilant via GitHub Actions, puis en testant les installations résultantes.",
+        "es": "Pruebe `bundle_app.<sh|ps1|zsh>` compilando localmente en Windows o MacOS, o enviando una rama, compilando mediante GitHub Actions y luego probando las instalaciones resultantes."
       },
       "install_important_title": {
         "en": "Required packages are copied by script!",
@@ -1421,9 +1396,9 @@
         "es": "Este repositorio reúne varias bibliotecas y proyectos en una sola aplicación. Los proyectos están distribuidos en varios repositorios para permitir la reutilización modular. A continuación se proporcionan scripts para ayudar en la configuración, aunque todo también puede configurarse manualmente. Lo siguiente asume que [los repositorios](https://github.com/pankosmia/repositories) están instalados con la siguiente estructura de directorios."
       },
       "ecosystem_setup_example": {
-        "en": "This is an example. Clients in use may vary. Configuration is handled via `app_config.env`and the `app_setup` script.",
-        "fr": "Ceci est un exemple. Les clients utilisés peuvent varier. La configuration est gérée via `app_config.env` et le script `app_setup`.",
-        "es": "Esto es un ejemplo. Los clientes en uso pueden variar. La configuración se gestiona mediante `app_config.env` y el script `app_setup`."
+        "en": "This is an example. Clients in use may vary. Configuration is handled via `app_config.json` and the `buildCommon.js` script.",
+        "fr": "Ceci est un exemple. Les clients utilisés peuvent varier. La configuration est gérée via `app_config.json` et le script `buildCommon.js`.",
+        "es": "Esto es un ejemplo. Los clientes en uso pueden variar. La configuración se gestiona mediante `app_config.json` y el script `buildCommon.jsbuildCommon.js`."
       },
       "heading_installing_clients": {
         "en": "Installing the clients",
@@ -1446,9 +1421,9 @@
         "es": "¡En cada repositorio de cliente, NO en este repositorio!"
       },
       "installing_clients_run_note": {
-        "en": "Running `run`, `build_server`, or `bundle_viewer` all copy the latest build to the build environment.",
-        "fr": "L'exécution de `run`, `build_server` ou `bundle_viewer` copie dans tous les cas la dernière build dans l'environnement de build.",
-        "es": "Ejecutar `run`, `build_server` o `bundle_viewer` copia en todos los casos la última compilación al entorno de compilación."
+        "en": "Running `run`, `build_server`, or `bundle_app` all copy the latest build to the build environment.",
+        "fr": "L'exécution de `run`, `build_server` ou `bundle_app` copie dans tous les cas la dernière build dans l'environnement de build.",
+        "es": "Ejecutar `run`, `build_server` o `bundle_app` copia en todos los casos la última compilación al entorno de compilación."
       },
       "heading_scripts": {
         "en": "Scripts",
@@ -1456,9 +1431,9 @@
         "es": "Scripts"
       },
       "scripts_legend": {
-        "en": "{: .important }\n> Scripts are located in `<os>/scripts/` and **must be run from that directory** (e.g., `cd linux/scripts/`, `cd windows\\scripts\\`, `cd macos/scripts/`). Scripts will fail if run from a different location.\n> **File extensions by OS:** Linux → `.bsh`, macOS → `.zsh`, Windows → `.bat` (unless otherwise noted). Paths use `/` on Linux/macOS and `\\` on Windows. <sup>[[1]](#f1)</sup>",
-        "fr": "{: .important }\n> Les scripts se trouvent dans `<os>/scripts/` et **doivent être exécutés depuis ce répertoire** (par exemple, `cd linux/scripts/`, `cd windows\\scripts\\`, `cd macos/scripts/`). Les scripts échoueront s'ils sont exécutés depuis un autre emplacement.\n> **Extensions de fichiers par OS :** Linux → `.bsh`, macOS → `.zsh`, Windows → `.bat` (sauf indication contraire). Les chemins utilisent `/` sur Linux/macOS et `\\` sur Windows. <sup>[[1]](#f1)</sup>",
-        "es": "{: .important }\n> Los scripts se encuentran en `<os>/scripts/` y **deben ejecutarse desde ese directorio** (por ejemplo, `cd linux/scripts/`, `cd windows\\scripts\\`, `cd macos/scripts/`). Los scripts fallarán si se ejecutan desde otra ubicación.\n> **Extensiones de archivo por SO:** Linux → `.bsh`, macOS → `.zsh`, Windows → `.bat` (salvo indicación contraria). Las rutas usan `/` en Linux/macOS y `\\` en Windows. <sup>[[1]](#f1)</sup>"
+        "en": "{: .important }\n> Scripts are located in `<os>/scripts/` and **must be run from that directory** (e.g., `cd linux/scripts/`, `cd windows\\scripts\\`, `cd macos/scripts/`). Scripts will fail if run from a different location.\n> **File extensions by OS:** Linux → `.sh`, macOS → `.zsh`, Windows → `.bat` (unless otherwise noted). Paths use `/` on Linux/macOS and `\\` on Windows. <sup>[[1]](#f1)</sup>",
+        "fr": "{: .important }\n> Les scripts se trouvent dans `<os>/scripts/` et **doivent être exécutés depuis ce répertoire** (par exemple, `cd linux/scripts/`, `cd windows\\scripts\\`, `cd macos/scripts/`). Les scripts échoueront s'ils sont exécutés depuis un autre emplacement.\n> **Extensions de fichiers par OS :** Linux → `.sh`, macOS → `.zsh`, Windows → `.bat` (sauf indication contraire). Les chemins utilisent `/` sur Linux/macOS et `\\` sur Windows. <sup>[[1]](#f1)</sup>",
+        "es": "{: .important }\n> Los scripts se encuentran en `<os>/scripts/` y **deben ejecutarse desde ese directorio** (por ejemplo, `cd linux/scripts/`, `cd windows\\scripts\\`, `cd macos/scripts/`). Los scripts fallarán si se ejecutan desde otra ubicación.\n> **Extensiones de archivo por SO:** Linux → `.sh`, macOS → `.zsh`, Windows → `.bat` (salvo indicación contraria). Las rutas usan `/` en Linux/macOS y `\\` en Windows. <sup>[[1]](#f1)</sup>"
       },
       "heading_configuration": {
         "en": "Configuration",
@@ -1466,24 +1441,19 @@
         "es": "Configuración"
       },
       "configuration_intro": {
-        "en": "Config files must match clients and assets utilized. Scripts that write them are provided, as per `app_config.env`. Files created by the app_setup script are:",
-        "fr": "Les fichiers de configuration doivent correspondre aux clients et assets utilisés. Des scripts pour les générer sont fournis, selon `app_config.env`. Les fichiers créés par le script app_setup sont :",
-        "es": "Los archivos de configuración deben coincidir con los clientes y assets utilizados. Se proporcionan scripts para generarlos, según `app_config.env`. Los archivos creados por el script app_setup son:"
+        "en": "Config files must match clients and assets utilized. Scripts that write them are provided, as per `app_config.json`. Some of the files created by the `buildCommon.js` script are:",
+        "fr": "Les fichiers de configuration doivent correspondre aux clients et assets utilisés. Des scripts pour les générer sont fournis, selon `app_config.json`. Certains des fichiers créés par le script `buildCommon.js` sont :",
+        "es": "Los archivos de configuración deben coincidir con los clientes y assets utilizados. Se proporcionan scripts para generarlos, según `app_config.json`. Algunos de los archivos creados por el script `buildCommon.js` son:"
       },
       "configuration_files_list": {
-        "en": "- `buildSpec.json`\n- `/globalBuildResources/i18nPatch.json`\n- `/globalBuildResources/product.json`\n- `/<os>/buildResources/setup/app_setup.json`",
-        "fr": "- `buildSpec.json`\n- `/globalBuildResources/i18nPatch.json`\n- `/globalBuildResources/product.json`\n- `/<os>/buildResources/setup/app_setup.json`",
-        "es": "- `buildSpec.json`\n- `/globalBuildResources/i18nPatch.json`\n- `/globalBuildResources/product.json`\n- `/<os>/buildResources/setup/app_setup.json`"
+        "en": "- `/globalBuildResources/i18nPatch.json`\n- `/globalBuildResources/product.json`\n- `/<os>/buildResources/setup/app_config.json`",
+        "fr": "- `/globalBuildResources/i18nPatch.json`\n- `/globalBuildResources/product.json`\n- `/<os>/buildResources/setup/app_config.json`",
+        "es": "- `/globalBuildResources/i18nPatch.json`\n- `/globalBuildResources/product.json`\n- `/<os>/buildResources/setup/app_config.json`"
       },
       "configuration_review": {
-        "en": "Review `app_config.env` and adjust as needed, then run one of the setup scripts that follow. Re-run the app_setup script anytime `app_config.env` is changed.",
-        "fr": "Vérifiez `app_config.env` et ajustez si nécessaire, puis exécutez l'un des scripts de configuration qui suivent. Relancez le script app_setup chaque fois que `app_config.env` est modifié.",
-        "es": "Revise `app_config.env` y ajuste según sea necesario, luego ejecute uno de los scripts de configuración que siguen. Vuelva a ejecutar el script app_setup cada vez que se modifique `app_config.env`."
-      },
-      "heading_config_scripts": {
-        "en": "Config scripts:",
-        "fr": "Scripts de configuration :",
-        "es": "Scripts de configuración:"
+        "en": "Review `app_config.json` and adjust as needed, then run one of the setup scripts that follow.",
+        "fr": "Vérifiez `app_config.json` et ajustez si nécessaire, puis exécutez l'un des scripts de configuration qui suivent.",
+        "es": "Revise `app_config.json` y ajuste según sea necesario, luego ejecute uno de los scripts de configuración que siguen."
       },
       "config_scripts_run_from": {
         "en": "Run from the provided location:",
@@ -1496,14 +1466,9 @@
         "es": "Descripción"
       },
       "table_header_script_arg": {
-        "en": "Script & Arguments<br /><small>cd </small>`<os>/scripts/`<br /><nobr><small>Linux: `.bsh` <code>&#124;</code> macOS: `.zsh` <code>&#124;</code> Win: `.bat`</small></nobr>",
-        "fr": "Script et arguments<br /><small>cd </small>`<os>/scripts/`<br /><nobr><small>Linux : `.bsh` <code>&#124;</code> macOS : `.zsh` <code>&#124;</code> Win : `.bat`</small></nobr>",
-        "es": "Script y argumentos<br /><small>cd </small>`<os>/scripts/`<br /><nobr><small>Linux: `.bsh` <code>&#124;</code> macOS: `.zsh` <code>&#124;</code> Win: `.bat`</small></nobr>"
-      },
-      "config_script_desc": {
-        "en": "Uses app_config.env to generate/rebuild/replace app_setup.json, buildSpec.json, product.json, and i18nPatch.json",
-        "fr": "Utilise app_config.env pour générer/reconstruire/remplacer app_setup.json, buildSpec.json, product.json et i18nPatch.json",
-        "es": "Usa app_config.env para generar/reconstruir/reemplazar app_setup.json, buildSpec.json, product.json e i18nPatch.json"
+        "en": "Script & Arguments<br /><small>cd </small>`<os>/scripts/`<br /><nobr><small>Linux: `.sh` <code>&#124;</code> macOS: `.zsh` <code>&#124;</code> Win: `.bat`</small></nobr>",
+        "fr": "Script et arguments<br /><small>cd </small>`<os>/scripts/`<br /><nobr><small>Linux : `.sh` <code>&#124;</code> macOS : `.zsh` <code>&#124;</code> Win : `.bat`</small></nobr>",
+        "es": "Script y argumentos<br /><small>cd </small>`<os>/scripts/`<br /><nobr><small>Linux: `.sh` <code>&#124;</code> macOS: `.zsh` <code>&#124;</code> Win: `.bat`</small></nobr>"
       },
       "heading_setup_scripts": {
         "en": "Setup scripts:",
@@ -1516,24 +1481,24 @@
         "es": "Ejecute desde la ubicación proporcionada:"
       },
       "clone_desc": {
-        "en": "Clones all repos in `/app_config.env` if a directory by that name does not already exist",
-        "fr": "Clone tous les dépôts dans `/app_config.env` si un répertoire portant ce nom n'existe pas déjà",
-        "es": "Clona todos los repositorios en `/app_config.env` si un directorio con ese nombre no existe ya"
+        "en": "Clones all repos in `/app_config.json` if a directory by that name does not already exist",
+        "fr": "Clone tous les dépôts dans `/app_config.json` si un répertoire portant ce nom n'existe pas déjà",
+        "es": "Clona todos los repositorios en `/app_config.json` si un directorio con ese nombre no existe ya"
       },
       "clone_script": {
-        "en": "`clone`<br />&nbsp;&nbsp;Default clones via HTTPS.<br />Optional argument:<br />`clone -s`<br />&nbsp;&nbsp;Clones via SSH.",
-        "fr": "`clone`<br />&nbsp;&nbsp;Clone par défaut via HTTPS.<br />Argument optionnel :<br />`clone -s`<br />&nbsp;&nbsp;Clone via SSH.",
-        "es": "`clone`<br />&nbsp;&nbsp;Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`clone -s`<br />&nbsp;&nbsp;Clona vía SSH."
+        "en": "`clone.<ext> [-s|-S] [tier|<tier<Repos]`<br />&nbsp;&nbsp;Default clones via HTTPS.<br />Optional argument:<br />`clone [-s|-S]`<br />&nbsp;&nbsp;Clones via SSH.<br />`clone [tier|<tier>Repos]`<br />&nbsp;&nbsp; One of the values in tiers.order (e.g. dev, qa, main) or (e.g. devRepos, qaRepos, mainRepos)",
+        "fr": "`clone.<ext> [-s|-S] [tier|<tier>Repos]`<br />&nbsp;&nbsp;Clone par défaut via HTTPS.<br />Argument optionnel :<br />`clone [-s|-S]`<br />&nbsp;&nbsp;Clone via SSH.<br />`clone [tier|<tier>Repos]`<br />&nbsp;&nbsp; Une des valeurs de tiers.order (par ex. dev, qa, main) ou (par ex. devRepos, qaRepos, mainRepos)",
+        "es": "`clone.<ext> [-s|-S] [tier|<tier>Repos]`<br />&nbsp;&nbsp;Clona por defecto vía HTTPS.<br />Argumento opcional:<br />`clone [-s|-S]`<br />&nbsp;&nbsp;Clona vía SSH.<br />`clone [tier|<tier>Repos]`<br />&nbsp;&nbsp; Uno de los valores de tiers.order (p. ej. dev, qa, main) o (p. ej. devRepos, qaRepos, mainRepos)"
       },
       "build_clients_desc": {
-        "en": "For each asset repo in `/app_config.env`: git checkout main, git pull<br />For each client repo in `/app_config.env`: `git checkout main`, `git pull`, `pnpm i`, and `pnpm run build`.<br />***Dev's should build manually when testing branch(es).***",
-        "fr": "Pour chaque dépôt d'assets dans `/app_config.env` : git checkout main, git pull<br />Pour chaque dépôt client dans `/app_config.env` : `git checkout main`, `git pull`, `pnpm i` et `pnpm run build`.<br />***Les développeurs doivent compiler manuellement lorsqu'ils testent des branches.***",
-        "es": "Para cada repositorio de assets en `/app_config.env`: git checkout main, git pull<br />Para cada repositorio de cliente en `/app_config.env`: `git checkout main`, `git pull`, `pnpm i` y `pnpm run build`.<br />***Los desarrolladores deben compilar manualmente al probar ramas.***"
+        "en": "For each asset repo in `/app_config.json`: git checkout main, git pull<br />For each client repo in `/app_config.json`: `git checkout main`, `git pull`, `pnpm i`, and `pnpm run build`.<br />***Dev's should build manually when testing branch(es).***",
+        "fr": "Pour chaque dépôt d'assets dans `/app_config.json` : git checkout main, git pull<br />Pour chaque dépôt client dans `/app_config.json` : `git checkout main`, `git pull`, `pnpm i` et `pnpm run build`.<br />***Les développeurs doivent compiler manuellement lorsqu'ils testent des branches.***",
+        "es": "Para cada repositorio de assets en `/app_config.json`: git checkout main, git pull<br />Para cada repositorio de cliente en `/app_config.json`: `git checkout main`, `git pull`, `pnpm i` y `pnpm run build`.<br />***Los desarrolladores deben compilar manualmente al probar ramas.***"
       },
       "build_clients_script": {
-        "en": "`build_clients`<br />Optional arguments:<br /><nobr><code>build_clients [branch&#124;dev&#124;qa] [dev&#124;qa]</code></nobr><br />&nbsp;&nbsp;Where \"my-branch\" does not exist, then fallback will be \"main\" unless the next argument is specified. If \"dev\" is indicated then a \"dev\" → \"qa\" → \"main\" fallback is implied. If \"qa\" is indicated then a \"qa\" → \"main\" fallback is implied.<br />`build_clients -d`<br />&nbsp;&nbsp;Deletes past logs without asking.<br />`build_clients -f`<br />&nbsp;&nbsp;Skip pull because all repos are known to be fresh clones.",
-        "fr": "`build_clients`<br />Arguments optionnels :<br /><nobr><code>build_clients [branch&#124;dev&#124;qa] [dev&#124;qa]</code></nobr><br />&nbsp;&nbsp;Lorsque « my-branch » n'existe pas, le repli sera « main » sauf si l'argument suivant est spécifié. Si « dev » est indiqué, un repli « dev » → « qa » → « main » est implicite. Si « qa » est indiqué, un repli « qa » → « main » est implicite.<br />`build_clients -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.<br />`build_clients -f`<br />&nbsp;&nbsp;Ignorer le pull car tous les dépôts sont des clones récents.",
-        "es": "`build_clients`<br />Argumentos opcionales:<br /><nobr><code>build_clients [branch&#124;dev&#124;qa] [dev&#124;qa]</code></nobr><br />&nbsp;&nbsp;Donde \"my-branch\" no exista, el respaldo será \"main\" a menos que se especifique el siguiente argumento. Si se indica \"dev\", se implica un respaldo \"dev\" → \"qa\" → \"main\". Si se indica \"qa\", se implica un respaldo \"qa\" → \"main\".<br />`build_clients -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar.<br />`build_clients -f`<br />&nbsp;&nbsp;Omitir pull porque todos los repositorios son clones recientes."
+        "en": "`build_clients.<ext> [my-branch|tier] [tier] [-d] [-f]`<br />Optional arguments:<br /><nobr><code>build_clients [branch|tier] [tier]</code></nobr><br />&nbsp;&nbsp;Where \"my-branch\" does not exist, then fallback will be tiers.default unless the next argument is specified. Fallback will continue in tiers.default order. With `\"order\": [\"dev\", \"qa\", \"main\"]`, if \"dev\" is indicated then a \"dev\" → \"qa\" → \"main\" fallback is implied. If \"qa\" is indicated then a \"qa\" → \"main\" fallback is implied.<br />`build_clients -d`<br />&nbsp;&nbsp;Deletes past logs without asking.<br />`build_clients -f`<br />&nbsp;&nbsp;Skip pull because all repos are known to be fresh clones.",
+        "fr": "`build_clients.<ext> [my-branch|tier] [tier] [-d] [-f]`<br />Arguments optionnels :<br /><nobr><code>build_clients [branch|tier] [tier]</code></nobr><br />&nbsp;&nbsp;Lorsque « my-branch » n'existe pas, le repli sera tiers.default sauf si l'argument suivant est spécifié. Le repli suivra l'ordre de tiers.default. Avec `\"order\": [\"dev\", \"qa\", \"main\"]`, si « dev » est indiqué, un repli « dev » → « qa » → « main » est implicite. Si « qa » est indiqué, un repli « qa » → « main » est implicite.<br />`build_clients -d`<br />&nbsp;&nbsp;Supprime les anciens logs sans demander.<br />`build_clients -f`<br />&nbsp;&nbsp;Ignorer le pull car tous les dépôts sont des clones récents.",
+        "es": "`build_clients.<ext> [my-branch|tier] [tier] [-d] [-f]`<br />Argumentos opcionales:<br /><nobr><code>build_clients [branch|tier] [tier]</code></nobr><br />&nbsp;&nbsp;Donde \"my-branch\" no exista, el respaldo será tiers.default a menos que se especifique el siguiente argumento. El respaldo seguirá el orden de tiers.default. Con `\"order\": [\"dev\", \"qa\", \"main\"]`, si se indica \"dev\", se implica un respaldo \"dev\" → \"qa\" → \"main\". Si se indica \"qa\", se implica un respaldo \"qa\" → \"main\".<br />`build_clients -d`<br />&nbsp;&nbsp;Elimina los logs anteriores sin preguntar.<br />`build_clients -f`<br />&nbsp;&nbsp;Omitir pull porque todos los repositorios son clones recientes."
       },
       "build_viewer_desc": {
         "en": "Create an Electronite viewer for use with the local dev build environment.",
@@ -1541,9 +1506,9 @@
         "es": "Crear un visor Electronite para usar con el entorno de build de desarrollo local."
       },
       "build_viewer_script": {
-        "en": "`build_viewer`<br />Optional argument:<br />`build_viewer -f`<br />&nbsp;&nbsp;Full re-install<br />**Windows:** uses `.ps1` (use a PowerShell terminal)",
-        "fr": "`build_viewer`<br />Argument optionnels :<br />`build_viewer -f`<br />&nbsp;&nbsp;Réinstallation complète<br />**Windows :** utilise `.ps1` (utilisez un terminal PowerShell)",
-        "es": "`build_viewer`<br />Argument opcionales:<br />`build_viewer -f`<br />&nbsp;&nbsp;Reinstalación completa<br />**Windows:** usa `.ps1` (use una terminal PowerShell)"
+        "en": "`build_viewer.<ext> [tier] [-f]`<br />Optional argument:<br />`build_viewer [tier]`<br />&nbsp;&nbsp;A tier from tiers.order; Defaults to tiers.default.<br />`build_viewer -f`<br />&nbsp;&nbsp;Full re-install<br />**Windows:** uses `.ps1` (use a PowerShell terminal)",
+        "fr": "`build_viewer.<ext> [tier] [-f]`<br />Argument optionnels :<br />`build_viewer [tier]`<br />&nbsp;&nbsp;Un \"tier\" de tiers.order ; par défaut, tiers.default.<br />`build_viewer -f`<br />&nbsp;&nbsp;Réinstallation complète<br />**Windows :** utilise `.ps1` (utilisez un terminal PowerShell)",
+        "es": "`build_viewer.<ext> [tier] [-f]`<br />Argument opcionales:<br />`build_viewer [tier]`<br />&nbsp;&nbsp;Un \"tier\" de tiers.order; por defecto, tiers.default.<br />`build_viewer -f`<br />&nbsp;&nbsp;Reinstalación completa<br />**Windows:** usa `.ps1` (use una terminal PowerShell)"
       },
       "heading_usage_scripts": {
         "en": "Usage scripts:",
@@ -1561,9 +1526,9 @@
         "es": "Elimina el directorio de build y ejecuta <nobr><code>cargo clean</code></nobr> <sup>[[4]](#f4)</sup>"
       },
       "clean_script": {
-        "en": "`clean`<br />Optional argument:<br />`clean -s`<br />&nbsp;&nbsp;Will not ask if server is off",
-        "fr": "`clean`<br />Argument optionnel :<br />`clean -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté",
-        "es": "`clean`<br />Argumento opcional:<br />`clean -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
+        "en": "`clean.<ext> [-s]`<br />Optional argument:<br />`clean -s`<br />&nbsp;&nbsp;Will not ask if server is off",
+        "fr": "`clean.<ext> [-s]`<br />Argument optionnel :<br />`clean -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté",
+        "es": "`clean.<ext> [-s]`<br />Argumento opcional:<br />`clean -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
       },
       "build_server_desc": {
         "en": "Runs cargo build and <nobr><code>node build.js</code></nobr>",
@@ -1571,9 +1536,9 @@
         "es": "Ejecuta cargo build y <nobr><code>node build.js</code></nobr>"
       },
       "build_server_script": {
-        "en": "`build_server`<br />Optional arguments:<br />`build_server dev`<br />&nbsp;&nbsp;Uses the \"dev\" version in `/local_server.env`<br />`build_server qa`<br />&nbsp;&nbsp;Uses the \"qa\" version in `/local_server.env`<br />`build_server -s`<br />&nbsp;&nbsp;Will not ask if server is off",
-        "fr": "`build_server`<br />Arguments optionnels :<br />`build_server dev`<br />&nbsp;&nbsp;Utilise la version « dev » dans `/local_server.env`<br />`build_server qa`<br />&nbsp;&nbsp;Utilise la version « qa » dans `/local_server.env`<br />`build_server -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté",
-        "es": "`build_server`<br />Argumentos opcionales:<br />`build_server dev`<br />&nbsp;&nbsp;Usa la versión \"dev\" en `/local_server.env`<br />`build_server qa`<br />&nbsp;&nbsp;Usa la versión \"qa\" en `/local_server.env`<br />`build_server -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
+        "en": "`build_server.<ext> [tier] [-s]`<br />Optional arguments:<br />`build_server [tier]`<br />&nbsp;&nbsp;(Default) Uses tier.default in `/app_config.json`<br />`build_server -s`<br />&nbsp;&nbsp;Will not ask if server is off",
+        "fr": "`build_server.<ext> [tier] [-s]`<br />Arguments optionnels :<br />`build_server [tier]`<br />&nbsp;&nbsp;(Défaut) Utilise tiers.default dans `/app_config.json`<br />`build_server -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté",
+        "es": "`build_server.<ext> [tier] [-s]`<br />Argumentos opcionales:<br />`build_server [tier]`<br />&nbsp;&nbsp;(Defect) Usa tiers.default en `/app_config.json`<br />`build_server -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
       },
       "run_desc": {
         "en": "Assembles the build environment (clients) and starts the server <sup>[[2]](#f2)</sup>",
@@ -1581,9 +1546,9 @@
         "es": "Ensambla el entorno de build (clientes) e inicia el servidor <sup>[[2]](#f2)</sup>"
       },
       "run_script": {
-        "en": "`run`<br />Optional arguments:<br />`run -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`run --help`<br />&nbsp;&nbsp;Lists additional available arguments",
-        "fr": "`run`<br />Argument optionneles :<br />`run -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`run --help`<br />&nbsp;&nbsp;Liste les arguments supplémentaires disponibles",
-        "es": "`run`<br />Argumento opcionales:<br />`run -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`run --help`<br />&nbsp;&nbsp;Muestra los argumentos adicionales disponibles"
+        "en": "`run.<ext> [tier] [-s] [--help]`<br />Optional arguments:<br />`run [tier]`<br />&nbsp;&nbsp;(Default) Uses tier.default in `/app_config.json`<br />`run -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`run --help`<br />&nbsp;&nbsp;Lists additional available arguments",
+        "fr": "`run.<ext> [tier] [-s] [--help]`<br />Argument optionneles :<br />`run [tier]`<br />&nbsp;&nbsp;(Default) Utilise tiers.default dans `/app_config.json`<br />`run -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`run --help`<br />&nbsp;&nbsp;Liste les arguments supplémentaires disponibles",
+        "es": "`run.<ext> [tier] [-s] [--help]`<br />Argumento opcionales:<br />`run [tier]`<br />&nbsp;&nbsp;(Default) Usa tiers.default en `/app_config.json`<br />`run -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`run --help`<br />&nbsp;&nbsp;Muestra los argumentos adicionales disponibles"
       },
       "viewer_desc": {
         "en": "Launches the Electronite viewer for use with the dev environment. (Requires the viewer having previously been created via the `build_viewer` script.)",
@@ -1595,25 +1560,25 @@
         "fr": "`viewer`<br />Outils de développement : Ctrl + Shift + I (macOS : Cmd + Option + I)<br />Argument optionnel :<br />`viewer [PORT#]`<br />(par défaut 19119)",
         "es": "`viewer`<br />Herramientas de desarrollo: Ctrl + Shift + I (macOS: Cmd + Option + I)<br />Argumento opcional:<br />`viewer [PORT#]`<br />(por defecto 19119)"
       },
-      "bundle_viewer_desc": {
-        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs `git checkout main`, `git pull`, and `pnpm i`, runs `app_setup` to ensure version consistency, runs <nobr><code>node build.js</code></nobr>, then makes a zip release bundle and a stand-alone installer. <sup>[[2]](#f2)</sup> <sup>[[3]](#f3)</sup>",
-        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute `git checkout main`, `git pull` et `pnpm i`, exécute `app_setup` pour assurer la cohérence des versions, exécute <nobr><code>node build.js</code></nobr>, puis crée un bundle de release zip et un installateur autonome. <sup>[[2]](#f2)</sup> <sup>[[3]](#f3)</sup>",
-        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta `git checkout main`, `git pull` y `pnpm i`, ejecuta `app_setup` para asegurar la consistencia de versiones, ejecuta <nobr><code>node build.js</code></nobr>, y luego crea un bundle de release zip y un instalador independiente. <sup>[[2]](#f2)</sup> <sup>[[3]](#f3)</sup>"
+      "bundle_app_desc": {
+        "en": "Deletes the last bundles and temp contents for the given OS (if they exist), then on this repo runs `git checkout main`, `git pull`, and `pnpm i`, runs <nobr><code>node build.js</code></nobr>, then makes a zip release bundle and a stand-alone installer. <sup>[[2]](#f2)</sup> <sup>[[3]](#f3)</sup>",
+        "fr": "Supprime les derniers bundles et le contenu temporaire pour le système d'exploitation donné (s'ils existent), puis sur ce dépôt exécute `git checkout main`, `git pull` et `pnpm i`, exécute <nobr><code>node build.js</code></nobr>, puis crée un bundle de release zip et un installateur autonome. <sup>[[2]](#f2)</sup> <sup>[[3]](#f3)</sup>",
+        "es": "Elimina los últimos bundles y el contenido temporal del sistema operativo dado (si existen), luego en este repositorio ejecuta `git checkout main`, `git pull` y `pnpm i`, ejecuta <nobr><code>node build.js</code></nobr>, y luego crea un bundle de release zip y un instalador independiente. <sup>[[2]](#f2)</sup> <sup>[[3]](#f3)</sup>"
       },
-      "bundle_viewer_script": {
-        "en": "`bundle_viewer`<br />**Linux:** Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here. Optional argument:<br /><nobr><code>bundle_viewer.ps1 -p</code></nobr><br />&nbsp;&nbsp;Portable app<br />**Windows:** Uses `.ps1`. Optional arguments:<br /><nobr><code>bundle_viewer.ps1 -p</code></nobr><br />&nbsp;&nbsp;Portable app<br /><nobr><code>bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;Will not ask if server is off<br /><nobr><code>bundle_viewer.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;Stops CLI build as it is requested separately from Github Actions.<br />**macOS:** Optional argument:<br /><nobr><code>bundle_viewer.ps1 -p</code></nobr><br />&nbsp;&nbsp;Portable app<br />`bundle_viewer -s`<br />&nbsp;&nbsp;Will not ask if server is off",
-        "fr": "`bundle_viewer`<br />**Linux :** Ne compile et ne crée le bundle que pour la visionneuse. Faites tout le reste manuellement ou via d'autres scripts listés ici. Argument optionnel :<br /><nobr><code>bundle_viewer.ps1 -p</code></nobr><br />&nbsp;&nbsp;Application portable<br />**Windows :** Utilise `.ps1`. Argument optionneles :<br /><nobr><code>bundle_viewer.ps1 -p</code></nobr><br />&nbsp;&nbsp;Application portable<br /><nobr><code>bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br /><nobr><code>bundle_viewer.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;Arrête la build CLI, car elle est demandée séparément depuis GitHub Actions.<br />**macOS :** Argument optionneles :<br /><nobr><code>bundle_viewer.ps1 -p</code></nobr><br />&nbsp;&nbsp;Application portable<br />`bundle_viewer -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté",
-        "es": "`bundle_viewer`<br />**Linux:** Solo compila y empaqueta el visor. Haga todo lo demás manualmente o mediante otros scripts listados aquí. Argumento opcional:<br /><nobr><code>bundle_viewer.ps1 -p</code></nobr><br />&nbsp;&nbsp;Aplicación portátil<br />**Windows:** Usa `.ps1`. Argumento opcionales:<br /><nobr><code>bundle_viewer.ps1 -p</code></nobr><br />&nbsp;&nbsp;Aplicación portátil<br /><nobr><code>bundle_viewer.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br /><nobr><code>bundle_viewer.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;Detiene la compilación de la CLI, ya que se solicita por separado desde GitHub Actions.<br />**macOS:** Argumento opcionales:<br /><nobr><code>bundle_viewer.ps1 -p</code></nobr><br />&nbsp;&nbsp;Aplicación portátil<br />`bundle_viewer -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
+      "bundle_app_script": {
+        "en": "`bundle_app`<br />**Linux:** Only builds and bundles the viewer. Do all else in the description manually or through other scripts listed here. Optional argument:<br />`build_app.sh [tier]`<br />&nbsp;&nbsp;(Default) Usa tiers.default en `/app_config.json`<br /><nobr><code>bundle_app.sh -p</code></nobr><br />&nbsp;&nbsp;Portable app<br />**Windows:** Uses `.ps1`. Optional arguments:<br />`build_app.ps1 -Tier \"[tier]\"`<br />&nbsp;&nbsp;(Default) Usa tiers.default en `/app_config.json`<br /><nobr><code>bundle_app.ps1 -p</code></nobr><br />&nbsp;&nbsp;Portable app<br /><nobr><code>bundle_app.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;Will not ask if server is off<br /><nobr><code>bundle_app.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;Stops CLI build as it is requested separately from Github Actions.<br />**macOS:** Optional argument:<br />`build_app.zsh [tier]`<br />&nbsp;&nbsp;(Default) Usa tiers.default en `/app_config.json`<br /><nobr><code>bundle_app.zsh -p</code></nobr><br />&nbsp;&nbsp;Portable app<br />`bundle_app -s`<br />&nbsp;&nbsp;Will not ask if server is off",
+        "fr": "`bundle_app`<br />**Linux :** Ne compile et ne crée le bundle que pour la visionneuse. Faites tout le reste manuellement ou via d'autres scripts listés ici. Argument optionnel :<br />`build_app.sh [tier]`<br />&nbsp;&nbsp;(Default) Utilise tiers.default dans `/app_config.json`<br /><nobr><code>bundle_app.sh -p</code></nobr><br />&nbsp;&nbsp;Application portable<br />**Windows :** Utilise `.ps1`. Argument optionneles :<br />`build_app.ps1 -Tier \"[tier]\"<br />&nbsp;&nbsp;(Default) Utilise tiers.default dans `/app_config.json`<br /><nobr><code>bundle_app.ps1 -p</code></nobr><br />&nbsp;&nbsp;Application portable<br /><nobr><code>bundle_app.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br /><nobr><code>bundle_app.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;Arrête la build CLI, car elle est demandée séparément depuis GitHub Actions.<br />**macOS :** Argument optionneles :<br />`build_app.zsh [tier]<br />&nbsp;&nbsp;(Default) Utilise tiers.default dans `/app_config.json`<br /><nobr><code>bundle_app.zsh -p</code></nobr><br />&nbsp;&nbsp;Application portable<br />`bundle_app -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté",
+        "es": "`bundle_app`<br />**Linux:** Solo compila y empaqueta el visor. Haga todo lo demás manualmente o mediante otros scripts listados aquí. Argumento opcional:<br />`build_app.sh [tier]`<br />&nbsp;&nbsp;(Defect) Usa tiers.default en `/app_config.json`<br /><nobr><code>bundle_app.sh -p</code></nobr><br />&nbsp;&nbsp;Aplicación portátil<br />**Windows:** Usa `.ps1`. Argumento opcionales:<br />`build_app.ps1 -Tier \"[tier]\"<br />&nbsp;&nbsp;(Defect) Usa tiers.default en `/app_config.json`<br /><nobr><code>bundle_app.ps1 -p</code></nobr><br />&nbsp;&nbsp;Aplicación portátil<br /><nobr><code>bundle_app.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br /><nobr><code>bundle_app.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;Detiene la compilación de la CLI, ya que se solicita por separado desde GitHub Actions.<br />**macOS:** Argumento opcionales:<br />`build_app.zsh [tier]<br />&nbsp;&nbsp;(Defect) Usa tiers.default en `/app_config.json<br /><nobr><code>bundle_app.zsh -p</code></nobr><br />&nbsp;&nbsp;Aplicación portátil<br />`bundle_app -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado"
       },
       "bundle_zip_desc": {
-        "en": "Deletes the last release bundle if it exists, then on this repo runs `git checkout main`, `git pull`, and `pnpm i`, runs `app_setup` to ensure version consistency, runs <nobr><code>node build.js</code></nobr>, then makes a zip/tgz release bundle <sup>[[2]](#f2)</sup>",
-        "fr": "Supprime le dernier bundle de release s'il existe, puis sur ce dépôt exécute `git checkout main`, `git pull` et `pnpm i`, exécute `app_setup` pour assurer la cohérence des versions, exécute <nobr><code>node build.js</code></nobr>, puis crée un bundle de release zip/tgz <sup>[[2]](#f2)</sup>",
-        "es": "Elimina el último bundle de release si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `pnpm i`, ejecuta `app_setup` para asegurar la consistencia de versiones, ejecuta <nobr><code>node build.js</code></nobr>, y luego crea un bundle de release zip/tgz <sup>[[2]](#f2)</sup>"
+        "en": "Deletes the last release bundle if it exists, then on this repo runs `git checkout main`, `git pull`, and `pnpm i`, runs <nobr><code>node build.js</code></nobr>, then makes a zip/tgz release bundle <sup>[[2]](#f2)</sup>",
+        "fr": "Supprime le dernier bundle de release s'il existe, puis sur ce dépôt exécute `git checkout main`, `git pull` et `pnpm i`, exécute <nobr><code>node build.js</code></nobr>, puis crée un bundle de release zip/tgz <sup>[[2]](#f2)</sup>",
+        "es": "Elimina el último bundle de release si existe, luego en este repositorio ejecuta `git checkout main`, `git pull` y `pnpm i`, ejecuta <nobr><code>node build.js</code></nobr>, y luego crea un bundle de release zip/tgz <sup>[[2]](#f2)</sup>"
       },
       "bundle_zip_script": {
-        "en": "**Linux:** `bundle_tgz`<br />**Windows:** `bundle_zip.ps1`<br />**macOS:** `bundle_zip`<br />Optional arguments:<br />**Linux/macOS:**<br />`bundle_tgz -s` / `bundle_zip -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`bundle_tgz -g` / `bundle_zip -g`<br />&nbsp;&nbsp;Run from GitHub Actions<br />**Windows:**<br /><nobr><code>bundle_zip.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off<br /><nobr><code>bundle_zip.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Run from GitHub Actions",
-        "fr": "**Linux :** `bundle_tgz`<br />**Windows :** `bundle_zip.ps1`<br />**macOS :** `bundle_zip`<br />Arguments optionnels :<br />**Linux/macOS :**<br />`bundle_tgz -s` / `bundle_zip -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`bundle_tgz -g` / `bundle_zip -g`<br />&nbsp;&nbsp;Exécuter depuis GitHub Actions<br />**Windows :**<br /><nobr><code>bundle_zip.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté<br /><nobr><code>bundle_zip.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Exécuter depuis GitHub Actions",
-        "es": "**Linux:** `bundle_tgz`<br />**Windows:** `bundle_zip.ps1`<br />**macOS:** `bundle_zip`<br />Argumentos opcionales:<br />**Linux/macOS:**<br />`bundle_tgz -s` / `bundle_zip -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`bundle_tgz -g` / `bundle_zip -g`<br />&nbsp;&nbsp;Ejecutar desde GitHub Actions<br />**Windows:**<br /><nobr><code>bundle_zip.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado<br /><nobr><code>bundle_zip.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; Ejecutar desde GitHub Actions"
+        "en": "**Linux:** `bundle_tgz.sh`<br />**Windows:** `bundle_zip.ps1`<br />**macOS:** `bundle_zip.zsh`<br />Optional arguments:<br />**Linux/macOS:**<br />`bundle_tgz.sh [tier]` / `bundle_zip.zsh [tier]`<br />&nbsp;&nbsp;(Default) Usa tiers.default en `/app_config.json`<br />`bundle_tgz -s` / `bundle_zip -s`<br />&nbsp;&nbsp;Will not ask if server is off<br />`bundle_tgz -g` / `bundle_zip -g`<br />&nbsp;&nbsp;Run from GitHub Actions<br />**Windows:**<br />`bundle_zip.ps1 -Tier \"[tier]\"`<br />&nbsp;&nbsp;(Default) Usa tiers.default en `/app_config.json`<br /><nobr><code>bundle_zip.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Will not ask if server is off<br /><nobr><code>bundle_zip.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;or: \"y\"; Run from GitHub Actions",
+        "fr": "**Linux :** `bundle_tgz.sh`<br />**Windows :** `bundle_zip.ps1`<br />**macOS :** `bundle_zip.zsh`<br />Arguments optionnels :<br />**Linux/macOS :**<br />`bundle_tgz.sh [tier]` / `bundle_zip.zsh [tier]`<br />&nbsp;&nbsp;(Default) Utilise tiers.default dans `/app_config.json`<br />`bundle_tgz -s` / `bundle_zip -s`<br />&nbsp;&nbsp;Ne demandera pas si le serveur est arrêté<br />`bundle_tgz -g` / `bundle_zip -g`<br />&nbsp;&nbsp;Exécuter depuis GitHub Actions<br />**Windows :**<br />`bundle_zip.pa1 -Tier \"[tier]\"`<br />&nbsp;&nbsp;(Default) Utilise tiers.default dans `/app_config.json`<br /><nobr><code>bundle_zip.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Ne demandera pas si le serveur est arrêté<br /><nobr><code>bundle_zip.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;ou : « y » ; Exécuter depuis GitHub Actions",
+        "es": "**Linux:** `bundle_tgz.sh`<br />**Windows:** `bundle_zip.ps1`<br />**macOS:** `bundle_zip.zsh`<br />Argumentos opcionales:<br />**Linux/macOS:**<br />`bundle_tgz.sh [tier]` / `bundle_zip.zsh [tier]`<br />&nbsp;&nbsp;(Defect) Usa tiers.default en `/app_config.json`<br />`bundle_tgz -s` / `bundle_zip -s`<br />&nbsp;&nbsp;No preguntará si el servidor está apagado<br />`bundle_tgz -g` / `bundle_zip -g`<br />&nbsp;&nbsp;Ejecutar desde GitHub Actions<br />**Windows:**<br />`bundle_zip.ps1 -Tier \"[tier]\"`<br />&nbsp;&nbsp;(Defect) Usa tiers.default en `/app_config.json`<br /><nobr><code>bundle_zip.ps1 -ServerOff \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; No preguntará si el servidor está apagado<br /><nobr><code>bundle_zip.ps1 -IsGHA \"Y\"</code></nobr><br />&nbsp;&nbsp;o: \"y\"; Ejecutar desde GitHub Actions"
       },
       "heading_maintenance_scripts": {
         "en": "Maintenance scripts:",
@@ -1646,9 +1611,9 @@
         "es": "Al ejecutar un script bat desde un símbolo del sistema, el `.\\` incluido en los ejemplos es opcional."
       },
       "footnote2": {
-        "en": "Ensure the local server is current! This is the `build_server` script, or `build_server dev` or `build_server qa` if `/local_server.env` has different versions from the panksomia_web in `/local_server/Cargo.toml`.",
-        "fr": "Assurez-vous que le serveur local est à jour ! Il s'agit du script `build_server`, ou `build_server dev` ou `build_server qa` si `/local_server.env` contient des versions différentes de panksomia_web dans `/local_server/Cargo.toml`.",
-        "es": "¡Asegúrese de que el servidor local esté actualizado! Esto es el script `build_server`, o `build_server dev` o `build_server qa` si `/local_server.env` tiene versiones diferentes de panksomia_web en `/local_server/Cargo.toml`."
+        "en": "Ensure the local server is current! This is the script `build_server dev`,  `build_server qa`,  or `build_server qa`.",
+        "fr": "Assurez-vous que le serveur local est à jour ! Il s'agit du script `build_server dev`, `build_server qa`, ou  `build_server main`.",
+        "es": "¡Asegúrese de que el servidor local esté actualizado! Esto es el script `build_server dev` o `build_server qa`, o `build_server main`."
       },
       "footnote3": {
         "en": "Environment prerequisite for running the exe build locally: Install [Inno Setup](https://jrsoftware.org/isdl.php) - tested with v6.4.3",

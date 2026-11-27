@@ -11,10 +11,6 @@ parent: Dev Reference Manual
 # {% include t.html key="title" %}
 {: .no_toc }
 
-{{ site.data.i18n.pages.general_clients.title[current_lang] }}
-
-{ site.data.i18n.pages.general_clients.title[current_lang] }
-
 {% include t.html key="additional_info" %}
 {: .fs-6 .fw-300 }
 
@@ -74,13 +70,6 @@ parent: Dev Reference Manual
 
 {% include tm.html key="configuration_review" %}
 
-#### {% include t.html key="heading_config_scripts" %}
-{% include t.html key="config_scripts_run_from" %}
-
-| {% include t.html key="table_header_description" %} | {% include tmp.html key="table_header_script_arg" %} |
-|---|---|
-| {% include t.html key="config_script_desc" %} | `app_setup` |
-
 #### {% include t.html key="heading_setup_scripts" %}
 {% include t.html key="setup_scripts_run_from" %}
 
@@ -99,8 +88,8 @@ parent: Dev Reference Manual
 | {% include tmp.html key="build_server_desc" %} | {% include tmp.html key="build_server_script" %} |
 | {% include tmp.html key="run_desc" %} | {% include tmp.html key="run_script" %} |
 | {% include tmp.html key="viewer_desc" %} | {% include tmp.html key="viewer_script" %} |
-| {% include tmp.html key="bundle_viewer_desc" %} | {% include tmp.html key="bundle_viewer_script" %} |
 | {% include tmp.html key="bundle_zip_desc" %} | {% include tmp.html key="bundle_zip_script" %} |
+| {% include tmp.html key="bundle_app_desc" %} | {% include tmp.html key="bundle_app_script" %} |
 
 #### {% include t.html key="heading_maintenance_scripts" %}
 {% include t.html key="maintenance_scripts_run_from" %}

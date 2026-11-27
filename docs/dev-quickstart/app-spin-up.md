@@ -54,29 +54,30 @@ parent: Dev Quickstart
 | > `pnpm install` | > `npm install` |
 
 ### {% include t.html key="heading_edit_app_config" %}
-{% include t.html key="edit_app_config_intro" %}
+{% include tm.html key="edit_app_config_intro" %}
 
 #### {% include t.html key="heading_required_assets" %}
-- ASSET1=resource-core
-- ASSET1_PATH=/runtime_resources
-- ASSET1_NAME=app_resources
-- ASSET2=resource-core
-- ASSET2_PATH=/templates
-- ASSET2_NAME=templates
-- ASSET3=webfonts-core
-- ASSET3_PATH=/
-- ASSET3_NAME=webfonts
+```
+  "assets": [
+    { "repo": "resource-core", "path": "/runtime_resources", "name": "app_resources", "branches": ["dev", "qa", "main"] },
+    { "repo": "resource-core", "path": "/templates",         "name": "templates",     "branches": ["dev", "qa", "main"] },
+    { "repo": "webfonts-core", "path": "/",                  "name": "webfonts",      "branches": ["dev", "qa", "main"] }
+  ],
+```
 
 #### {% include t.html key="heading_required_clients" %}
 {% include tm.html key="required_clients" %}
 
 #### {% include t.html key="heading_some_optional_clients" %}
-{% include t.html key="sequential" %}
-- CLIENT1=core-client-dashboard
-- CLIENT2=core-client-content
-- CLIENT3=core-client-settings
-- CLIENT4=core-contenthandler-generic
-
+{% include tm.html key="sequential" %}
+```
+  "clients": [
+    { "repo": "core-client-dashboard",                "branches": ["dev", "qa", "main"] },
+    { "repo": "core-client-content",                  "branches": ["dev", "qa", "main"] },
+    { "repo": "core-client-settings",                 "branches": ["dev", "qa", "main"] },
+    { "repo": "core-contenthandler-generic",          "branches": ["dev", "qa", "main"] }
+  ],
+```
 
 ### {% include t.html key="heading_branding" %}
 
@@ -89,8 +90,6 @@ parent: Dev Quickstart
 `cd [os]/scripts`
 
 {% include tm.html key="setup_scripts_clone" %}
-
-{% include tm.html key="setup_scripts_app_setup" %}
 
 {% include tm.html key="setup_scripts_build_clients" %}
 - {% include tmp.html key="setup_scripts_build_clients_note1" %}
